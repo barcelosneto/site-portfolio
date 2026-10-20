@@ -28,14 +28,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Estilos Globais V2.0 -->
-  <link rel="stylesheet" href="./assets/css/base.css?v=3.0">
-  <link rel="stylesheet" href="./assets/css/components.css?v=3.0">
-  <link rel="stylesheet" href="./assets/css/pages.css?v=3.0">
+  <!-- Estilos Globais V4.0 -->
+  <link rel="stylesheet" href="./assets/css/base.css?v=4.0">
+  <link rel="stylesheet" href="./assets/css/components.css?v=4.0">
+  <link rel="stylesheet" href="./assets/css/pages.css?v=4.0">
 
   <!-- Scripts de Configuração e Tema -->
-  <script src="./config/site-config.js?v=3.0"></script>
-  <script src="./assets/js/theme.js?v=3.0"></script>
+  <script src="./config/site-config.js?v=4.0"></script>
+  <script src="./assets/js/theme.js?v=4.0"></script>
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -55,7 +55,7 @@
         "name": "Barcelos Neto — Desenvolvimento Web",
         "url": "https://barcelosneto.github.io/site-portfolio/",
         "email": "pedrobarcelos1980@gmail.com",
-        "description": "Desenvolvimento de sites institucionais, landing pages, páginas para negócios locais e otimização de performance e SEO técnico.",
+        "description": "Desenvolvimento de sites institucionais, landing pages, páginas para negócios locais e catálogos interativos sob medida.",
         "areaServed": "BR",
         "sameAs": [
           "https://github.com/barcelosneto",
@@ -108,100 +108,120 @@
   </header>
 
   <main id="conteudo-principal">
-    <!-- 1. HERO PRINCIPAL ASSIMÉTRICO COM SHOWCASE INTERATIVO -->
+    <!-- 1. HERO PRINCIPAL ASSIMÉTRICO COM MOCKUPS REAIS DAS DEMOS -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content" data-reveal>
-          <span class="eyebrow">Engenharia Front-End • Design Direcionado à Conversão</span>
+          <span class="eyebrow">Estúdio Digital • Sites &amp; Interfaces sob Medida</span>
           <h1 class="hero__title">
-            Sites profissionais que posicionam sua marca e <span class="text-gradient">transformam visitas em negócios</span>.
+            Sites sob medida que posicionam sua marca e <span class="text-gradient">transformam visitas em negócios</span>.
           </h1>
           <p class="hero__lead">
-            Arquitetura web sob medida para empresas, clínicas, restaurantes e negócios imobiliários. Interfaces rápidas, acessíveis e projetadas para transmitir autoridade imediata em qualquer dispositivo.
+            Projetamos e desenvolvemos landing pages, sites institucionais e catálogos interativos para empresas, clínicas, restaurantes e negócios imobiliários que exigem presença digital à altura da sua reputação.
           </p>
           <div class="hero__actions">
             <a href="./portfolio/index.html" class="btn btn--primary btn--lg">
-              Explorar Portfólio &amp; Demos
+              Ver Projetos
               <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="./contato/index.html" class="btn btn--secondary btn--lg">Solicitar Proposta</a>
-            <a href="./contato/index.html" class="btn btn--ghost btn--lg" data-whatsapp-cta hidden>Falar no WhatsApp</a>
+            <a href="./contato/index.html" class="btn btn--secondary btn--lg">Solicitar Orçamento</a>
           </div>
-          <ul class="hero__trust" aria-label="Pilares técnicos de entrega">
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Código Semântico &amp; Zero Bloat</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Acessibilidade WCAG AA</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> SEO Técnico &amp; Dados Estruturados</li>
+          <ul class="hero__trust" aria-label="Compromissos de entrega do estúdio">
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Código 100% próprio, sem mensalidades</li>
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Leitura fluida no celular e no desktop</li>
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Contato direto com quem desenvolve</li>
           </ul>
         </div>
 
-        <!-- Studio Showcase Interativo (Alterna as 3 Demos Setoriais ao vivo) -->
+        <!-- Studio Showcase Interativo com Capturas Reais das 3 Demos -->
         <div class="hero__visual" data-reveal>
-          <div class="hero-showcase" role="region" aria-label="Vitrine interativa de projetos demonstrativos">
+          <div class="hero-showcase" role="region" aria-label="Vitrine interativa com capturas reais das demonstrações do portfólio">
             <div class="hero-showcase__top">
               <div class="browser-frame__dots" aria-hidden="true">
                 <span></span><span></span><span></span>
               </div>
-              <div class="hero-showcase__tabs" role="tablist" aria-label="Alternar prévia de demonstração">
-                <button type="button" class="hero-showcase__tab is-active" role="tab" aria-selected="true" data-showcase-tab="restaurante">01. Gastronomia</button>
-                <button type="button" class="hero-showcase__tab" role="tab" aria-selected="false" data-showcase-tab="clinica">02. Saúde</button>
+              <div class="hero-showcase__tabs" role="tablist" aria-label="Alternar demonstração em destaque">
+                <button type="button" class="hero-showcase__tab is-active" role="tab" aria-selected="true" data-showcase-tab="restaurante">01. Restaurante</button>
+                <button type="button" class="hero-showcase__tab" role="tab" aria-selected="false" data-showcase-tab="clinica">02. Clínica</button>
                 <button type="button" class="hero-showcase__tab" role="tab" aria-selected="false" data-showcase-tab="imobiliaria">03. Imobiliária</button>
               </div>
             </div>
 
-            <!-- Pane 1: Restaurante -->
+            <!-- Pane 1: Restaurante (Captura Real da Demo + Detalhe Fotográfico) -->
             <div class="hero-showcase__pane is-active" data-showcase-pane="restaurante">
               <div class="hero-showcase__preview">
-                <img src="./assets/img/restaurante/thumb-restaurante.webp" width="1200" height="750" fetchpriority="high" alt="Corte nobre grelhado na brasa representando o projeto Sabor &amp; Brasa">
+                <img src="./assets/img/home/mockup-restaurante.webp" width="1366" height="854" fetchpriority="high" alt="Captura real da demonstração navegável Sabor &amp; Brasa com cardápio digital interativo">
+                <div class="hero-showcase__inset">
+                  <img src="./assets/img/restaurante/thumb-restaurante.webp" width="108" height="80" alt="Detalhe gastronômico Sabor &amp; Brasa">
+                  <div class="hero-showcase__inset-txt">
+                    <strong>Cardápio + Lightbox</strong>
+                    Filtro por dieta e busca ao vivo
+                  </div>
+                </div>
               </div>
               <div class="hero-showcase__meta">
                 <div>
-                  <div class="hero-showcase__meta-title">Sabor &amp; Brasa — Gastronomia Autoral</div>
-                  <div class="hero-showcase__meta-sub">Filtro de cardápio em tempo real + Lightbox fotográfico</div>
+                  <div class="hero-showcase__meta-title">Sabor &amp; Brasa — Gastronomia Autoral (Demo)</div>
+                  <div class="hero-showcase__meta-sub">Substitui cardápios lentos em PDF por experiência interativa no celular</div>
                 </div>
                 <a href="./demos/restaurante/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
               </div>
             </div>
 
-            <!-- Pane 2: Clínica -->
+            <!-- Pane 2: Clínica (Captura Real da Demo + Detalhe Fotográfico) -->
             <div class="hero-showcase__pane" data-showcase-pane="clinica" hidden>
               <div class="hero-showcase__preview">
-                <img src="./assets/img/clinica/thumb-clinica.webp" width="1200" height="750" loading="lazy" alt="Consultório clínico moderno e iluminado representando a Clínica Vitae">
+                <img src="./assets/img/home/mockup-clinica.webp" width="1366" height="854" alt="Captura real da demonstração navegável Clínica Vitae com especialidades médicas e jornada do paciente">
+                <div class="hero-showcase__inset">
+                  <img src="./assets/img/clinica/thumb-clinica.webp" width="108" height="80" alt="Ambiente clínico Clínica Vitae">
+                  <div class="hero-showcase__inset-txt">
+                    <strong>Jornada do Paciente</strong>
+                    6 especialidades + pré-consulta
+                  </div>
+                </div>
               </div>
               <div class="hero-showcase__meta">
                 <div>
-                  <div class="hero-showcase__meta-title">Clínica Vitae — Saúde Integrada</div>
-                  <div class="hero-showcase__meta-sub">Arquitetura de confiança + Jornada de pré-agendamento</div>
+                  <div class="hero-showcase__meta-title">Clínica Vitae — Saúde Integrada (Demo)</div>
+                  <div class="hero-showcase__meta-sub">Comunicação serena para apresentar especialidades e facilitar agendamentos</div>
                 </div>
                 <a href="./demos/clinica/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
               </div>
             </div>
 
-            <!-- Pane 3: Imobiliária -->
+            <!-- Pane 3: Imobiliária (Captura Real da Demo + Detalhe Fotográfico) -->
             <div class="hero-showcase__pane" data-showcase-pane="imobiliaria" hidden>
               <div class="hero-showcase__preview">
-                <img src="./assets/img/imobiliaria/thumb-imobiliaria.webp" width="1200" height="750" loading="lazy" alt="Residência contemporânea de alto padrão representando a Horizonte Prime Imobiliária">
+                <img src="./assets/img/home/mockup-imobiliaria.webp" width="1366" height="854" alt="Captura real da demonstração navegável Horizonte Prime com catálogo e filtros de imóveis">
+                <div class="hero-showcase__inset">
+                  <img src="./assets/img/imobiliaria/thumb-imobiliaria.webp" width="108" height="80" alt="Arquitetura residencial Horizonte Prime">
+                  <div class="hero-showcase__inset-txt">
+                    <strong>Busca Multicritério</strong>
+                    Filtro instantâneo + modal de vistas
+                  </div>
+                </div>
               </div>
               <div class="hero-showcase__meta">
                 <div>
-                  <div class="hero-showcase__meta-title">Horizonte Prime — Imóveis &amp; Arquitetura</div>
-                  <div class="hero-showcase__meta-sub">Busca multicritério + Modal com galeria fotográfica</div>
+                  <div class="hero-showcase__meta-title">Horizonte Prime — Consultoria Imobiliária (Demo)</div>
+                  <div class="hero-showcase__meta-sub">Catálogo filtrável por tipologia, bairro, faixa de valor e dormitórios</div>
                 </div>
                 <a href="./demos/imobiliaria/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
               </div>
             </div>
 
-            <div class="hero-showcase__metrics" aria-label="Especificações de engenharia">
+            <div class="hero-showcase__metrics" aria-label="Resumo do acervo demonstrativo">
               <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">3 Demos Reais</span>
-                <span class="hero-metric-pill__lbl">Navegáveis no navegador</span>
+                <span class="hero-metric-pill__val">3 Demos Navegáveis</span>
+                <span class="hero-metric-pill__lbl">Teste filtros e modais ao vivo</span>
               </div>
               <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">HTML + CSS + JS</span>
-                <span class="hero-metric-pill__lbl">Arquitetura limpa e rápida</span>
+                <span class="hero-metric-pill__val">6 Projetos no Acervo</span>
+                <span class="hero-metric-pill__lbl">Demos reais + estudos de escopo</span>
               </div>
               <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">WCAG 2.1 AA</span>
-                <span class="hero-metric-pill__lbl">Teclado, foco e contraste</span>
+                <span class="hero-metric-pill__val">100% Responsivo</span>
+                <span class="hero-metric-pill__lbl">Do smartphone ao widescreen</span>
               </div>
             </div>
           </div>
@@ -209,60 +229,18 @@
       </div>
     </section>
 
-    <!-- 2. FAIXA DE CAPACIDADE TÉCNICA (PROOF STRIP) -->
-    <section class="proof-strip" aria-label="Diferenciais técnicos de entrega">
-      <div class="container proof-strip__grid">
-        <div class="proof-item" data-reveal>
-          <span class="proof-item__icon" aria-hidden="true">
-            <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </span>
-          <div>
-            <h2 class="proof-item__title">Engenharia Semântica</h2>
-            <p class="proof-item__desc">Marcação HTML5 estruturada, estados ARIA completos e navegação fluida por teclado.</p>
-          </div>
-        </div>
-        <div class="proof-item" data-reveal>
-          <span class="proof-item__icon" aria-hidden="true">
-            <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </span>
-          <div>
-            <h2 class="proof-item__title">Design Responsivo Real</h2>
-            <p class="proof-item__desc">Layouts fluidos testados de 375px a 1920px, sem quebras ou rolagem horizontal.</p>
-          </div>
-        </div>
-        <div class="proof-item" data-reveal>
-          <span class="proof-item__icon" aria-hidden="true">
-            <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </span>
-          <div>
-            <h2 class="proof-item__title">SEO Técnico de Base</h2>
-            <p class="proof-item__desc">Metadados Open Graph, Schema.org JSON-LD, sitemap.xml e hierarquia de títulos limpa.</p>
-          </div>
-        </div>
-        <div class="proof-item" data-reveal>
-          <span class="proof-item__icon" aria-hidden="true">
-            <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </span>
-          <div>
-            <h2 class="proof-item__title">Performance Extrema</h2>
-            <p class="proof-item__desc">Zero dependências pesadas. Carregamento instantâneo para reduzir rejeição em campanhas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. VITRINE PRINCIPAL — DEMONSTRAÇÕES SETORIAIS INTERATIVAS -->
+    <!-- 2. PORTFÓLIO EM DESTAQUE — AS 3 DEMONSTRAÇÕES NAVEGÁVEIS + CATÁLOGO DE 6 PROJETOS -->
     <section class="section" id="demos-destaque">
       <div class="container">
         <div class="section-header section-header--split" data-reveal>
           <div>
-            <span class="eyebrow">Vitrine Técnica em Produção</span>
-            <h2 class="section-title">Demonstrações completas para você testar na prática</h2>
+            <span class="eyebrow">Portfólio em Destaque • Projetos Demonstrativos</span>
+            <h2 class="section-title">Experimente na prática antes de contratar</h2>
             <p class="section-subtitle">
-              Em vez de imagens estáticas, explore três projetos demonstrativos completos com fotografia editorial real, identidade visual exclusiva, filtros ao vivo e componentes interativos.
+              Desenvolvemos três aplicações demonstrativas completas para que você avalie acabamento visual, velocidade e usabilidade real no seu próprio navegador.
             </p>
           </div>
-          <a href="./portfolio/index.html" class="btn btn--secondary">Ver Todos os 6 Projetos →</a>
+          <a href="./portfolio/index.html" class="btn btn--secondary">Ver Catálogo Completo (6 Projetos) →</a>
         </div>
 
         <div class="grid grid--3">
@@ -275,27 +253,29 @@
                   <span class="project-card-v2__domain">demos/restaurante</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <img src="./assets/img/restaurante/thumb-restaurante.webp" width="1200" height="750" loading="lazy" alt="Fotografia gastronômica de corte grelhado na brasa para a demonstração Sabor &amp; Brasa">
+                  <img src="./assets/img/restaurante/thumb-restaurante.webp" width="1200" height="750" loading="lazy" alt="Fotografia gastronômica de corte nobre grelhado na brasa para a demonstração Sabor &amp; Brasa">
+                  <div class="project-card-v2__photo-chip">
+                    <img src="./assets/img/home/mockup-restaurante.webp" width="84" height="60" loading="lazy" alt="Miniatura da interface Sabor &amp; Brasa">
+                    <span>UI Interativa</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-card-v2__body">
               <div class="card__meta">
-                <span class="badge badge--brand">Gastronomia</span>
-                <span class="badge badge--demo">Demo Interativa</span>
+                <span class="badge badge--brand">Gastronomia &amp; Reservas</span>
+                <span class="badge badge--demo">Demo Navegável</span>
               </div>
               <h3 class="card__title">Sabor &amp; Brasa — Cozinha Autoral</h3>
               <p class="card__desc">
-                Experiência gastronômica imersiva com fotografia de pratos reais, filtro de cardápio por categoria, restrições alimentares, busca instantânea e lightbox acessível.
+                Experiência digital para restaurantes e bares que desejam valorizar o cardápio com fotografia apetitosa e facilitar reservas de mesa.
               </p>
-              <ul class="tag-list" aria-label="Recursos implementados">
-                <li class="tag">Cardápio Fotográfico</li>
-                <li class="tag">Lightbox Teclado</li>
-                <li class="tag">Reserva Direta</li>
-              </ul>
+              <div class="project-card-v2__context">
+                <strong>Diferencial comercial:</strong> Elimina PDFs difíceis de ler no celular com busca instantânea por ingrediente, filtros por dieta (vegetariano, vegano, sem glúten) e galeria em tela cheia.
+              </div>
               <div class="card__footer">
-                <a href="./demos/restaurante/index.html" class="btn btn--primary btn--sm">Explorar Demo</a>
-                <a href="./contato/index.html?projeto=restaurante" class="btn btn--ghost btn--sm">Pedir Similar</a>
+                <a href="./demos/restaurante/index.html" class="btn btn--primary btn--sm">Abrir Demo Real →</a>
+                <a href="./contato/index.html?projeto=restaurante" class="btn btn--ghost btn--sm">Solicitar Similar</a>
               </div>
             </div>
           </article>
@@ -309,27 +289,29 @@
                   <span class="project-card-v2__domain">demos/clinica</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <img src="./assets/img/clinica/thumb-clinica.webp" width="1200" height="750" loading="lazy" alt="Consultório clínico moderno e iluminado para a demonstração Clínica Vitae">
+                  <img src="./assets/img/clinica/thumb-clinica.webp" width="1200" height="750" loading="lazy" alt="Consultório clínico moderno e bem iluminado para a demonstração Clínica Vitae">
+                  <div class="project-card-v2__photo-chip">
+                    <img src="./assets/img/home/mockup-clinica.webp" width="84" height="60" loading="lazy" alt="Miniatura da interface Clínica Vitae">
+                    <span>UI Institucional</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-card-v2__body">
               <div class="card__meta">
                 <span class="badge badge--accent">Saúde &amp; Clínicas</span>
-                <span class="badge badge--demo">Demo Interativa</span>
+                <span class="badge badge--demo">Demo Navegável</span>
               </div>
               <h3 class="card__title">Clínica Vitae — Saúde Integrada</h3>
               <p class="card__desc">
-                Interface serena e confiável focada no acolhimento do paciente: infraestrutura clínica fotografada, especialidades médicas, fluxo de pré-agendamento e FAQ.
+                Site institucional sereno e acolhedor para clínicas médicas, odontológicas e centros de saúde que priorizam clareza ética e confiança.
               </p>
-              <ul class="tag-list" aria-label="Recursos implementados">
-                <li class="tag">Jornada do Paciente</li>
-                <li class="tag">Contraste AA</li>
-                <li class="tag">FAQ Nativo</li>
-              </ul>
+              <div class="project-card-v2__context">
+                <strong>Diferencial comercial:</strong> Organiza especialidades, orientações pré-consulta, convênios/reembolso e perguntas frequentes para reduzir dúvidas na recepção.
+              </div>
               <div class="card__footer">
-                <a href="./demos/clinica/index.html" class="btn btn--primary btn--sm">Explorar Demo</a>
-                <a href="./contato/index.html?projeto=clinica" class="btn btn--ghost btn--sm">Pedir Similar</a>
+                <a href="./demos/clinica/index.html" class="btn btn--primary btn--sm">Abrir Demo Real →</a>
+                <a href="./contato/index.html?projeto=clinica" class="btn btn--ghost btn--sm">Solicitar Similar</a>
               </div>
             </div>
           </article>
@@ -344,124 +326,263 @@
                 </div>
                 <div class="project-card-v2__screen">
                   <img src="./assets/img/imobiliaria/thumb-imobiliaria.webp" width="1200" height="750" loading="lazy" alt="Residência contemporânea de alto padrão para a demonstração Horizonte Prime Imobiliária">
+                  <div class="project-card-v2__photo-chip">
+                    <img src="./assets/img/home/mockup-imobiliaria.webp" width="84" height="60" loading="lazy" alt="Miniatura da interface Horizonte Prime">
+                    <span>Catálogo Ao Vivo</span>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="project-card-v2__body">
               <div class="card__meta">
                 <span class="badge badge--brand">Mercado Imobiliário</span>
-                <span class="badge badge--demo">Demo Interativa</span>
+                <span class="badge badge--demo">Demo Navegável</span>
               </div>
               <h3 class="card__title">Horizonte Prime — Imóveis</h3>
               <p class="card__desc">
-                Catálogo imobiliário de alto padrão com fotografia arquitetônica real, filtros combinados (tipo, bairro, faixa de valor e dormitórios) e modal interativo.
+                Vitrine arquitetônica para imobiliárias boutiques, incorporadoras e corretores de alto padrão apresentarem carteiras selecionadas.
               </p>
-              <ul class="tag-list" aria-label="Recursos implementados">
-                <li class="tag">Filtro Multicritério</li>
-                <li class="tag">Galeria no Modal</li>
-                <li class="tag">Captação Qualificada</li>
-              </ul>
+              <div class="project-card-v2__context">
+                <strong>Diferencial comercial:</strong> Filtragem combinada instantânea (tipo, bairro, valor e dormitórios) e ficha técnica em modal com galeria de fotos e solicitação por código.
+              </div>
               <div class="card__footer">
-                <a href="./demos/imobiliaria/index.html" class="btn btn--primary btn--sm">Explorar Demo</a>
-                <a href="./contato/index.html?projeto=imobiliaria" class="btn btn--ghost btn--sm">Pedir Similar</a>
+                <a href="./demos/imobiliaria/index.html" class="btn btn--primary btn--sm">Abrir Demo Real →</a>
+                <a href="./contato/index.html?projeto=imobiliaria" class="btn btn--ghost btn--sm">Solicitar Similar</a>
               </div>
             </div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- 4. SOLUÇÕES & SERVIÇOS SOB MEDIDA -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <span class="eyebrow">Especialidades de Engenharia Web</span>
-          <h2 class="section-title">Soluções digitais desenhadas para gerar percepção de valor</h2>
-          <p class="section-subtitle">
-            Cada projeto nasce da necessidade real do negócio: apresentar serviços com clareza, ranquear em buscas locais e converter visitantes em contatos qualificados.
-          </p>
-        </div>
-
-        <div class="grid grid--3">
-          <div class="card card--interactive" data-reveal>
-            <div class="card__meta"><span class="badge badge--brand">01 • Institucional</span></div>
-            <h3 class="card__title">Sites Institucionais Premium</h3>
-            <p class="card__desc">
-              Estrutura multipágina completa para empresas, escritórios e consultorias que precisam consolidar reputação e apresentar seu portfólio com rigor visual.
+        <!-- Faixa Secundária: Catálogo Completo de 6 Projetos (incluindo os 3 Estudos Conceituais) -->
+        <div class="catalog-overview-banner" data-reveal>
+          <div>
+            <span class="badge badge--neutral mb-4">Acervo Completo • 6 Projetos Documentados</span>
+            <h3 class="card__title" style="margin-bottom: var(--space-2);">Mais 3 estudos conceituais de arquitetura no catálogo</h3>
+            <p class="card__desc" style="margin-bottom: 0;">
+              Além das 3 demos navegáveis acima, consulte no portfólio os modelos conceituais para <strong>Consultorias B2B</strong>, <strong>Landing Pages de Eventos</strong> e <strong>Portfólios de Arquitetura</strong>.
             </p>
-            <div class="card__footer">
-              <a href="./servicos/index.html#institucional" class="btn btn--ghost btn--sm">Ver escopo detalhado →</a>
-            </div>
           </div>
 
-          <div class="card card--interactive" data-reveal>
-            <div class="card__meta"><span class="badge badge--accent">02 • Conversão</span></div>
-            <h3 class="card__title">Landing Pages Estratégicas</h3>
-            <p class="card__desc">
-              Páginas de alta velocidade com narrativa persuasiva, arquitetura de informação enxuta e CTAs diretos para maximizar o retorno de tráfego pago e orgânico.
-            </p>
-            <div class="card__footer">
-              <a href="./servicos/index.html#landing-pages" class="btn btn--ghost btn--sm">Ver escopo detalhado →</a>
-            </div>
+          <div class="catalog-mini-list" aria-label="Estudos conceituais adicionais no portfólio">
+            <a href="./portfolio/index.html" class="catalog-mini-item">
+              <img src="./assets/img/corporativo/thumb-corporativo.webp" width="96" height="72" loading="lazy" alt="Conceito Estrutura Executiva B2B">
+              <span class="catalog-mini-item__info">
+                <span class="catalog-mini-item__title">Estrutura Executiva</span>
+                <span class="catalog-mini-item__tag">Conceito • B2B</span>
+              </span>
+            </a>
+            <a href="./portfolio/index.html" class="catalog-mini-item">
+              <img src="./assets/img/launchpad/thumb-launchpad.webp" width="96" height="72" loading="lazy" alt="Conceito LaunchPad Alta Conversão">
+              <span class="catalog-mini-item__info">
+                <span class="catalog-mini-item__title">LaunchPad</span>
+                <span class="catalog-mini-item__tag">Conceito • Landing Page</span>
+              </span>
+            </a>
+            <a href="./portfolio/index.html" class="catalog-mini-item">
+              <img src="./assets/img/monogrid/thumb-monogrid.webp" width="96" height="72" loading="lazy" alt="Conceito MonoGrid Portfólio Autoral">
+              <span class="catalog-mini-item__info">
+                <span class="catalog-mini-item__title">MonoGrid</span>
+                <span class="catalog-mini-item__tag">Conceito • Portfólio</span>
+              </span>
+            </a>
           </div>
 
-          <div class="card card--interactive" data-reveal>
-            <div class="card__meta"><span class="badge badge--neutral">03 • Negócios Locais</span></div>
-            <h3 class="card__title">Páginas Setoriais &amp; Catálogos</h3>
-            <p class="card__desc">
-              Interfaces especializadas para clínicas, restaurantes e imobiliárias, com cardápios filtráveis, catálogos interativos e pré-atendimento organizado.
-            </p>
-            <div class="card__footer">
-              <a href="./servicos/index.html#negocios-locais" class="btn btn--ghost btn--sm">Ver escopo detalhado →</a>
-            </div>
+          <div>
+            <a href="./portfolio/index.html" class="btn btn--primary">Explorar os 6 Projetos →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. MÉTODO DE TRABALHO EM 4 ETAPAS -->
-    <section class="section">
+    <!-- 3. SERVIÇOS E BENEFÍCIOS COMERCIAIS (BENTO LAYOUT ASSIMÉTRICO) -->
+    <section class="section section--alt" id="servicos-home">
       <div class="container">
-        <div class="section-header section-header--center" data-reveal>
-          <span class="eyebrow">Processo Transparente</span>
-          <h2 class="section-title">Do diagnóstico à publicação com previsibilidade</h2>
-          <p class="section-subtitle">
-            Fluxo enxuto em quatro etapas, com comunicação direta com quem projeta e desenvolve cada linha de código do seu site.
-          </p>
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <span class="eyebrow">Soluções Digitais sob Medida</span>
+            <h2 class="section-title">Estruturas comerciais desenhadas para o momento do seu negócio</h2>
+            <p class="section-subtitle">
+              Cada projeto é planejado para resolver objetivos concretos: apresentar seu diferencial com clareza, qualificar o atendimento e facilitar o pedido de orçamento.
+            </p>
+          </div>
+          <a href="./servicos/index.html" class="btn btn--secondary">Comparar Escopos e Entregáveis →</a>
+        </div>
+
+        <div class="bento-services-grid">
+          <!-- Card 1 (Wide): Sites Institucionais -->
+          <article class="card card--interactive bento-service-card--wide" data-reveal>
+            <div class="card__meta">
+              <span class="badge badge--brand">01 • Posicionamento &amp; Autoridade</span>
+              <span class="badge badge--neutral">Empresas, Escritórios &amp; Consultorias</span>
+            </div>
+            <h3 class="card__title">Sites Institucionais de Autoridade</h3>
+            <p class="card__desc">
+              Para empresas e escritórios que precisam transmitir solidez antes mesmo da primeira reunião comercial, organizando áreas de atuação, diferenciais e canais de contato em uma navegação impecável.
+            </p>
+            <ul class="service-benefit-list">
+              <li>Apresentação clara de serviços para decisores e clientes exigentes</li>
+              <li>Páginas estruturadas para fortalecer a reputação da marca em buscas no Google</li>
+              <li>Formulário de triagem comercial que organiza os pedidos recebidos por e-mail</li>
+            </ul>
+            <div class="card__footer">
+              <a href="./servicos/index.html#institucional" class="btn btn--secondary btn--sm">Ver detalhes do escopo</a>
+              <a href="./contato/index.html?projeto=institucional" class="btn btn--primary btn--sm">Solicitar Proposta →</a>
+            </div>
+          </article>
+
+          <!-- Card 2 (Narrow): Landing Pages -->
+          <article class="card card--interactive bento-service-card--narrow" data-reveal>
+            <div class="card__meta">
+              <span class="badge badge--accent">02 • Campanhas &amp; Captação</span>
+            </div>
+            <h3 class="card__title">Landing Pages de Alta Conversão</h3>
+            <p class="card__desc">
+              Páginas de destino enxutas e velozes para campanhas de anúncios (Google Ads / Meta Ads), lançamentos de serviços ou captação direta de leads.
+            </p>
+            <ul class="service-benefit-list">
+              <li>Argumentação sequencial sem fugas de navegação</li>
+              <li>Carregamento leve para reduzir desistências no 4G/5G</li>
+              <li>Seção de perguntas frequentes para contornar objeções</li>
+            </ul>
+            <div class="card__footer">
+              <a href="./servicos/index.html#landing-pages" class="btn btn--ghost btn--sm">Ver escopo →</a>
+              <a href="./contato/index.html?projeto=landing-page" class="btn btn--primary btn--sm">Pedir Orçamento</a>
+            </div>
+          </article>
+
+          <!-- Card 3 (Narrow): Catálogos e Experiências Interativas -->
+          <article class="card card--interactive bento-service-card--narrow" data-reveal>
+            <div class="card__meta">
+              <span class="badge badge--brand">03 • Catálogos &amp; Interatividade</span>
+            </div>
+            <h3 class="card__title">Catálogos, Cardápios &amp; Buscas</h3>
+            <p class="card__desc">
+              Interfaces interativas para imobiliárias, restaurantes e empresas que precisam exibir produtos, pratos ou imóveis com filtros instantâneos.
+            </p>
+            <ul class="service-benefit-list">
+              <li>Filtros combinados sem recarregar a página</li>
+              <li>Modais de detalhes e galerias fotográficas acessíveis</li>
+              <li>Navegação intuitiva adaptada ao toque no celular</li>
+            </ul>
+            <div class="card__footer">
+              <a href="./servicos/index.html#negocios-locais" class="btn btn--ghost btn--sm">Ver escopo →</a>
+              <a href="./contato/index.html?projeto=negocio-local" class="btn btn--primary btn--sm">Pedir Orçamento</a>
+            </div>
+          </article>
+
+          <!-- Card 4 (Wide): Negócios Locais, Portfólios e Redesign -->
+          <article class="card card--interactive bento-service-card--wide" data-reveal>
+            <div class="card__meta">
+              <span class="badge badge--accent">04 • Presença Regional &amp; Autoral</span>
+              <span class="badge badge--neutral">Clínicas, Arquitetos &amp; Especialistas</span>
+            </div>
+            <h3 class="card__title">Páginas para Negócios Locais, Portfólios &amp; Reformulações</h3>
+            <p class="card__desc">
+              Soluções sob medida para clínicas médicas, consultórios, arquitetos, engenheiros e profissionais liberais — ou para empresas que precisam modernizar um site antigo e desconfigurado no celular.
+            </p>
+            <ul class="service-benefit-list">
+              <li>Estrutura de especialidades, horários, endereço e orientações de atendimento</li>
+              <li>Vitrines autorais minimalistas para exposição de estudos de caso e acervo técnico</li>
+              <li>Reformulação completa de sites datados preservando a identidade do negócio</li>
+            </ul>
+            <div class="card__footer">
+              <a href="./servicos/index.html#portfolios" class="btn btn--secondary btn--sm">Ver modalidades</a>
+              <a href="./contato/index.html?projeto=redesign" class="btn btn--primary btn--sm">Avaliar Meu Projeto →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Fundamentos de Qualidade Técnica (Subordinados à Proposta Comercial) -->
+        <div class="quality-foundations-bar" data-reveal aria-label="Fundamentos técnicos inclusos em todos os projetos">
+          <div class="quality-foundation-item">
+            <span class="proof-item__icon" aria-hidden="true">
+              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <div>
+              <h4 class="quality-foundation-item__title">Código Semântico &amp; Limpo</h4>
+              <p class="quality-foundation-item__desc">HTML5 estruturado e manutenível, sem dependência de construtores lentos.</p>
+            </div>
+          </div>
+
+          <div class="quality-foundation-item">
+            <span class="proof-item__icon" aria-hidden="true">
+              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </span>
+            <div>
+              <h4 class="quality-foundation-item__title">Base de SEO Técnico</h4>
+              <p class="quality-foundation-item__desc">Metadados Open Graph, Schema.org JSON-LD, sitemap.xml e hierarquia de títulos.</p>
+            </div>
+          </div>
+
+          <div class="quality-foundation-item">
+            <span class="proof-item__icon" aria-hidden="true">
+              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </span>
+            <div>
+              <h4 class="quality-foundation-item__title">Acessibilidade WCAG AA</h4>
+              <p class="quality-foundation-item__desc">Contraste verificado nos temas escuro e claro, foco visível e suporte a teclado.</p>
+            </div>
+          </div>
+
+          <div class="quality-foundation-item">
+            <span class="proof-item__icon" aria-hidden="true">
+              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
+            <div>
+              <h4 class="quality-foundation-item__title">Desempenho Mobile-First</h4>
+              <p class="quality-foundation-item__desc">Imagens otimizadas em WebP e carregamento ágil de 320px a 1920px.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROCESSO DE CONTRATAÇÃO EM 4 ETAPAS CLARAS -->
+    <section class="section" id="processo-home">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <span class="eyebrow">Processo de Contratação Transparente</span>
+            <h2 class="section-title">Do alinhamento inicial à publicação sem burocracia</h2>
+            <p class="section-subtitle">
+              Trabalhe diretamente com quem projeta e desenvolve seu site, acompanhando cada etapa por link de pré-visualização navegável.
+            </p>
+          </div>
+          <a href="./sobre/index.html" class="btn btn--secondary">Conhecer Método &amp; Estúdio →</a>
         </div>
 
         <ol class="process-steps">
           <li class="process-step" data-reveal>
             <div class="process-step__num" aria-hidden="true">01</div>
-            <h3 class="card__title">Diagnóstico &amp; Escopo</h3>
-            <p class="card__desc">Mapeamento de público-alvo, objetivos comerciais, referências visuais e definição exata das páginas e entregáveis.</p>
+            <h3 class="card__title">Alinhamento &amp; Escopo</h3>
+            <p class="card__desc">Entendimento do seu modelo de negócio, público-alvo, referências visuais e definição objetiva das páginas e funcionalidades necessárias.</p>
           </li>
           <li class="process-step" data-reveal>
             <div class="process-step__num" aria-hidden="true">02</div>
-            <h3 class="card__title">Arquitetura &amp; UI Design</h3>
-            <p class="card__desc">Estruturação da hierarquia de títulos, copy orientada à clareza, sistema tipográfico e identidade visual responsiva.</p>
+            <h3 class="card__title">Estrutura &amp; Direção Visual</h3>
+            <p class="card__desc">Organização da narrativa comercial, hierarquia de argumentos, curadoria fotográfica e identidade visual alinhada ao seu segmento.</p>
           </li>
           <li class="process-step" data-reveal>
             <div class="process-step__num" aria-hidden="true">03</div>
-            <h3 class="card__title">Engenharia &amp; Testes</h3>
-            <p class="card__desc">Codificação semântica limpa, validação de acessibilidade por teclado, SEO técnico e revisão multi-dispositivo.</p>
+            <h3 class="card__title">Desenvolvimento &amp; Revisão</h3>
+            <p class="card__desc">Construção do site com link de teste real para você navegar no celular e no computador, validando cada detalhe antes da entrega.</p>
           </li>
           <li class="process-step" data-reveal>
             <div class="process-step__num" aria-hidden="true">04</div>
             <h3 class="card__title">Publicação &amp; Autonomia</h3>
-            <p class="card__desc">Deploy configurado com HTTPS, código-fonte documentado e orientações práticas para evolução contínua.</p>
+            <p class="card__desc">Configuração de domínio com HTTPS, revisão final de formulários e SEO, e entrega integral do código-fonte documentado.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- 6. PERGUNTAS FREQUENTES (FAQ) -->
+    <!-- 5. PERGUNTAS FREQUENTES (FAQ) -->
     <section class="section section--alt">
       <div class="container container--narrow">
         <div class="section-header section-header--center" data-reveal>
           <span class="eyebrow">Dúvidas Comuns</span>
           <h2 class="section-title">Perguntas Frequentes</h2>
-          <p class="section-subtitle">Respostas diretas sobre prazos, tecnologia, propriedade do código e manutenção.</p>
+          <p class="section-subtitle">Respostas diretas sobre as demonstrações, prazos, hospedagem e solicitação de proposta.</p>
         </div>
 
         <div class="faq-list" data-reveal>
@@ -471,17 +592,17 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-content">
-              <p>São <strong>projetos demonstrativos autorais</strong> desenvolvidos especificamente para comprovar qualidade de engenharia front-end, direção de arte e usabilidade em cenários reais (restaurante, clínica e imobiliária), mantendo total transparência ética.</p>
+              <p>São <strong>projetos demonstrativos autorais</strong> desenvolvidos especificamente para comprovar qualidade de engenharia front-end, direção visual e usabilidade em cenários reais (restaurante, clínica e imobiliária), mantendo total transparência comercial.</p>
             </div>
           </details>
 
           <details class="faq-item">
             <summary class="faq-summary">
-              <span>O site funcionará perfeitamente em celulares e tablets?</span>
+              <span>O site funcionará perfeitamente em celulares e diferentes tamanhos de tela?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-content">
-              <p>Sim. Todo o desenvolvimento segue abordagem <em>Mobile-First</em>, com tipografia fluida, áreas de toque confortáveis, menus acessíveis e imagens vetoriais leves.</p>
+              <p>Sim. Todo o desenvolvimento segue abordagem <em>Mobile-First</em>, com tipografia fluida, áreas de toque confortáveis, menus acessíveis e imagens otimizadas em WebP que se adaptam de 320px a monitores widescreen.</p>
             </div>
           </details>
 
@@ -491,7 +612,7 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-content">
-              <p>O código-fonte entregue é 100% seu, sem mensalidades obrigatórias de plataformas fechadas. Pode ser publicado gratuitamente em GitHub Pages, Cloudflare Pages, Vercel, Netlify ou na hospedagem do seu próprio domínio.</p>
+              <p>O código-fonte entregue é 100% seu, sem mensalidades obrigatórias de plataformas fechadas. Pode ser publicado em GitHub Pages, Cloudflare Pages, Vercel, Netlify ou na hospedagem do seu próprio domínio.</p>
             </div>
           </details>
 
@@ -501,25 +622,25 @@
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
             <div class="faq-content">
-              <p>Basta acessar a <a href="./contato/index.html">página de Contato</a>, selecionar o tipo de projeto desejado e descrever brevemente sua necessidade. O formulário estrutura todos os dados para envio direto por e-mail ou cópia rápida.</p>
+              <p>Basta acessar a <a href="./contato/index.html">página de Contato</a>, selecionar o tipo de projeto desejado e descrever brevemente sua necessidade, ou enviar um e-mail direto para <a href="mailto:pedrobarcelos1980@gmail.com">pedrobarcelos1980@gmail.com</a>.</p>
             </div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- 7. CTA FINAL DE CONVERSÃO -->
-    <section class="section">
+    <!-- 6. CTA FINAL DE ALTO IMPACTO PARA CONVERSÃO COMERCIAL -->
+    <section class="section" id="contato-cta">
       <div class="container" data-reveal>
         <div class="cta-banner">
           <div>
-            <span class="eyebrow" style="background: rgba(59,130,246,0.2); color: #93C5FD; border-color: rgba(147,197,253,0.35);">Pronto para elevar sua presença digital?</span>
-            <h2>Vamos construir um site à altura da sua empresa</h2>
-            <p>Envie os detalhes iniciais do seu projeto e receba uma proposta técnica clara, sem compromissos ocultos.</p>
+            <span class="eyebrow" style="background: rgba(59,130,246,0.2); color: #93C5FD; border-color: rgba(147,197,253,0.35);">Orçamento &amp; Diagnóstico Inicial</span>
+            <h2>Vamos construir uma presença digital à altura do seu negócio?</h2>
+            <p>Envie os detalhes do seu projeto pelo formulário estruturado ou diretamente para <strong>pedrobarcelos1980@gmail.com</strong> e receba uma proposta clara e sob medida.</p>
           </div>
           <div class="cta-banner__actions">
             <a href="./contato/index.html" class="btn btn--primary btn--lg">Solicitar Orçamento</a>
-            <a href="./portfolio/index.html" class="btn btn--secondary btn--lg">Ver Portfólio Completo</a>
+            <a href="mailto:pedrobarcelos1980@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20Or%C3%A7amento%20%E2%80%94%20Desenvolvimento%20Web" class="btn btn--secondary btn--lg">Enviar E-mail Direto</a>
           </div>
         </div>
       </div>
@@ -587,6 +708,6 @@
     <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="./assets/js/main.js?v=3.0"></script>
+  <script src="./assets/js/main.js?v=4.0"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Créditos, Origem e Licenciamento de Imagens — V3.0
+# Créditos, Origem e Licenciamento de Imagens — V4.0
 
 **Projeto:** Barcelos Neto — Desenvolvimento Web (`https://barcelosneto.github.io/site-portfolio`)  
 **Diretório local de ativos:** `assets/img/`  
@@ -9,19 +9,22 @@
 
 ## 1. Política de Licenciamento
 
-Todas as fotografias incorporadas ao portfólio e às demonstrações setoriais foram obtidas no banco de imagens **Unsplash** sob a **[Unsplash License](https://unsplash.com/license)**:
+Todas as fotografias incorporadas ao portfólio e às demonstrações setoriais foram obtidas no banco de imagens **Unsplash** sob a **[Unsplash License](https://unsplash.com/license)**, complementadas por **3 capturas reais de interface (UI Mockups)** geradas diretamente a partir das páginas demonstrativas autorais do próprio projeto:
 - **Permissões:** Uso comercial e não comercial gratuito, mundial e perpétuo; permissão para download, cópia, modificação, recorte, conversão para `.webp` e hospedagem local direta no repositório.
 - **Atribuição:** Não obrigatória pela licença oficial, mas documentada integralmente neste arquivo por transparência editorial e rastreabilidade técnica.
 
 ---
 
-## 2. Inventário Completo das 30 Fotografias Locais (`assets/img/`)
+## 2. Inventário Completo dos 33 Ativos Visuais Locais (`assets/img/`)
 
-### 2.1. Institucional / Estúdio (`assets/img/home/`)
+### 2.1. Institucional, Estúdio & Capturas Reais de Interface (`assets/img/home/`)
 
 | Arquivo Local | Página / Seção Utilizada | Origem | ID / URL Original | Licença | Data |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `assets/img/home/studio-workspace.webp` | `sobre/index.html` (Checklist de Engenharia & Estúdio) | Unsplash | [`photo-1498050108023-c5249f4df085`](https://images.unsplash.com/photo-1498050108023-c5249f4df085) | Unsplash License | 20/10/2026 |
+| `assets/img/home/mockup-restaurante.webp` | `index.html` (Hero Stage & Card de Destaque — Demo 01) | Captura Real de UI (`demos/restaurante/index.html`) | Renderização local via Chromium (`1366x854`) | Autoral (Próprio Repositório) | 20/10/2026 |
+| `assets/img/home/mockup-clinica.webp` | `index.html` (Hero Stage & Card de Destaque — Demo 02) | Captura Real de UI (`demos/clinica/index.html`) | Renderização local via Chromium (`1366x854`) | Autoral (Próprio Repositório) | 20/10/2026 |
+| `assets/img/home/mockup-imobiliaria.webp` | `index.html` (Hero Stage & Card de Destaque — Demo 03) | Captura Real de UI (`demos/imobiliaria/index.html`) | Renderização local via Chromium (`1366x854`) | Autoral (Próprio Repositório) | 20/10/2026 |
 
 ---
 
