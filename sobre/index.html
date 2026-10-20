@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-root="..">
+<html lang="pt-BR" data-theme="dark" data-root="..">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre e Metodologia | Barcelos Neto — Desenvolvimento Web</title>
-  <meta name="description" content="Conheça a filosofia de trabalho, competências técnicas em desenvolvimento front-end e princípios de qualidade de Barcelos Neto — Desenvolvedor Web.">
+  <title>Sobre &amp; Processo de Trabalho | Barcelos Neto — Desenvolvimento Web</title>
+  <meta name="description" content="Conheça a filosofia técnica, os padrões de qualidade e o método de desenvolvimento web de Barcelos Neto: código semântico, acessibilidade, transparência e foco em resultados.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/sobre/" data-page-path="sobre/">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/sobre/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Sobre e Metodologia | Barcelos Neto — Desenvolvimento Web">
-  <meta property="og:description" content="Desenvolvimento web focado em clareza da informação, acessibilidade, performance e código limpo.">
+  <meta property="og:site_name" content="Barcelos Neto — Desenvolvimento Web">
+  <meta property="og:title" content="Sobre &amp; Processo de Trabalho | Barcelos Neto — Desenvolvimento Web">
+  <meta property="og:description" content="Engenharia front-end orientada a negócios: código limpo, acessibilidade WCAG AA e transparência do início à publicação.">
   <meta property="og:url" content="https://barcelosneto.github.io/site-portfolio/sobre/">
-  <meta property="og:image" content="../assets/img/og-cover.svg">
+  <meta property="og:image" content="https://barcelosneto.github.io/site-portfolio/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
@@ -27,149 +35,135 @@
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="brand-logo" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
-        <span class="brand-logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-            <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
         </span>
-        <span class="brand-logo__text">
-          <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
-          <span class="brand-logo__sub">Barcelos Neto — Desenvolvedor Web</span>
+        <span class="brand__text">
+          <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+          <span class="brand__tagline">Estúdio Digital &amp; Front-End</span>
         </span>
       </a>
 
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="menu-principal" data-main-nav aria-label="Navegação principal">
-          <ul class="main-nav__list">
-            <li><a href="../index.html" class="main-nav__link">Início</a></li>
-            <li><a href="../portfolio/index.html" class="main-nav__link">Portfólio</a></li>
-            <li><a href="../servicos/index.html" class="main-nav__link">Serviços</a></li>
-            <li><a href="index.html" class="main-nav__link" aria-current="page">Sobre</a></li>
-            <li><a href="../contato/index.html" class="main-nav__link">Contato</a></li>
-          </ul>
-          <div class="main-nav__mobile-cta">
-            <a href="../contato/index.html" class="btn btn--primary">Solicitar orçamento</a>
-          </div>
-        </nav>
+      <nav class="nav" id="main-navigation" data-main-nav aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Início</a></li>
+          <li><a href="../portfolio/index.html" class="nav__link">Portfólio &amp; Demos</a></li>
+          <li><a href="../servicos/index.html" class="nav__link">Serviços</a></li>
+          <li><a href="./index.html" class="nav__link" aria-current="page">Sobre &amp; Processo</a></li>
+          <li><a href="../contato/index.html" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
 
-        <div class="header-actions">
-          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro ou escuro" title="Alternar tema">
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"/>
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-
-          <a href="../contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar orçamento</a>
-
-          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
+          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="../contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Orçamento</a>
+        <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <section class="page-hero" aria-labelledby="sobre-title">
-      <div class="container">
-        <span class="hero__eyebrow">Barcelos Neto — Desenvolvedor Web</span>
-        <h1 id="sobre-title">Engenharia Front-End com Foco Comercial</h1>
-        <p>
-          Construímos interfaces digitais sob a premissa de que um bom site comercial precisa ser rápido de carregar, simples de compreender e fácil de manter no longo prazo.
+    <section class="page-hero">
+      <div class="container page-hero__inner" data-reveal>
+        <span class="eyebrow">Visão Técnica &amp; Compromisso Ético</span>
+        <h1 class="page-hero__title">Sobre Barcelos Neto</h1>
+        <p class="page-hero__lead">
+          Desenvolvimento web com rigor artesanal: interfaces rápidas, acessíveis e honestas, projetadas para valorizar a reputação do seu negócio e facilitar a tomada de decisão do seu cliente.
         </p>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="apresentacao-heading">
+    <section class="section">
       <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
-          <div>
-            <span class="eyebrow">Identificação Profissional</span>
-            <h2 id="apresentacao-heading" style="margin-bottom: 1rem;">Barcelos Neto — Desenvolvedor Web</h2>
-            <p>
-              Com foco no desenvolvimento de sites institucionais, landing pages e vitrines digitais no Brasil, a atuação de <strong>Barcelos Neto — Desenvolvimento Web</strong> elimina complexidades desnecessárias de servidor quando o objetivo real do negócio é apresentar seus serviços com excelência e gerar conversas comerciais.
+        <div class="grid grid--2" style="align-items: start;">
+          <div data-reveal>
+            <span class="eyebrow">Filosofia de Trabalho</span>
+            <h2 class="section-title">Por que priorizo engenharia limpa e comunicação clara?</h2>
+            <p class="mb-4">
+              Muitos sites empresariais falham em dois extremos: ou utilizam templates genéricos e lentos que prejudicam a credibilidade da marca, ou escondem informações essenciais atrás de efeitos pesados que dificultam o uso no celular.
             </p>
-            <p>
-              Em vez de empilhar dezenas de bibliotecas pesadas ou plugins que tornam a navegação lenta no celular, utilizamos padrões abertos da web (HTML5 semântico, CSS3 modular e JavaScript moderno) para criar páginas enxutas, seguras e fáceis de hospedar.
+            <p class="mb-4">
+              Como desenvolvedor web (<strong data-config-identity>Barcelos Neto — Desenvolvedor Web</strong>), meu foco é unir <strong>design editorial contemporâneo</strong> e <strong>engenharia front-end sólida</strong>. Isso significa construir páginas onde cada título, botão e seção tem um propósito comercial claro, carregando instantaneamente em qualquer conexão.
             </p>
-            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-              <a href="https://github.com/barcelosneto" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                Ver perfil no GitHub (github.com/barcelosneto)
+            <p class="mb-6">
+              Acredito na transparência radical: sem promessas infladas, sem métricas inventadas e sem aprisionamento tecnológico. Você recebe um projeto bem documentado, de fácil manutenção e construído sobre padrões abertos da web.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-3);">
+              <a href="https://www.linkedin.com/in/barcelosneto" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+                Conectar no LinkedIn ↗
               </a>
-              <a href="../portfolio/index.html" class="btn btn--primary">
-                Explorar projetos demonstrativos
+              <a href="https://github.com/barcelosneto" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+                Ver Repositórios no GitHub ↗
               </a>
             </div>
           </div>
 
-          <div class="card">
-            <h3 class="card__title">Princípios que orientam cada entrega</h3>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.75;">
-              <li><strong>Honestidade funcional:</strong> nenhum botão ornamental ou formulário que simule envio sem confirmação real.</li>
-              <li><strong>Design centrado na leitura:</strong> tipografia fluida, contraste verificado (WCAG AA) e espaçamento generoso.</li>
-              <li><strong>Independência de plataforma:</strong> arquivos padrões que rodam em GitHub Pages ou qualquer servidor HTTP sem aprisionamento tecnológico.</li>
-              <li><strong>Foco no dispositivo móvel:</strong> a maior parte do tráfego comercial brasileiro ocorre pelo celular; por isso toda tela nasce mobile-first.</li>
+          <div class="card" data-reveal>
+            <h3 class="card__title">Checklist de Qualidade em Toda Entrega</h3>
+            <p class="card__desc">Cada projeto passa por verificação técnica antes de ir ao ar:</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--text-sm); color: var(--text-secondary);">
+              <li>✓ <strong>HTML5 Semântico:</strong> Estrutura lógica de landmarks (<code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>) e hierarquia única de <code>h1</code>.</li>
+              <li>✓ <strong>Acessibilidade (WCAG AA):</strong> Contraste verificado nos temas escuro e claro, foco visível para teclado e atributos ARIA corretos.</li>
+              <li>✓ <strong>Responsividade Mobile-First:</strong> Adaptação fluida de 375px (smartphones) até monitores widescreen.</li>
+              <li>✓ <strong>SEO Técnico Integrado:</strong> Meta tags descritivas, Open Graph, URLs canônicas, <code>sitemap.xml</code> e Schema.org JSON-LD.</li>
+              <li>✓ <strong>Código Portável:</strong> Compatível com GitHub Pages, Cloudflare Pages, Vercel, Netlify ou servidores tradicionais.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPETÊNCIAS TÉCNICAS -->
-    <section class="section section-alt" aria-labelledby="competencias-heading">
+    <section class="section section--alt">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Domínio Técnico</span>
-          <h2 id="competencias-heading">Competências aplicadas nos projetos</h2>
-          <p>
-            Conjunto de práticas modernas utilizadas na construção deste site e de todas as demonstrações do portfólio.
-          </p>
+        <div class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Etapas do Projeto</span>
+          <h2 class="section-title">Como trabalharemos juntos</h2>
+          <p class="section-subtitle">Um processo direto, sem jargões desnecessários, para que você acompanhe cada avanço com tranquilidade.</p>
         </div>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <h3 class="card__title">Arquitetura HTML5 &amp; SEO</h3>
-            <p class="card__body">
-              Marcação semântica rigorosa (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>), hierarquia lógica de títulos, dados estruturados JSON-LD, Open Graph e <code>sitemap.xml</code>.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">UI/UX &amp; CSS3 Responsivo</h3>
-            <p class="card__body">
-              Sistemas de design com Custom Properties (variáveis CSS), suporte nativo a tema claro e escuro, CSS Grid e Flexbox sem overflow horizontal de 320px a 1440px+.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">JavaScript Modular &amp; Acessível</h3>
-            <p class="card__body">
-              Interações rápidas sem dependência de frameworks pesados: filtros instantâneos, normalização de acentos, modais com controle de foco, tecla Escape e atributos ARIA corretos.
-            </p>
-          </article>
-        </div>
+        <ol class="process-steps">
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">01</div>
+            <h3 class="card__title">Alinhamento Inicial</h3>
+            <p class="card__desc">Entendimento do seu modelo de negócio, diferenciais, público-alvo e objetivos principais da página.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">02</div>
+            <h3 class="card__title">Estrutura &amp; Conteúdo</h3>
+            <p class="card__desc">Organização das seções, definição da hierarquia de argumentos e direção visual alinhada ao seu setor.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">03</div>
+            <h3 class="card__title">Desenvolvimento &amp; Revisão</h3>
+            <p class="card__desc">Construção do site com link de pré-visualização navegável para você testar no celular e no computador.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">04</div>
+            <h3 class="card__title">Publicação Final</h3>
+            <p class="card__desc">Checagem final de links, formulários, metadados de busca e entrega completa dos arquivos e publicação.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section" aria-labelledby="sobre-cta-heading">
-      <div class="container">
+    <section class="section">
+      <div class="container" data-reveal>
         <div class="cta-banner">
-          <h2 id="sobre-cta-heading">Vamos conversar sobre o próximo passo da sua presença digital?</h2>
-          <p>
-            Veja os projetos demonstrativos em funcionamento ou envie os detalhes da sua demanda pela página de contato.
-          </p>
+          <div>
+            <h2>Pronto para iniciar uma conversa técnica?</h2>
+            <p>Explore as demonstrações práticas ou envie uma mensagem detalhando o que sua empresa precisa.</p>
+          </div>
           <div class="cta-banner__actions">
-            <a href="../contato/index.html" class="btn btn--primary btn--lg">Solicitar orçamento</a>
-            <a href="../portfolio/index.html" class="btn btn--outline-light btn--lg">Conhecer projetos</a>
+            <a href="../contato/index.html" class="btn btn--primary btn--lg">Entrar em Contato</a>
+            <a href="../portfolio/index.html" class="btn btn--secondary btn--lg">Explorar Demos</a>
           </div>
         </div>
       </div>
@@ -180,55 +174,59 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="../index.html" class="brand-logo" style="color: #F8FAFC; margin-bottom: 0.85rem;">
-            <span class="brand-logo__mark" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-                <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <a href="../index.html" class="brand mb-4">
+            <span class="brand__mark" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
             </span>
-            <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+            <span class="brand__text">
+              <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+              <span class="brand__tagline" data-config-identity>Barcelos Neto — Desenvolvedor Web</span>
+            </span>
           </a>
-          <p>Sites profissionais que transformam visitas em oportunidades.</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">
+            Desenvolvimento web focado em clareza comercial, performance técnica, acessibilidade e conversão.
+          </p>
+          <div class="mt-4" data-social-list style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
         </div>
+
         <div>
-          <h3>Navegação</h3>
+          <h3 class="footer-title">Mapa do Site</h3>
           <ul class="footer-links">
-            <li><a href="../index.html">Página Inicial</a></li>
-            <li><a href="../portfolio/index.html">Portfólio &amp; Modelos</a></li>
-            <li><a href="../servicos/index.html">Serviços e Escopo</a></li>
-            <li><a href="index.html">Sobre e Metodologia</a></li>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../portfolio/index.html">Portfólio &amp; Demos</a></li>
+            <li><a href="../servicos/index.html">Serviços</a></li>
+            <li><a href="./index.html">Sobre &amp; Processo</a></li>
             <li><a href="../contato/index.html">Solicitar Orçamento</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Demos Navegáveis</h3>
+          <ul class="footer-links">
+            <li><a href="../demos/restaurante/index.html">Restaurante Sabor &amp; Brasa</a></li>
+            <li><a href="../demos/clinica/index.html">Clínica Vitae</a></li>
+            <li><a href="../demos/imobiliaria/index.html">Horizonte Prime Imóveis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contato &amp; Transparência</h3>
+          <ul class="footer-links">
+            <li><span class="text-muted">E-mail:</span> <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
             <li><a href="../privacidade/index.html">Política de Privacidade</a></li>
           </ul>
         </div>
-        <div>
-          <h3>Demonstrações</h3>
-          <ul class="footer-links">
-            <li><a href="../demos/restaurante/index.html">Demo: Restaurante Sabor &amp; Brasa</a></li>
-            <li><a href="../demos/clinica/index.html">Demo: Clínica Vitae</a></li>
-            <li><a href="../demos/imobiliaria/index.html">Demo: Horizonte Prime Imóveis</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contato Comercial</h3>
-          <ul class="footer-links">
-            <li>E-mail: <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
-            <li>Atendimento remoto para todo o Brasil</li>
-          </ul>
-          <div style="margin-top: 1rem;" data-social-list></div>
-        </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>. Todos os direitos reservados.</p>
-        <p><a href="../privacidade/index.html">Privacidade</a> &bull; <a href="../contato/index.html">Contato</a></p>
+        <p>Engenharia Front-End em HTML5, CSS3 e JavaScript Semântico.</p>
       </div>
     </div>
   </footer>
 
-  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página" title="Voltar ao topo">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="../assets/js/main.js"></script>

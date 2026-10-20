@@ -1,97 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-root=".">
+<html lang="pt-BR" data-theme="dark" data-root=".">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Não Encontrada (Erro 404) | Barcelos Neto — Desenvolvimento Web</title>
-  <meta name="description" content="A página solicitada não foi encontrada ou teve seu endereço alterado. Navegue para a página inicial ou acesse nosso portfólio.">
+  <title>Página Não Encontrada (404) | Barcelos Neto — Desenvolvimento Web</title>
+  <meta name="description" content="A página solicitada não foi encontrada. Volte para o início ou explore o portfólio e as demonstrações navegáveis.">
   <meta name="robots" content="noindex, follow">
 
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" data-rel-asset="assets/icons/favicon.svg">
-  <link rel="stylesheet" href="assets/css/base.css" data-rel-asset="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css" data-rel-asset="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages.css" data-rel-asset="assets/css/pages.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+  <link rel="manifest" href="./site.webmanifest">
 
-  <script src="config/site-config.js" data-rel-asset="config/site-config.js"></script>
-  <script src="assets/js/theme.js" data-rel-asset="assets/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
+
+  <script src="./config/site-config.js"></script>
+  <script src="./assets/js/theme.js"></script>
 </head>
 <body>
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-logo" data-base-link="" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
-        <span class="brand-logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-            <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <div class="container site-header__inner">
+      <a href="./index.html" class="brand" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
         </span>
-        <span class="brand-logo__text">
-          <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
-          <span class="brand-logo__sub">Barcelos Neto — Desenvolvedor Web</span>
+        <span class="brand__text">
+          <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+          <span class="brand__tagline">Estúdio Digital &amp; Front-End</span>
         </span>
       </a>
 
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="menu-principal" data-main-nav aria-label="Navegação principal">
-          <ul class="main-nav__list">
-            <li><a href="index.html" class="main-nav__link" data-base-link="">Início</a></li>
-            <li><a href="portfolio/index.html" class="main-nav__link" data-base-link="portfolio/index.html">Portfólio</a></li>
-            <li><a href="servicos/index.html" class="main-nav__link" data-base-link="servicos/index.html">Serviços</a></li>
-            <li><a href="sobre/index.html" class="main-nav__link" data-base-link="sobre/index.html">Sobre</a></li>
-            <li><a href="contato/index.html" class="main-nav__link" data-base-link="contato/index.html">Contato</a></li>
-          </ul>
-          <div class="main-nav__mobile-cta">
-            <a href="contato/index.html" class="btn btn--primary" data-base-link="contato/index.html">Solicitar orçamento</a>
-          </div>
-        </nav>
+      <nav class="nav" id="main-navigation" data-main-nav aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="./index.html" class="nav__link">Início</a></li>
+          <li><a href="./portfolio/index.html" class="nav__link">Portfólio &amp; Demos</a></li>
+          <li><a href="./servicos/index.html" class="nav__link">Serviços</a></li>
+          <li><a href="./sobre/index.html" class="nav__link">Sobre &amp; Processo</a></li>
+          <li><a href="./contato/index.html" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
 
-        <div class="header-actions">
-          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro ou escuro" title="Alternar tema">
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"/>
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-
-          <a href="contato/index.html" class="btn btn--primary btn--sm header-cta-desktop" data-base-link="contato/index.html">Solicitar orçamento</a>
-
-          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
+          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="./contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Orçamento</a>
+        <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <section class="section" style="padding-block: 5.5rem;" aria-labelledby="err-404-title">
-      <div class="container" style="max-width: 44rem; text-align: center;">
+    <section class="section">
+      <div class="container container--narrow" style="text-align: center; padding-block: var(--space-16);" data-reveal>
         <span class="eyebrow">Erro 404 • Rota Não Localizada</span>
-        <h1 id="err-404-title" style="margin-bottom: 1rem;">Não encontramos a página solicitada</h1>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-          O endereço digitado pode estar incorreto ou o conteúdo foi reorganizado. Utilize os atalhos abaixo para continuar navegando com segurança pelo site.
+        <h1 class="section-title" style="margin-top: var(--space-2);">Página não encontrada</h1>
+        <p class="section-subtitle" style="margin-inline: auto; margin-bottom: var(--space-8);">
+          O endereço que você tentou acessar não existe ou foi movido. Utilize os atalhos abaixo para continuar navegando pelo portfólio e pelas demonstrações interativas.
         </p>
-
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 3rem;">
-          <a href="index.html" class="btn btn--primary btn--lg" data-base-link="">Voltar para o início</a>
-          <a href="portfolio/index.html" class="btn btn--secondary btn--lg" data-base-link="portfolio/index.html">Ver projetos do portfólio</a>
-          <a href="contato/index.html" class="btn btn--secondary btn--lg" data-base-link="contato/index.html">Solicitar orçamento</a>
-        </div>
-
-        <div class="card" style="text-align: left;">
-          <h2 class="card__title">Páginas mais acessadas</h2>
-          <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.8;">
-            <li><a href="demos/restaurante/index.html" data-base-link="demos/restaurante/index.html">Demonstração: Restaurante Sabor &amp; Brasa</a></li>
-            <li><a href="demos/clinica/index.html" data-base-link="demos/clinica/index.html">Demonstração: Clínica Vitae</a></li>
-            <li><a href="demos/imobiliaria/index.html" data-base-link="demos/imobiliaria/index.html">Demonstração: Horizonte Prime Imóveis</a></li>
-            <li><a href="servicos/index.html" data-base-link="servicos/index.html">Catálogo de Serviços e Entregáveis</a></li>
-          </ul>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4);">
+          <a href="./index.html" class="btn btn--primary btn--lg">Voltar para o Início</a>
+          <a href="./portfolio/index.html" class="btn btn--secondary btn--lg">Explorar Portfólio &amp; Demos</a>
+          <a href="./contato/index.html" class="btn btn--ghost btn--lg">Solicitar Orçamento</a>
         </div>
       </div>
     </section>
@@ -99,31 +78,13 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="padding-top: 0;">
-        <p>&copy; 2026 <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>. Navegação de recuperação 404.</p>
-        <p>
-          <a href="index.html" data-base-link="">Início</a> &bull;
-          <a href="privacidade/index.html" data-base-link="privacidade/index.html">Privacidade</a> &bull;
-          <a href="contato/index.html" data-base-link="contato/index.html">Contato</a>
-        </p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>. Todos os direitos reservados.</p>
+        <p><a href="./privacidade/index.html">Política de Privacidade</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js" data-rel-asset="assets/js/main.js"></script>
-  <script>
-    // Se 404.html for servido pelo GitHub Pages sob um subdiretório e basePath estiver definido,
-    // ajusta automaticamente os links para a raiz configurada.
-    (function () {
-      var cfg = window.SITE_CONFIG || {};
-      if (cfg.basePath && cfg.basePath.trim() !== "") {
-        var base = cfg.basePath.replace(/\/+$/, "");
-        document.querySelectorAll("[data-base-link]").forEach(function (a) {
-          var target = a.getAttribute("data-base-link") || "index.html";
-          a.setAttribute("href", base + "/" + target.replace(/^\/+/, ""));
-        });
-      }
-    })();
-  </script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

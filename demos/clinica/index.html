@@ -1,320 +1,291 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-root="../..">
+<html lang="pt-BR" data-theme="dark" data-root="../..">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clínica Vitae | Saúde Integrada &amp; Bem-Estar (Projeto Demonstrativo)</title>
-  <meta name="description" content="Projeto demonstrativo de clínica multiprofissional: especialidades, equipe ilustrativa, orientações de atendimento e contato para agendamento.">
+  <title>Clínica Vitae (Demo de Portfólio) | Saúde Integrada &amp; Especialidades</title>
+  <meta name="description" content="Demonstração técnica de portfólio desenvolvida por Barcelos Neto — Desenvolvimento Web: página institucional para clínica médica e consultório com especialidades, jornada do paciente e FAQ.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/demos/clinica/" data-page-path="demos/clinica/">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/demos/clinica/">
 
-  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Barcelos Neto — Desenvolvimento Web">
+  <meta property="og:title" content="Clínica Vitae — Demonstração de Site para Área da Saúde">
+  <meta property="og:description" content="Projeto demonstrativo focado em acolhimento, clareza de informações médicas, acessibilidade e conversão.">
+  <meta property="og:url" content="https://barcelosneto.github.io/site-portfolio/demos/clinica/">
+  <meta property="og:image" content="https://barcelosneto.github.io/site-portfolio/assets/img/thumb-clinica.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+  <link rel="manifest" href="../../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../../assets/css/base.css">
   <link rel="stylesheet" href="../../assets/css/components.css">
   <link rel="stylesheet" href="../../assets/css/pages.css">
 
   <script src="../../config/site-config.js"></script>
+  <script src="../../assets/js/theme.js"></script>
 </head>
 <body class="theme-clinica">
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-  <!-- FAIXA DISCRETA DE DEMONSTRAÇÃO DE PORTFÓLIO -->
-  <aside class="demo-portfolio-bar" aria-label="Aviso de demonstração de portfólio">
-    <div class="demo-portfolio-bar__inner">
-      <span class="demo-portfolio-bar__badge">
-        ● Demonstração de portfólio — Projeto demonstrativo fictício (Clínica Vitae)
-      </span>
-      <div class="demo-portfolio-bar__links">
-        <a href="../../portfolio/index.html">&larr; Voltar ao portfólio</a>
-        <a href="../../contato/index.html?projeto=institucional&amp;assunto=Modelo%20Clinica">Solicitar site como este</a>
+  <!-- Barra Fixa Superior de Demonstração -->
+  <aside class="demo-banner" aria-label="Aviso de projeto demonstrativo">
+    <div class="container demo-banner__inner">
+      <div class="demo-banner__text">
+        <span class="demo-banner__badge">Demonstração de portfólio</span>
+        <span>Clínica, profissionais, registros e horários fictícios para demonstração de interface na área da saúde.</span>
+      </div>
+      <div class="demo-banner__actions">
+        <a href="../../portfolio/index.html" class="btn btn--secondary btn--sm" style="background:#1E293B; color:#F8FAFC; border-color:#334155;">← Voltar ao Portfólio</a>
+        <a href="../../contato/index.html?projeto=clinica" class="btn btn--primary btn--sm">Solicitar Site Similar</a>
+        <button type="button" class="btn btn--ghost btn--sm" style="color:#CBD5E1; border-color:#334155;" data-share-page>Copiar Link</button>
       </div>
     </div>
   </aside>
 
-  <!-- CABEÇALHO DA CLÍNICA -->
+  <!-- Header da Demo -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-logo__mark" style="background-color: #0F766E; border-color: #14B8A6;" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2.5">
-            <path d="M12 5v14M5 12h14"/>
-          </svg>
+    <div class="container site-header__inner">
+      <a href="#topo-clinica" class="brand">
+        <span class="brand__mark" style="background: linear-gradient(135deg, #0D9488, #14B8A6);" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="#FFFFFF" stroke-width="2.5"/></svg>
         </span>
-        <span class="brand-logo__text">
-          <span>Clínica Vitae</span>
-          <span class="brand-logo__sub">Projeto Demonstrativo</span>
+        <span class="brand__text">
+          <span class="brand__name">Clínica Vitae</span>
+          <span class="brand__tagline">Saúde Integrada • Demo</span>
         </span>
       </a>
 
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="menu-clinica" data-main-nav aria-label="Navegação da clínica">
-          <ul class="main-nav__list">
-            <li><a href="#especialidades" class="main-nav__link">Especialidades</a></li>
-            <li><a href="#equipe" class="main-nav__link">Corpo Clínico (Ilustrativo)</a></li>
-            <li><a href="#atendimento" class="main-nav__link">Atendimento</a></li>
-            <li><a href="#faq-clinica" class="main-nav__link">Dúvidas</a></li>
-          </ul>
-          <div class="main-nav__mobile-cta">
-            <a href="#agendamento" class="btn btn--primary">Solicitar agendamento</a>
-          </div>
-        </nav>
+      <nav class="nav" id="main-navigation" data-main-nav aria-label="Navegação da demonstração">
+        <ul class="nav__list">
+          <li><a href="#especialidades" class="nav__link">Especialidades</a></li>
+          <li><a href="#jornada" class="nav__link">Como Funciona</a></li>
+          <li><a href="#equipe" class="nav__link">Corpo Clínico</a></li>
+          <li><a href="#duvidas" class="nav__link">Dúvidas</a></li>
+          <li><a href="../../portfolio/index.html" class="nav__link">Voltar ao Portfólio</a></li>
+        </ul>
+      </nav>
 
-        <div class="header-actions">
-          <a href="#agendamento" class="btn btn--primary btn--sm header-cta-desktop">Solicitar agendamento</a>
-          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-clinica" aria-label="Abrir menu de navegação">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
+          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="#agendamento" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Agendamento</a>
+        <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <!-- HERO -->
-    <section class="clinica-hero" aria-labelledby="clinica-hero-title">
+    <!-- Hero da Clínica -->
+    <section class="hero-clinica" id="topo-clinica">
       <div class="container hero__grid">
-        <div>
-          <span class="badge badge--demo" style="margin-bottom: 1rem;">Projeto Demonstrativo • Instituição de Saúde Fictícia</span>
-          <h1 id="clinica-hero-title" style="margin-bottom: 1rem;">
-            Cuidado multiprofissional organizado com acolhimento e clareza
-          </h1>
-          <p style="font-size: 1.15rem; margin-bottom: 2rem;">
-            Demonstração de interface web para clínicas, consultórios e centros de bem-estar. Apresenta áreas de atuação, orientações prévias de consulta e canal direto para recepção.
+        <div data-reveal>
+          <span class="badge badge--demo mb-4">Projeto demonstrativo • Saúde &amp; Bem-Estar</span>
+          <h1 class="hero__title">Cuidado médico humanizado, preventivo e com hora marcada</h1>
+          <p class="hero__lead">
+            Na Clínica Vitae (fictícia), unimos escuta atenta, diagnóstico preciso e ambiente acolhedor para cuidar da sua saúde integral em todas as fases da vida.
           </p>
           <div class="hero__actions">
-            <a href="#especialidades" class="btn btn--primary btn--lg" style="background-color: #14B8A6; color: #042F2E;">Conhecer especialidades</a>
-            <a href="#agendamento" class="btn btn--outline-light btn--lg">Orientações de agendamento</a>
+            <a href="#especialidades" class="btn btn--primary btn--lg">Conhecer Especialidades</a>
+            <a href="#jornada" class="btn btn--secondary btn--lg" style="background: rgba(255,255,255,0.08); color: #F0FDFA; border-color: rgba(255,255,255,0.22);">Orientações ao Paciente</a>
           </div>
         </div>
 
-        <div>
-          <svg viewBox="0 0 520 320" width="100%" height="auto" role="img" aria-label="Ilustração institucional da Clínica Vitae">
-            <rect width="520" height="320" rx="18" fill="#0B3B36" stroke="#14B8A6" stroke-width="2"/>
-            <rect x="40" y="45" width="440" height="230" rx="12" fill="#F0FDFA"/>
-            <circle cx="135" cy="145" r="52" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
-            <path d="M135 118v54M108 145h54" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
-            <rect x="220" y="95" width="210" height="18" rx="6" fill="#0F766E"/>
-            <rect x="220" y="128" width="180" height="12" rx="4" fill="#475569"/>
-            <rect x="220" y="150" width="160" height="12" rx="4" fill="#64748B"/>
-            <rect x="220" y="185" width="130" height="32" rx="6" fill="#0D9488"/>
-          </svg>
+        <div data-reveal>
+          <img src="../../assets/img/thumb-clinica.svg" width="800" height="500" alt="Ilustração institucional da demonstração Clínica Vitae" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid rgba(45, 212, 191, 0.3);">
         </div>
       </div>
     </section>
 
-    <!-- AVISO ÉTICO E DE DEMONSTRAÇÃO -->
-    <section class="section" style="padding-bottom: 0;">
+    <!-- Especialidades Médicas -->
+    <section class="section" id="especialidades">
       <div class="container">
-        <div class="alert alert--info">
-          <strong>Aviso importante de demonstração e conformidade:</strong> A <em>Clínica Vitae</em> é uma marca fictícia criada exclusivamente para demonstração de design e engenharia front-end. Este site demonstrativo não realiza diagnósticos, não contém aconselhamento clínico e não inventa nomes de médicos ou números de conselho de classe (CRM/CRO/CRP).
-        </div>
-      </div>
-    </section>
-
-    <!-- ESPECIALIDADES -->
-    <section class="section" id="especialidades" aria-labelledby="esp-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Áreas de Atuação Ilustrativas</span>
-          <h2 id="esp-heading">Especialidades apresentadas com linguagem acessível</h2>
-          <p>
-            Estrutura pensada para que o paciente compreenda rapidamente qual especialidade procurar e como se preparar para o atendimento.
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Áreas de Atendimento (Ilustrativas)</span>
+          <h2 class="section-title">Especialidades Integradas</h2>
+          <p class="section-subtitle">
+            Estrutura clara para que o paciente encontre rapidamente o especialista adequado e compreenda quando agendar sua avaliação.
           </p>
         </div>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <h3 class="card__title">Clínica Geral &amp; Check-up Preventivo</h3>
-            <p class="card__body">
-              Avaliação global da saúde do adulto, acompanhamento de rotina e encaminhamento coordenado entre especialidades quando necessário.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Presencial (Ilustrativo)</span>
-            </div>
+        <div class="grid grid--3">
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Prevenção &amp; Check-up</span></div>
+            <h3 class="card__title">Clínica Médica Geral</h3>
+            <p class="card__desc">Avaliação global da saúde, acompanhamento de exames periódicos, controle de pressão arterial e orientação preventiva individualizada.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            </div>
-            <h3 class="card__title">Cardiologia &amp; Avaliação Funcional</h3>
-            <p class="card__body">
-              Consultas preventivas, avaliação para prática esportiva e acompanhamento de indicadores cardiovasculares em ambiente tranquilo.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Exames de Rotina</span>
-            </div>
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Saúde Cardiovascular</span></div>
+            <h3 class="card__title">Cardiologia Clínica</h3>
+            <p class="card__desc">Prevenção de fatores de risco, avaliação pré-operatória, liberação para atividades esportivas e acompanhamento contínuo.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            </div>
-            <h3 class="card__title">Nutrição Clínica &amp; Educação Alimentar</h3>
-            <p class="card__body">
-              Planejamento nutricional individualizado, adaptado à rotina de trabalho e às preferências culturais de cada paciente.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Acompanhamento</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            </div>
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Pele, Cabelos &amp; Unhas</span></div>
             <h3 class="card__title">Dermatologia Clínica</h3>
-            <p class="card__body">
-              Cuidados com a saúde da pele, prevenção solar e orientações dermatológicas baseadas em avaliação presencial.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Cuidado Preventivo</span>
-            </div>
+            <p class="card__desc">Diagnóstico e prevenção da saúde da pele, mapeamento de sinais, tratamento de dermatites, acne e protocolos clínicos seguros.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3 class="card__title">Psicologia &amp; Saúde Emocional</h3>
-            <p class="card__body">
-              Escuta qualificada em salas com isolamento acústico e privacidade para adolescentes, adultos e idosos.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Sigilo &amp; Acolhimento</span>
-            </div>
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Metabolismo &amp; Alimentação</span></div>
+            <h3 class="card__title">Nutrição Funcional</h3>
+            <p class="card__desc">Planos alimentares adaptados à rotina real do paciente, reeducação nutricional, suporte esportivo e controle metabólico.</p>
           </article>
 
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            </div>
-            <h3 class="card__title">Fisioterapia &amp; Reabilitação</h3>
-            <p class="card__body">
-              Sessões individuais focadas em mobilidade articular, ergonomia no trabalho e recuperação funcional assistida.
-            </p>
-            <div class="tag-list">
-              <span class="badge">Atendimento Individual</span>
-            </div>
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Movimento &amp; Postura</span></div>
+            <h3 class="card__title">Ortopedia &amp; Reabilitação</h3>
+            <p class="card__desc">Cuidado especializado para dores articulares, coluna, lesões esportivas e fortalecimento orientado à qualidade de vida.</p>
+          </article>
+
+          <article class="card card--interactive" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">Saúde Emocional</span></div>
+            <h3 class="card__title">Psicologia Clínica</h3>
+            <p class="card__desc">Atendimento ético e sigiloso para adultos e adolescentes, manejo de estresse, ansiedade e desenvolvimento de autonomia emocional.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- EQUIPE ILUSTRATIVA (SEM CREDENCIAIS FALSAS) -->
-    <section class="section section-alt" id="equipe" aria-labelledby="equipe-heading">
+    <!-- Jornada do Paciente em 4 Passos -->
+    <section class="section section--alt" id="jornada">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Estrutura de Apresentação de Equipe</span>
-          <h2 id="equipe-heading">Modelo de cartões para corpo clínico</h2>
-          <p>
-            Em projetos reais da área da saúde, cada cartão abaixo deve exibir o nome completo do profissional, sua especialidade registrada (RQE) e o número real de inscrição no respectivo conselho regional, conforme normas éticas de publicidade médica/odontológica.
-          </p>
+        <div class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Atendimento Descomplicado</span>
+          <h2 class="section-title">Como funciona a sua consulta</h2>
+          <p class="section-subtitle">Reduzimos a ansiedade e a burocracia com orientações transparentes antes mesmo de você chegar à recepção.</p>
         </div>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <span class="badge badge--demo" style="align-self: flex-start; margin-bottom: 0.75rem;">Espaço Demonstrativo 01</span>
-            <h3 class="card__title">Diretoria Técnica / Clínica Geral</h3>
-            <p class="card__body">
-              Espaço reservado para apresentação da formação acadêmica real, residência médica e linhas de cuidado do responsável técnico da instituição.
+        <ol class="process-steps">
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">01</div>
+            <h3 class="card__title">Escolha da Especialidade</h3>
+            <p class="card__desc">Identifique a área desejada ou solicite orientação da nossa recepção para triagem inicial.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">02</div>
+            <h3 class="card__title">Pré-Agendamento Rápido</h3>
+            <p class="card__desc">Informe sua disponibilidade de turno (manhã ou tarde) e se o atendimento será particular ou por reembolso.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">03</div>
+            <h3 class="card__title">Confirmação &amp; Preparo</h3>
+            <p class="card__desc">Receba lembrete com endereço, estacionamento e lista de exames anteriores que vale levar no dia.</p>
+          </li>
+          <li class="process-step" data-reveal>
+            <div class="process-step__num" aria-hidden="true">04</div>
+            <h3 class="card__title">Acolhimento &amp; Retorno</h3>
+            <p class="card__desc">Consulta pontual, tempo adequado de escuta e plano terapêutico explicado de forma clara.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Corpo Clínico Ilustrativo -->
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Equipe Multidisciplinar (Fictícia)</span>
+          <h2 class="section-title">Corpo Clínico Demonstrativo</h2>
+          <p class="section-subtitle">Todos os nomes e números de registro abaixo são meramente ilustrativos para demonstrar a estrutura visual de apresentação de profissionais.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card" data-reveal>
+            <span class="badge badge--demo mb-4" style="align-self: flex-start;">Perfil Ilustrativo</span>
+            <h3 class="card__title">Dra. Helena Vasconcelos</h3>
+            <p style="font-size: var(--text-xs); font-weight: 700; color: var(--brand-primary); margin-bottom: var(--space-3);">
+              Clínica Médica • Registro Ilustrativo CRM-00000
             </p>
-            <p class="form-help" style="margin-top: 1rem;">
-              <strong>Registro Profissional:</strong> <code>[CRM / RQE a preencher pelo cliente real]</code>
-            </p>
+            <p class="card__desc">Dedicação à medicina preventiva, check-up executivo e acompanhamento longitudinal de pacientes adultos e idosos.</p>
           </article>
 
-          <article class="card">
-            <span class="badge badge--demo" style="align-self: flex-start; margin-bottom: 0.75rem;">Espaço Demonstrativo 02</span>
-            <h3 class="card__title">Especialista em Cardiologia</h3>
-            <p class="card__body">
-              Espaço reservado para descrever a trajetória real do especialista, sociedades científicas de que participa e horários de atendimento.
+          <article class="card" data-reveal>
+            <span class="badge badge--demo mb-4" style="align-self: flex-start;">Perfil Ilustrativo</span>
+            <h3 class="card__title">Dr. Rafael Montenegro</h3>
+            <p style="font-size: var(--text-xs); font-weight: 700; color: var(--brand-primary); margin-bottom: var(--space-3);">
+              Cardiologia • Registro Ilustrativo CRM-00001
             </p>
-            <p class="form-help" style="margin-top: 1rem;">
-              <strong>Registro Profissional:</strong> <code>[CRM / RQE a preencher pelo cliente real]</code>
-            </p>
+            <p class="card__desc">Foco em prevenção cardiovascular, hipertensão arterial e avaliação cardiológica para praticantes de corrida e ciclismo.</p>
           </article>
 
-          <article class="card">
-            <span class="badge badge--demo" style="align-self: flex-start; margin-bottom: 0.75rem;">Espaço Demonstrativo 03</span>
-            <h3 class="card__title">Especialista em Nutrição Clínica</h3>
-            <p class="card__body">
-              Espaço reservado para apresentação profissional verificável, áreas de foco em nutrição e abordagem de acompanhamento nutricional.
+          <article class="card" data-reveal>
+            <span class="badge badge--demo mb-4" style="align-self: flex-start;">Perfil Ilustrativo</span>
+            <h3 class="card__title">Dra. Camila Albuquerque</h3>
+            <p style="font-size: var(--text-xs); font-weight: 700; color: var(--brand-primary); margin-bottom: var(--space-3);">
+              Dermatologia • Registro Ilustrativo CRM-00002
             </p>
-            <p class="form-help" style="margin-top: 1rem;">
-              <strong>Registro Profissional:</strong> <code>[CRN a preencher pelo cliente real]</code>
-            </p>
+            <p class="card__desc">Atuação em dermatologia clínica, saúde da barreira cutânea, prevenção oncológica e cuidados personalizados.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- INFORMAÇÕES DE ATENDIMENTO E AGENDAMENTO -->
-    <section class="section" id="atendimento" aria-labelledby="atendimento-heading">
-      <div class="container">
-        <div class="grid grid-2" id="agendamento">
-          <div class="card">
-            <h2 id="atendimento-heading" class="card__title">Como funciona o atendimento (Fluxo Ilustrativo)</h2>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.8;">
-              <li><strong>Horário da Recepção (Fictício):</strong> Segunda a sexta, das 7h30 às 19h; sábados das 8h às 12h.</li>
-              <li><strong>Modalidades:</strong> Atendimento particular e emissão de documentação para solicitação de reembolso junto a operadoras.</li>
-              <li><strong>Acessibilidade Física:</strong> Exemplo de seção informando rampas de acesso, elevadores e sanitários adaptados.</li>
-              <li><strong>Preparo para Consultas:</strong> Orientações claras sobre documentos pessoais e exames anteriores que o paciente deve levar.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h2 class="card__title">Agendamento Assistido via Recepção</h2>
-            <p class="card__body">
-              Este site demonstrativo não possui integração com prontuário eletrônico ou agenda médica em tempo real. O botão abaixo demonstra o encaminhamento direto do paciente para a recepção via WhatsApp configurável ou solicitação de site similar.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.25rem;">
-              <a href="#" class="btn btn--whatsapp" data-whatsapp-cta data-whatsapp-msg="Olá! Estou visualizando a demonstração da Clínica Vitae e gostaria de testar o fluxo de agendamento por WhatsApp.">
-                Agendar pelo WhatsApp (Demo)
-              </a>
-              <a href="../../contato/index.html?projeto=institucional&amp;assunto=Orcamento%20Site%20Clinica" class="btn btn--primary">
-                Solicitar orçamento para minha clínica
-              </a>
-            </div>
-            <p class="form-help" style="margin-top: 1rem;" data-whatsapp-notice></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ DA CLÍNICA -->
-    <section class="section section-alt" id="faq-clinica" aria-labelledby="faq-clin-heading">
-      <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">Dúvidas Frequentes</span>
-          <h2 id="faq-clin-heading">Perguntas comuns de pacientes (Exemplo Demonstrativo)</h2>
+    <!-- FAQ de Orientações Pré-Consulta -->
+    <section class="section section--alt" id="duvidas">
+      <div class="container container--narrow">
+        <div class="section-header section-header--center" data-reveal>
+          <span class="eyebrow">Orientações Úteis</span>
+          <h2 class="section-title">Dúvidas Frequentes dos Pacientes</h2>
         </div>
 
-        <div class="faq-list">
+        <div class="faq-list" data-reveal>
           <details class="faq-item">
-            <summary class="faq-question">
-              <span>Quais documentos devo levar na primeira consulta?</span>
-              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            <summary class="faq-summary">
+              <span>A clínica atende convênios ou trabalha com sistema de reembolso?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer">
-              <p>Recomendamos apresentar documento oficial com foto, lista atualizada de medicamentos de uso contínuo e resultados de exames laboratoriais ou de imagem realizados nos últimos 12 meses.</p>
+            <div class="faq-content">
+              <p><em>(Texto demonstrativo)</em> Realizamos atendimentos particulares e emitimos toda a documentação fiscal e relatório médico padronizado para solicitação de reembolso junto ao seu plano de saúde.</p>
             </div>
           </details>
 
           <details class="faq-item">
-            <summary class="faq-question">
-              <span>Como funciona a confirmação de horário agendado?</span>
-              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            <summary class="faq-summary">
+              <span>O que devo levar na minha primeira consulta?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer">
-              <p>Em uma operação real de clínica, a equipe de recepção envia uma mensagem de confirmação via WhatsApp com 24 horas de antecedência, informando endereço e orientações de chegada.</p>
+            <div class="faq-content">
+              <p>Recomendamos trazer documento com foto, lista de medicamentos de uso contínuo e resultados de exames laboratoriais ou de imagem realizados nos últimos 12 meses.</p>
             </div>
           </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>O prédio possui acessibilidade para cadeirantes e idosos?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-content">
+              <p>Sim. Estrutura planejada com rampas de acesso, elevadores amplos, sanitários adaptados e desembarque assistido na portaria principal.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA de Conversão para Médicos e Gestores de Clínicas -->
+    <section class="section" id="agendamento">
+      <div class="container" data-reveal>
+        <div class="cta-banner" style="background: linear-gradient(135deg, #041F1E 0%, #0A3835 100%);">
+          <div>
+            <h2>Precisa de um site ético, rápido e acolhedor para sua clínica ou consultório?</h2>
+            <p>Projetamos páginas para médicos, dentistas, psicólogos e clínicas multidisciplinares com foco em clareza e agendamento.</p>
+          </div>
+          <div class="cta-banner__actions">
+            <a href="../../contato/index.html?projeto=clinica&amp;assunto=Site%20para%20Cl%C3%ADnica%20ou%20Consult%C3%B3rio%20(inspirado%20na%20Demo%20Cl%C3%ADnica%20Vitae)" class="btn btn--primary btn--lg">Solicitar Orçamento para Área da Saúde</a>
+            <a href="../../portfolio/index.html" class="btn btn--secondary btn--lg">Voltar ao Portfólio</a>
+          </div>
         </div>
       </div>
     </section>
@@ -322,15 +293,16 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom" style="padding-top: 0;">
-        <p><strong>Clínica Vitae</strong> — Projeto Demonstrativo integrante do portfólio <a href="../../index.html">Barcelos Neto — Desenvolvimento Web</a>.</p>
-        <p>
-          <a href="../../portfolio/index.html">Voltar ao Portfólio</a> &bull;
-          <a href="../../contato/index.html">Solicitar Orçamento</a>
-        </p>
+      <div class="footer-bottom">
+        <p><strong>Aviso:</strong> <em>Clínica Vitae</em> é um <strong>Projeto demonstrativo</strong> fictício criado por <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>.</p>
+        <p><a href="../../portfolio/index.html">← Voltar ao Portfólio Principal</a> • <a href="../../contato/index.html?projeto=clinica">Solicitar Orçamento</a></p>
       </div>
     </div>
   </footer>
+
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <script src="../../assets/js/main.js"></script>
 </body>

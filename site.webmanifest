@@ -1,0 +1,16 @@
+{
+  "name": "Barcelos Neto — Desenvolvimento Web",
+  "short_name": "Barcelos Neto",
+  "description": "Desenvolvimento de sites institucionais, landing pages de alta conversão e demonstrações setoriais navegáveis.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#060913",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "./assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

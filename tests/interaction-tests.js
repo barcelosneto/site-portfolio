@@ -47,9 +47,9 @@ assert.strictEqual(cfg.basePath, "/site-portfolio", "basePath deve ser /site-por
 assert.strictEqual(cfg.socialLinks.github, "https://github.com/barcelosneto", "GitHub deve apontar para https://github.com/barcelosneto");
 assert.strictEqual(cfg.contact.email, "pedrobarcelos1980@gmail.com", "E-mail comercial deve ser pedrobarcelos1980@gmail.com");
 assert.strictEqual(cfg.contact.whatsappNumber, "", "WhatsApp (A confirmar) deve vir vazio para não inventar número");
-assert.strictEqual(cfg.socialLinks.linkedin, "", "LinkedIn (A confirmar) deve vir vazio até confirmação");
+assert.strictEqual(cfg.socialLinks.linkedin, "https://www.linkedin.com/in/barcelosneto", "LinkedIn deve apontar para https://www.linkedin.com/in/barcelosneto");
 assert.strictEqual(cfg.portfolioProjects.length, 6, "Deve conter 6 projetos demonstrativos/conceituais no catálogo");
-console.log(" [OK] Estrutura de config/site-config.js validada com os dados de Barcelos Neto");
+console.log(" [OK] Estrutura de config/site-config.js validada com os dados de Barcelos Neto (incluindo LinkedIn e GitHub)");
 
 // 3. Testar normalização de acentos e busca (mesmo algoritmo usado em portfolio.js e demo-restaurante.js)
 function normalizeText(str) {

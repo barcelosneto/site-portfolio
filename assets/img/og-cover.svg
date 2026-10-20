@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Barcelos Neto — Desenvolvimento Web | Sites profissionais que transformam visitas em oportunidades">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Barcelos Neto — Desenvolvimento Web | Engenharia Front-End, Sites Institucionais e Landing Pages de Alta Conversão">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1220"/>
-      <stop offset="60%" stop-color="#111C35"/>
-      <stop offset="100%" stop-color="#0F2942"/>
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="55%" stop-color="#0B1328"/>
+      <stop offset="100%" stop-color="#0A1E38"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2563EB"/>
-      <stop offset="100%" stop-color="#06B6D4"/>
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="1050" cy="120" r="240" fill="#2563EB" opacity="0.14"/>
-  <circle cx="950" cy="520" r="180" fill="#06B6D4" opacity="0.12"/>
-  <rect x="80" y="80" width="1040" height="470" rx="28" fill="#131E36" stroke="#263859" stroke-width="2"/>
-  <rect x="130" y="140" width="64" height="64" rx="14" fill="#0B1220" stroke="#2563EB" stroke-width="2"/>
-  <path d="M148 160L162 186L176 160" fill="none" stroke="url(#accent)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="215" y="182" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700">Barcelos Neto — Desenvolvimento Web</text>
-  <text x="130" y="285" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800">Sites profissionais que transformam</text>
-  <text x="130" y="350" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800">visitas em oportunidades</text>
-  <text x="130" y="425" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="26">Landing Pages • Sites Institucionais • Portfólios • Performance &amp; SEO Técnico</text>
-  <rect x="130" y="465" width="280" height="10" rx="5" fill="url(#accent)"/>
+  <circle cx="1020" cy="130" r="260" fill="#3B82F6" opacity="0.16"/>
+  <circle cx="940" cy="510" r="200" fill="#22D3EE" opacity="0.12"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#0E172C" stroke="#233559" stroke-width="2"/>
+  <rect x="128" y="132" width="64" height="64" rx="14" fill="#060913" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M146 152L160 178L174 152" fill="none" stroke="url(#accent)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="212" y="172" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="800">Barcelos Neto — Desenvolvimento Web</text>
+  <text x="128" y="278" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="800">Presença digital de alto impacto</text>
+  <text x="128" y="346" fill="#38BDF8" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="800">para negócios que buscam autoridade</text>
+  <text x="128" y="422" fill="#94A3B8" font-family="monospace" font-size="23">SITES INSTITUCIONAIS • LANDING PAGES • DEMOS NAVEGÁVEIS • SEO TÉCNICO</text>
+  <rect x="128" y="468" width="320" height="10" rx="5" fill="url(#accent)"/>
 </svg>

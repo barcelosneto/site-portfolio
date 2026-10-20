@@ -1,46 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Prévia do projeto demonstrativo Sabor &amp; Brasa">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Prévia do projeto demonstrativo Sabor &amp; Brasa — Gastronomia Autoral">
   <defs>
     <linearGradient id="rest-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1C1412"/>
-      <stop offset="100%" stop-color="#2D1B14"/>
+      <stop offset="0%" stop-color="#0E0907"/>
+      <stop offset="55%" stop-color="#1C120E"/>
+      <stop offset="100%" stop-color="#291710"/>
     </linearGradient>
-    <linearGradient id="rest-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D97706"/>
-      <stop offset="100%" stop-color="#F59E0B"/>
+    <linearGradient id="rest-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EA580C"/>
     </linearGradient>
+    <radialGradient id="rest-glow" cx="75%" cy="28%" r="48%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="800" height="500" fill="url(#rest-bg)"/>
-  <circle cx="660" cy="100" r="140" fill="#D97706" opacity="0.15"/>
-  <!-- Browser frame -->
-  <rect x="48" y="40" width="704" height="420" rx="16" fill="#241915" stroke="#442E24" stroke-width="2"/>
-  <rect x="48" y="40" width="704" height="40" rx="16" fill="#18100E"/>
-  <circle cx="76" cy="60" r="6" fill="#EF4444"/>
-  <circle cx="96" cy="60" r="6" fill="#F59E0B"/>
-  <circle cx="116" cy="60" r="6" fill="#10B981"/>
-  <!-- Mock Hero -->
-  <rect x="84" y="108" width="120" height="20" rx="10" fill="#452715"/>
-  <text x="144" y="122" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">GASTRONOMIA</text>
-  <text x="84" y="168" fill="#FEF3C7" font-family="Georgia, serif" font-size="34" font-weight="700">Sabor &amp; Brasa</text>
-  <text x="84" y="200" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="16">Cozinha autoral na brasa com cardápio interativo</text>
-  <rect x="84" y="226" width="148" height="38" rx="8" fill="url(#rest-accent)"/>
-  <text x="158" y="250" fill="#1C1412" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Explorar Cardápio</text>
-  <!-- Mock Dish Illustration -->
-  <circle cx="575" cy="215" r="92" fill="#2E201B" stroke="#D97706" stroke-width="3"/>
-  <circle cx="575" cy="215" r="70" fill="#1C1412"/>
-  <path d="M535 215 Q575 170 615 215 Q575 260 535 215Z" fill="#D97706"/>
-  <circle cx="560" cy="200" r="8" fill="#10B981"/>
-  <circle cx="595" cy="225" r="6" fill="#EF4444"/>
-  <!-- Mock Menu Cards -->
-  <rect x="84" y="310" width="195" height="115" rx="10" fill="#2E201B" stroke="#442E24"/>
-  <rect x="100" y="328" width="110" height="14" rx="4" fill="#FDE68A"/>
-  <rect x="100" y="352" width="155" height="10" rx="4" fill="#A8A29E"/>
-  <rect x="100" y="390" width="70" height="18" rx="4" fill="#D97706"/>
-  <rect x="302" y="310" width="195" height="115" rx="10" fill="#2E201B" stroke="#442E24"/>
-  <rect x="318" y="328" width="130" height="14" rx="4" fill="#FDE68A"/>
-  <rect x="318" y="352" width="150" height="10" rx="4" fill="#A8A29E"/>
-  <rect x="318" y="390" width="70" height="18" rx="4" fill="#D97706"/>
-  <rect x="520" y="310" width="195" height="115" rx="10" fill="#2E201B" stroke="#442E24"/>
-  <rect x="536" y="328" width="100" height="14" rx="4" fill="#FDE68A"/>
-  <rect x="536" y="352" width="145" height="10" rx="4" fill="#A8A29E"/>
-  <rect x="536" y="390" width="70" height="18" rx="4" fill="#D97706"/>
+  <rect width="800" height="500" fill="url(#rest-glow)"/>
+
+  <!-- Main Interface Canvas -->
+  <rect x="36" y="28" width="728" height="444" rx="16" fill="#160F0C" stroke="#3E271E" stroke-width="1.5"/>
+  <!-- Top Nav Mockup -->
+  <rect x="36" y="28" width="728" height="48" rx="16" fill="#120B09"/>
+  <line x1="36" y1="76" x2="764" y2="76" stroke="#2E1D16" stroke-width="1"/>
+  <circle cx="66" cy="52" r="10" fill="url(#rest-gold)"/>
+  <text x="86" y="57" fill="#FFFBEB" font-family="Georgia, serif" font-size="14" font-weight="700">Sabor &amp; Brasa</text>
+  <text x="480" y="56" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Cardápio   Galeria   Horários</text>
+  <rect x="652" y="39" width="88" height="26" rx="13" fill="url(#rest-gold)"/>
+  <text x="696" y="56" fill="#120B09" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">Reservar Mesa</text>
+
+  <!-- Editorial Hero Left -->
+  <rect x="68" y="104" width="146" height="22" rx="11" fill="#2B1911" stroke="#78350F"/>
+  <circle cx="82" cy="115" r="3.5" fill="#F59E0B"/>
+  <text x="146" y="119" fill="#FBBF24" font-family="monospace" font-size="9.5" font-weight="700" text-anchor="middle">PARRILLA &amp; FOGO DE CHÃO</text>
+
+  <text x="68" y="164" fill="#FFFBEB" font-family="Georgia, serif" font-size="34" font-weight="700">Cortes nobres &amp;</text>
+  <text x="68" y="202" fill="#F59E0B" font-family="Georgia, serif" font-size="34" font-weight="700">cozinha de brasa.</text>
+  <text x="68" y="232" fill="#A8A29E" font-family="system-ui, sans-serif" font-size="13">Cardápio digital filtrável por categoria, restrições</text>
+  <text x="68" y="250" fill="#A8A29E" font-family="system-ui, sans-serif" font-size="13">alimentares e busca instantânea de pratos.</text>
+
+  <rect x="68" y="270" width="136" height="36" rx="8" fill="url(#rest-gold)"/>
+  <text x="136" y="293" fill="#120B09" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">Explorar Cardápio</text>
+  <rect x="214" y="270" width="118" height="36" rx="8" fill="#211510" stroke="#442C22"/>
+  <text x="273" y="293" fill="#FDE68A" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" text-anchor="middle">Galeria Lightbox</text>
+
+  <!-- Featured Dish Artwork Right -->
+  <rect x="470" y="98" width="262" height="208" rx="14" fill="#1E130F" stroke="#452A1E"/>
+  <circle cx="601" cy="192" r="68" fill="#120B09" stroke="#F59E0B" stroke-width="2"/>
+  <circle cx="601" cy="192" r="54" fill="#241611"/>
+  <path d="M565 192 Q601 154 638 192 Q601 230 565 192Z" fill="url(#rest-gold)"/>
+  <path d="M578 184 L592 202 M596 178 L610 198 M614 182 L624 196" stroke="#451A03" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="576" cy="172" r="6" fill="#10B981"/>
+  <circle cx="624" cy="206" r="5" fill="#EF4444"/>
+  <!-- Floating Rating Pill -->
+  <rect x="488" y="264" width="154" height="28" rx="8" fill="#120B09" stroke="#78350F"/>
+  <text x="565" y="282" fill="#FBBF24" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">★ Bife Ancho • R$ 118</text>
+
+  <!-- Interactive Menu Filter Strip & Cards -->
+  <rect x="68" y="330" width="664" height="118" rx="12" fill="#1D130F" stroke="#36221A"/>
+  <rect x="86" y="346" width="68" height="22" rx="11" fill="#F59E0B"/>
+  <text x="120" y="361" fill="#120B09" font-family="system-ui, sans-serif" font-size="10" font-weight="800" text-anchor="middle">Todos (8)</text>
+  <rect x="162" y="346" width="86" height="22" rx="11" fill="#291B15"/>
+  <text x="205" y="361" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Na Brasa</text>
+  <rect x="256" y="346" width="86" height="22" rx="11" fill="#291B15"/>
+  <text x="299" y="361" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Sem Glúten</text>
+
+  <!-- Mini Dish Cards -->
+  <rect x="86" y="380" width="200" height="54" rx="8" fill="#140D0A" stroke="#2E1D16"/>
+  <text x="98" y="402" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Burrata Defumada</text>
+  <text x="98" y="420" fill="#F59E0B" font-family="monospace" font-size="10" font-weight="700">R$ 58 • Vegetariano</text>
+
+  <rect x="300" y="380" width="200" height="54" rx="8" fill="#140D0A" stroke="#2E1D16"/>
+  <text x="312" y="402" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Polvo Grelhado na Brasa</text>
+  <text x="312" y="420" fill="#F59E0B" font-family="monospace" font-size="10" font-weight="700">R$ 134 • Sem Glúten</text>
+
+  <rect x="514" y="380" width="200" height="54" rx="8" fill="#140D0A" stroke="#2E1D16"/>
+  <text x="526" y="402" fill="#FEF3C7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Risoto de Cogumelos</text>
+  <text x="526" y="420" fill="#F59E0B" font-family="monospace" font-size="10" font-weight="700">R$ 86 • Vegano</text>
 </svg>

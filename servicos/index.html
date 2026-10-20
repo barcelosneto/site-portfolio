@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-root="..">
+<html lang="pt-BR" data-theme="dark" data-root="..">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços de Desenvolvimento Web | Barcelos Neto — Desenvolvimento Web</title>
-  <meta name="description" content="Conheça o escopo, entregáveis e diferenciais de nossos serviços: Landing Pages, Sites Institucionais, Portfólios Profissionais e Manutenção Web.">
+  <meta name="description" content="Conheça os serviços de criação de sites institucionais, landing pages de alta conversão, páginas para negócios locais, portfólios e otimização de performance e SEO técnico.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/servicos/" data-page-path="servicos/">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/servicos/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Barcelos Neto — Desenvolvimento Web">
   <meta property="og:title" content="Serviços de Desenvolvimento Web | Barcelos Neto — Desenvolvimento Web">
-  <meta property="og:description" content="Landing pages, sites institucionais, portfólios e otimização técnica com foco em performance e acessibilidade.">
+  <meta property="og:description" content="Sites institucionais, landing pages, páginas para negócios locais e otimização de performance e SEO técnico.">
   <meta property="og:url" content="https://barcelosneto.github.io/site-portfolio/servicos/">
-  <meta property="og:image" content="../assets/img/og-cover.svg">
+  <meta property="og:image" content="https://barcelosneto.github.io/site-portfolio/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
@@ -27,204 +35,237 @@
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="brand-logo" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
-        <span class="brand-logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-            <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
         </span>
-        <span class="brand-logo__text">
-          <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
-          <span class="brand-logo__sub">Barcelos Neto — Desenvolvedor Web</span>
+        <span class="brand__text">
+          <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+          <span class="brand__tagline">Estúdio Digital &amp; Front-End</span>
         </span>
       </a>
 
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="menu-principal" data-main-nav aria-label="Navegação principal">
-          <ul class="main-nav__list">
-            <li><a href="../index.html" class="main-nav__link">Início</a></li>
-            <li><a href="../portfolio/index.html" class="main-nav__link">Portfólio</a></li>
-            <li><a href="index.html" class="main-nav__link" aria-current="page">Serviços</a></li>
-            <li><a href="../sobre/index.html" class="main-nav__link">Sobre</a></li>
-            <li><a href="../contato/index.html" class="main-nav__link">Contato</a></li>
-          </ul>
-          <div class="main-nav__mobile-cta">
-            <a href="../contato/index.html" class="btn btn--primary">Solicitar orçamento</a>
-          </div>
-        </nav>
+      <nav class="nav" id="main-navigation" data-main-nav aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Início</a></li>
+          <li><a href="../portfolio/index.html" class="nav__link">Portfólio &amp; Demos</a></li>
+          <li><a href="./index.html" class="nav__link" aria-current="page">Serviços</a></li>
+          <li><a href="../sobre/index.html" class="nav__link">Sobre &amp; Processo</a></li>
+          <li><a href="../contato/index.html" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
 
-        <div class="header-actions">
-          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro ou escuro" title="Alternar tema">
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"/>
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-
-          <a href="../contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar orçamento</a>
-
-          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
+          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="../contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Orçamento</a>
+        <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <section class="page-hero" aria-labelledby="servicos-title">
-      <div class="container">
-        <span class="hero__eyebrow">Escopo &amp; Entregáveis</span>
-        <h1 id="servicos-title">Serviços de Desenvolvimento Web Front-End</h1>
-        <p>
-          Trabalhamos com escopo fechado e transparente, entregando código limpo, sem promessas irreais e com total independência tecnológica para o cliente.
+    <section class="page-hero">
+      <div class="container page-hero__inner" data-reveal>
+        <span class="eyebrow">Soluções &amp; Entregáveis de Engenharia</span>
+        <h1 class="page-hero__title">Serviços de Desenvolvimento Web</h1>
+        <p class="page-hero__lead">
+          Escopos claros e sob medida para empresas, negócios locais e profissionais liberais que buscam presença digital rápida, acessível e orientada a resultados reais.
         </p>
       </div>
     </section>
 
-    <!-- 1. LANDING PAGES -->
-    <section class="section" id="landing-pages" aria-labelledby="srv-lp-title">
+    <!-- Detalhamento dos Serviços -->
+    <section class="section">
       <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
-          <div>
-            <span class="eyebrow">01 • Foco em Conversão</span>
-            <h2 id="srv-lp-title" style="margin-bottom: 1rem;">Landing Pages de Apresentação e Captura</h2>
-            <p>
-              Ideal para empresas ou profissionais que precisam divulgar um serviço específico, captar orçamentos qualificados a partir de campanhas de busca ou substituir páginas lentas por uma experiência ágil no celular.
+        <div class="grid grid--2">
+          <!-- 1. Sites Institucionais -->
+          <article class="card card--interactive" id="institucional" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">01 • Autoridade &amp; Reputação</span></div>
+            <h2 class="card__title">Sites Institucionais</h2>
+            <p class="card__desc">
+              Para empresas, consultorias e escritórios que precisam consolidar credibilidade no mercado, apresentar diferenciais competitivos e facilitar o contato comercial.
             </p>
-            <p>
-              A estrutura é desenhada para guiar a leitura em uma única página lógica: proposta de valor imediata, detalhamento de benefícios, demonstração visual ou cardápio/catálogo interativo, resolução de objeções (FAQ) e chamada clara para contato.
-            </p>
-            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-              <a href="../contato/index.html?projeto=landing-page" class="btn btn--primary">Solicitar orçamento de Landing Page</a>
-              <a href="../demos/restaurante/index.html" class="btn btn--secondary">Ver exemplo prático (Restaurante)</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Entregáveis inclusos no escopo</h3>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.7;">
-              <li>Página responsiva mobile-first (testada de 320px a 1440px+)</li>
-              <li>Seções customizadas: Hero, Benefícios, Catálogo/Serviços, FAQ e Contato</li>
-              <li>Integração de botões de ação para WhatsApp configurável e e-mail</li>
-              <li>Metadados completos de SEO local e Open Graph para compartilhamento</li>
-              <li>Arquivos estáticos prontos para publicação imediata em GitHub Pages ou servidor web</li>
+            <ul class="tag-list">
+              <li class="tag">Múltiplas Páginas</li>
+              <li class="tag">SEO Técnico</li>
+              <li class="tag">Identidade Sólida</li>
+              <li class="tag">Responsivo</li>
             </ul>
-          </div>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-4);">
+              <strong>Entregáveis inclusos:</strong> Home estratégica, páginas de Serviços, Sobre, Contato com validação, Política de Privacidade e configuração de metadados Open Graph.
+            </p>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=institucional" class="btn btn--primary btn--sm">Solicitar Orçamento Institucional</a>
+            </div>
+          </article>
+
+          <!-- 2. Landing Pages -->
+          <article class="card card--interactive" id="landing-pages" data-reveal>
+            <div class="card__meta"><span class="badge badge--accent">02 • Conversão &amp; Campanhas</span></div>
+            <h2 class="card__title">Landing Pages de Alta Conversão</h2>
+            <p class="card__desc">
+              Páginas de destino enxutas e velozes, desenhadas para campanhas de tráfego pago (Google Ads / Meta Ads), lançamento de serviços ou captação qualificada de leads.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Copy Estruturada</li>
+              <li class="tag">Carregamento Rápido</li>
+              <li class="tag">CTAs Diretos</li>
+              <li class="tag">FAQ Integrado</li>
+            </ul>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-4);">
+              <strong>Entregáveis inclusos:</strong> Hero com proposta de valor clara, blocos de benefícios, quebra de objeções (FAQ), formulário validado e otimização de performance.
+            </p>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=landing-page" class="btn btn--primary btn--sm">Solicitar Orçamento de Landing Page</a>
+            </div>
+          </article>
+
+          <!-- 3. Páginas para Negócios Locais -->
+          <article class="card card--interactive" id="negocios-locais" data-reveal>
+            <div class="card__meta"><span class="badge badge--brand">03 • Presença Setorial</span></div>
+            <h2 class="card__title">Páginas para Negócios Locais</h2>
+            <p class="card__desc">
+              Soluções pensadas para restaurantes, clínicas médicas, consultórios, imobiliárias e comércios que precisam ser encontrados na região e atender clientes pelo celular.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Cardápios &amp; Catálogos</li>
+              <li class="tag">Especialidades</li>
+              <li class="tag">Horários &amp; Endereço</li>
+              <li class="tag">Schema Local</li>
+            </ul>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-4);">
+              <strong>Exemplos práticos no portfólio:</strong> <a href="../demos/restaurante/index.html">Demo Restaurante</a>, <a href="../demos/clinica/index.html">Demo Clínica</a> e <a href="../demos/imobiliaria/index.html">Demo Imobiliária</a>.
+            </p>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=negocio-local" class="btn btn--primary btn--sm">Solicitar Orçamento para Negócio Local</a>
+            </div>
+          </article>
+
+          <!-- 4. Portfólios Profissionais -->
+          <article class="card card--interactive" id="portfolios" data-reveal>
+            <div class="card__meta"><span class="badge badge--neutral">04 • Marca Pessoal</span></div>
+            <h2 class="card__title">Portfólios Profissionais</h2>
+            <p class="card__desc">
+              Para arquitetos, engenheiros, designers, consultores e especialistas independentes que desejam expor seu acervo técnico de forma organizada e elegante.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Galeria Filtrável</li>
+              <li class="tag">Estudos de Caso</li>
+              <li class="tag">Biografia &amp; Processo</li>
+              <li class="tag">Contato Rápido</li>
+            </ul>
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-bottom: var(--space-4);">
+              <strong>Entregáveis inclusos:</strong> Catálogo de projetos com filtros por categoria e busca instantânea, apresentação profissional e canais diretos de contratação.
+            </p>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=portfolio" class="btn btn--primary btn--sm">Solicitar Orçamento de Portfólio</a>
+            </div>
+          </article>
+
+          <!-- 5. Reformulação / Redesign -->
+          <article class="card card--interactive" id="redesign" data-reveal>
+            <div class="card__meta"><span class="badge badge--accent">05 • Modernização</span></div>
+            <h2 class="card__title">Reformulação Visual e Estrutural</h2>
+            <p class="card__desc">
+              Seu site atual parece datado, não se adapta bem ao celular ou demora para carregar? Reconstruímos a interface com código moderno preservando a essência da sua marca.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">UI/UX Moderno</li>
+              <li class="tag">Correção Mobile</li>
+              <li class="tag">Acessibilidade AA</li>
+            </ul>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=redesign" class="btn btn--primary btn--sm">Avaliar Reformulação</a>
+            </div>
+          </article>
+
+          <!-- 6. Performance e SEO Técnico -->
+          <article class="card card--interactive" id="seo-performance" data-reveal>
+            <div class="card__meta"><span class="badge badge--neutral">06 • Qualidade Técnica</span></div>
+            <h2 class="card__title">Otimização de Performance e SEO Técnico</h2>
+            <p class="card__desc">
+              Ajustes estruturais em sites estáticos para melhorar tempo de carregamento, semântica de cabeçalhos, dados estruturados (Schema.org), acessibilidade e indexação.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Core Web Vitals</li>
+              <li class="tag">JSON-LD</li>
+              <li class="tag">Sitemap &amp; Robots</li>
+            </ul>
+            <div class="card__footer">
+              <a href="../contato/index.html?projeto=seo-performance" class="btn btn--primary btn--sm">Solicitar Diagnóstico Técnico</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 2. SITES INSTITUCIONAIS -->
-    <section class="section section-alt" id="institucional" aria-labelledby="srv-inst-title">
+    <!-- Tabela Comparativa de Escopos -->
+    <section class="section section--alt">
       <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
-          <div>
-            <span class="eyebrow">02 • Presença Corporativa</span>
-            <h2 id="srv-inst-title" style="margin-bottom: 1rem;">Sites Institucionais Multipágina</h2>
-            <p>
-              Recomendado para clínicas, consultorias, escritórios e empresas que necessitam organizar múltiplas frentes de atendimento em páginas dedicadas, transmitindo solidez e governança.
-            </p>
-            <p>
-              Diferente de sistemas pesados que exigem atualizações semanais de plugins, um site institucional estático garante estabilidade contínua, carregamento instantâneo entre subpáginas e conformidade técnica de acessibilidade.
-            </p>
-            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-              <a href="../contato/index.html?projeto=institucional" class="btn btn--primary">Solicitar orçamento Institucional</a>
-              <a href="../demos/clinica/index.html" class="btn btn--secondary">Ver exemplo prático (Clínica)</a>
-            </div>
-          </div>
+        <div class="section-header" data-reveal>
+          <span class="eyebrow">Comparativo Objetivo</span>
+          <h2 class="section-title">Qual formato é o ideal para o seu momento?</h2>
+          <p class="section-subtitle">Compare as características principais de cada modalidade antes de solicitar sua proposta.</p>
+        </div>
 
-          <div class="card">
-            <h3 class="card__title">Entregáveis inclusos no escopo</h3>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.7;">
-              <li>Arquitetura multipágina (Início, Serviços/Especialidades, Sobre, Contato, Privacidade e 404)</li>
-              <li>Cabeçalho e menu mobile acessível com suporte integral a teclado</li>
-              <li>Formulário de contato validado no cliente com encaminhamento transparente</li>
-              <li>Mapa do site (<code>sitemap.xml</code>) e diretrizes de indexação (<code>robots.txt</code>)</li>
-              <li>Arquivo central de configuração para fácil atualização de contatos</li>
-            </ul>
-          </div>
+        <div class="table-wrap" data-reveal>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Critério / Recurso</th>
+                <th scope="col">Landing Page</th>
+                <th scope="col">Site para Negócio Local</th>
+                <th scope="col">Site Institucional Completo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Objetivo Principal</strong></td>
+                <td>Conversão rápida de campanha ou oferta única</td>
+                <td>Apresentar catálogo/cardápio, endereço e captar reservas/agendamentos</td>
+                <td>Posicionamento de marca, detalhamento de serviços e autoridade corporativa</td>
+              </tr>
+              <tr>
+                <td><strong>Estrutura</strong></td>
+                <td>Página única estratégica dividida em seções</td>
+                <td>Página robusta com filtros interativos ou até 3 páginas</td>
+                <td>Arquitetura multipágina completa (5 a 8 páginas interligadas)</td>
+              </tr>
+              <tr>
+                <td><strong>Recursos Interativos</strong></td>
+                <td>Acordeão de FAQ, CTAs diretos e formulário validado</td>
+                <td>Filtros de busca, cardápio/catálogo, lightbox ou modal de detalhes</td>
+                <td>Filtro de portfólio/cases, tabelas comparativas e múltiplos pontos de conversão</td>
+              </tr>
+              <tr>
+                <td><strong>SEO Técnico &amp; Mobile</strong></td>
+                <td>Incluso (100% responsivo)</td>
+                <td>Incluso + Dados estruturados locais</td>
+                <td>Incluso + Sitemap, Schema completo e arquitetura semântica avançada</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <!-- 3. PORTFÓLIOS E CATÁLOGOS -->
-    <section class="section" id="portfolios" aria-labelledby="srv-port-title">
-      <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
+    <!-- CTA -->
+    <section class="section">
+      <div class="container" data-reveal>
+        <div class="cta-banner">
           <div>
-            <span class="eyebrow">03 • Vitrines Interativas</span>
-            <h2 id="srv-port-title" style="margin-bottom: 1rem;">Portfólios Profissionais e Catálogos Filtráveis</h2>
-            <p>
-              Projetado para imobiliárias boutique, arquitetos, engenheiros, designers e estúdios que precisam exibir dezenas de itens ou projetos com filtros rápidos por categoria, localização ou especificações técnicas.
-            </p>
-            <p>
-              Toda a filtragem e pesquisa textual ocorre diretamente no navegador do visitante (client-side), proporcionando resposta imediata sem depender de banco de dados externo.
-            </p>
-            <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-              <a href="../contato/index.html?projeto=portfolio" class="btn btn--primary">Solicitar orçamento de Portfólio/Catálogo</a>
-              <a href="../demos/imobiliaria/index.html" class="btn btn--secondary">Ver exemplo prático (Imobiliária)</a>
-            </div>
+            <h2>Em dúvida sobre qual formato escolher?</h2>
+            <p>Conte-me sobre o seu negócio na página de contato e eu recomendarei a estrutura mais eficiente para o seu objetivo.</p>
           </div>
-
-          <div class="card">
-            <h3 class="card__title">Entregáveis inclusos no escopo</h3>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.7;">
-              <li>Grade de projetos ou produtos com filtros combinados e busca sem diferenciar acentos</li>
-              <li>Modais acessíveis de ficha técnica ou lightbox de galeria de imagens</li>
-              <li>Tratamento amigável para buscas sem resultado e botão de limpeza rápida</li>
-              <li>Otimização de gráficos em SVG/WebP com carregamento preguiçoso (lazy loading)</li>
-            </ul>
+          <div class="cta-banner__actions">
+            <a href="../contato/index.html" class="btn btn--primary btn--lg">Falar sobre meu projeto</a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. MANUTENÇÃO E EVOLUÇÃO -->
-    <section class="section section-alt" id="manutencao" aria-labelledby="srv-manut-title">
-      <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
-          <div>
-            <span class="eyebrow">04 • Sustentação e Refinamento</span>
-            <h2 id="srv-manut-title" style="margin-bottom: 1rem;">Manutenção, Acessibilidade e Atualizações</h2>
-            <p>
-              Já possui um site estático ou página institucional e precisa atualizar informações, corrigir falhas de visualização em celulares, adequar o contraste de cores para acessibilidade ou preparar o projeto para publicação no GitHub Pages?
-            </p>
-            <p>
-              Realizamos diagnósticos pontuais ou pacotes de evolução técnica sobre o código existente.
-            </p>
-            <div style="margin-top: 1.5rem;">
-              <a href="../contato/index.html?projeto=manutencao" class="btn btn--primary">Solicitar análise de manutenção</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 class="card__title">Atividades cobertas na manutenção</h3>
-            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.7;">
-              <li>Inclusão de novas seções, páginas de serviços ou itens de catálogo</li>
-              <li>Correção de overflow horizontal e quebras de layout em telas pequenas</li>
-              <li>Adequação semântica (headings, labels de formulário, foco de teclado e contraste WCAG AA)</li>
-              <li>Padronização de caminhos relativos para funcionamento em subdiretórios</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRANSPARÊNCIA DE ESCOPO -->
-    <section class="section" aria-labelledby="transparencia-heading">
-      <div class="container">
-        <div class="alert alert--info" style="padding: 2rem;">
-          <h2 id="transparencia-heading" style="font-size: 1.35rem; margin-bottom: 0.75rem;">Compromisso de transparência técnica sobre entregas estáticas</h2>
-          <p>
-            Nossos projetos são desenvolvidos com foco em <strong>arquitetura front-end estática de alta durabilidade</strong>. Não comercializamos nem prometemos sistemas que dependam de servidores PHP/WordPress ativos (como painel <code>/wp-admin</code>), processamento de pagamentos com cartão diretamente no site, área de membros com login/banco de dados ou agendamento médico em tempo real sem integração externa dedicada. Sempre que seu fluxo exigir contato, utilizamos alternativas diretas, claras e auditáveis como redirecionamento contextual para WhatsApp e e-mail.
-          </p>
         </div>
       </div>
     </section>
@@ -234,55 +275,59 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="../index.html" class="brand-logo" style="color: #F8FAFC; margin-bottom: 0.85rem;">
-            <span class="brand-logo__mark" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-                <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <a href="../index.html" class="brand mb-4">
+            <span class="brand__mark" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
             </span>
-            <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+            <span class="brand__text">
+              <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+              <span class="brand__tagline" data-config-identity>Barcelos Neto — Desenvolvedor Web</span>
+            </span>
           </a>
-          <p>Sites profissionais que transformam visitas em oportunidades.</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">
+            Desenvolvimento web focado em clareza comercial, performance técnica, acessibilidade e conversão.
+          </p>
+          <div class="mt-4" data-social-list style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
         </div>
+
         <div>
-          <h3>Navegação</h3>
+          <h3 class="footer-title">Mapa do Site</h3>
           <ul class="footer-links">
-            <li><a href="../index.html">Página Inicial</a></li>
-            <li><a href="../portfolio/index.html">Portfólio &amp; Modelos</a></li>
-            <li><a href="index.html">Serviços e Escopo</a></li>
-            <li><a href="../sobre/index.html">Sobre e Metodologia</a></li>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../portfolio/index.html">Portfólio &amp; Demos</a></li>
+            <li><a href="./index.html">Serviços</a></li>
+            <li><a href="../sobre/index.html">Sobre &amp; Processo</a></li>
             <li><a href="../contato/index.html">Solicitar Orçamento</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Demos Navegáveis</h3>
+          <ul class="footer-links">
+            <li><a href="../demos/restaurante/index.html">Restaurante Sabor &amp; Brasa</a></li>
+            <li><a href="../demos/clinica/index.html">Clínica Vitae</a></li>
+            <li><a href="../demos/imobiliaria/index.html">Horizonte Prime Imóveis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contato &amp; Transparência</h3>
+          <ul class="footer-links">
+            <li><span class="text-muted">E-mail:</span> <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
             <li><a href="../privacidade/index.html">Política de Privacidade</a></li>
           </ul>
         </div>
-        <div>
-          <h3>Demonstrações</h3>
-          <ul class="footer-links">
-            <li><a href="../demos/restaurante/index.html">Demo: Restaurante Sabor &amp; Brasa</a></li>
-            <li><a href="../demos/clinica/index.html">Demo: Clínica Vitae</a></li>
-            <li><a href="../demos/imobiliaria/index.html">Demo: Horizonte Prime Imóveis</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contato Comercial</h3>
-          <ul class="footer-links">
-            <li>E-mail: <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
-            <li>Atendimento remoto para todo o Brasil</li>
-          </ul>
-          <div style="margin-top: 1rem;" data-social-list></div>
-        </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>. Todos os direitos reservados.</p>
-        <p><a href="../privacidade/index.html">Privacidade</a> &bull; <a href="../contato/index.html">Contato</a></p>
+        <p>Engenharia Front-End em HTML5, CSS3 e JavaScript Semântico.</p>
       </div>
     </div>
   </footer>
 
-  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página" title="Voltar ao topo">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="../assets/js/main.js"></script>

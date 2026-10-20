@@ -1,648 +1,888 @@
 /* ==========================================================================
-   PAGES.CSS — Estilos de Seções Específicas e Demos Independentes
-   Vértice Digital — Site Comercial Estático
+   PAGES.CSS — Layouts Editoriais de Páginas & Demos Setoriais V2.0
+   Barcelos Neto — Desenvolvimento Web
    ========================================================================== */
 
-/* 1. HERO PRINCIPAL E CABEÇALHOS DE PÁGINA */
+/* 1. HERO PRINCIPAL (HOME) — Assimétrico com Studio Showcase Interativo */
 .hero {
-  background: var(--bg-hero);
-  color: #F8FAFC;
-  padding-block: 4.5rem 5rem;
   position: relative;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
   overflow: hidden;
-  border-bottom: 1px solid #1E293B;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-@media (min-width: 1024px) {
-  .hero {
-    padding-block: 6rem 6.5rem;
-  }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 25%, #000 35%, transparent 100%);
+  opacity: 0.38;
+  pointer-events: none;
 }
 
 .hero__grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
   align-items: center;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
   .hero__grid {
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: var(--space-12);
   }
 }
 
-.hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: rgba(37, 99, 235, 0.22);
-  color: #7DD3FC;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 1.25rem;
-}
-
 .hero__title {
-  color: #F8FAFC;
-  margin-bottom: 1.25rem;
-}
-
-.hero__title span {
-  background: linear-gradient(90deg, #60A5FA 0%, #22D3EE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-6);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .hero__lead {
-  color: #CBD5E1;
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  max-width: 40rem;
-  margin-bottom: 2rem;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+  max-width: 56ch;
+  line-height: 1.7;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.875rem;
-  margin-bottom: 2.25rem;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
 }
 
 .hero__trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.875rem;
-  color: #94A3B8;
+  gap: var(--space-3) var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-subtle);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  list-style: none;
 }
 
-.hero__trust-item {
+.hero__trust li {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--space-2);
 }
 
-.hero__trust-item svg {
-  color: #38BDF8;
-  width: 1.1rem;
-  height: 1.1rem;
+.hero__trust-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--status-success);
+  box-shadow: 0 0 8px var(--status-success);
 }
 
-/* Mockup Visual Arquitetural no Hero */
-.hero-visual {
-  background: rgba(15, 23, 42, 0.75);
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+/* Studio Showcase Interativo na Hero */
+.hero__visual {
+  position: relative;
 }
 
-.hero-visual__bar {
+.hero-showcase {
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.96) 0%, rgba(7, 11, 22, 0.98) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-glow), var(--shadow-xl);
+  color: #F8FAFC;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-showcase::after {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-showcase__top {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 0.9rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
 }
 
-.hero-visual__dots {
-  display: flex;
-  gap: 0.4rem;
-}
-
-.hero-visual__dots span {
-  width: 0.65rem;
-  height: 0.65rem;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.hero-visual__url {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: #94A3B8;
-  background: rgba(255, 255, 255, 0.06);
-  padding: 0.2rem 0.75rem;
+.hero-showcase__tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  background: rgba(6, 9, 19, 0.75);
+  padding: 0.25rem;
   border-radius: var(--radius-full);
+  border: 1px solid rgba(148, 163, 184, 0.16);
 }
 
-.hero-visual__metrics {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
-  margin-top: 1rem;
+.hero-showcase__tab {
+  background: transparent;
+  color: #94A3B8;
+  border: 0;
+  padding: 0.32rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
 
-.metric-pill {
-  background: rgba(30, 41, 59, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem;
+.hero-showcase__tab:hover {
+  color: #F8FAFC;
 }
 
-.metric-pill__title {
+.hero-showcase__tab.is-active {
+  background: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(37, 99, 235, 0.45);
+}
+
+.hero-showcase__pane {
+  display: none;
+}
+
+.hero-showcase__pane.is-active {
+  display: block;
+}
+
+.hero-showcase__preview {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #060913;
+  margin-bottom: var(--space-4);
+  aspect-ratio: 16 / 10;
+}
+
+.hero-showcase__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-showcase__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.hero-showcase__meta-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #F8FAFC;
+}
+
+.hero-showcase__meta-sub {
   font-size: 0.75rem;
   color: #94A3B8;
-  text-transform: uppercase;
+}
+
+.hero-showcase__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.hero-metric-pill {
+  background: rgba(6, 9, 19, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.75rem;
+}
+
+.hero-metric-pill__val {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   font-weight: 700;
+  color: #38BDF8;
 }
 
-.metric-pill__val {
-  font-size: 1rem;
-  font-weight: 800;
-  color: #F8FAFC;
-  margin-top: 0.2rem;
+.hero-metric-pill__lbl {
+  display: block;
+  font-size: 0.68rem;
+  color: #94A3B8;
 }
 
-/* Page Header Interno */
-.page-hero {
-  background: var(--bg-hero);
-  color: #F8FAFC;
-  padding-block: 3.5rem 4rem;
-  border-bottom: 1px solid #1E293B;
+/* Faixa de Prova de Capacidade (Proof Strip) */
+.proof-strip {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-block: var(--space-8);
 }
 
-.page-hero h1 {
-  color: #F8FAFC;
-  margin-bottom: 0.85rem;
+.proof-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
 }
 
-.page-hero p {
-  color: #CBD5E1;
-  max-width: 44rem;
-  font-size: 1.1rem;
-}
-
-/* 2. CARTÕES DE PROJETO E FILTROS DO PORTFÓLIO */
-.portfolio-controls {
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-@media (min-width: 860px) {
-  .portfolio-controls {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+@media (min-width: 640px) {
+  .proof-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 1024px) {
+  .proof-strip__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.proof-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+}
+
+.proof-item__icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: var(--radius-sm);
+  background: var(--brand-primary-soft);
+  color: var(--brand-primary);
+  border: 1px solid var(--border-highlight);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.proof-item__title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.proof-item__desc {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* 2. CABEÇALHO DE PÁGINAS INTERNAS (Page Hero Editorial) */
+.page-hero {
+  position: relative;
+  padding-block: var(--space-16);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, var(--brand-primary-soft) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 840px;
+}
+
+.page-hero__title {
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__lead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 3. PORTFÓLIO — SHOWCASE EDITORIAL DE PROJETOS (Prioridade #1) */
+.filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  background: var(--bg-elevated);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  margin-bottom: var(--space-8);
+  box-shadow: var(--shadow-md);
 }
 
 .filter-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: var(--space-2);
 }
 
-.filter-btn {
-  padding: 0.5rem 0.95rem;
+.filter-pill {
+  padding: 0.5rem 1.05rem;
   border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: 700;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
   color: var(--text-secondary);
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-strong);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
-.filter-btn:hover {
+.filter-pill:hover {
+  color: var(--text-primary);
   border-color: var(--brand-primary);
-  color: var(--brand-primary);
 }
 
-.filter-btn.is-active,
-.filter-btn[aria-pressed="true"] {
-  background-color: var(--brand-primary);
+.filter-pill.is-active,
+.filter-pill[aria-pressed="true"] {
+  background: var(--brand-primary);
   color: #FFFFFF;
   border-color: var(--brand-primary);
+  box-shadow: 0 4px 14px -2px var(--brand-glow);
 }
 
 .search-box {
   position: relative;
-  min-width: min(100%, 280px);
-  flex: 1;
-  max-width: 24rem;
+  flex: 1 1 260px;
+  max-width: 380px;
 }
 
 .search-box input {
-  padding-left: 2.5rem;
+  width: 100%;
+  padding: 0.62rem 1rem 0.62rem 2.5rem;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+  box-shadow: var(--focus-ring);
 }
 
 .search-box__icon {
   position: absolute;
-  left: 0.85rem;
+  left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
-  width: 1.1rem;
-  height: 1.1rem;
   pointer-events: none;
 }
 
-.project-card {
-  background-color: var(--bg-elevated);
+.results-meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Grid de Cases do Portfólio — Cards Maiores e mais Ricos (2 Colunas em Desktop) */
+.portfolio-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 920px) {
+  .portfolio-showcase-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project-card-v2 {
+  background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
-.project-card__thumb {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  background-color: #0B1220;
-  overflow: hidden;
+.project-card-v2:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+  border-color: var(--border-highlight);
+}
+
+.project-card-v2__stage {
+  background: linear-gradient(160deg, #090E1C 0%, #111A30 100%);
+  padding: var(--space-5) var(--space-5) 0;
   border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card__thumb img {
+.project-card-v2__window {
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-bottom: 0;
+  background: #060913;
+  overflow: hidden;
+  box-shadow: 0 -8px 28px rgba(0, 0, 0, 0.45);
+  transition: transform var(--transition-slow);
+}
+
+.project-card-v2:hover .project-card-v2__window {
+  transform: translateY(-4px) scale(1.015);
+}
+
+.project-card-v2__chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.48rem 0.85rem;
+  background: #0F172A;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.project-card-v2__dots {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.project-card-v2__dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.project-card-v2__dots span:nth-child(1) { background: #EF4444; }
+.project-card-v2__dots span:nth-child(2) { background: #F59E0B; }
+.project-card-v2__dots span:nth-child(3) { background: #10B981; }
+
+.project-card-v2__domain {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #94A3B8;
+}
+
+.project-card-v2__screen {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #060913;
+}
+
+.project-card-v2__screen img,
+.project-card-v2__screen svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-normal);
 }
 
-.project-card:hover .project-card__thumb img {
-  transform: scale(1.03);
-}
-
-.project-card__badges {
-  position: absolute;
-  top: 0.85rem;
-  left: 0.85rem;
-  right: 0.85rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.project-card__content {
-  padding: 1.5rem;
+.project-card-v2__body {
+  padding: var(--space-6);
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
+  flex: 1;
 }
 
-.project-card__category {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--brand-primary);
-  margin-bottom: 0.35rem;
-}
-
-.project-card__title {
-  font-size: 1.25rem;
-  margin-bottom: 0.65rem;
-}
-
-.project-card__desc {
-  font-size: 0.925rem;
+.project-card-v2__context {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xs);
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  line-height: 1.55;
 }
 
-.project-card__deliverables {
-  margin-block: 0.5rem 1rem;
-  padding-left: 1.15rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  list-style: disc;
-}
-
-.project-card__deliverables li {
-  margin-bottom: 0.25rem;
+.project-card-v2__context strong {
+  color: var(--text-primary);
 }
 
 .empty-state {
   text-align: center;
-  padding: 3.5rem 1.5rem;
-  background-color: var(--bg-elevated);
+  padding: var(--space-16) var(--space-6);
+  background: var(--bg-elevated);
   border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-md);
-  margin-block: 1.5rem;
+  border-radius: var(--radius-lg);
 }
 
-/* 3. ETAPAS DE PROCESSO */
-.steps-grid {
+/* 4. PROCESSO / TIMELINE NUMERADA */
+.process-steps {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
   counter-reset: step-counter;
+  list-style: none;
 }
 
-@media (min-width: 768px) {
-  .steps-grid {
+@media (min-width: 640px) {
+  .process-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .steps-grid {
+  .process-steps {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.step-card {
-  background-color: var(--bg-elevated);
+.process-step {
+  background: var(--bg-elevated);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
   position: relative;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.step-card__num {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: var(--radius-full);
-  background-color: var(--brand-primary);
-  color: #FFFFFF;
-  font-weight: 800;
-  font-size: 0.95rem;
+.process-step:hover {
+  border-color: var(--border-highlight);
+  transform: translateY(-3px);
+}
+
+.process-step__num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--brand-primary-soft);
+  border: 1px solid var(--border-highlight);
+  color: var(--brand-primary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
 }
 
-/* 4. BANNER CTA FINAL */
-.cta-banner {
-  background: var(--bg-hero);
-  color: #F8FAFC;
+/* 5. TABELA COMPARATIVA DE ESCOPOS */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 3rem 1.75rem;
-  text-align: center;
-  border: 1px solid #1E293B;
-  box-shadow: var(--shadow-lg);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
 }
 
-@media (min-width: 768px) {
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--text-sm);
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.comparison-table th {
+  background: var(--bg-secondary);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 6. SEÇÃO CTA DE CONVERSÃO FINAL */
+.cta-banner {
+  background: linear-gradient(135deg, #080E1E 0%, #0F1D3B 55%, #0C2540 100%);
+  color: #F8FAFC;
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-8);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  box-shadow: var(--shadow-glow), var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
   .cta-banner {
-    padding: 4rem 3rem;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-16);
   }
 }
 
 .cta-banner h2 {
   color: #F8FAFC;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-3);
 }
 
 .cta-banner p {
   color: #CBD5E1;
-  max-width: 38rem;
-  margin-inline: auto;
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
+  font-size: var(--text-lg);
 }
 
 .cta-banner__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  gap: var(--space-3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
-/* 5. ESTILOS ESPECÍFICOS DAS DEMONSTRAÇÕES */
+/* Social Pills */
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
 
-/* --- DEMO A: RESTAURANTE SABOR & BRASA --- */
+/* 7. IDENTIDADES VISUAIS PRÓPRIAS DAS 3 DEMOS SETORIAIS */
+
+/* Demo 1: Restaurante Sabor & Brasa (Gastronomia Autoral — Brasa, Obsidiana & Âmbar Dourado) */
 .theme-restaurante {
-  --bg-primary: #FAF7F2;
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #FEF3C7;
-  --bg-elevated: #FFFFFF;
-  --text-primary: #1C1917;
-  --text-secondary: #44403C;
-  --text-muted: #57534E;
-  --brand-primary: #B45309;
-  --brand-primary-hover: #92400E;
-  --border-subtle: #E7E5E4;
-  --border-strong: #D6D3D1;
+  --brand-primary: #F59E0B;
+  --brand-primary-hover: #FBBF24;
+  --brand-primary-soft: rgba(245, 158, 11, 0.14);
+  --brand-accent: #EA580C;
+  --brand-accent-soft: rgba(234, 88, 12, 0.14);
+  --border-highlight: rgba(245, 158, 11, 0.4);
 }
 
-.rest-hero {
-  background: linear-gradient(135deg, #1C1412 0%, #2E1D15 65%, #3B2316 100%);
-  color: #FAF7F2;
-  padding-block: 4.5rem;
-  border-bottom: 2px solid #B45309;
-}
-
-.rest-hero h1 {
+.hero-restaurante {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(245, 158, 11, 0.22) 0%, transparent 45%),
+    linear-gradient(135deg, #120C0A 0%, #23140E 55%, #160E0B 100%);
   color: #FEF3C7;
-  font-family: Georgia, "Times New Roman", serif;
+  padding-block: var(--space-16);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.24);
 }
 
-.rest-hero p {
+.hero-restaurante h1,
+.hero-restaurante h2 {
+  font-family: var(--font-serif);
+  color: #FFFBEB;
+  letter-spacing: -0.02em;
+}
+
+.hero-restaurante p {
   color: #E7E5E4;
 }
 
 .menu-item-card {
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 1.35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.85rem;
-  box-shadow: var(--shadow-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.menu-item-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: var(--shadow-md);
 }
 
 .menu-item-card__header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 0.75rem;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .menu-item-card__price {
-  font-weight: 800;
+  font-family: var(--font-mono);
+  font-weight: 700;
   color: var(--brand-primary);
-  font-size: 1.1rem;
+  font-size: var(--text-base);
   white-space: nowrap;
+  background: var(--brand-primary-soft);
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-highlight);
 }
 
-.gallery-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-.gallery-btn {
-  border-radius: var(--radius-md);
+.gallery-trigger {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 2px solid var(--border-subtle);
-  background-color: #1C1412;
-  position: relative;
-  aspect-ratio: 4 / 3;
-  width: 100%;
+  cursor: pointer;
   text-align: left;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  padding: 0;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
-.gallery-btn:hover {
-  transform: translateY(-3px);
+.gallery-trigger:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--brand-primary);
 }
 
-.gallery-btn__caption {
-  position: absolute;
-  bottom: 0;
-  inset-inline: 0;
-  background: rgba(28, 20, 18, 0.88);
-  color: #FEF3C7;
-  padding: 0.6rem 0.85rem;
-  font-size: 0.85rem;
+.gallery-trigger__caption {
+  padding: var(--space-4) var(--space-5);
   font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* --- DEMO B: CLÍNICA VITAE --- */
+/* Demo 2: Clínica Vitae (Saúde Integrada — Esmeralda Clínico, Clareza & Acolhimento) */
 .theme-clinica {
-  --bg-primary: #F8FAFC;
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #CCFBF1;
-  --bg-elevated: #FFFFFF;
-  --text-primary: #0F172A;
-  --text-secondary: #334155;
-  --text-muted: #475569;
-  --brand-primary: #0F766E;
-  --brand-primary-hover: #115E59;
-  --border-subtle: #E2E8F0;
-  --border-strong: #CBD5E1;
+  --brand-primary: #14B8A6;
+  --brand-primary-hover: #2DD4BF;
+  --brand-primary-soft: rgba(20, 184, 166, 0.14);
+  --brand-accent: #0EA5E9;
+  --brand-accent-soft: rgba(14, 165, 233, 0.14);
+  --border-highlight: rgba(20, 184, 166, 0.4);
 }
 
-.clinica-hero {
-  background: linear-gradient(135deg, #062825 0%, #0F4C45 100%);
+.hero-clinica {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(20, 184, 166, 0.22) 0%, transparent 45%),
+    linear-gradient(135deg, #041F1E 0%, #0A3532 55%, #072227 100%);
   color: #F0FDFA;
-  padding-block: 4.5rem;
+  padding-block: var(--space-16);
+  border-bottom: 1px solid rgba(20, 184, 166, 0.25);
 }
 
-.clinica-hero h1 {
-  color: #FFFFFF;
+.hero-clinica h1 {
+  color: #F0FDFA;
 }
 
-.clinica-hero p {
+.hero-clinica p {
   color: #CCFBF1;
 }
 
-/* --- DEMO C: IMOBILIÁRIA HORIZONTE PRIME --- */
+/* Demo 3: Horizonte Prime Imobiliária (Arquitetura & Alto Padrão — Índigo & Ciano) */
 .theme-imobiliaria {
-  --bg-primary: #F8FAFC;
-  --bg-secondary: #FFFFFF;
-  --bg-tertiary: #EEF2FF;
-  --bg-elevated: #FFFFFF;
-  --text-primary: #0F172A;
-  --text-secondary: #334155;
-  --text-muted: #475569;
-  --brand-primary: #4338CA;
-  --brand-primary-hover: #3730A3;
-  --border-subtle: #E2E8F0;
-  --border-strong: #CBD5E1;
+  --brand-primary: #6366F1;
+  --brand-primary-hover: #818CF8;
+  --brand-primary-soft: rgba(99, 102, 241, 0.15);
+  --brand-accent: #06B6D4;
+  --brand-accent-soft: rgba(6, 182, 212, 0.15);
+  --border-highlight: rgba(99, 102, 241, 0.42);
 }
 
-.imob-hero {
-  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+.hero-imobiliaria {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 45%),
+    linear-gradient(135deg, #070B19 0%, #161538 55%, #0D172A 100%);
   color: #F8FAFC;
-  padding-block: 4.25rem;
+  padding-block: var(--space-16);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.25);
 }
 
-.imob-hero h1 {
-  color: #FFFFFF;
+.hero-imobiliaria h1 {
+  color: #F8FAFC;
 }
 
-.imob-hero p {
+.hero-imobiliaria p {
   color: #CBD5E1;
 }
 
 .imob-filter-bar {
-  background-color: var(--bg-secondary);
+  background: var(--bg-elevated);
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 2rem;
-}
-
-.imob-filter-grid {
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-8);
   display: grid;
-  gap: 1rem;
   grid-template-columns: 1fr;
+  gap: var(--space-4);
+  align-items: end;
 }
 
-@media (min-width: 640px) {
-  .imob-filter-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 768px) {
+  .imob-filter-bar {
+    grid-template-columns: repeat(4, 1fr) auto;
   }
-}
-
-@media (min-width: 1024px) {
-  .imob-filter-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.property-card {
-  background-color: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  box-shadow: var(--shadow-sm);
-}
-
-.property-card__visual {
-  aspect-ratio: 16 / 10;
-  position: relative;
-  background-color: #1E1B4B;
-}
-
-.property-card__body {
-  padding: 1.35rem;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-}
-
-.property-card__price {
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--brand-primary);
-  margin-block: 0.35rem;
 }
 
 .property-specs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  padding-block: 0.75rem;
-  margin-block: 0.65rem;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  margin-block: var(--space-3);
   border-block: 1px solid var(--border-subtle);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
   color: var(--text-secondary);
+}
+
+/* Conteúdo Legal / Política de Privacidade */
+.prose h2 {
+  font-size: var(--text-2xl);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-3);
+}
+
+.prose p,
+.prose ul {
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+}
+
+.prose li {
+  margin-bottom: var(--space-2);
 }

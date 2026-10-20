@@ -1,7 +1,8 @@
 /**
- * THEME.JS — Gerenciamento de Tema Claro / Escuro
- * ===============================================
- * Respeita prefers-color-scheme e persiste escolha no localStorage (com try/catch).
+ * THEME.JS — Gerenciamento de Tema Escuro Premium (Default) / Claro Editorial
+ * ===========================================================================
+ * Define o Tema Escuro Premium como experiência principal padrão e persiste a
+ * escolha do visitante no localStorage (com fallback seguro em memória).
  */
 
 (function () {
@@ -28,10 +29,7 @@
     if (stored === "dark" || stored === "light") {
       return stored;
     }
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
-    return "light";
+    return "dark";
   }
 
   function applyTheme(theme) {
@@ -52,12 +50,12 @@
       );
       btn.setAttribute(
         "title",
-        isDark ? "Mudar para tema claro" : "Mudar para tema escuro"
+        isDark ? "Mudar para tema claro editorial" : "Mudar para tema escuro premium"
       );
     });
   }
 
-  // Aplica imediatamente para evitar flash
+  // Aplica imediatamente para evitar flash entre páginas
   var currentTheme = getPreferredTheme();
   applyTheme(currentTheme);
 
@@ -67,7 +65,10 @@
     var buttons = document.querySelectorAll("[data-theme-toggle]");
     buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        currentTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        currentTheme =
+          document.documentElement.getAttribute("data-theme") === "dark"
+            ? "light"
+            : "dark";
         setStoredTheme(currentTheme);
         applyTheme(currentTheme);
       });

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-root="..">
+<html lang="pt-BR" data-theme="dark" data-root="..">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato e Solicitação de Orçamento | Barcelos Neto — Desenvolvimento Web</title>
-  <meta name="description" content="Entre em contato para solicitar orçamento de landing page, site institucional, portfólio ou manutenção web.">
+  <title>Contato &amp; Orçamento | Barcelos Neto — Desenvolvimento Web</title>
+  <meta name="description" content="Solicite um orçamento para criação de site institucional, landing page ou página para negócio local com Barcelos Neto — Desenvolvimento Web.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/contato/" data-page-path="contato/">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/contato/">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Contato e Solicitação de Orçamento | Barcelos Neto — Desenvolvimento Web">
-  <meta property="og:description" content="Solicite uma proposta personalizada para o desenvolvimento do seu site profissional.">
+  <meta property="og:site_name" content="Barcelos Neto — Desenvolvimento Web">
+  <meta property="og:title" content="Contato &amp; Orçamento | Barcelos Neto — Desenvolvimento Web">
+  <meta property="og:description" content="Preencha os dados iniciais do seu projeto e prepare sua solicitação de orçamento com rapidez e transparência.">
   <meta property="og:url" content="https://barcelosneto.github.io/site-portfolio/contato/">
-  <meta property="og:image" content="../assets/img/og-cover.svg">
+  <meta property="og:image" content="https://barcelosneto.github.io/site-portfolio/assets/img/og-cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/components.css">
   <link rel="stylesheet" href="../assets/css/pages.css">
@@ -27,197 +35,175 @@
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a href="../index.html" class="brand-logo" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
-        <span class="brand-logo__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-            <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <div class="container site-header__inner">
+      <a href="../index.html" class="brand" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
+        <span class="brand__mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
         </span>
-        <span class="brand-logo__text">
-          <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
-          <span class="brand-logo__sub">Barcelos Neto — Desenvolvedor Web</span>
+        <span class="brand__text">
+          <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+          <span class="brand__tagline">Estúdio Digital &amp; Front-End</span>
         </span>
       </a>
 
-      <div class="nav-wrapper">
-        <nav class="main-nav" id="menu-principal" data-main-nav aria-label="Navegação principal">
-          <ul class="main-nav__list">
-            <li><a href="../index.html" class="main-nav__link">Início</a></li>
-            <li><a href="../portfolio/index.html" class="main-nav__link">Portfólio</a></li>
-            <li><a href="../servicos/index.html" class="main-nav__link">Serviços</a></li>
-            <li><a href="../sobre/index.html" class="main-nav__link">Sobre</a></li>
-            <li><a href="index.html" class="main-nav__link" aria-current="page">Contato</a></li>
-          </ul>
-          <div class="main-nav__mobile-cta">
-            <a href="#contact-form" class="btn btn--primary">Preencher formulário</a>
-          </div>
-        </nav>
+      <nav class="nav" id="main-navigation" data-main-nav aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="../index.html" class="nav__link">Início</a></li>
+          <li><a href="../portfolio/index.html" class="nav__link">Portfólio &amp; Demos</a></li>
+          <li><a href="../servicos/index.html" class="nav__link">Serviços</a></li>
+          <li><a href="../sobre/index.html" class="nav__link">Sobre &amp; Processo</a></li>
+          <li><a href="./index.html" class="nav__link" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
 
-        <div class="header-actions">
-          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Alternar tema claro ou escuro" title="Alternar tema">
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <circle cx="12" cy="12" r="5"/>
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          </button>
-
-          <a href="#contact-form" class="btn btn--primary btn--sm header-cta-desktop">Solicitar orçamento</a>
-
-          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu de navegação">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
+          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="./index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Orçamento</a>
+        <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="conteudo-principal">
-    <section class="page-hero" aria-labelledby="contato-title">
-      <div class="container">
-        <span class="hero__eyebrow">Atendimento Comercial</span>
-        <h1 id="contato-title">Solicite um Orçamento para o Seu Projeto</h1>
-        <p>
-          Preencha os dados abaixo para gerar sua solicitação estruturada por e-mail ou utilize nossos canais diretos de contato.
+    <section class="page-hero">
+      <div class="container page-hero__inner" data-reveal>
+        <span class="eyebrow">Atendimento Direto &amp; Proposta Sob Medida</span>
+        <h1 class="page-hero__title">Solicitar Orçamento</h1>
+        <p class="page-hero__lead">
+          Preencha os dados abaixo para estruturar seu pedido de orçamento. O formulário valida as informações no navegador e prepara a mensagem completa para envio direto.
         </p>
       </div>
     </section>
 
-    <section class="section" aria-label="Formulário de orçamento e canais diretos">
+    <section class="section">
       <div class="container">
-        <div class="grid grid-2" style="align-items: start;">
-          <!-- COLUNA 1: FORMULÁRIO ACESSÍVEL -->
-          <div class="card">
-            <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Formulário de Solicitação</h2>
-            <p class="form-help" style="margin-bottom: 1.5rem;">
-              <strong>Aviso de funcionamento estático:</strong> Este formulário valida seus dados localmente e prepara o envio através do seu aplicativo de e-mail padrão (<code>mailto:</code>), sem armazenar dados em banco de dados intermediário.
+        <div class="grid grid--2" style="align-items: start;">
+          <!-- Coluna Esquerda: Informações e Canais Diretos -->
+          <div data-reveal>
+            <h2 class="section-title" style="font-size: var(--text-2xl);">Canais Oficiais &amp; Funcionamento</h2>
+            <p class="mb-6">
+              Para garantir privacidade total e independência de servidores intermediários, este site estático não armazena seus dados em banco de dados oculto: ao submeter o formulário, formatamos o escopo completo e acionamos seu cliente de e-mail padrão (ou disponibilizamos a cópia imediata da mensagem).
             </p>
 
+            <div class="card mb-6">
+              <h3 class="card__title">Dados de Contato</h3>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--text-sm);">
+                <li>
+                  <strong>Profissional:</strong> <span data-config-identity>Barcelos Neto — Desenvolvedor Web</span>
+                </li>
+                <li>
+                  <strong>E-mail direto:</strong> <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a>
+                </li>
+                <li>
+                  <strong>WhatsApp:</strong> <span data-whatsapp-notice>Atendimento inicial via formulário ou e-mail direto</span>
+                </li>
+                <li>
+                  <strong>Modalidade:</strong> Atendimento remoto para todo o Brasil
+                </li>
+              </ul>
+
+              <div class="mt-4">
+                <a href="./index.html" class="btn btn--primary btn--sm" data-whatsapp-cta hidden>Iniciar conversa no WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card__title">Perfis Profissionais</h3>
+              <p class="card__desc">Acompanhe repositórios públicos, histórico profissional e arquitetura de código:</p>
+              <div data-social-list style="display: flex; flex-wrap: wrap; gap: var(--space-2);"></div>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Formulário Validado -->
+          <div class="card" data-reveal>
+            <h2 class="card__title">Formulário de Escopo Inicial</h2>
+            <p class="card__desc">Campos marcados com <span style="color: var(--status-error);">*</span> são obrigatórios.</p>
+
+            <div id="form-feedback" class="alert" role="status" aria-live="polite" hidden></div>
+
             <form id="contact-form" novalidate>
-              <!-- Campo Honeypot Oculto (Proteção Básica Client-Side) -->
+              <!-- Honeypot Anti-Spam -->
               <div class="hp-field" aria-hidden="true">
-                <label for="website-url-hp">Não preencha este campo (proteção anti-spam local)</label>
+                <label for="website-url-hp">Não preencha este campo se for humano</label>
                 <input type="text" id="website-url-hp" name="website_url_hp" tabindex="-1" autocomplete="off">
               </div>
 
               <div class="form-group">
                 <label for="full-name" class="form-label">Nome completo <span aria-hidden="true">*</span></label>
-                <input type="text" id="full-name" name="fullName" class="form-control" required autocomplete="name" placeholder="Ex.: Mariana Souza" aria-describedby="error-full-name">
+                <input type="text" id="full-name" name="fullName" class="form-input" required autocomplete="name" placeholder="Ex.: Mariana Alves" aria-describedby="error-full-name">
                 <span id="error-full-name" class="form-error" role="alert"></span>
               </div>
 
-              <div class="form-group">
-                <label for="email" class="form-label">E-mail de contato <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" class="form-control" required autocomplete="email" placeholder="Ex.: mariana@empresa.com.br" aria-describedby="error-email">
-                <span id="error-email" class="form-error" role="alert"></span>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">Seu melhor e-mail <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" required autocomplete="email" placeholder="nome@empresa.com.br" aria-describedby="error-email">
+                  <span id="error-email" class="form-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Telefone / WhatsApp (opcional)</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel" placeholder="(11) 99999-9999" aria-describedby="error-phone">
+                  <span id="error-phone" class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="project-type" class="form-label">Tipo de projeto <span aria-hidden="true">*</span></label>
+                  <select id="project-type" name="projectType" class="form-select" required aria-describedby="error-project-type">
+                    <option value="">Selecione uma opção...</option>
+                    <option value="institucional">Site Institucional Multipágina</option>
+                    <option value="landing-page">Landing Page de Alta Conversão</option>
+                    <option value="restaurante">Site para Restaurante / Gastronomia</option>
+                    <option value="clinica">Site para Clínica / Consultório</option>
+                    <option value="imobiliaria">Site / Catálogo para Imobiliária</option>
+                    <option value="negocio-local">Outro Negócio Local</option>
+                    <option value="portfolio">Portfólio Profissional</option>
+                    <option value="redesign">Reformulação / Redesign de Site</option>
+                    <option value="seo-performance">Otimização de Performance &amp; SEO</option>
+                  </select>
+                  <span id="error-project-type" class="form-error" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="budget" class="form-label">Expectativa de prazo / estágio</label>
+                  <select id="budget" name="budget" class="form-select">
+                    <option value="">Selecione (opcional)...</option>
+                    <option value="urgente">Início imediato (próximos dias)</option>
+                    <option value="30-dias">Planejamento para os próximos 30 dias</option>
+                    <option value="exploratorio">Orçamento exploratório / comparativo</option>
+                  </select>
+                </div>
               </div>
 
               <div class="form-group">
-                <label for="phone" class="form-label">
-                  Telefone ou WhatsApp <span class="form-label__optional">(opcional, com DDD)</span>
-                </label>
-                <input type="tel" id="phone" name="phone" class="form-control" autocomplete="tel" placeholder="Ex.: (11) 99999-9999" aria-describedby="error-phone">
-                <span id="error-phone" class="form-error" role="alert"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="project-type" class="form-label">Tipo de projeto desejado <span aria-hidden="true">*</span></label>
-                <select id="project-type" name="projectType" class="form-control" required aria-describedby="error-project-type">
-                  <option value="">Selecione uma opção...</option>
-                  <option value="landing-page">Landing Page (Página de Captura / Campanha)</option>
-                  <option value="institucional">Site Institucional Multipágina</option>
-                  <option value="portfolio">Portfólio Profissional</option>
-                  <option value="catalogo">Catálogo / Vitrine com Filtros (Ex.: Imobiliária / Cardápio)</option>
-                  <option value="manutencao">Manutenção, Acessibilidade ou Atualização</option>
-                  <option value="outro">Outro escopo web front-end</option>
-                </select>
-                <span id="error-project-type" class="form-error" role="alert"></span>
-              </div>
-
-              <div class="form-group">
-                <label for="budget" class="form-label">
-                  Orçamento estimado <span class="form-label__optional">(opcional)</span>
-                </label>
-                <select id="budget" name="budget" class="form-control">
-                  <option value="">Prefiro avaliar após diagnóstico de escopo</option>
-                  <option value="inicial">Escopo enxuto (Página única / Ajuste pontual)</option>
-                  <option value="intermediario">Escopo intermediário (Site institucional completo)</option>
-                  <option value="avancado">Escopo avançado (Múltiplas páginas + Catálogo filtrável)</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message" class="form-label">Mensagem e objetivos do projeto <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" class="form-control" required placeholder="Conte um pouco sobre o seu segmento, páginas necessárias e expectativa de prazo..." aria-describedby="error-message"></textarea>
+                <label for="message" class="form-label">Resumo do projeto ou necessidade <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" class="form-textarea" required placeholder="Conte brevemente sobre sua empresa, quais páginas ou funcionalidades deseja e se gostou de alguma demonstração do portfólio..." aria-describedby="error-message"></textarea>
+                <span class="form-hint">Mínimo de 15 caracteres.</span>
                 <span id="error-message" class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group">
-                <div class="checkbox-group">
+                <label for="consent" class="form-checkbox-wrap">
                   <input type="checkbox" id="consent" name="consent" required aria-describedby="error-consent">
-                  <label for="consent" style="font-size: 0.9rem; color: var(--text-secondary);">
-                    Compreendo que este site estático não armazena meus dados em banco próprio e que ao enviar serei direcionado ao meu aplicativo de e-mail conforme a <a href="../privacidade/index.html">Política de Privacidade</a>. <span aria-hidden="true">*</span>
-                  </label>
-                </div>
+                  <span style="font-size: var(--text-xs); color: var(--text-secondary);">
+                    Estou ciente da <a href="../privacidade/index.html">Política de Privacidade</a> e compreendo que este formulário prepara o rascunho da mensagem para envio direto através do meu aplicativo de e-mail ou cópia local. <span style="color: var(--status-error);">*</span>
+                  </span>
+                </label>
                 <span id="error-consent" class="form-error" role="alert"></span>
               </div>
 
-              <div id="form-feedback" class="alert" role="status" aria-live="polite" hidden></div>
-
-              <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
-                <button type="submit" class="btn btn--primary btn--lg">
-                  Preparar e abrir no aplicativo de e-mail
-                </button>
-                <button type="button" id="copy-draft-btn" class="btn btn--secondary" hidden>
-                  Copiar texto da mensagem
-                </button>
+              <div style="display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center;">
+                <button type="submit" class="btn btn--primary btn--lg">Preparar Solicitação por E-mail</button>
+                <button type="button" id="copy-draft-btn" class="btn btn--secondary" hidden>Copiar texto da mensagem</button>
               </div>
-
-              <p class="form-help" style="margin-top: 1rem;">
-                <em>Nota técnica:</em> este formulário inclui um campo oculto anti-spam (honeypot) no cliente, que auxilia contra preenchimento automatizado simples, mas não equivale a validação de servidor backend.
-              </p>
             </form>
-          </div>
-
-          <!-- COLUNA 2: CANAIS DIRETOS E WHATSAPP CONFIGURÁVEL -->
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div class="card">
-              <h2 class="card__title">Conversar pelo WhatsApp</h2>
-              <p class="card__body">
-                Prefere iniciar a conversa por mensagem instantânea? Clique abaixo para abrir o WhatsApp com uma mensagem inicial preenchida.
-              </p>
-              <div style="margin-top: 1.25rem;">
-                <a href="#" class="btn btn--whatsapp" data-whatsapp-cta data-whatsapp-msg="Olá! Vim pela página de contato do site Barcelos Neto — Desenvolvimento Web e gostaria de solicitar um orçamento.">
-                  Conversar no WhatsApp
-                </a>
-              </div>
-              <p class="form-help" style="margin-top: 0.85rem;" data-whatsapp-notice>
-                Verificando configuração de número em config/site-config.js...
-              </p>
-            </div>
-
-            <div class="card">
-              <h2 class="card__title">E-mail Direto &amp; Atendimento</h2>
-              <p class="card__body">
-                Você também pode enviar seu briefing ou documentação diretamente para o nosso endereço de e-mail configurável:
-              </p>
-              <p style="margin-top: 0.75rem; font-weight: 700;">
-                <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a>
-              </p>
-              <p class="form-help" style="margin-top: 0.75rem;">
-                Horário comercial de referência: segunda a sexta, das 9h às 18h (horário de Brasília).
-              </p>
-            </div>
-
-            <div class="card">
-              <h2 class="card__title">Perfis e Redes</h2>
-              <div data-social-list></div>
-            </div>
           </div>
         </div>
       </div>
@@ -228,55 +214,59 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="../index.html" class="brand-logo" style="color: #F8FAFC; margin-bottom: 0.85rem;">
-            <span class="brand-logo__mark" aria-hidden="true">
-              <svg viewBox="0 0 32 32" width="22" height="22" fill="none">
-                <path d="M7 9L16 25L25 9" stroke="#38BDF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+          <a href="../index.html" class="brand mb-4">
+            <span class="brand__mark" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
             </span>
-            <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+            <span class="brand__text">
+              <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
+              <span class="brand__tagline" data-config-identity>Barcelos Neto — Desenvolvedor Web</span>
+            </span>
           </a>
-          <p>Sites profissionais que transformam visitas em oportunidades.</p>
+          <p class="text-muted" style="font-size: var(--text-sm);">
+            Desenvolvimento web focado em clareza comercial, performance técnica, acessibilidade e conversão.
+          </p>
+          <div class="mt-4" data-social-list style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
         </div>
+
         <div>
-          <h3>Navegação</h3>
+          <h3 class="footer-title">Mapa do Site</h3>
           <ul class="footer-links">
-            <li><a href="../index.html">Página Inicial</a></li>
-            <li><a href="../portfolio/index.html">Portfólio &amp; Modelos</a></li>
-            <li><a href="../servicos/index.html">Serviços e Escopo</a></li>
-            <li><a href="../sobre/index.html">Sobre e Metodologia</a></li>
-            <li><a href="index.html">Solicitar Orçamento</a></li>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../portfolio/index.html">Portfólio &amp; Demos</a></li>
+            <li><a href="../servicos/index.html">Serviços</a></li>
+            <li><a href="../sobre/index.html">Sobre &amp; Processo</a></li>
+            <li><a href="./index.html">Solicitar Orçamento</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Demos Navegáveis</h3>
+          <ul class="footer-links">
+            <li><a href="../demos/restaurante/index.html">Restaurante Sabor &amp; Brasa</a></li>
+            <li><a href="../demos/clinica/index.html">Clínica Vitae</a></li>
+            <li><a href="../demos/imobiliaria/index.html">Horizonte Prime Imóveis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Contato &amp; Transparência</h3>
+          <ul class="footer-links">
+            <li><span class="text-muted">E-mail:</span> <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
             <li><a href="../privacidade/index.html">Política de Privacidade</a></li>
           </ul>
         </div>
-        <div>
-          <h3>Demonstrações</h3>
-          <ul class="footer-links">
-            <li><a href="../demos/restaurante/index.html">Demo: Restaurante Sabor &amp; Brasa</a></li>
-            <li><a href="../demos/clinica/index.html">Demo: Clínica Vitae</a></li>
-            <li><a href="../demos/imobiliaria/index.html">Demo: Horizonte Prime Imóveis</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Contato Comercial</h3>
-          <ul class="footer-links">
-            <li>E-mail: <a href="mailto:pedrobarcelos1980@gmail.com" data-config-email>pedrobarcelos1980@gmail.com</a></li>
-            <li>Atendimento remoto para todo o Brasil</li>
-          </ul>
-          <div style="margin-top: 1rem;" data-social-list></div>
-        </div>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 <span data-config-brand>Barcelos Neto — Desenvolvimento Web</span>. Todos os direitos reservados.</p>
-        <p><a href="../privacidade/index.html">Privacidade</a> &bull; <a href="index.html">Contato</a></p>
+        <p>Engenharia Front-End em HTML5, CSS3 e JavaScript Semântico.</p>
       </div>
     </div>
   </footer>
 
-  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página" title="Voltar ao topo">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="../assets/js/main.js"></script>
