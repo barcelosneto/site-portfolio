@@ -24,12 +24,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../assets/css/base.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <link rel="stylesheet" href="../../assets/css/base.css?v=3.0">
+  <link rel="stylesheet" href="../../assets/css/components.css?v=3.0">
+  <link rel="stylesheet" href="../../assets/css/pages.css?v=3.0">
 
-  <script src="../../config/site-config.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../../config/site-config.js?v=3.0"></script>
+  <script src="../../assets/js/theme.js?v=3.0"></script>
 </head>
 <body class="theme-imobiliaria">
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
@@ -54,7 +54,7 @@
     <div class="container site-header__inner">
       <a href="#topo-imob" class="brand">
         <span class="brand__mark" style="background: linear-gradient(135deg, #4F46E5, #06B6D4);" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#FFFFFF"/></svg>
+          <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#FFFFFF"/></svg>
         </span>
         <span class="brand__text">
           <span class="brand__name">Horizonte Prime</span>
@@ -72,12 +72,12 @@
 
       <div class="header-actions">
         <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
-          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
         <a href="#catalogo" class="btn btn--primary btn--sm header-cta-desktop">Buscar Imóveis</a>
         <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -100,7 +100,13 @@
         </div>
 
         <div data-reveal>
-          <img src="../../assets/img/thumb-imobiliaria.svg" width="800" height="500" alt="Ilustração do catálogo demonstrativo Horizonte Prime Imóveis" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid rgba(99, 102, 241, 0.35);">
+          <div class="demo-hero-frame" style="border-color: rgba(99, 102, 241, 0.38);">
+            <img src="../../assets/img/imobiliaria/hero-imobiliaria.webp" width="1400" height="875" fetchpriority="high" alt="Fachada de residência contemporânea com vidro piso-teto representando a demonstração Horizonte Prime Imóveis">
+            <div class="demo-hero-frame__badge">
+              <span><strong>Horizonte Prime</strong> • Curadoria Arquitetônica &amp; Alto Padrão</span>
+              <span class="badge badge--brand">6 Imóveis Filtráveis</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -170,6 +176,9 @@
         <div class="grid grid--3" data-imob-grid>
           <!-- Imóvel 1 -->
           <article class="card card--interactive" data-property-card data-type="Cobertura" data-neighborhood="Jardim Europa" data-price-band="acima-1500k" data-bedrooms="3">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp101.webp" width="900" height="560" loading="lazy" alt="Cobertura duplex contemporânea com terraço panorâmico (Código HP-101)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Cobertura</span>
               <span class="badge badge--demo">Cód. HP-101 (Fictício)</span>
@@ -188,6 +197,9 @@
 
           <!-- Imóvel 2 -->
           <article class="card card--interactive" data-property-card data-type="Apartamento" data-neighborhood="Vila Nova" data-price-band="800k-1500k" data-bedrooms="3">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp102.webp" width="900" height="560" loading="lazy" alt="Living integrado com varanda gourmet no Edifício Vértice Park (Código HP-102)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Apartamento</span>
               <span class="badge badge--demo">Cód. HP-102 (Fictício)</span>
@@ -206,6 +218,9 @@
 
           <!-- Imóvel 3 -->
           <article class="card card--interactive" data-property-card data-type="Casa" data-neighborhood="Alto da Boa Vista" data-price-band="800k-1500k" data-bedrooms="4">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp103.webp" width="900" height="560" loading="lazy" alt="Casa térrea contemporânea com jardim em condomínio fechado (Código HP-103)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Casa em Condomínio</span>
               <span class="badge badge--demo">Cód. HP-103 (Fictício)</span>
@@ -224,6 +239,9 @@
 
           <!-- Imóvel 4 -->
           <article class="card card--interactive" data-property-card data-type="Apartamento" data-neighborhood="Centro Historico" data-price-band="ate-800k" data-bedrooms="1">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp104.webp" width="900" height="560" loading="lazy" alt="Studio urbano compacto com design de interiores funcional (Código HP-104)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Studio / Compacto</span>
               <span class="badge badge--demo">Cód. HP-104 (Fictício)</span>
@@ -242,6 +260,9 @@
 
           <!-- Imóvel 5 -->
           <article class="card card--interactive" data-property-card data-type="Comercial" data-neighborhood="Vila Nova" data-price-band="ate-800k" data-bedrooms="2">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp105.webp" width="900" height="560" loading="lazy" alt="Conjunto corporativo contemporâneo com amplas esquadrias (Código HP-105)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Comercial</span>
               <span class="badge badge--demo">Cód. HP-105 (Fictício)</span>
@@ -260,6 +281,9 @@
 
           <!-- Imóvel 6 -->
           <article class="card card--interactive" data-property-card data-type="Casa" data-neighborhood="Jardim Europa" data-price-band="acima-1500k" data-bedrooms="4">
+            <div class="card__thumb">
+              <img src="../../assets/img/imobiliaria/imovel-hp106.webp" width="900" height="560" loading="lazy" alt="Residência autoral em concreto e madeira com vista para o vale (Código HP-106)">
+            </div>
             <div class="card__meta">
               <span class="badge badge--brand">Casa Autoral</span>
               <span class="badge badge--demo">Cód. HP-106 (Fictício)</span>
@@ -346,10 +370,10 @@
   </footer>
 
   <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
-    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="../../assets/js/main.js"></script>
-  <script src="../../assets/js/demo-imobiliaria.js"></script>
+  <script src="../../assets/js/main.js?v=3.0"></script>
+  <script src="../../assets/js/demo-imobiliaria.js?v=3.0"></script>
 </body>
 </html>

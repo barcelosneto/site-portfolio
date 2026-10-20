@@ -148,15 +148,27 @@
       if (triggers.length === 0) return;
       currentIndex = (idx + triggers.length) % triggers.length;
       var btn = triggers[currentIndex];
-      var title = btn.getAttribute("data-title") || "Imagem ilustrativa";
+      var title = btn.getAttribute("data-title") || "Fotografia gastronômica";
       var desc = btn.getAttribute("data-description") || "";
-      var svgMarkup = btn.querySelector("svg")
-        ? btn.querySelector("svg").outerHTML
-        : "";
+      var imgEl = btn.querySelector("img");
+      var mediaMarkup = "";
+
+      if (imgEl) {
+        var src = imgEl.getAttribute("src") || "";
+        var alt = imgEl.getAttribute("alt") || title;
+        mediaMarkup =
+          '<img src="' +
+          src +
+          '" alt="' +
+          alt.replace(/"/g, "&quot;") +
+          '" width="1200" height="750" style="width:100%;max-height:480px;object-fit:cover;border-radius:var(--radius-md);display:block;" />';
+      } else if (btn.querySelector("svg")) {
+        mediaMarkup = btn.querySelector("svg").outerHTML;
+      }
 
       if (titleEl) titleEl.textContent = title;
       if (descEl) descEl.textContent = desc;
-      if (artworkContainer) artworkContainer.innerHTML = svgMarkup;
+      if (artworkContainer) artworkContainer.innerHTML = mediaMarkup;
       if (counterEl) {
         counterEl.textContent =
           "Item " + (currentIndex + 1) + " de " + triggers.length;

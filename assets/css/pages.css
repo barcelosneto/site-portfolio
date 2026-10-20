@@ -413,6 +413,8 @@
   color: var(--text-muted);
   margin-bottom: var(--space-6);
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
   align-items: center;
   justify-content: space-between;
 }
@@ -504,6 +506,15 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #060913;
+  position: relative;
+}
+
+.project-card-v2__screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 9, 19, 0.05) 0%, rgba(6, 9, 19, 0.42) 100%);
+  pointer-events: none;
 }
 
 .project-card-v2__screen img,
@@ -511,6 +522,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.project-card-v2:hover .project-card-v2__screen img {
+  transform: scale(1.045);
 }
 
 .project-card-v2__body {
@@ -689,7 +706,80 @@
   gap: 0.45rem;
 }
 
-/* 7. IDENTIDADES VISUAIS PRÓPRIAS DAS 3 DEMOS SETORIAIS */
+/* 7. IDENTIDADES VISUAIS PRÓPRIAS DAS 3 DEMOS SETORIAIS & COMPONENTES FOTOGRÁFICOS V3.0 */
+
+.demo-hero-frame {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 56px -12px rgba(0, 0, 0, 0.65);
+  position: relative;
+  background: #090D16;
+}
+
+.demo-hero-frame img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.demo-hero-frame__badge {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-4);
+  right: var(--space-4);
+  background: rgba(9, 13, 22, 0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: #F8FAFC;
+  font-size: var(--text-xs);
+}
+
+.concept-preview-media {
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background: #060913;
+}
+
+.concept-preview-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.concept-preview-media:hover img {
+  transform: scale(1.03);
+}
+
+.studio-photo-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  margin-bottom: var(--space-5);
+  aspect-ratio: 16 / 9;
+  background: #060913;
+}
+
+.studio-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 /* Demo 1: Restaurante Sabor & Brasa (Gastronomia Autoral — Brasa, Obsidiana & Âmbar Dourado) */
 .theme-restaurante {
@@ -729,6 +819,7 @@
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
+  overflow: hidden;
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
@@ -736,6 +827,26 @@
   transform: translateY(-4px);
   border-color: rgba(245, 158, 11, 0.45);
   box-shadow: var(--shadow-md);
+}
+
+.menu-item-card__media {
+  margin: calc(var(--space-6) * -1) calc(var(--space-6) * -1) var(--space-5);
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+  background: #120C0A;
+}
+
+.menu-item-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.menu-item-card:hover .menu-item-card__media img {
+  transform: scale(1.045);
 }
 
 .menu-item-card__header {
@@ -775,6 +886,24 @@
   border-color: var(--brand-primary);
 }
 
+.gallery-trigger__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #120C0A;
+}
+
+.gallery-trigger__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-trigger:hover .gallery-trigger__media img {
+  transform: scale(1.04);
+}
+
 .gallery-trigger__caption {
   padding: var(--space-4) var(--space-5);
   font-weight: 700;
@@ -810,6 +939,42 @@
 
 .hero-clinica p {
   color: #CCFBF1;
+}
+
+.clinic-photo-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.clinic-photo-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-highlight);
+}
+
+.clinic-photo-card__media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #041F1E;
+}
+
+.clinic-photo-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.clinic-photo-card:hover .clinic-photo-card__media img {
+  transform: scale(1.04);
+}
+
+.clinic-photo-card__body {
+  padding: var(--space-5);
 }
 
 /* Demo 3: Horizonte Prime Imobiliária (Arquitetura & Alto Padrão — Índigo & Ciano) */

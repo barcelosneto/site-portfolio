@@ -16,6 +16,11 @@
       area: "210 m² privativos",
       bedrooms: "3 suítes",
       parking: "3 vagas cobertas",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp101.webp",
+        "../../assets/img/imobiliaria/imovel-hp102.webp",
+        "../../assets/img/imobiliaria/hero-imobiliaria.webp"
+      ],
       description:
         "Imóvel fictício para demonstração de interface imobiliária. Planta integrada com iluminação natural abundante, terraço gourmet privativo, preparação para automação residencial e isolamento acústico nas esquadrias.",
       features: [
@@ -35,6 +40,11 @@
       area: "118 m² privativos",
       bedrooms: "3 quartos (2 suítes)",
       parking: "2 vagas",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp102.webp",
+        "../../assets/img/imobiliaria/imovel-hp104.webp",
+        "../../assets/img/imobiliaria/imovel-hp101.webp"
+      ],
       description:
         "Imóvel fictício para demonstração de catálogo. Apartamento de andar alto com vista livre, varanda gourmet integrada à cozinha e lazer completo no condomínio.",
       features: [
@@ -54,6 +64,11 @@
       area: "245 m² construídos",
       bedrooms: "4 quartos (2 suítes)",
       parking: "4 vagas",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp103.webp",
+        "../../assets/img/imobiliaria/hero-imobiliaria.webp",
+        "../../assets/img/imobiliaria/imovel-hp106.webp"
+      ],
       description:
         "Imóvel fictício de demonstração. Projeto arquitetônico contemporâneo em lote plano, com jardim central integrado à sala de jantar, energia solar fotovoltaica e área de lazer privativa.",
       features: [
@@ -73,6 +88,11 @@
       area: "54 m² privativos",
       bedrooms: "1 quarto",
       parking: "1 vaga rotativa",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp104.webp",
+        "../../assets/img/imobiliaria/imovel-hp102.webp",
+        "../../assets/img/imobiliaria/imovel-hp105.webp"
+      ],
       description:
         "Imóvel fictício de demonstração. Layout inteligente pensado para mobilidade urbana, com marcenaria planejada ilustrativa, lavanderia coletiva equipada e rooftop com vista para a cidade.",
       features: [
@@ -92,6 +112,11 @@
       area: "86 m² privativos",
       bedrooms: "2 ambientes + recepção",
       parking: "2 vagas privativas",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp105.webp",
+        "../../assets/img/imobiliaria/imovel-hp102.webp",
+        "../../assets/img/imobiliaria/imovel-hp104.webp"
+      ],
       description:
         "Imóvel comercial fictício para demonstração de portfólio. Conjunto corporativo com piso elevado instalado, forro modular, dois lavabos e auditório compartilhado no edifício.",
       features: [
@@ -111,6 +136,11 @@
       area: "310 m² construídos",
       bedrooms: "4 suítes",
       parking: "4 vagas",
+      photos: [
+        "../../assets/img/imobiliaria/imovel-hp106.webp",
+        "../../assets/img/imobiliaria/thumb-imobiliaria.webp",
+        "../../assets/img/imobiliaria/hero-imobiliaria.webp"
+      ],
       description:
         "Imóvel fictício de demonstração. Residência com estrutura mista em concreto e madeira, esquadrias piso-teto, adega climatizada ilustrativa e área gourmet voltada para o pôr do sol.",
       features: [
@@ -222,50 +252,31 @@
 
     function renderGalleryView(viewIndex) {
       if (!activeProp || !galleryStage) return;
+      var photos = activeProp.photos || [];
       var views = [
         {
-          caption: "Vista 1/3 — Fachada e Perspectiva Arquitetônica Ilustrativa (" + activeProp.code + ")",
-          bg: "#1E1B4B",
-          accent: "#4F46E5",
+          caption: "Vista 1/3 — Fachada e Volumetria Arquitetônica (" + activeProp.code + ")",
+          img: photos[0] || "../../assets/img/imobiliaria/imovel-hp101.webp",
           label: "FACHADA & VOLUMETRIA"
         },
         {
-          caption: "Vista 2/3 — Living Integrado & Iluminação Natural Ilustrativa (" + activeProp.code + ")",
-          bg: "#0F172A",
-          accent: "#06B6D4",
-          label: "LIVING & TERRAÇO"
+          caption: "Vista 2/3 — Living Integrado & Iluminação Natural (" + activeProp.code + ")",
+          img: photos[1] || "../../assets/img/imobiliaria/imovel-hp102.webp",
+          label: "LIVING & INTERIORS"
         },
         {
-          caption: "Vista 3/3 — Planta Humanizada Esquemática (" + activeProp.code + ")",
-          bg: "#172554",
-          accent: "#38BDF8",
-          label: "ESQUEMA DE PLANTA (" + activeProp.area + ")"
+          caption: "Vista 3/3 — Perspectiva & Implantação (" + activeProp.code + " • " + activeProp.area + ")",
+          img: photos[2] || "../../assets/img/imobiliaria/hero-imobiliaria.webp",
+          label: "IMPLANTAÇÃO (" + activeProp.area + ")"
         }
       ];
       var v = views[viewIndex] || views[0];
       galleryStage.innerHTML =
-        '<svg viewBox="0 0 700 320" width="100%" height="100%" role="img" aria-label="' +
-        v.caption +
-        '">' +
-        '<rect width="700" height="320" rx="10" fill="' +
-        v.bg +
-        '"/>' +
-        '<rect x="45" y="40" width="610" height="240" rx="8" fill="none" stroke="' +
-        v.accent +
-        '" stroke-width="2" stroke-dasharray="6 4"/>' +
-        '<path d="M120 240 L230 110 L350 240 Z" fill="' +
-        v.accent +
-        '" opacity="0.35"/>' +
-        '<rect x="310" y="95" width="240" height="145" rx="6" fill="' +
-        v.accent +
-        '" opacity="0.25"/>' +
-        '<text x="350" y="160" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="20" font-weight="800" text-anchor="middle">' +
-        v.label +
-        "</text>" +
-        '<text x="350" y="192" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Representação Gráfica Demonstrativa — ' +
-        activeProp.title.split("—")[0] +
-        "</text>" +
-        "</svg>";
+        '<img src="' +
+        v.img +
+        '" alt="' +
+        v.caption.replace(/"/g, "&quot;") +
+        '" width="900" height="480" style="width:100%;height:320px;object-fit:cover;border-radius:var(--radius-md);display:block;" />';
       if (galleryCaption) galleryCaption.textContent = v.caption;
 
       slideBtns.forEach(function (b, idx) {

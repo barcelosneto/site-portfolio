@@ -24,12 +24,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../assets/css/base.css">
-  <link rel="stylesheet" href="../../assets/css/components.css">
-  <link rel="stylesheet" href="../../assets/css/pages.css">
+  <link rel="stylesheet" href="../../assets/css/base.css?v=3.0">
+  <link rel="stylesheet" href="../../assets/css/components.css?v=3.0">
+  <link rel="stylesheet" href="../../assets/css/pages.css?v=3.0">
 
-  <script src="../../config/site-config.js"></script>
-  <script src="../../assets/js/theme.js"></script>
+  <script src="../../config/site-config.js?v=3.0"></script>
+  <script src="../../assets/js/theme.js?v=3.0"></script>
 </head>
 <body class="theme-restaurante">
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
@@ -54,7 +54,7 @@
     <div class="container site-header__inner">
       <a href="#topo-demo" class="brand">
         <span class="brand__mark" style="background: linear-gradient(135deg, #D97706, #EA580C);" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2c1.5 4 4 6 4 10a4 4 0 1 1-8 0c0-4 2.5-6 4-10z" stroke="#FFFFFF"/></svg>
+          <svg height="18" width="18" class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2c1.5 4 4 6 4 10a4 4 0 1 1-8 0c0-4 2.5-6 4-10z" stroke="#FFFFFF"/></svg>
         </span>
         <span class="brand__text">
           <span class="brand__name">Sabor &amp; Brasa</span>
@@ -73,12 +73,12 @@
 
       <div class="header-actions">
         <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
-          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
         <a href="#horarios" class="btn btn--primary btn--sm header-cta-desktop">Reservar Mesa</a>
         <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -101,7 +101,13 @@
         </div>
 
         <div data-reveal>
-          <img src="../../assets/img/thumb-restaurante.svg" width="800" height="500" alt="Ilustração gastronômica do restaurante demonstrativo Sabor &amp; Brasa" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); border: 1px solid rgba(245, 158, 11, 0.3);">
+          <div class="demo-hero-frame" style="border-color: rgba(245, 158, 11, 0.35);">
+            <img src="../../assets/img/restaurante/hero-restaurante.webp" width="1400" height="875" fetchpriority="high" alt="Ambiente cinematográfico do salão do restaurante demonstrativo Sabor &amp; Brasa com iluminação quente">
+            <div class="demo-hero-frame__badge">
+              <span><strong>Sabor &amp; Brasa</strong> • Parrilla Contemporânea &amp; Adega</span>
+              <span class="badge badge--brand">Cardápio Digital Ao Vivo</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -129,7 +135,7 @@
 
           <div class="search-box">
             <label for="menu-search-input" class="sr-only">Buscar prato ou ingrediente</label>
-            <svg class="icon search-box__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg height="18" width="18" class="icon search-box__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="search" id="menu-search-input" data-menu-search placeholder="Buscar prato ou ingrediente (ex.: cogumelos, ancho)..." autocomplete="off">
           </div>
         </div>
@@ -158,6 +164,9 @@
         <div class="grid grid--2" data-menu-grid>
           <article class="menu-item-card" data-menu-item data-category="entradas" data-diets="vegetariano">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-burrata.webp" width="800" height="500" loading="lazy" alt="Burrata cremosa com tomates confitados no azeite de ervas e manjericão fresco">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Burrata Defumada na Lenha</h3>
                 <span class="menu-item-card__price">R$ 58 <small class="text-muted">(fictício)</small></span>
@@ -172,6 +181,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="entradas" data-diets="vegetariano,vegano,sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-ceviche.webp" width="800" height="500" loading="lazy" alt="Ceviche autoral fresco servido em cerâmica artesanal com cítricos e coentro">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Ceviche de Banana-da-Terra &amp; Castanha</h3>
                 <span class="menu-item-card__price">R$ 44 <small class="text-muted">(fictício)</small></span>
@@ -187,6 +199,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="principais" data-diets="sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-bife-ancho.webp" width="800" height="500" loading="lazy" alt="Bife Ancho Angus grelhado na parrilla com ervas e acompanhamentos">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Bife Ancho Angus na Parrilla (350g)</h3>
                 <span class="menu-item-card__price">R$ 118 <small class="text-muted">(fictício)</small></span>
@@ -201,6 +216,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="principais" data-diets="vegetariano,vegano,sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-risoto.webp" width="800" height="500" loading="lazy" alt="Risoto cremoso de cogumelos silvestres tostados na brasa">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Risoto de Cogumelos Silvestres na Brasa</h3>
                 <span class="menu-item-card__price">R$ 86 <small class="text-muted">(fictício)</small></span>
@@ -216,11 +234,14 @@
 
           <article class="menu-item-card" data-menu-item data-category="principais" data-diets="sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-polvo.webp" width="800" height="500" loading="lazy" alt="Frutos do mar grelhados na brasa com limão siciliano e azeite de ervas">
+              </div>
               <div class="menu-item-card__header">
-                <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Polvo Grelhado com Batatas ao Murro</h3>
+                <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Polvo &amp; Camarões Grelhados com Batatas ao Murro</h3>
                 <span class="menu-item-card__price">R$ 134 <small class="text-muted">(fictício)</small></span>
               </div>
-              <p class="card__desc">Tentáculos de polvo macios finalizados no carvão, batatas bolinha douradas no alho assado, páprica defumada e brócolis tostado.</p>
+              <p class="card__desc">Frutos do mar selecionados finalizados no carvão, batatas bolinha douradas no alho assado, páprica defumada e azeite cítrico.</p>
             </div>
             <ul class="tag-list" style="margin-bottom: 0;">
               <li class="tag">Prato Principal</li>
@@ -230,6 +251,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="sobremesas" data-diets="vegetariano">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-torta-basca.webp" width="800" height="500" loading="lazy" alt="Torta basca caramelizada servida com calda artesanal de frutas vermelhas">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Torta Basca Caramelizada com Frutas Vermelhas</h3>
                 <span class="menu-item-card__price">R$ 39 <small class="text-muted">(fictício)</small></span>
@@ -244,6 +268,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="sobremesas" data-diets="vegetariano,vegano,sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-abacaxi.webp" width="800" height="500" loading="lazy" alt="Sobremesa de frutas grelhadas com especiarias e sorbet artesanal de coco">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Abacaxi na Brasa com Sorbet de Coco</h3>
                 <span class="menu-item-card__price">R$ 34 <small class="text-muted">(fictício)</small></span>
@@ -259,6 +286,9 @@
 
           <article class="menu-item-card" data-menu-item data-category="bebidas" data-diets="vegetariano,vegano,sem-gluten">
             <div>
+              <div class="menu-item-card__media">
+                <img src="../../assets/img/restaurante/prato-soda.webp" width="800" height="500" loading="lazy" alt="Soda botânica autoral com tangerina fresca e ramo de alecrim">
+              </div>
               <div class="menu-item-card__header">
                 <h3 class="card__title" style="font-size: var(--text-lg); margin-bottom: 0;">Soda Botânica de Tangerina &amp; Alecrim Defumado</h3>
                 <span class="menu-item-card__price">R$ 26 <small class="text-muted">(fictício)</small></span>
@@ -285,51 +315,39 @@
     <section class="section section--alt" id="galeria">
       <div class="container">
         <div class="section-header" data-reveal>
-          <span class="eyebrow">Galeria Interativa (Lightbox)</span>
-          <h2 class="section-title">Ambiente &amp; Apresentação</h2>
-          <p class="section-subtitle">Clique em qualquer cartão abaixo para abrir o modal acessível (suporta navegação por setas do teclado e tecla <code>Escape</code>).</p>
+          <span class="eyebrow">Galeria Fotográfica Interativa (Lightbox)</span>
+          <h2 class="section-title">Ambiente &amp; Experiência na Brasa</h2>
+          <p class="section-subtitle">Clique em qualquer fotografia abaixo para abrir o modal acessível em alta resolução (suporta navegação por setas do teclado e tecla <code>Escape</code>).</p>
         </div>
 
         <div class="grid grid--3">
-          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Salão Principal &amp; Parrilla Central" data-description="Ilustração demonstrativa do salão com iluminação quente indireta, mesas em madeira maciça e vista para a grelha aberta.">
-            <svg viewBox="0 0 600 380" width="100%" height="220" role="img" aria-label="Ilustração do Salão Principal">
-              <rect width="600" height="380" fill="#1C1412"/>
-              <circle cx="300" cy="170" r="110" fill="#D97706" opacity="0.22"/>
-              <rect x="80" y="90" width="440" height="200" rx="14" fill="#2A1C17" stroke="#D97706" stroke-width="2"/>
-              <text x="300" y="185" fill="#FEF3C7" font-family="Georgia, serif" font-size="24" font-weight="700" text-anchor="middle">Salão &amp; Parrilla Aberta</text>
-              <text x="300" y="218" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Clique para ampliar no Lightbox</text>
-            </svg>
+          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Salão Principal &amp; Arquitetura Acolhedora" data-description="Salão principal com iluminação quente indireta, mesas em madeira natural e atmosfera pensada para jantares autorais.">
+            <div class="gallery-trigger__media">
+              <img src="../../assets/img/restaurante/galeria-salao.webp" width="1200" height="750" loading="lazy" alt="Salão principal do restaurante com mesas em madeira e iluminação quente">
+            </div>
             <div class="gallery-trigger__caption">
-              <span>01. Salão Principal &amp; Parrilla</span>
-              <span class="badge badge--brand">Ampliar</span>
+              <span>01. Salão Principal &amp; Ambiente</span>
+              <span class="badge badge--brand">Ampliar Foto</span>
             </div>
           </button>
 
-          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Cortes Selecionados na Brasa" data-description="Representação gráfica da preparação em grelha inclinada com lenha frutífera certificada e controle de temperatura.">
-            <svg viewBox="0 0 600 380" width="100%" height="220" role="img" aria-label="Ilustração dos Cortes na Brasa">
-              <rect width="600" height="380" fill="#261610"/>
-              <circle cx="300" cy="170" r="100" fill="#EA580C" opacity="0.25"/>
-              <rect x="80" y="90" width="440" height="200" rx="14" fill="#1C110D" stroke="#F59E0B" stroke-width="2"/>
-              <text x="300" y="185" fill="#FEF3C7" font-family="Georgia, serif" font-size="24" font-weight="700" text-anchor="middle">Fogo &amp; Maturação</text>
-              <text x="300" y="218" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Clique para ampliar no Lightbox</text>
-            </svg>
+          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Cortes Selecionados na Brasa Viva" data-description="Preparação em parrilla com lenha frutífera certificada e controle preciso de temperatura para selagem perfeita.">
+            <div class="gallery-trigger__media">
+              <img src="../../assets/img/restaurante/galeria-brasa.webp" width="1200" height="750" loading="lazy" alt="Cortes nobres sendo grelhados sobre brasa viva na parrilla">
+            </div>
             <div class="gallery-trigger__caption">
               <span>02. Cortes Selecionados na Brasa</span>
-              <span class="badge badge--brand">Ampliar</span>
+              <span class="badge badge--brand">Ampliar Foto</span>
             </div>
           </button>
 
-          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Adega &amp; Coquetelaria Autoral" data-description="Ilustração demonstrativa do balcão de coquetelaria botânica e seleção de rótulos sul-americanos.">
-            <svg viewBox="0 0 600 380" width="100%" height="220" role="img" aria-label="Ilustração da Adega e Coquetelaria">
-              <rect width="600" height="380" fill="#171110"/>
-              <circle cx="300" cy="170" r="105" fill="#FBBF24" opacity="0.18"/>
-              <rect x="80" y="90" width="440" height="200" rx="14" fill="#241915" stroke="#B45309" stroke-width="2"/>
-              <text x="300" y="185" fill="#FEF3C7" font-family="Georgia, serif" font-size="24" font-weight="700" text-anchor="middle">Adega &amp; Botânicos</text>
-              <text x="300" y="218" fill="#D6D3D1" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Clique para ampliar no Lightbox</text>
-            </svg>
+          <button type="button" class="gallery-trigger" data-lightbox-trigger data-title="Adega &amp; Coquetelaria Autoral" data-description="Curadoria de vinhos sul-americanos e coquetelaria botânica autoral para harmonização com pratos na brasa.">
+            <div class="gallery-trigger__media">
+              <img src="../../assets/img/restaurante/galeria-adega.webp" width="1200" height="750" loading="lazy" alt="Taças de vinho e ambiente de adega contemporânea">
+            </div>
             <div class="gallery-trigger__caption">
               <span>03. Adega &amp; Coquetelaria Autoral</span>
-              <span class="badge badge--brand">Ampliar</span>
+              <span class="badge badge--brand">Ampliar Foto</span>
             </div>
           </button>
         </div>
@@ -403,10 +421,10 @@
   </footer>
 
   <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
-    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="../../assets/js/main.js"></script>
-  <script src="../../assets/js/demo-restaurante.js"></script>
+  <script src="../../assets/js/main.js?v=3.0"></script>
+  <script src="../../assets/js/demo-restaurante.js?v=3.0"></script>
 </body>
 </html>

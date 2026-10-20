@@ -173,12 +173,33 @@ main {
 }
 
 img,
-svg,
 picture,
 video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+svg.icon,
+.brand__mark svg,
+.brand-logo__mark svg,
+.icon-btn svg,
+.theme-toggle svg,
+.menu-toggle svg,
+.search-box__icon,
+.back-to-top svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  fill: none;
 }
 
 /* Tipografia Base & Hierarquia Editorial */

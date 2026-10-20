@@ -80,13 +80,14 @@ window.SITE_CONFIG = {
       categoryLabel: "Gastronomia & Reservas",
       typeLabel: "Landing Page + Cardápio Interativo",
       badge: "Projeto Demonstrativo",
+      thumbnail: "assets/img/restaurante/thumb-restaurante.webp",
       shortDescription:
-        "Interface imersiva para restaurante autoral com cardápio filtrável por categoria e restrições alimentares, galeria com lightbox acessível, horários e fluxo rápido de contato.",
+        "Interface imersiva para restaurante autoral com fotografia gastronômica real, cardápio filtrável por categoria e restrições alimentares, galeria com lightbox acessível, horários e fluxo rápido de contato.",
       problemSolved:
         "Substitui cardápios em PDF difíceis de ler no celular por uma navegação instantânea, legível e voltada para reservas diretas.",
       deliverables: [
-        "Cardápio interativo com busca e filtros dietéticos instantâneos",
-        "Galeria visual em SVG/CSS de carregamento ultrarrápido com modal acessível",
+        "Cardápio fotográfico interativo com busca e filtros dietéticos instantâneos",
+        "Galeria visual em WebP de carregamento otimizado com modal acessível",
         "Chamada para reserva via WhatsApp ou contato e seção de dúvidas frequentes"
       ],
       technologies: ["HTML5 Semântico", "CSS Grid & Custom Properties", "JavaScript ES6+", "WCAG AA"],
@@ -101,13 +102,14 @@ window.SITE_CONFIG = {
       categoryLabel: "Saúde & Clínicas",
       typeLabel: "Site Institucional de Especialidades",
       badge: "Projeto Demonstrativo",
+      thumbnail: "assets/img/clinica/thumb-clinica.webp",
       shortDescription:
-        "Site institucional sereno e acolhedor para clínicas e consultórios, apresentando especialidades, corpo clínico demonstrativo, orientações de preparo e agendamento transparente.",
+        "Site institucional sereno e acolhedor para clínicas e consultórios, apresentando especialidades, infraestrutura clínica fotografada, orientações de preparo e agendamento transparente.",
       problemSolved:
         "Organiza informações médicas sem jargões confusos, transmite seriedade ética e facilita o primeiro contato do paciente pelo celular.",
       deliverables: [
         "Filtro interativo de especialidades e orientações ao paciente",
-        "Apresentação ética de equipe ilustrativa e estrutura de atendimento",
+        "Apresentação ética de equipe ilustrativa e infraestrutura de atendimento",
         "Avisos claros de conformidade e agendamento assistido via canal direto"
       ],
       technologies: ["HTML5 Semântico", "Design Inclusivo", "JavaScript Modular", "SEO Local"],
@@ -122,13 +124,14 @@ window.SITE_CONFIG = {
       categoryLabel: "Mercado Imobiliário",
       typeLabel: "Catálogo com Filtros & Ficha Técnica",
       badge: "Projeto Demonstrativo",
+      thumbnail: "assets/img/imobiliaria/thumb-imobiliaria.webp",
       shortDescription:
-        "Plataforma de vitrine imobiliária com filtragem combinada por tipo de imóvel, bairro, faixa de valor e quartos, além de modal completo de especificações e galeria.",
+        "Plataforma de vitrine imobiliária com fotografia arquitetônica real, filtragem combinada por tipo de imóvel, bairro, faixa de valor e quartos, além de modal completo de especificações e galeria.",
       problemSolved:
         "Permite que compradores encontrem imóveis compatíveis em segundos sem recarregar a página, qualificando o contato comercial.",
       deliverables: [
         "Busca multicritério em tempo real (tipo, bairro, faixa de preço e dormitórios)",
-        "Modal de detalhes técnicos do imóvel com galeria navegável por teclado",
+        "Modal de detalhes técnicos do imóvel com galeria fotográfica navegável por teclado",
         "Botão de solicitação de visita contextualizado com o código do imóvel"
       ],
       technologies: ["HTML5", "CSS Moderno", "Filtragem Client-Side", "Acessibilidade Teclado"],
@@ -143,6 +146,7 @@ window.SITE_CONFIG = {
       categoryLabel: "Serviços Corporativos",
       typeLabel: "Arquitetura Institucional B2B",
       badge: "Conceito Arquitetural",
+      thumbnail: "assets/img/corporativo/thumb-corporativo.webp",
       shortDescription:
         "Arquitetura enxuta para escritórios de consultoria que precisam apresentar áreas de atuação, governança e formulário de triagem com sobriedade e rapidez.",
       problemSolved:
@@ -164,6 +168,7 @@ window.SITE_CONFIG = {
       categoryLabel: "Landing Pages",
       typeLabel: "Página de Captura e Vendas",
       badge: "Conceito Arquitetural",
+      thumbnail: "assets/img/launchpad/thumb-launchpad.webp",
       shortDescription:
         "Estrutura focada em campanha de tráfego pago ou orgânico com proposta de valor imediata, programação em módulos, perguntas frequentes e carregamento instantâneo.",
       problemSolved:
@@ -185,6 +190,7 @@ window.SITE_CONFIG = {
       categoryLabel: "Portfólios Profissionais",
       typeLabel: "Vitrine Autoral de Projetos",
       badge: "Conceito Arquitetural",
+      thumbnail: "assets/img/monogrid/thumb-monogrid.webp",
       shortDescription:
         "Vitrine minimalista com foco em apresentação visual de estudos de caso, ficha técnica de projetos e solicitação direta de proposta.",
       problemSolved:
@@ -194,7 +200,7 @@ window.SITE_CONFIG = {
         "Páginas ou modais de estudo de caso detalhado",
         "Modo claro e escuro nativo com transição suave"
       ],
-      technologies: ["HTML5", "CSS Grid", "Temas Claro/Escuro", "SVG Art"],
+      technologies: ["HTML5", "CSS Grid", "Temas Claro/Escuro", "Fotografia WebP"],
       demoPath: "servicos/index.html#portfolios",
       previewTheme: "cyan",
       featured: false

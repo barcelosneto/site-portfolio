@@ -24,12 +24,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../assets/css/base.css">
-  <link rel="stylesheet" href="../assets/css/components.css">
-  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/base.css?v=3.0">
+  <link rel="stylesheet" href="../assets/css/components.css?v=3.0">
+  <link rel="stylesheet" href="../assets/css/pages.css?v=3.0">
 
-  <script src="../config/site-config.js"></script>
-  <script src="../assets/js/theme.js"></script>
+  <script src="../config/site-config.js?v=3.0"></script>
+  <script src="../assets/js/theme.js?v=3.0"></script>
 </head>
 <body>
   <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
@@ -38,7 +38,7 @@
     <div class="container site-header__inner">
       <a href="../index.html" class="brand" aria-label="Barcelos Neto — Desenvolvimento Web — Página Inicial">
         <span class="brand__mark" aria-hidden="true">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
         </span>
         <span class="brand__text">
           <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
@@ -58,12 +58,12 @@
 
       <div class="header-actions">
         <button type="button" class="icon-btn" data-theme-toggle aria-label="Alternar tema claro ou escuro" aria-pressed="true">
-          <svg class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg height="18" width="18" class="icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
         </button>
         <a href="../contato/index.html" class="btn btn--primary btn--sm header-cta-desktop">Solicitar Orçamento</a>
         <button type="button" class="icon-btn menu-toggle" data-menu-toggle aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu de navegação">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -97,7 +97,7 @@
 
           <div class="search-box">
             <label for="portfolio-search-input" class="sr-only">Buscar projeto por título, tecnologia ou segmento</label>
-            <svg class="icon search-box__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg height="18" width="18" class="icon search-box__icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             <input type="search" id="portfolio-search-input" data-portfolio-search placeholder="Buscar por segmento, recurso ou tag..." autocomplete="off">
           </div>
         </div>
@@ -118,7 +118,7 @@
                   <span class="project-card-v2__domain">sabor-e-brasa.demo/cardapio</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <img src="../assets/img/thumb-restaurante.svg" width="800" height="500" alt="Prévia da interface Sabor &amp; Brasa">
+                  <img src="../assets/img/restaurante/thumb-restaurante.webp" width="1200" height="750" fetchpriority="high" alt="Corte nobre grelhado na brasa representando o projeto Sabor &amp; Brasa">
                 </div>
               </div>
             </div>
@@ -129,13 +129,13 @@
               </div>
               <h2 class="card__title">Sabor &amp; Brasa — Gastronomia Autoral</h2>
               <p class="card__desc">
-                Plataforma digital para restaurante contemporâneo que substitui cardápios em PDF lentos por uma experiência interativa, apetitosa e imediata no celular.
+                Plataforma digital para restaurante contemporâneo que substitui cardápios em PDF lentos por uma experiência fotográfica interativa, apetitosa e imediata no celular.
               </p>
               <div class="project-card-v2__context">
                 <strong>Objetivo &amp; Solução:</strong> Reduzir atrito na escolha de pratos e reservas de mesa com busca sem acentos, filtros combinados por dieta (vegetariano, vegano, sem glúten) e galeria lightbox acessível.
               </div>
               <ul class="tag-list" aria-label="Entregáveis e tecnologias">
-                <li class="tag">Cardápio Filtrável</li>
+                <li class="tag">Cardápio Fotográfico</li>
                 <li class="tag">Busca Instantânea</li>
                 <li class="tag">Lightbox Teclado</li>
                 <li class="tag">HTML/CSS/JS Puro</li>
@@ -156,7 +156,7 @@
                   <span class="project-card-v2__domain">clinica-vitae.demo/especialidades</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <img src="../assets/img/thumb-clinica.svg" width="800" height="500" alt="Prévia da interface Clínica Vitae">
+                  <img src="../assets/img/clinica/thumb-clinica.webp" width="1200" height="750" fetchpriority="high" alt="Consultório clínico moderno e bem iluminado representando a Clínica Vitae">
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
                 Presença digital institucional para clínicas e consultórios médicos, desenhada para transmitir serenidade, rigor clínico e facilitar o pré-agendamento.
               </p>
               <div class="project-card-v2__context">
-                <strong>Objetivo &amp; Solução:</strong> Organizar especialidades médicas, corpo clínico ilustrativo, orientações pré-consulta e perguntas frequentes em uma leitura acolhedora com contraste WCAG AA.
+                <strong>Objetivo &amp; Solução:</strong> Organizar especialidades médicas, infraestrutura clínica, orientações pré-consulta e perguntas frequentes em uma leitura acolhedora com contraste WCAG AA.
               </div>
               <ul class="tag-list" aria-label="Entregáveis e tecnologias">
                 <li class="tag">Jornada do Paciente</li>
@@ -194,7 +194,7 @@
                   <span class="project-card-v2__domain">horizonte-prime.demo/catalogo</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <img src="../assets/img/thumb-imobiliaria.svg" width="800" height="500" alt="Prévia da interface Horizonte Prime Imobiliária">
+                  <img src="../assets/img/imobiliaria/thumb-imobiliaria.webp" width="1200" height="750" loading="lazy" alt="Residência contemporânea de alto padrão com iluminação arquitetônica representando a Horizonte Prime">
                 </div>
               </div>
             </div>
@@ -205,14 +205,14 @@
               </div>
               <h2 class="card__title">Horizonte Prime — Catálogo Imobiliário</h2>
               <p class="card__desc">
-                Vitrine arquitetônica para imobiliárias boutiques e consultores de alto padrão, com filtragem rápida no cliente e visualização detalhada de cada imóvel.
+                Vitrine arquitetônica para imobiliárias boutiques e consultores de alto padrão, com filtragem rápida no cliente e visualização fotográfica detalhada de cada imóvel.
               </p>
               <div class="project-card-v2__context">
-                <strong>Objetivo &amp; Solução:</strong> Permitir filtragem combinada por tipologia, bairro, faixa de valor e dormitórios sem recarregar a página, abrindo ficha técnica com galeria de vistas e planta.
+                <strong>Objetivo &amp; Solução:</strong> Permitir filtragem combinada por tipologia, bairro, faixa de valor e dormitórios sem recarregar a página, abrindo ficha técnica com galeria de fotos reais.
               </div>
               <ul class="tag-list" aria-label="Entregáveis e tecnologias">
                 <li class="tag">Filtro Combinado</li>
-                <li class="tag">Modal com Planta</li>
+                <li class="tag">Modal Fotográfico</li>
                 <li class="tag">Captação por Código</li>
                 <li class="tag">UI Arquitetônica</li>
               </ul>
@@ -224,35 +224,15 @@
           </article>
 
           <!-- Case 4: Institucional Corporativo -->
-          <article class="project-card-v2" data-project-card data-category="institucional" data-search-terms="institucional corporativo consultoria b2b advocacia contabilidade nexo">
+          <article class="project-card-v2" data-project-card data-category="institucional" data-search-terms="institucional corporativo consultoria b2b advocacia contabilidade nexo estrutura executiva">
             <div class="project-card-v2__stage">
               <div class="project-card-v2__window">
                 <div class="project-card-v2__chrome">
                   <div class="project-card-v2__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                  <span class="project-card-v2__domain">nexo-consultoria.conceito/b2b</span>
+                  <span class="project-card-v2__domain">estrutura-executiva.conceito/b2b</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <svg viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Conceito visual Nexo Consultoria Corporativa">
-                    <rect width="800" height="500" fill="#070D1B"/>
-                    <circle cx="660" cy="110" r="150" fill="#3B82F6" opacity="0.16"/>
-                    <rect x="52" y="42" width="696" height="416" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
-                    <rect x="88" y="88" width="150" height="22" rx="11" fill="#1E3A8A"/>
-                    <text x="163" y="103" fill="#93C5FD" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">CONSULTORIA B2B</text>
-                    <text x="88" y="156" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="32" font-weight="800">Nexo Estratégia &amp; Gestão</text>
-                    <text x="88" y="188" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="15">Governança corporativa, diagnósticos operacionais e expansão</text>
-                    <rect x="88" y="220" width="192" height="190" rx="10" fill="#1E293B" stroke="#334155"/>
-                    <text x="112" y="264" fill="#38BDF8" font-family="monospace" font-size="26" font-weight="800">+42%</text>
-                    <text x="112" y="292" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Eficiência Operacional</text>
-                    <rect x="112" y="316" width="140" height="8" rx="4" fill="#3B82F6"/>
-                    <rect x="304" y="220" width="192" height="190" rx="10" fill="#1E293B" stroke="#334155"/>
-                    <text x="328" y="264" fill="#34D399" font-family="monospace" font-size="26" font-weight="800">ISO / ESG</text>
-                    <text x="328" y="292" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Conformidade &amp; Processos</text>
-                    <rect x="328" y="316" width="140" height="8" rx="4" fill="#10B981"/>
-                    <rect x="520" y="220" width="192" height="190" rx="10" fill="#1E293B" stroke="#334155"/>
-                    <text x="544" y="264" fill="#F8FAFC" font-family="monospace" font-size="26" font-weight="800">B2B Lead</text>
-                    <text x="544" y="292" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Diagnóstico Executivo</text>
-                    <rect x="544" y="316" width="140" height="8" rx="4" fill="#6366F1"/>
-                  </svg>
+                  <img src="../assets/img/corporativo/thumb-corporativo.webp" width="1200" height="750" loading="lazy" alt="Sala de conselho e arquitetura corporativa B2B representando o conceito Estrutura Executiva — Nexo Consultoria">
                 </div>
               </div>
             </div>
@@ -261,9 +241,9 @@
                 <span class="badge badge--neutral">Institucional</span>
                 <span class="badge badge--demo">Conceito de Interface</span>
               </div>
-              <h2 class="card__title">Nexo Consultoria — Portal B2B</h2>
+              <h2 class="card__title">Estrutura Executiva — Consultoria Jurídica &amp; B2B</h2>
               <p class="card__desc">
-                Arquitetura multipágina sob medida para consultorias empresariais, escritórios de advocacia e firmas de engenharia que demandam sobriedade e clareza técnica.
+                Arquitetura multipágina sob medida para consultorias empresariais, escritórios de advocacia e firmas de contabilidade que demandam sobriedade e clareza técnica.
               </p>
               <div class="project-card-v2__context">
                 <strong>Objetivo &amp; Solução:</strong> Estruturar áreas de atuação complexas em páginas escaneáveis com indicadores executivos, matriz de serviços e captação de reuniões estratégicas.
@@ -281,34 +261,15 @@
           </article>
 
           <!-- Case 5: Landing Page de Alta Conversão -->
-          <article class="project-card-v2" data-project-card data-category="landing-page" data-search-terms="landing page conversao lancamento infoproduto servico saas campanha trafego">
+          <article class="project-card-v2" data-project-card data-category="landing-page" data-search-terms="landing page conversao lancamento infoproduto servico saas campanha trafego launchpad impulse">
             <div class="project-card-v2__stage">
               <div class="project-card-v2__window">
                 <div class="project-card-v2__chrome">
                   <div class="project-card-v2__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                  <span class="project-card-v2__domain">impulse-launch.conceito/lp</span>
+                  <span class="project-card-v2__domain">launchpad.conceito/alta-conversao</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <svg viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Conceito visual Landing Page Impulse">
-                    <rect width="800" height="500" fill="#090D1A"/>
-                    <circle cx="400" cy="120" r="220" fill="#2563EB" opacity="0.18"/>
-                    <rect x="64" y="44" width="672" height="412" rx="16" fill="#0F172A" stroke="#2563EB" stroke-width="1.5"/>
-                    <rect x="315" y="86" width="170" height="24" rx="12" fill="#1E3A8A"/>
-                    <text x="400" y="102" fill="#93C5FD" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle">ALTA CONVERSÃO • LP</text>
-                    <text x="400" y="156" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="32" font-weight="800" text-anchor="middle">Headline Direta ao Ponto</text>
-                    <text x="400" y="190" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="15" text-anchor="middle">Proposta única de valor + prova de capacidade + CTA sem distração</text>
-                    <rect x="295" y="216" width="210" height="46" rx="10" fill="#2563EB"/>
-                    <text x="400" y="244" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Agendar Demonstração →</text>
-                    <rect x="104" y="294" width="184" height="120" rx="10" fill="#162038" stroke="#263859"/>
-                    <text x="196" y="340" fill="#38BDF8" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">&lt; 1.0s</text>
-                    <text x="196" y="368" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">First Contentful Paint</text>
-                    <rect x="308" y="294" width="184" height="120" rx="10" fill="#162038" stroke="#263859"/>
-                    <text x="400" y="340" fill="#34D399" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">100% Focada</text>
-                    <text x="400" y="368" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Arquitetura persuasiva</text>
-                    <rect x="512" y="294" width="184" height="120" rx="10" fill="#162038" stroke="#263859"/>
-                    <text x="604" y="340" fill="#FBBF24" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">Mobile Ready</text>
-                    <text x="604" y="368" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Ergonomia de toque</text>
-                  </svg>
+                  <img src="../assets/img/launchpad/thumb-launchpad.webp" width="1200" height="750" loading="lazy" alt="Auditório e palco de conferência tecnológica representando a Landing Page LaunchPad">
                 </div>
               </div>
             </div>
@@ -317,9 +278,9 @@
                 <span class="badge badge--accent">Landing Page</span>
                 <span class="badge badge--demo">Conceito de Interface</span>
               </div>
-              <h2 class="card__title">Impulse Launchpad — Página de Conversão</h2>
+              <h2 class="card__title">LaunchPad — Página de Alta Conversão</h2>
               <p class="card__desc">
-                Estrutura de página única projetada para campanhas de Google Ads, Meta Ads e lançamentos de serviços especializados com carregamento instantâneo.
+                Estrutura de página única projetada para campanhas de Google Ads, Meta Ads, eventos executivos e lançamentos de produtos digitais com carregamento instantâneo.
               </p>
               <div class="project-card-v2__context">
                 <strong>Objetivo &amp; Solução:</strong> Eliminar fugas de navegação, responder objeções através de blocos progressivos de benefícios e FAQ, e guiar o visitante até o formulário.
@@ -345,19 +306,7 @@
                   <span class="project-card-v2__domain">monogrid-studio.conceito/cases</span>
                 </div>
                 <div class="project-card-v2__screen">
-                  <svg viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Conceito visual Portfólio Autoral MonoGrid">
-                    <rect width="800" height="500" fill="#080B12"/>
-                    <rect x="52" y="42" width="696" height="416" rx="14" fill="#0E131F" stroke="#263044" stroke-width="2"/>
-                    <text x="88" y="106" fill="#38BDF8" font-family="monospace" font-size="11" font-weight="700">ESTÚDIO AUTORAL &amp; ARQUITETURA</text>
-                    <text x="88" y="148" fill="#F8FAFC" font-family="Georgia, serif" font-size="32" font-weight="700">MonoGrid — Acervo &amp; Projetos</text>
-                    <rect x="88" y="182" width="300" height="236" rx="10" fill="#161F33" stroke="#2E3C56"/>
-                    <circle cx="238" cy="276" r="46" fill="#38BDF8" opacity="0.22"/>
-                    <text x="112" y="388" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">01 • Pavilhão Horizonte</text>
-                    <rect x="412" y="182" width="300" height="110" rx="10" fill="#161F33" stroke="#2E3C56"/>
-                    <text x="436" y="244" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">02 • Identidade &amp; Direção Editorial</text>
-                    <rect x="412" y="308" width="300" height="110" rx="10" fill="#161F33" stroke="#2E3C56"/>
-                    <text x="436" y="370" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="14" font-weight="700">03 • Curadoria de Cases Técnicos</text>
-                  </svg>
+                  <img src="../assets/img/monogrid/thumb-monogrid.webp" width="1200" height="750" loading="lazy" alt="Arquitetura minimalista em concreto aparente e geometria limpa representando o projeto MonoGrid">
                 </div>
               </div>
             </div>
@@ -366,7 +315,7 @@
                 <span class="badge badge--brand">Portfólio</span>
                 <span class="badge badge--demo">Conceito de Interface</span>
               </div>
-              <h2 class="card__title">MonoGrid — Portfólio para Especialistas</h2>
+              <h2 class="card__title">MonoGrid — Portfólio para Arquitetos &amp; Criativos</h2>
               <p class="card__desc">
                 Vitrine minimalista para arquitetos, engenheiros, designers e consultores independentes que desejam apresentar estudos de caso com estética editorial.
               </p>
@@ -418,7 +367,7 @@
         <div>
           <a href="../index.html" class="brand mb-4">
             <span class="brand__mark" aria-hidden="true">
-              <svg class="icon" viewBox="0 0 24 24"><path d="M4 6L12 19L20 6" stroke="#FFFFFF" stroke-width="2.5"/></svg>
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
             </span>
             <span class="brand__text">
               <span class="brand__name" data-config-brand>Barcelos Neto — Desenvolvimento Web</span>
@@ -468,10 +417,10 @@
   </footer>
 
   <button type="button" class="back-to-top" data-back-to-top aria-label="Voltar ao topo da página">
-    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/portfolio.js"></script>
+  <script src="../assets/js/main.js?v=3.0"></script>
+  <script src="../assets/js/portfolio.js?v=3.0"></script>
 </body>
 </html>
