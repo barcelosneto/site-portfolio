@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Prévia do projeto demonstrativo Horizonte Prime Imobiliária">
+  <defs>
+    <linearGradient id="imob-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+    <linearGradient id="imob-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#imob-bg)"/>
+  <circle cx="650" cy="95" r="140" fill="#4F46E5" opacity="0.18"/>
+  <!-- Browser frame -->
+  <rect x="48" y="40" width="704" height="420" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <rect x="48" y="40" width="704" height="40" rx="16" fill="#E2E8F0"/>
+  <circle cx="76" cy="60" r="6" fill="#EF4444"/>
+  <circle cx="96" cy="60" r="6" fill="#F59E0B"/>
+  <circle cx="116" cy="60" r="6" fill="#10B981"/>
+  <!-- Mock Header & Filter Bar -->
+  <text x="84" y="128" fill="#0F172A" font-family="system-ui, sans-serif" font-size="28" font-weight="800">Horizonte Prime Imóveis</text>
+  <text x="84" y="155" fill="#475569" font-family="system-ui, sans-serif" font-size="14">Busca por bairro, tipologia, quartos e faixa de valor</text>
+  <rect x="84" y="175" width="632" height="56" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="100" y="191" width="140" height="24" rx="6" fill="#F1F5F9"/>
+  <rect x="256" y="191" width="140" height="24" rx="6" fill="#F1F5F9"/>
+  <rect x="412" y="191" width="140" height="24" rx="6" fill="#F1F5F9"/>
+  <rect x="568" y="187" width="130" height="32" rx="6" fill="url(#imob-accent)"/>
+  <!-- Property Cards -->
+  <rect x="84" y="255" width="195" height="175" rx="10" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="84" y="255" width="195" height="82" rx="10" fill="#1E293B"/>
+  <path d="M125 337 L125 290 L165 270 L205 290 L205 337 Z" fill="#4F46E5"/>
+  <rect x="100" y="352" width="130" height="12" rx="4" fill="#0F172A"/>
+  <rect x="100" y="374" width="95" height="10" rx="4" fill="#64748B"/>
+  <rect x="100" y="398" width="85" height="16" rx="4" fill="#4F46E5"/>
+
+  <rect x="302" y="255" width="195" height="175" rx="10" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="302" y="255" width="195" height="82" rx="10" fill="#0F172A"/>
+  <path d="M350 337 L350 280 L410 280 L410 337 Z" fill="#06B6D4"/>
+  <rect x="318" y="352" width="140" height="12" rx="4" fill="#0F172A"/>
+  <rect x="318" y="374" width="105" height="10" rx="4" fill="#64748B"/>
+  <rect x="318" y="398" width="85" height="16" rx="4" fill="#4F46E5"/>
+
+  <rect x="520" y="255" width="195" height="175" rx="10" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="520" y="255" width="195" height="82" rx="10" fill="#1E1B4B"/>
+  <path d="M565 337 L595 272 L645 300 L645 337 Z" fill="#818CF8"/>
+  <rect x="536" y="352" width="120" height="12" rx="4" fill="#0F172A"/>
+  <rect x="536" y="374" width="100" height="10" rx="4" fill="#64748B"/>
+  <rect x="536" y="398" width="85" height="16" rx="4" fill="#4F46E5"/>
+</svg>

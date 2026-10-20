@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-root="../..">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte Prime | Consultoria Imobiliária (Projeto Demonstrativo)</title>
+  <meta name="description" content="Projeto demonstrativo de imobiliária com busca local por tipo de imóvel, bairro, dormitórios e faixa de preço, além de ficha técnica em modal.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/demos/imobiliaria/" data-page-path="demos/imobiliaria/">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+
+  <script src="../../config/site-config.js"></script>
+</head>
+<body class="theme-imobiliaria">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- FAIXA DISCRETA DE DEMONSTRAÇÃO DE PORTFÓLIO -->
+  <aside class="demo-portfolio-bar" aria-label="Aviso de demonstração de portfólio">
+    <div class="demo-portfolio-bar__inner">
+      <span class="demo-portfolio-bar__badge">
+        ● Demonstração de portfólio — Projeto demonstrativo fictício (Horizonte Prime Imóveis)
+      </span>
+      <div class="demo-portfolio-bar__links">
+        <a href="../../portfolio/index.html">&larr; Voltar ao portfólio</a>
+        <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Modelo%20Imobiliaria">Solicitar site como este</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CABEÇALHO DA IMOBILIÁRIA -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo__mark" style="background-color: #3730A3; border-color: #6366F1;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFFFF" stroke-width="2.2">
+            <path d="M3 10l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span>Horizonte Prime</span>
+          <span class="brand-logo__sub">Projeto Demonstrativo</span>
+        </span>
+      </a>
+
+      <div class="nav-wrapper">
+        <nav class="main-nav" id="menu-imob" data-main-nav aria-label="Navegação da imobiliária">
+          <ul class="main-nav__list">
+            <li><a href="#catalogo-imoveis" class="main-nav__link">Imóveis (Fictícios)</a></li>
+            <li><a href="#diferenciais-imob" class="main-nav__link">Consultoria</a></li>
+            <li><a href="#contato-imob" class="main-nav__link">Contato</a></li>
+          </ul>
+          <div class="main-nav__mobile-cta">
+            <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Orcamento%20Site%20Imobiliaria" class="btn btn--primary">Quero um site assim</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#catalogo-imoveis" class="btn btn--primary btn--sm header-cta-desktop">Filtrar Imóveis</a>
+          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-imob" aria-label="Abrir menu de navegação">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- HERO -->
+    <section class="imob-hero" aria-labelledby="imob-hero-title">
+      <div class="container">
+        <span class="badge badge--demo" style="margin-bottom: 1rem;">Projeto Demonstrativo • Imóveis e Valores Estritamente Fictícios</span>
+        <h1 id="imob-hero-title" style="max-width: 46rem; margin-bottom: 1rem;">
+          Curadoria de imóveis residenciais e corporativos com busca instantânea
+        </h1>
+        <p style="max-width: 42rem; font-size: 1.15rem;">
+          Teste os filtros combinados abaixo (tipo, bairro, faixa de valor e dormitórios) e clique em qualquer imóvel para abrir o modal acessível com galeria e ficha técnica.
+        </p>
+      </div>
+    </section>
+
+    <!-- BARRA DE FILTROS E GRADE DE IMÓVEIS -->
+    <section class="section" id="catalogo-imoveis" aria-labelledby="catalogo-heading">
+      <div class="container">
+        <h2 id="catalogo-heading" class="sr-only">Catálogo de Imóveis Demonstrativos</h2>
+
+        <div class="imob-filter-bar" role="region" aria-label="Filtros de busca de imóveis">
+          <div class="imob-filter-grid">
+            <div>
+              <label for="filter-type" class="form-label">Tipo de Imóvel</label>
+              <select id="filter-type" class="form-control">
+                <option value="todos">Todos os tipos</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="casa">Casa em Condomínio</option>
+                <option value="cobertura">Cobertura Duplex</option>
+                <option value="comercial">Conjunto Comercial</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="filter-neighborhood" class="form-label">Bairro (Fictício)</label>
+              <select id="filter-neighborhood" class="form-control">
+                <option value="todos">Todos os bairros</option>
+                <option value="jardim-europa">Jardim Europa</option>
+                <option value="vila-nova">Vila Nova</option>
+                <option value="alto-boa-vista">Alto da Boa Vista</option>
+                <option value="centro-historico">Centro Histórico</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="filter-price" class="form-label">Faixa de Valor (Ilustrativa)</label>
+              <select id="filter-price" class="form-control">
+                <option value="todos">Qualquer faixa</option>
+                <option value="ate-800k">Até R$ 800 mil (fictício)</option>
+                <option value="800k-1500k">De R$ 800 mil a R$ 1,5 milhão</option>
+                <option value="acima-1500k">Acima de R$ 1,5 milhão</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="filter-bedrooms" class="form-label">Dormitórios / Ambientes</label>
+              <select id="filter-bedrooms" class="form-control">
+                <option value="0">Qualquer quantidade</option>
+                <option value="1">1+ quarto / ambiente</option>
+                <option value="2">2+ quartos / ambientes</option>
+                <option value="3">3+ quartos</option>
+                <option value="4">4+ quartos</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+            <span id="imob-count" class="form-help" style="margin: 0; font-weight: 700;" aria-live="polite">6 imóveis demonstrativos encontrados</span>
+            <button type="button" id="filter-reset" class="btn btn--secondary btn--sm">Limpar filtros de busca</button>
+          </div>
+        </div>
+
+        <!-- GRADE DE IMÓVEIS -->
+        <div class="grid grid-3" data-imob-grid>
+          <!-- Imóvel 1 -->
+          <article class="property-card" data-property-card data-type="cobertura" data-neighborhood="jardim-europa" data-price-band="acima-1500k" data-bedrooms="3">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica da Cobertura Residencial Aurora">
+                <rect width="600" height="375" fill="#1E1B4B"/>
+                <rect x="80" y="70" width="440" height="240" rx="8" fill="#312E81" stroke="#818CF8" stroke-width="2"/>
+                <rect x="120" y="110" width="160" height="110" rx="4" fill="#38BDF8" opacity="0.35"/>
+                <rect x="310" y="110" width="170" height="110" rx="4" fill="#38BDF8" opacity="0.25"/>
+                <text x="300" y="280" fill="#E0E7FF" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-101 • Cobertura Duplex Ilustrativa</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-101</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Jardim Europa (Bairro Fictício)</span>
+              <h3 class="card__title">Residencial Aurora — Cobertura Duplex</h3>
+              <div class="property-card__price">R$ 1.850.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>210 m²</span>
+                <span>3 suítes</span>
+                <span>3 vagas</span>
+              </div>
+              <p class="card__body">Planta integrada com terraço panorâmico ilustrativo, iluminação natural abundante e acabamento contemporâneo.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-101">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-101" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Imóvel 2 -->
+          <article class="property-card" data-property-card data-type="apartamento" data-neighborhood="vila-nova" data-price-band="800k-1500k" data-bedrooms="3">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica do Edifício Vértice Park">
+                <rect width="600" height="375" fill="#0F172A"/>
+                <rect x="150" y="45" width="300" height="285" rx="8" fill="#1E293B" stroke="#38BDF8" stroke-width="2"/>
+                <rect x="190" y="85" width="220" height="45" rx="4" fill="#06B6D4" opacity="0.3"/>
+                <rect x="190" y="150" width="220" height="45" rx="4" fill="#06B6D4" opacity="0.3"/>
+                <text x="300" y="295" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-102 • Apartamento Varanda</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-102</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Vila Nova (Bairro Fictício)</span>
+              <h3 class="card__title">Edifício Vértice Park — Varanda Integrada</h3>
+              <div class="property-card__price">R$ 920.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>118 m²</span>
+                <span>3 quartos</span>
+                <span>2 vagas</span>
+              </div>
+              <p class="card__body">Andar alto ilustrativo com vista livre, varanda nivelada ao living e infraestrutura completa de lazer no condomínio.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-102">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-102" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Imóvel 3 -->
+          <article class="property-card" data-property-card data-type="casa" data-neighborhood="alto-boa-vista" data-price-band="800k-1500k" data-bedrooms="4">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica da Casa Bosque das Águas">
+                <rect width="600" height="375" fill="#172554"/>
+                <path d="M120 270 L300 110 L480 270 Z" fill="#1D4ED8" opacity="0.45"/>
+                <rect x="160" y="190" width="280" height="110" rx="6" fill="#1E3A8A" stroke="#60A5FA" stroke-width="2"/>
+                <text x="300" y="335" fill="#DBEAFE" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-103 • Casa Térrea em Condomínio</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-103</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Alto da Boa Vista (Bairro Fictício)</span>
+              <h3 class="card__title">Casa Bosque das Águas — Condomínio Fechado</h3>
+              <div class="property-card__price">R$ 1.480.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>245 m²</span>
+                <span>4 quartos</span>
+                <span>4 vagas</span>
+              </div>
+              <p class="card__body">Residência térrea demonstrativa em lote plano, com jardim central integrado e preparação fotovoltaica.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-103">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-103" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Imóvel 4 -->
+          <article class="property-card" data-property-card data-type="apartamento" data-neighborhood="centro-historico" data-price-band="ate-800k" data-bedrooms="1">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica do Studio Urbano Linha Central">
+                <rect width="600" height="375" fill="#1E1B4B"/>
+                <rect x="130" y="75" width="340" height="220" rx="10" fill="#312E81" stroke="#38BDF8" stroke-width="2"/>
+                <circle cx="300" cy="175" r="55" fill="#4338CA"/>
+                <text x="300" y="330" fill="#E0E7FF" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-104 • Studio Compacto Urbano</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-104</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Centro Histórico (Bairro Fictício)</span>
+              <h3 class="card__title">Studio Urbano Linha Central</h3>
+              <div class="property-card__price">R$ 490.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>54 m²</span>
+                <span>1 quarto</span>
+                <span>1 vaga</span>
+              </div>
+              <p class="card__body">Planta flexível demonstrativa pensada para mobilidade urbana, com coworking e lavanderia compartilhada.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-104">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-104" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Imóvel 5 -->
+          <article class="property-card" data-property-card data-type="comercial" data-neighborhood="vila-nova" data-price-band="ate-800k" data-bedrooms="2">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica do Conjunto Corporativo Prime Tower">
+                <rect width="600" height="375" fill="#0F172A"/>
+                <rect x="110" y="65" width="380" height="235" rx="8" fill="#1E293B" stroke="#818CF8" stroke-width="2"/>
+                <rect x="150" y="105" width="130" height="140" rx="4" fill="#334155"/>
+                <rect x="310" y="105" width="140" height="140" rx="4" fill="#334155"/>
+                <text x="300" y="335" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-105 • Conjunto Comercial</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-105</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Vila Nova (Bairro Fictício)</span>
+              <h3 class="card__title">Conjunto Corporativo Prime Tower</h3>
+              <div class="property-card__price">R$ 740.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>86 m²</span>
+                <span>2 ambientes</span>
+                <span>2 vagas</span>
+              </div>
+              <p class="card__body">Sala corporativa demonstrativa com piso elevado, recepção controlada e auditório no edifício.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-105">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-105" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Imóvel 6 -->
+          <article class="property-card" data-property-card data-type="casa" data-neighborhood="jardim-europa" data-price-band="acima-1500k" data-bedrooms="4">
+            <div class="property-card__visual">
+              <svg viewBox="0 0 600 375" width="100%" height="100%" role="img" aria-label="Ilustração arquitetônica da Residência Mirante do Vale">
+                <rect width="600" height="375" fill="#1E1B4B"/>
+                <rect x="90" y="85" width="420" height="200" rx="8" fill="#312E81" stroke="#38BDF8" stroke-width="2"/>
+                <rect x="130" y="125" width="340" height="120" rx="6" fill="#1E1B4B"/>
+                <text x="300" y="330" fill="#E0E7FF" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">HP-106 • Arquitetura Contemporânea</text>
+              </svg>
+              <div class="project-card__badges">
+                <span class="badge badge--demo">Valor Fictício</span>
+                <span class="badge">Cód. HP-106</span>
+              </div>
+            </div>
+            <div class="property-card__body">
+              <span class="project-card__category">Jardim Europa (Bairro Fictício)</span>
+              <h3 class="card__title">Residência Mirante do Vale</h3>
+              <div class="property-card__price">R$ 2.150.000 <small style="font-size: 0.75rem; font-weight: 500;">(fictício)</small></div>
+              <div class="property-specs">
+                <span>310 m²</span>
+                <span>4 suítes</span>
+                <span>4 vagas</span>
+              </div>
+              <p class="card__body">Residência autoral demonstrativa com esquadrias piso-teto, iluminação zenital e vista livre.</p>
+              <div class="card__footer">
+                <button type="button" class="btn btn--primary btn--sm" data-open-property="HP-106">Ver ficha e galeria</button>
+                <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Interesse%20Demo%20HP-106" class="btn btn--secondary btn--sm">Solicitar contato</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ESTADO VAZIO -->
+        <div class="empty-state" id="imob-empty" hidden>
+          <h3>Nenhum imóvel demonstrativo corresponde a essa combinação de filtros</h3>
+          <p style="margin-block: 0.75rem 1.5rem;">Altere a faixa de valor, o bairro ou clique abaixo para restaurar todos os imóveis de exemplo.</p>
+          <button type="button" class="btn btn--primary" onclick="document.getElementById('filter-reset').click()">Restaurar todos os imóveis</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS E CONTATO -->
+    <section class="section section-alt" id="diferenciais-imob" aria-labelledby="imob-dif-heading">
+      <div class="container">
+        <div class="grid grid-2" id="contato-imob">
+          <div class="card">
+            <h2 id="imob-dif-heading" class="card__title">Sobre esta Demonstração Imobiliária</h2>
+            <p class="card__body">
+              Esta página demonstra como corretores autônomos, consultorias imobiliárias boutique ou incorporadoras podem apresentar uma seleção curada de imóveis em um site estático ultrarrápido, sem custos mensais de servidores complexos.
+            </p>
+            <p class="form-help" style="margin-top: 1rem;">
+              <strong>Aviso legal:</strong> nenhum dos imóveis listados acima existe ou está disponível para comercialização. Trata-se exclusivamente de demonstração funcional de portfólio.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2 class="card__title">Deseja uma vitrine imobiliária como esta?</h2>
+            <p class="card__body">
+              Personalizamos os filtros, bairros, categorias e identidade visual para o seu escritório imobiliário ou lançamento residencial.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.25rem;">
+              <a href="../../contato/index.html?projeto=catalogo&amp;assunto=Orcamento%20Vitrine%20Imobiliaria" class="btn btn--primary">
+                Solicitar orçamento deste modelo
+              </a>
+              <a href="#" class="btn btn--whatsapp" data-whatsapp-cta data-whatsapp-msg="Olá! Testei a demonstração Horizonte Prime Imóveis e gostaria de solicitar um orçamento.">
+                Conversar no WhatsApp
+              </a>
+            </div>
+            <p class="form-help" style="margin-top: 1rem;" data-whatsapp-notice></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DE FICHA TÉCNICA DO IMÓVEL -->
+  <div class="modal-backdrop" id="property-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="prop-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span id="prop-modal-code" class="badge badge--demo">Código Fictício</span>
+          <h2 id="prop-modal-title" style="font-size: 1.25rem; margin-top: 0.35rem;">Detalhes do Imóvel</h2>
+        </div>
+        <button type="button" class="modal-close" id="property-modal-close" aria-label="Fechar detalhes do imóvel">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="prop-modal-stage" style="aspect-ratio: 16/7.5; background: #0F172A; border-radius: 0.5rem; overflow: hidden; margin-bottom: 0.5rem;"></div>
+        <p id="prop-modal-caption" class="form-help" style="margin-bottom: 1rem;"></p>
+
+        <div class="filter-pills" style="margin-bottom: 1.25rem;" role="group" aria-label="Alternar vista da galeria do imóvel">
+          <button type="button" class="filter-btn is-active" data-prop-slide="0" aria-pressed="true">Vista 1: Fachada</button>
+          <button type="button" class="filter-btn" data-prop-slide="1" aria-pressed="false">Vista 2: Living</button>
+          <button type="button" class="filter-btn" data-prop-slide="2" aria-pressed="false">Vista 3: Planta Esquemática</button>
+        </div>
+
+        <div id="prop-modal-price" class="property-card__price" style="margin-bottom: 0.75rem;"></div>
+        <div id="prop-modal-meta" class="property-specs" style="margin-bottom: 1rem;"></div>
+        <p id="prop-modal-desc"></p>
+
+        <h3 style="font-size: 1rem; margin-block: 1.25rem 0.5rem;">Características Ilustrativas da Ficha</h3>
+        <ul id="prop-modal-features" class="project-card__deliverables" style="font-size: 0.925rem;"></ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn--secondary" id="property-modal-close-btn">Fechar janela</button>
+        <a href="../../contato/index.html" id="prop-modal-contact" class="btn btn--primary">Solicitar contato sobre este modelo</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top: 0;">
+        <p><strong>Horizonte Prime Imóveis</strong> — Projeto Demonstrativo integrante do portfólio <a href="../../index.html">Barcelos Neto — Desenvolvimento Web</a>.</p>
+        <p>
+          <a href="../../portfolio/index.html">Voltar ao Portfólio</a> &bull;
+          <a href="../../contato/index.html">Solicitar Orçamento</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/demo-imobiliaria.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# robots.txt — Barcelos Neto — Desenvolvimento Web (Site Estático para GitHub Pages)
+# URL de produção configurada para https://barcelosneto.github.io/site-portfolio
+
+User-agent: *
+Allow: /
+
+Sitemap: https://barcelosneto.github.io/site-portfolio/sitemap.xml

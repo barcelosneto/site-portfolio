@@ -1,0 +1,648 @@
+/* ==========================================================================
+   PAGES.CSS — Estilos de Seções Específicas e Demos Independentes
+   Vértice Digital — Site Comercial Estático
+   ========================================================================== */
+
+/* 1. HERO PRINCIPAL E CABEÇALHOS DE PÁGINA */
+.hero {
+  background: var(--bg-hero);
+  color: #F8FAFC;
+  padding-block: 4.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #1E293B;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-block: 6rem 6.5rem;
+  }
+}
+
+.hero__grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero__grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(37, 99, 235, 0.22);
+  color: #7DD3FC;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+}
+
+.hero__title {
+  color: #F8FAFC;
+  margin-bottom: 1.25rem;
+}
+
+.hero__title span {
+  background: linear-gradient(90deg, #60A5FA 0%, #22D3EE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__lead {
+  color: #CBD5E1;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.875rem;
+  color: #94A3B8;
+}
+
+.hero__trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero__trust-item svg {
+  color: #38BDF8;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Mockup Visual Arquitetural no Hero */
+.hero-visual {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-visual__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.hero-visual__dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.hero-visual__dots span {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-visual__url {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #94A3B8;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.hero-visual__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.metric-pill {
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+}
+
+.metric-pill__title {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.metric-pill__val {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #F8FAFC;
+  margin-top: 0.2rem;
+}
+
+/* Page Header Interno */
+.page-hero {
+  background: var(--bg-hero);
+  color: #F8FAFC;
+  padding-block: 3.5rem 4rem;
+  border-bottom: 1px solid #1E293B;
+}
+
+.page-hero h1 {
+  color: #F8FAFC;
+  margin-bottom: 0.85rem;
+}
+
+.page-hero p {
+  color: #CBD5E1;
+  max-width: 44rem;
+  font-size: 1.1rem;
+}
+
+/* 2. CARTÕES DE PROJETO E FILTROS DO PORTFÓLIO */
+.portfolio-controls {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 860px) {
+  .portfolio-controls {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-strong);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.filter-btn.is-active,
+.filter-btn[aria-pressed="true"] {
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+  border-color: var(--brand-primary);
+}
+
+.search-box {
+  position: relative;
+  min-width: min(100%, 280px);
+  flex: 1;
+  max-width: 24rem;
+}
+
+.search-box input {
+  padding-left: 2.5rem;
+}
+
+.search-box__icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  width: 1.1rem;
+  height: 1.1rem;
+  pointer-events: none;
+}
+
+.project-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.project-card__thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: #0B1220;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.project-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-card__thumb img {
+  transform: scale(1.03);
+}
+
+.project-card__badges {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-card__content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.project-card__category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-primary);
+  margin-bottom: 0.35rem;
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.project-card__desc {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.project-card__deliverables {
+  margin-block: 0.5rem 1rem;
+  padding-left: 1.15rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  list-style: disc;
+}
+
+.project-card__deliverables li {
+  margin-bottom: 0.25rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background-color: var(--bg-elevated);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  margin-block: 1.5rem;
+}
+
+/* 3. ETAPAS DE PROCESSO */
+.steps-grid {
+  display: grid;
+  gap: 1.5rem;
+  counter-reset: step-counter;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 1.5rem;
+  position: relative;
+}
+
+.step-card__num {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-primary);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* 4. BANNER CTA FINAL */
+.cta-banner {
+  background: var(--bg-hero);
+  color: #F8FAFC;
+  border-radius: var(--radius-lg);
+  padding: 3rem 1.75rem;
+  text-align: center;
+  border: 1px solid #1E293B;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+  .cta-banner {
+    padding: 4rem 3rem;
+  }
+}
+
+.cta-banner h2 {
+  color: #F8FAFC;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  color: #CBD5E1;
+  max-width: 38rem;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.cta-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* 5. ESTILOS ESPECÍFICOS DAS DEMONSTRAÇÕES */
+
+/* --- DEMO A: RESTAURANTE SABOR & BRASA --- */
+.theme-restaurante {
+  --bg-primary: #FAF7F2;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #FEF3C7;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #1C1917;
+  --text-secondary: #44403C;
+  --text-muted: #57534E;
+  --brand-primary: #B45309;
+  --brand-primary-hover: #92400E;
+  --border-subtle: #E7E5E4;
+  --border-strong: #D6D3D1;
+}
+
+.rest-hero {
+  background: linear-gradient(135deg, #1C1412 0%, #2E1D15 65%, #3B2316 100%);
+  color: #FAF7F2;
+  padding-block: 4.5rem;
+  border-bottom: 2px solid #B45309;
+}
+
+.rest-hero h1 {
+  color: #FEF3C7;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.rest-hero p {
+  color: #E7E5E4;
+}
+
+.menu-item-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.85rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.menu-item-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.menu-item-card__price {
+  font-weight: 800;
+  color: var(--brand-primary);
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.gallery-btn {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--border-subtle);
+  background-color: #1C1412;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  text-align: left;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.gallery-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--brand-primary);
+}
+
+.gallery-btn__caption {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  background: rgba(28, 20, 18, 0.88);
+  color: #FEF3C7;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* --- DEMO B: CLÍNICA VITAE --- */
+.theme-clinica {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #CCFBF1;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --brand-primary: #0F766E;
+  --brand-primary-hover: #115E59;
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+}
+
+.clinica-hero {
+  background: linear-gradient(135deg, #062825 0%, #0F4C45 100%);
+  color: #F0FDFA;
+  padding-block: 4.5rem;
+}
+
+.clinica-hero h1 {
+  color: #FFFFFF;
+}
+
+.clinica-hero p {
+  color: #CCFBF1;
+}
+
+/* --- DEMO C: IMOBILIÁRIA HORIZONTE PRIME --- */
+.theme-imobiliaria {
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #EEF2FF;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --brand-primary: #4338CA;
+  --brand-primary-hover: #3730A3;
+  --border-subtle: #E2E8F0;
+  --border-strong: #CBD5E1;
+}
+
+.imob-hero {
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+  color: #F8FAFC;
+  padding-block: 4.25rem;
+}
+
+.imob-hero h1 {
+  color: #FFFFFF;
+}
+
+.imob-hero p {
+  color: #CBD5E1;
+}
+
+.imob-filter-bar {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.imob-filter-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .imob-filter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .imob-filter-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.property-card {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.property-card__visual {
+  aspect-ratio: 16 / 10;
+  position: relative;
+  background-color: #1E1B4B;
+}
+
+.property-card__body {
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.property-card__price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin-block: 0.35rem;
+}
+
+.property-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  padding-block: 0.75rem;
+  margin-block: 0.65rem;
+  border-block: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}

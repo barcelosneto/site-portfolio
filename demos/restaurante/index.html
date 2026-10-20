@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-root="../..">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor &amp; Brasa | Gastronomia Contemporânea (Projeto Demonstrativo)</title>
+  <meta name="description" content="Projeto demonstrativo de restaurante autoral com cardápio interativo, filtros dietéticos, galeria acessível e informações de reserva.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://barcelosneto.github.io/site-portfolio/demos/restaurante/" data-page-path="demos/restaurante/">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/components.css">
+  <link rel="stylesheet" href="../../assets/css/pages.css">
+
+  <script src="../../config/site-config.js"></script>
+</head>
+<body class="theme-restaurante">
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- FAIXA DISCRETA DE DEMONSTRAÇÃO DE PORTFÓLIO -->
+  <aside class="demo-portfolio-bar" aria-label="Aviso de demonstração de portfólio">
+    <div class="demo-portfolio-bar__inner">
+      <span class="demo-portfolio-bar__badge">
+        ● Demonstração de portfólio — Projeto demonstrativo fictício (Sabor &amp; Brasa)
+      </span>
+      <div class="demo-portfolio-bar__links">
+        <a href="../../portfolio/index.html">&larr; Voltar ao portfólio</a>
+        <a href="../../contato/index.html?projeto=landing-page&amp;assunto=Modelo%20Restaurante">Solicitar site como este</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CABEÇALHO DO RESTAURANTE -->
+  <header class="site-header" style="background-color: #1C1412; border-bottom-color: #3B2316;">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" style="color: #FEF3C7;">
+        <span class="brand-logo__mark" style="background-color: #B45309; border-color: #F59E0B;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FEF3C7" stroke-width="2.2">
+            <path d="M12 2c1.5 3.5 4 6 4 10a4 4 0 1 1-8 0c0-4 2.5-6.5 4-10z"/>
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <span>Sabor &amp; Brasa</span>
+          <span class="brand-logo__sub" style="color: #FCD34D;">Projeto Demonstrativo</span>
+        </span>
+      </a>
+
+      <div class="nav-wrapper">
+        <nav class="main-nav" id="menu-restaurante" data-main-nav aria-label="Navegação do restaurante" style="background-color: #1C1412;">
+          <ul class="main-nav__list">
+            <li><a href="#cardapio" class="main-nav__link" style="color: #FDE68A;">Cardápio</a></li>
+            <li><a href="#galeria" class="main-nav__link" style="color: #FDE68A;">Ambiente &amp; Pratos</a></li>
+            <li><a href="#horarios" class="main-nav__link" style="color: #FDE68A;">Horários &amp; Local</a></li>
+            <li><a href="#faq-rest" class="main-nav__link" style="color: #FDE68A;">Dúvidas</a></li>
+          </ul>
+          <div class="main-nav__mobile-cta">
+            <a href="#reservas" class="btn btn--primary">Reservas &amp; Contato</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#reservas" class="btn btn--primary btn--sm header-cta-desktop">Reservas &amp; Contato</a>
+          <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu-restaurante" aria-label="Abrir menu de navegação" style="background-color: #2E1D15; color: #FEF3C7; border-color: #B45309;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- HERO -->
+    <section class="rest-hero" aria-labelledby="rest-hero-title">
+      <div class="container hero__grid">
+        <div>
+          <span class="badge badge--demo" style="margin-bottom: 1rem;">Projeto Demonstrativo • Gastronomia Fictícia</span>
+          <h1 id="rest-hero-title" style="margin-bottom: 1rem;">
+            Cozinha autoral na brasa, ingredientes frescos e hospitalidade acolhedora
+          </h1>
+          <p style="font-size: 1.15rem; margin-bottom: 2rem;">
+            Explore nosso cardápio demonstrativo com cortes especiais, opções vegetarianas na grelha e sobremesas artesanais. Valores e horários abaixo são ilustrativos para demonstração de interface.
+          </p>
+          <div class="hero__actions">
+            <a href="#cardapio" class="btn btn--primary btn--lg">Explorar cardápio interativo</a>
+            <a href="#reservas" class="btn btn--outline-light btn--lg">Consultar disponibilidade</a>
+          </div>
+        </div>
+
+        <div>
+          <svg viewBox="0 0 520 340" width="100%" height="auto" role="img" aria-label="Ilustração gastronômica do restaurante Sabor &amp; Brasa">
+            <rect width="520" height="340" rx="18" fill="#261712" stroke="#B45309" stroke-width="2"/>
+            <circle cx="260" cy="170" r="115" fill="#1C1412" stroke="#D97706" stroke-width="3"/>
+            <circle cx="260" cy="170" r="85" fill="#2E1D15"/>
+            <path d="M200 175 Q260 120 320 175 Q260 225 200 175 Z" fill="#B45309"/>
+            <path d="M220 165 L245 190 M250 155 L275 185 M280 160 L300 185" stroke="#451A03" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="225" cy="145" r="10" fill="#15803D"/>
+            <circle cx="295" cy="195" r="9" fill="#DC2626"/>
+            <text x="260" y="315" fill="#FDE68A" font-family="Georgia, serif" font-size="15" text-anchor="middle">Apresentação Visual Ilustrativa — Sem Imagens Externas Quebradas</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO INTERATIVO COM FILTROS -->
+    <section class="section" id="cardapio" aria-labelledby="cardapio-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Cardápio Digital Demonstrativo</span>
+          <h2 id="cardapio-heading">Filtre por categoria ou preferência alimentar</h2>
+          <p>
+            Todos os pratos e valores (R$) abaixo são <strong>estritamente ilustrativos</strong> para demonstrar a velocidade da busca e dos filtros sem recarregar a página.
+          </p>
+        </div>
+
+        <div class="portfolio-controls">
+          <div class="filter-pills" role="group" aria-label="Categorias do cardápio">
+            <button type="button" class="filter-btn is-active" data-menu-cat="todos" aria-pressed="true">Todos os pratos</button>
+            <button type="button" class="filter-btn" data-menu-cat="entradas" aria-pressed="false">Entradas</button>
+            <button type="button" class="filter-btn" data-menu-cat="brasa" aria-pressed="false">Principais na Brasa</button>
+            <button type="button" class="filter-btn" data-menu-cat="sobremesas" aria-pressed="false">Sobremesas</button>
+            <button type="button" class="filter-btn" data-menu-cat="bebidas" aria-pressed="false">Bebidas Autorais</button>
+          </div>
+
+          <div class="search-box">
+            <label for="menu-search" class="sr-only">Buscar ingrediente ou prato no cardápio</label>
+            <svg class="search-box__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="search" id="menu-search" class="form-control" data-menu-search placeholder="Buscar prato ou ingrediente...">
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center;">
+            <label class="checkbox-group" style="cursor: pointer; font-weight: 600; font-size: 0.9rem;">
+              <input type="checkbox" data-menu-diet="vegetariano"> Opção Vegetariana
+            </label>
+            <label class="checkbox-group" style="cursor: pointer; font-weight: 600; font-size: 0.9rem;">
+              <input type="checkbox" data-menu-diet="sem-gluten"> Sem Glúten
+            </label>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <span class="form-help" style="margin: 0; font-weight: 700;" data-menu-count aria-live="polite">8 pratos ilustrativos exibidos</span>
+            <button type="button" class="btn btn--secondary btn--sm" data-menu-reset>Limpar filtros</button>
+          </div>
+        </div>
+
+        <div class="grid grid-2" data-menu-grid>
+          <article class="menu-item-card" data-menu-item data-category="entradas" data-diets="vegetariano,sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Corações de Alcachofra na Brasa</h3>
+                <span class="menu-item-card__price">R$ 48 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Alcachofra grelhada no carvão com azeite de ervas frescas, raspas de limão siciliano e flor de sal.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Entrada</span>
+              <span class="badge badge--tech">Vegetariano</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="entradas" data-diets="vegetariano">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Burrata Cremosa &amp; Tomates Tostados</h3>
+                <span class="menu-item-card__price">R$ 56 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Burrata artesanal acompanhada de tomates cereja assados na lenha, pesto de manjericão e pão de fermentação natural.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Entrada</span>
+              <span class="badge badge--tech">Vegetariano</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="brasa" data-diets="sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Bife Ancho Maturado &amp; Manteiga de Alho Negro</h3>
+                <span class="menu-item-card__price">R$ 118 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Corte alto preparado na parrilla (350g), servido com batatas rústicas ao murro e chimichurri da casa.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Principal na Brasa</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="brasa" data-diets="sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Pescada Amarela Grelhada &amp; Purê de Mandioquinha</h3>
+                <span class="menu-item-card__price">R$ 98 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Filé de peixe fresco selado na brasa com crosta de castanhas brasileiras e legumes tostados da estação.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Principal na Brasa</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="brasa" data-diets="vegetariano,sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Couve-Flor Inteira Assada &amp; Tahine Cítrico</h3>
+                <span class="menu-item-card__price">R$ 74 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Finalizada na brasa com especiarias suaves, molho de gergelim, sementes de romã e amêndoas laminadas.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Principal na Brasa</span>
+              <span class="badge badge--tech">Vegetariano</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="sobremesas" data-diets="vegetariano">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Torta Basca Caramelizada &amp; Calda de Frutas Vermelhas</h3>
+                <span class="menu-item-card__price">R$ 38 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Cheesecake de interior cremoso assado em alta temperatura com calda artesanal levemente ácida.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Sobremesa</span>
+              <span class="badge badge--tech">Vegetariano</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="sobremesas" data-diets="vegetariano,sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Abacaxi Grelhado na Brasa com Especiarias</h3>
+                <span class="menu-item-card__price">R$ 32 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Fatias caramelizadas na grelha com canela e anis-estrelado, acompanhadas de sorbet artesanal de coco.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Sobremesa</span>
+              <span class="badge badge--tech">Vegetariano</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+
+          <article class="menu-item-card" data-menu-item data-category="bebidas" data-diets="vegetariano,sem-gluten">
+            <div>
+              <div class="menu-item-card__header">
+                <h3>Refresco Botânico de Tangerina &amp; Alecrim Defumado</h3>
+                <span class="menu-item-card__price">R$ 24 <small style="font-size:0.7rem; font-weight:500;">(ilustrativo)</small></span>
+              </div>
+              <p>Coquetel sem álcool preparado com suco natural de tangerina, infusão de alecrim tostado e água com gás.</p>
+            </div>
+            <div class="tag-list">
+              <span class="badge">Bebida Autoral</span>
+              <span class="badge badge--tech">Sem Álcool</span>
+              <span class="badge badge--tech">Sem Glúten</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" data-menu-empty hidden>
+          <h3>Nenhum prato encontrado com esses filtros</h3>
+          <p style="margin-block: 0.75rem 1.25rem;">Experimente desmarcar uma restrição alimentar ou buscar por outro termo.</p>
+          <button type="button" class="btn btn--primary" data-menu-reset>Mostrar cardápio completo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA COM LIGHTBOX ACESSÍVEL -->
+    <section class="section section-alt" id="galeria" aria-labelledby="galeria-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Galeria Interativa</span>
+          <h2 id="galeria-heading">Ambiente e Apresentação (Clique para ampliar)</h2>
+          <p>
+            Clique em qualquer quadro abaixo ou pressione Enter pelo teclado para testar o componente de Lightbox acessível (com suporte a setas e tecla Escape).
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <button type="button" class="gallery-btn" data-lightbox-trigger data-title="Salão Principal &amp; Iluminação Indireta" data-description="Composição gráfica ilustrativa representando o salão principal com mesas em madeira natural e iluminação acolhedora.">
+            <svg viewBox="0 0 400 300" width="100%" height="100%" role="img" aria-label="Salão Principal e Iluminação Indireta">
+              <rect width="400" height="300" fill="#1C1412"/>
+              <circle cx="120" cy="90" r="35" fill="#F59E0B" opacity="0.25"/>
+              <circle cx="280" cy="90" r="35" fill="#F59E0B" opacity="0.25"/>
+              <rect x="60" y="170" width="110" height="65" rx="6" fill="#78350F"/>
+              <rect x="230" y="170" width="110" height="65" rx="6" fill="#78350F"/>
+            </svg>
+            <span class="gallery-btn__caption">Salão Principal &amp; Iluminação (Ampliar)</span>
+          </button>
+
+          <button type="button" class="gallery-btn" data-lightbox-trigger data-title="Estação de Parrilla &amp; Fogo de Chão" data-description="Representação visual da cozinha aberta com grelha inclinada e preparo artesanal na brasa.">
+            <svg viewBox="0 0 400 300" width="100%" height="100%" role="img" aria-label="Estação de Parrilla e Fogo de Chão">
+              <rect width="400" height="300" fill="#261712"/>
+              <rect x="70" y="70" width="260" height="150" rx="10" fill="#1C1412" stroke="#D97706" stroke-width="3"/>
+              <path d="M160 190 Q200 110 240 190 Z" fill="#EA580C"/>
+              <path d="M180 190 Q200 135 220 190 Z" fill="#FBBF24"/>
+            </svg>
+            <span class="gallery-btn__caption">Estação de Parrilla Aberta (Ampliar)</span>
+          </button>
+
+          <button type="button" class="gallery-btn" data-lightbox-trigger data-title="Empratamento Autoral &amp; Ervas Frescas" data-description="Detalhe ilustrativo de finalização dos pratos com ingredientes sazonais.">
+            <svg viewBox="0 0 400 300" width="100%" height="100%" role="img" aria-label="Empratamento Autoral e Ervas Frescas">
+              <rect width="400" height="300" fill="#1F1613"/>
+              <circle cx="200" cy="145" r="85" fill="#2E1D15" stroke="#F59E0B" stroke-width="2"/>
+              <circle cx="200" cy="145" r="55" fill="#B45309"/>
+              <circle cx="185" cy="135" r="12" fill="#15803D"/>
+              <circle cx="220" cy="155" r="10" fill="#DC2626"/>
+            </svg>
+            <span class="gallery-btn__caption">Empratamento Autoral (Ampliar)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORÁRIOS ILUSTRATIVOS, LOCALIZAÇÃO E RESERVAS -->
+    <section class="section" id="horarios" aria-labelledby="horarios-heading">
+      <div class="container">
+        <div class="grid grid-2" id="reservas">
+          <div class="card">
+            <span class="badge badge--demo" style="align-self: flex-start; margin-bottom: 0.75rem;">Dados Fictícios de Demonstração</span>
+            <h2 id="horarios-heading" class="card__title">Horários &amp; Endereço Ilustrativo</h2>
+            <p class="card__body">
+              Em um projeto real para restaurante, esta seção exibe o endereço oficial, orientações de estacionamento/valet e link direto para abrir a rota no aplicativo de mapas do celular.
+            </p>
+            <ul class="project-card__deliverables" style="font-size: 0.95rem; line-height: 1.8;">
+              <li><strong>Terça a Sexta:</strong> Almoço das 12h às 15h30 | Jantar das 19h às 23h (Ilustrativo)</li>
+              <li><strong>Sábados:</strong> Das 12h às 23h30 sem intervalo (Ilustrativo)</li>
+              <li><strong>Domingos e Feriados:</strong> Das 12h às 17h (Ilustrativo)</li>
+              <li><strong>Endereço Demonstrativo:</strong> Av. Gastronômica Central, nº 500 — Bairro Jardins (Endereço Fictício)</li>
+            </ul>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+                Abrir mapa externo demonstrativo (OpenStreetMap)
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="card__title">Solicitação de Reserva por Canal Direto</h2>
+            <p class="card__body">
+              Para manter a arquitetura 100% estática, rápida e honesta, não simulamos reserva confirmada automaticamente sem servidor. O botão abaixo encaminha o pedido de mesa para o WhatsApp configurável ou formulário de contato.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.25rem;">
+              <a href="#" class="btn btn--whatsapp" data-whatsapp-cta data-whatsapp-msg="Olá! Estou testando a demonstração do restaurante Sabor & Brasa e gostaria de consultar disponibilidade de mesa.">
+                Consultar reserva via WhatsApp
+              </a>
+              <a href="../../contato/index.html?projeto=landing-page&amp;assunto=Orcamento%20Site%20Restaurante" class="btn btn--primary">
+                Quero um site como este para meu restaurante
+              </a>
+            </div>
+            <p class="form-help" style="margin-top: 1rem;" data-whatsapp-notice></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ DO RESTAURANTE -->
+    <section class="section section-alt" id="faq-rest" aria-labelledby="faq-rest-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Perguntas Frequentes</span>
+          <h2 id="faq-rest-heading">Dúvidas comuns (Exemplo de atendimento ao cliente)</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Vocês atendem clientes com restrições alimentares ou alergias?</span>
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>Em nosso cardápio interativo você pode filtrar rapidamente pratos vegetarianos e sem glúten. Em um estabelecimento real, recomendamos sempre avisar a equipe de salão para prevenção de contaminação cruzada.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Como funcionam as reservas para grupos e confraternizações?</span>
+              <span class="faq-question__icon" aria-hidden="true">▼</span>
+            </summary>
+            <div class="faq-answer">
+              <p>O contato prévio via WhatsApp permite informar data, horário desejado e número de convidados diretamente à equipe de recepção.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL LIGHTBOX ACESSÍVEL -->
+  <div class="modal-backdrop" id="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h2 id="lightbox-title" style="font-size: 1.15rem;">Visualização da Galeria</h2>
+          <span id="lightbox-counter" class="form-help" style="margin: 0;">Item 1 de 3</span>
+        </div>
+        <button type="button" class="modal-close" id="lightbox-close" aria-label="Fechar visualização ampliada">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="lightbox-artwork" style="border-radius: 0.5rem; overflow: hidden; margin-bottom: 1rem; aspect-ratio: 4/3; background: #1C1412;"></div>
+        <p id="lightbox-desc" style="margin: 0;"></p>
+      </div>
+      <div class="modal-footer" style="justify-content: space-between;">
+        <div style="display: flex; gap: 0.5rem;">
+          <button type="button" class="btn btn--secondary btn--sm" id="lightbox-prev" aria-label="Imagem anterior">&larr; Anterior</button>
+          <button type="button" class="btn btn--secondary btn--sm" id="lightbox-next" aria-label="Próxima imagem">Próxima &rarr;</button>
+        </div>
+        <span class="form-help" style="margin: 0;">Dica: use as setas do teclado ou ESC para fechar</span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer" style="background-color: #140D0B;">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top: 0;">
+        <p><strong>Sabor &amp; Brasa</strong> — Projeto Demonstrativo integrante do portfólio <a href="../../index.html">Barcelos Neto — Desenvolvimento Web</a>.</p>
+        <p>
+          <a href="../../portfolio/index.html">Voltar ao Portfólio</a> &bull;
+          <a href="../../contato/index.html">Solicitar Orçamento</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/demo-restaurante.js"></script>
+</body>
+</html>
