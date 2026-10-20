@@ -37,7 +37,7 @@
     if (theme === "dark") {
       root.setAttribute("data-theme", "dark");
     } else {
-      root.removeAttribute("data-theme");
+      root.setAttribute("data-theme", "light");
     }
 
     var buttons = document.querySelectorAll("[data-theme-toggle]");
