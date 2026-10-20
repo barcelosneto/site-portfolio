@@ -1,78 +1,83 @@
-# Relatório de Validação Técnica e Visual — Redesign Premium da Home V4.0
+# Relatório de Validação Técnica e Visual — Redesign V5.0 (Home Autoral Premium)
 
 **Projeto:** Barcelos Neto — Desenvolvimento Web  
 **Diretório local auditado:** `C:\Users\82033625\Documents\GitHub\site-portfolio`  
 **URL de produção configurada:** `https://barcelosneto.github.io/site-portfolio` (`basePath: /site-portfolio`)  
 **Data da Auditoria:** 20 de outubro de 2026  
-**Status Geral:** **100% APROVADO (776 verificações automatizadas aprovadas, 0 erros de console, 0 erros HTTP 404, 0 overflow horizontal em todas as resoluções)**
+**Status Geral:** **100% APROVADO (771 verificações automatizadas aprovadas, 0 erros de console, 0 erros HTTP 404, 0 overflow horizontal em todas as resoluções)**
 
 ---
 
-## 1. Resumo Executivo das Evoluções na V4.0
+## 1. Resumo Executivo das Evoluções na V5.0
 
-O **Redesign Premium da Home V4.0** evoluiu a página inicial (`index.html`) para o padrão de estúdio digital comercial de alto impacto, combinando direção de arte editorial escura, hierarquia orientada ao cliente e demonstração visual autêntica dos projetos do portfólio:
+O **Redesign V5.0 — Home Autoral Premium** transformou a página inicial (`index.html`) para substituir o antigo aspecto de "painel administrativo" por uma identidade autoral, humana e comercialmente atraente:
 
-1. **Hero Comercial de Alto Impacto com Vitrine Interativa Real (`index.html`):**
-   - **Proposta de Valor Direta:** Título forte orientado a negócios (*"Sites sob medida que posicionam sua marca e transformam visitas em negócios"*), acompanhado de subtítulo comercial claro para empresas, clínicas, restaurantes e imobiliárias.
-   - **CTAs Claros e Sem Links Mortos:** Dois botões principais (`Ver Projetos` → `./portfolio/index.html` e `Solicitar Orçamento` → `./contato/index.html`), eliminando botões de WhatsApp ocultos ou vazios na dobra principal.
-   - **Palco Visual com Capturas Reais das Demos (`assets/img/home/mockup-*.webp`):** Janela interativa em estilo navegador com 3 abas (`01. Restaurante`, `02. Clínica`, `03. Imobiliária`) exibindo **capturas reais em alta definição (`1366x854` WebP)** das 3 demonstrações navegáveis do próprio projeto, sobrepostas por cartões fotográficos de detalhe (`.hero-showcase__inset`) e acesso direto a cada demo.
-   - **Trava Definitiva Contra SVG Gigante:** Logotipo e ícones com atributos explícitos `width` e `height` no HTML e trava CSS em `assets/css/base.css` (`maxSvgWidth` medido via DOM: `18.39px`).
+1. **Fotografia Pessoal Oficial do Desenvolvedor (`assets/img/foto-barcelos-neto.*`):**
+   - Incorporação da fotografia real de Barcelos Neto em dois formatos otimizados: `assets/img/foto-barcelos-neto.png` e `assets/img/foto-barcelos-neto.webp` (renderizado em 164x164 sem bordas pretas).
+   - Card vertical sofisticado com cantos arredondados de 28px (`.author-card-v5`), borda com gradiente sutil, iluminação radial, indicador de status ativo (*"Disponível para novos projetos"*) com dot pulsante em verde e proporção facial preservada com precisão matemática (`devImgRatio: '1.00'`, zero distorção).
+   - Layout responsivo específico para dispositivos móveis (`align-items: flex-start`, avatar de 64px, tipografia ajustada e espaçamento fluído).
 
-2. **Seção de Portfólio em Destaque + Faixa do Acervo Completo de 6 Projetos (`#demos-destaque`):**
-   - **3 Cards Principais das Demos Navegáveis:** Cada card combina fotografia licenciada do segmento com miniatura flutuante da interface real (`.project-card-v2__photo-chip`), selo de nicho, caixa de **Diferencial Comercial** orientada a resultados e duplo CTA (`Abrir Demo Real →` e `Solicitar Similar`).
-   - **Banner do Catálogo Completo (6 Projetos):** Faixa editorial secundária (`.catalog-overview-banner` + `.catalog-mini-list`) apresentando visualmente os **3 estudos conceituais adicionais** (*Estrutura Executiva — B2B*, *LaunchPad — Alta Conversão* e *MonoGrid — Portfólio*), garantindo transparência sobre o acervo completo de 6 projetos.
+2. **Novo Hero Assimétrico de Alto Impacto:**
+   - **Coluna Esquerda:**
+     - Identificação discreta: `Barcelos Neto | Desenvolvedor Web`.
+     - Headline de impacto: *"Sites que impressionam. Experiências que convertem."*
+     - Proposta comercial clara para landing pages, sites institucionais e catálogos sob medida.
+     - Botões comerciais diretos: `Explorar Projetos` (ancorado para `#projetos-destaque`) e `Solicitar Orçamento` (`./contato/index.html`).
+     - Elementos de confiança sem métricas artificiais (*Código limpo e 100% próprio*, *Design responsivo do celular ao widescreen*, *Atendimento direto com quem desenvolve*).
+   - **Coluna Direita:**
+     - Composição cinematográfica em profundidade:
+       - **Mockup Principal (Sabor & Brasa):** Janela de navegador realista com botões de controle, barra de URL `demos/restaurante`, selo gastronômico, captura real da interface e link direto `Abrir Demo Real →`.
+       - **Sub-mockups Sobrepostos (Clínica Vitae & Horizonte Prime):** Janelas secundárias em grid com capturas reais das interfaces médicas e imobiliárias, cantos de 20px, sombras naturais e links funcionais para cada demo.
+     - **Eliminação Definitiva do Painel Administrativo:** Removido o antigo bloco de abas com dezenas de métricas que remetiam a um dashboard de software corporativo.
 
-3. **Seção de Serviços Reorganizada em Bento Grid Assimétrico (`#servicos-home`):**
-   - **Layout Assimétrico 12 Colunas (`7+5` / `5+7`):** Apresentação orientada a benefícios reais para o contratante (*Sites Institucionais de Autoridade*, *Landing Pages de Alta Conversão*, *Catálogos, Cardápios & Buscas* e *Negócios Locais & Portfólios*).
-   - **Barra de Fundações de Engenharia (`.quality-foundations-bar`):** Os diferenciais técnicos (*HTML5 Semântico*, *SEO Técnico Nativo*, *Acessibilidade WCAG AA* e *Desempenho Otimizado*) foram posicionados como camada de sustentação sob os cards comerciais, evitando jargão excessivo nos títulos principais.
+3. **Seção "Projetos em Destaque" com Fotografias e Mockups Grandes:**
+   - Destaque cinematográfico para as 3 demos navegáveis (*Sabor & Brasa*, *Clínica Vitae* e *Horizonte Prime*), combinando fotografia temática licenciada, miniatura da UI real em alta fidelidade e diferenciais comerciais objetivos.
+   - Banner do catálogo completo documentando os **6 projetos** (incluindo os 3 estudos conceituais arquiteturais: *Estrutura Executiva — B2B*, *LaunchPad — Alta Conversão* e *MonoGrid — Portfólio*).
 
-4. **Processo em 4 Etapas, FAQ Direto e CTA Final de Conversão (`#processo`, `#contato-cta`):**
-   - Fluxo transparente em 4 etapas (*Diagnóstico & Escopo*, *Direção Visual & Protótipo*, *Desenvolvimento & Testes*, *Publicação & Entrega*), perguntas frequentes em acordeões nativos acessíveis (`<details>`) e bloco final de conversão com botão para o formulário estruturado e disparo direto de e-mail para `pedrobarcelos1980@gmail.com`.
+4. **Seções Inferiores Reorganizadas em Narrativa Comercial Fluida:**
+   - **Serviços:** 4 soluções claras (*Sites Institucionais de Autoridade*, *Landing Pages de Alta Conversão*, *Catálogos, Cardápios & Buscas* e *Negócios Locais & Portfólios*) sustentadas pela barra de fundações de engenharia (HTML5 semântico, SEO técnico, WCAG AA e WebP).
+   - **Processo:** 4 etapas enxutas do diagnóstico à publicação com código 100% próprio.
+   - **FAQ & CTA Final:** Respostas diretas sobre propriedade do código e demonstrações, com canais de orçamento via formulário e e-mail direto `pedrobarcelos1980@gmail.com`.
 
 ---
 
-## 2. Arquivos Criados e Modificados
+## 2. Inventário de Arquivos Modificados e Criados
 
 | Arquivo | Ação | Descrição Técnica |
 | :--- | :--- | :--- |
-| `index.html` | Modificado | Nova arquitetura comercial e editorial V4.0 da Home, vitrine interativa com mockups reais das 3 demos, banner dos 6 projetos do catálogo, Bento Grid de serviços, barra de fundações técnicas e cache-busting `?v=4.0`. |
-| `assets/css/pages.css` | Modificado | Adicionados estilos V4.0: `.hero-showcase__inset`, `.project-card-v2__photo-chip`, `.catalog-overview-banner`, `.catalog-mini-list`, `.bento-services-grid`, `.service-benefit-list`, `.quality-foundations-bar` e refinamentos responsivos para `320px` e `375px`. |
-| `assets/css/components.css` | Modificado | Refinamento de `white-space: nowrap` e espaçamento responsivo do cabeçalho entre `961px` e `1180px` para alinhamento perfeito em linha única em telas de `1024px`. |
-| `assets/img/home/mockup-restaurante.webp` | Criado | Captura real em `.webp` (`1366x854`, 169 KB) da demonstração `demos/restaurante/index.html`. |
-| `assets/img/home/mockup-clinica.webp` | Criado | Captura real em `.webp` (`1366x854`, 121 KB) da demonstração `demos/clinica/index.html`. |
-| `assets/img/home/mockup-imobiliaria.webp` | Criado | Captura real em `.webp` (`1366x854`, 182 KB) da demonstração `demos/imobiliaria/index.html`. |
-| `CREDITOS_IMAGENS.md` | Modificado | Atualizado para a versão V4.0 documentando os **33 ativos visuais locais** (30 fotografias Unsplash sob licença comercial gratuita + 3 capturas autorais de UI das demos). |
-| `RELATORIO_VALIDACAO.md` | Modificado | Atualizado com os resultados reais da auditoria V4.0 em servidor HTTP local e navegador Chromium via CDP. |
+| `index.html` | Modificado | Hero V5.0 autoral, card do desenvolvedor com `<picture>` responsivo, composição de mockups cinematográficos, âncora `#projetos-destaque` e nova hierarquia editorial. |
+| `assets/css/pages.css` | Modificado | Estilos V5.0: `.hero__badge`, `.hero__stage-v5`, `.author-card-v5` (28px de border-radius, glow radial, status dot pulsante), `.stage-mockups-v5`, `.stage-window-v5` e adaptações para celular (`max-width: 640px`). |
+| `assets/img/foto-barcelos-neto.png` | Criado | Fotografia pessoal oficial de Barcelos Neto fornecida pelo usuário (`164x164` PNG). |
+| `assets/img/foto-barcelos-neto.webp` | Criado | Versão `.webp` otimizada da foto do desenvolvedor gerada via Chromium com enquadramento perfeito (10.1 KB). |
+| `CREDITOS_IMAGENS.md` | Modificado | Atualizado para V5.0 documentando a fotografia pessoal oficial junto aos 33 ativos visuais do projeto. |
+| `RELATORIO_VALIDACAO.md` | Modificado | Relatório técnico detalhado com métricas reais obtidas via Chrome DevTools Protocol. |
 
 ---
 
-## 3. Resultados da Validação Real em Navegador (Chrome DevTools Protocol)
+## 3. Resultados dos Testes em Navegador Real (Chrome DevTools Protocol)
 
-A página inicial e todo o ecossistema foram servidos via servidor HTTP local simulando o subcaminho `/site-portfolio/` do GitHub Pages e inspecionados programaticamente via Chrome DevTools Protocol (`Emulation.setDeviceMetricsOverride`) nas 6 larguras obrigatórias:
+Executado em servidor HTTP local simulando `/site-portfolio/` com Chromium headless e comandos diretos da API CDP (`Emulation.setDeviceMetricsOverride`):
 
-| Viewport Testado | `clientWidth` | `scrollWidth` | Overflow Horizontal (`overflowX`) | Imagens na Home | Maior Largura de `<svg>` | Erros de Console / 404 | Status |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Mobile Compacto (`320px`)** | `320px` | `320px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
-| **Mobile Padrão (`375px`)** | `375px` | `375px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
-| **Tablet (`768px`)** | `768px` | `768px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
-| **Laptop (`1024px`)** | `1009px` | `1009px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
-| **Desktop HD (`1366px`)** | `1351px` | `1351px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
-| **Full HD (`1920px`)** | `1905px` | `1905px` | `false` (Zero) | 15 / 15 íntegras | `18.39px` | `0` / `0` | **APROVADO** |
+| Viewport Testado | `clientWidth` | `scrollWidth` | Overflow Horizontal (`overflowX`) | Foto Carregada (`devImgLoaded`) | Proporção Facial (`devImgRatio`) | Maior SVG | Console / 404 | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Mobile (`320px`)** | `320px` | `320px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
+| **Mobile Padrão (`375px`)** | `375px` | `375px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
+| **Tablet (`768px`)** | `768px` | `768px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
+| **Laptop (`1024px`)** | `1009px` | `1009px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
+| **Desktop HD (`1366px`)** | `1351px` | `1351px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
+| **Full HD (`1920px`)** | `1905px` | `1905px` | `false` (Zero) | `true` | `1.00` (1:1 sem distorção) | `18.39px` | `0` / `0` | **APROVADO** |
 
-### Testes Funcionais e Interativos Executados:
-- **Suíte Estática & Estrutural (`node tests/validate-site.js`):** **776 verificações aprovadas, 0 erros.**
-- **Suíte de Integração JS (`node tests/interaction-tests.js`):** **100% aprovada** (sintaxe de todos os 7 módulos JS, dados de `config/site-config.js`, normalização de busca e acessibilidade de formulários).
-- **Troca de Abas da Vitrine Hero (`[data-showcase-tab]`):** Alternância instantânea validada entre `01. Restaurante`, `02. Clínica` e `03. Imobiliária` (`panel1Active: true`, `panel2Active: true`, `panel3Active: true`).
-- **Alternância de Tema Escuro/Claro (`[data-theme-toggle]`):** Validada visualmente e via DOM com contraste legível em ambos os modos e persistência em `localStorage`.
-- **Menu Mobile e Teclado (`[data-menu-toggle]`):** Abertura e fechamento por botão e tecla `Escape` validados em `375px` (`opened: true`, `closedByEsc: true`).
+### Validações Funcionais e Interativas:
+- **Suíte Estática (`node tests/validate-site.js`):** **771 verificações aprovadas, 0 erros.**
+- **Suíte de Lógica JS (`node tests/interaction-tests.js`):** **100% aprovada.**
+- **Enquadramento Facial:** Proporção `1.00` confirmada em 100% das resoluções, sem estiramento ou achatamento facial.
+- **Menu Mobile (`375px`):** Abertura e fechamento validados via clique e via tecla `Escape`.
+- **Modo Claro / Modo Escuro:** Contraste perfeito nos cards do desenvolvedor e das janelas de demonstração em ambos os temas.
+- **Links e Demos:** Todos os caminhos relativos para as 3 demonstrações navegáveis (`demos/restaurante/index.html`, `demos/clinica/index.html`, `demos/imobiliaria/index.html`) e catálogo completo validados com código HTTP 200.
 
 ---
 
 ## 4. Pendências que Dependem Exclusivamente do Usuário
 
-1. **Número de WhatsApp (`whatsappNumber` em `config/site-config.js`):**
-   - Mantido vazio (`""`) conforme orientação. Assim que o número oficial for definido, basta preenchê-lo no formato `55DD9XXXXXXXX` em `config/site-config.js` para ativar automaticamente os links de WhatsApp em todo o site.
-2. **Identificação Societária / CPF ou CNPJ (`privacidade/index.html`):**
-   - Caso deseje exibir CNPJ ou registro empresarial específico no rodapé ou na Política de Privacidade, basta informar para inclusão.
-3. **Publicação no GitHub (`git commit` / `git push`):**
-   - Conforme instrução expressa, **nenhum commit ou push foi realizado**. Todas as alterações estão prontas no diretório local `C:\Users\82033625\Documents\GitHub\site-portfolio` para revisão no GitHub Desktop.
+1. **Número de WhatsApp (`whatsappNumber` em `config/site-config.js`):** Permanece vazio (`""`) conforme combinado até que o número definitivo seja fornecido.
+2. **Publicação no GitHub (`git commit` / `git push`):** Conforme instruções, **nenhum commit ou push foi executado**. Os arquivos estão salvos e testados localmente para revisão e envio seguro pelo GitHub Desktop.

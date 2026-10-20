@@ -1,26 +1,29 @@
-# Créditos, Origem e Licenciamento de Imagens — V4.0
+# Créditos, Origem e Licenciamento de Imagens — V5.0
 
 **Projeto:** Barcelos Neto — Desenvolvimento Web (`https://barcelosneto.github.io/site-portfolio`)  
 **Diretório local de ativos:** `assets/img/`  
-**Formato padronizado:** `.webp` (otimizado para performance web e Core Web Vitals)  
+**Formato padronizado:** `.webp` e `.png` (otimizados para performance web e Core Web Vitals)  
 **Data de obtenção e auditoria:** 20/10/2026  
 
 ---
 
 ## 1. Política de Licenciamento
 
-Todas as fotografias incorporadas ao portfólio e às demonstrações setoriais foram obtidas no banco de imagens **Unsplash** sob a **[Unsplash License](https://unsplash.com/license)**, complementadas por **3 capturas reais de interface (UI Mockups)** geradas diretamente a partir das páginas demonstrativas autorais do próprio projeto:
-- **Permissões:** Uso comercial e não comercial gratuito, mundial e perpétuo; permissão para download, cópia, modificação, recorte, conversão para `.webp` e hospedagem local direta no repositório.
-- **Atribuição:** Não obrigatória pela licença oficial, mas documentada integralmente neste arquivo por transparência editorial e rastreabilidade técnica.
+O acervo visual do portfólio é composto por:
+1. **Fotografia Pessoal Oficial do Desenvolvedor:** Imagem real e autêntica de Barcelos Neto, fornecida diretamente pelo titular e vinculada ao perfil oficial do GitHub (`@barcelosneto`). Uso restrito e autoral para identificação profissional neste portfólio.
+2. **Fotografias de Segmento:** Fotografias de ambientação, cardápio, clínicas e arquitetura obtidas no banco de imagens **Unsplash** sob a **[Unsplash License](https://unsplash.com/license)** (uso comercial gratuito, mundial e perpétuo).
+3. **Capturas Reais de Interface (UI Mockups):** Capturas reais de tela em alta definição geradas diretamente a partir das páginas demonstrativas navegáveis desenvolvidas no próprio repositório.
 
 ---
 
-## 2. Inventário Completo dos 33 Ativos Visuais Locais (`assets/img/`)
+## 2. Inventário Completo dos Ativos Visuais Locais (`assets/img/`)
 
-### 2.1. Institucional, Estúdio & Capturas Reais de Interface (`assets/img/home/`)
+### 2.1. Identificação do Desenvolvedor & Estúdio (`assets/img/`)
 
 | Arquivo Local | Página / Seção Utilizada | Origem | ID / URL Original | Licença | Data |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| `assets/img/foto-barcelos-neto.png` | `index.html` (Hero Autoral — Card do Desenvolvedor) | Pessoal / GitHub | Avatar oficial [`@barcelosneto`](https://github.com/barcelosneto) | Autoral / Pessoal | 20/10/2026 |
+| `assets/img/foto-barcelos-neto.webp` | `index.html` (Hero Autoral — Picture WebP) | Pessoal / GitHub | Avatar oficial [`@barcelosneto`](https://github.com/barcelosneto) | Autoral / Pessoal | 20/10/2026 |
 | `assets/img/home/studio-workspace.webp` | `sobre/index.html` (Checklist de Engenharia & Estúdio) | Unsplash | [`photo-1498050108023-c5249f4df085`](https://images.unsplash.com/photo-1498050108023-c5249f4df085) | Unsplash License | 20/10/2026 |
 | `assets/img/home/mockup-restaurante.webp` | `index.html` (Hero Stage & Card de Destaque — Demo 01) | Captura Real de UI (`demos/restaurante/index.html`) | Renderização local via Chromium (`1366x854`) | Autoral (Próprio Repositório) | 20/10/2026 |
 | `assets/img/home/mockup-clinica.webp` | `index.html` (Hero Stage & Card de Destaque — Demo 02) | Captura Real de UI (`demos/clinica/index.html`) | Renderização local via Chromium (`1366x854`) | Autoral (Próprio Repositório) | 20/10/2026 |

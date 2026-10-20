@@ -108,136 +108,121 @@
   </header>
 
   <main id="conteudo-principal">
-    <!-- 1. HERO PRINCIPAL ASSIMÉTRICO COM MOCKUPS REAIS DAS DEMOS -->
+    <!-- 1. HERO PRINCIPAL ASSIMÉTRICO V5.0 — IDENTIDADE AUTORAL & MOCKUPS CINEMATOGRÁFICOS -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content" data-reveal>
-          <span class="eyebrow">Estúdio Digital • Sites &amp; Interfaces sob Medida</span>
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            <span>Barcelos Neto | Desenvolvedor Web</span>
+          </div>
           <h1 class="hero__title">
-            Sites sob medida que posicionam sua marca e <span class="text-gradient">transformam visitas em negócios</span>.
+            Sites que impressionam. <span class="text-gradient">Experiências que convertem.</span>
           </h1>
           <p class="hero__lead">
-            Projetamos e desenvolvemos landing pages, sites institucionais e catálogos interativos para empresas, clínicas, restaurantes e negócios imobiliários que exigem presença digital à altura da sua reputação.
+            Desenvolvo landing pages, sites institucionais e catálogos sob medida com design autoral, engenharia front-end impecável e foco total em posicionamento e resultados comerciais para empresas e profissionais.
           </p>
           <div class="hero__actions">
-            <a href="./portfolio/index.html" class="btn btn--primary btn--lg">
-              Ver Projetos
+            <a href="#projetos-destaque" class="btn btn--primary btn--lg">
+              Explorar Projetos
               <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <a href="./contato/index.html" class="btn btn--secondary btn--lg">Solicitar Orçamento</a>
           </div>
-          <ul class="hero__trust" aria-label="Compromissos de entrega do estúdio">
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Código 100% próprio, sem mensalidades</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Leitura fluida no celular e no desktop</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Contato direto com quem desenvolve</li>
+          <ul class="hero__trust" aria-label="Compromissos de entrega">
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Código limpo e 100% próprio</li>
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Design responsivo do celular ao widescreen</li>
+            <li><span class="hero__trust-dot" aria-hidden="true"></span> Atendimento direto com quem desenvolve</li>
           </ul>
         </div>
 
-        <!-- Studio Showcase Interativo com Capturas Reais das 3 Demos -->
-        <div class="hero__visual" data-reveal>
-          <div class="hero-showcase" role="region" aria-label="Vitrine interativa com capturas reais das demonstrações do portfólio">
-            <div class="hero-showcase__top">
-              <div class="browser-frame__dots" aria-hidden="true">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="hero-showcase__tabs" role="tablist" aria-label="Alternar demonstração em destaque">
-                <button type="button" class="hero-showcase__tab is-active" role="tab" aria-selected="true" data-showcase-tab="restaurante">01. Restaurante</button>
-                <button type="button" class="hero-showcase__tab" role="tab" aria-selected="false" data-showcase-tab="clinica">02. Clínica</button>
-                <button type="button" class="hero-showcase__tab" role="tab" aria-selected="false" data-showcase-tab="imobiliaria">03. Imobiliária</button>
+        <!-- Coluna Direita: Card Pessoal do Desenvolvedor + Mockups Cinematográficos -->
+        <div class="hero__stage-v5" data-reveal>
+          <!-- Card Vertical Sofisticado do Desenvolvedor -->
+          <div class="author-card-v5">
+            <div class="author-card-v5__avatar">
+              <picture>
+                <source srcset="./assets/img/foto-barcelos-neto.webp" type="image/webp">
+                <img src="./assets/img/foto-barcelos-neto.png" width="164" height="164" alt="Fotografia profissional de Barcelos Neto, Desenvolvedor Web">
+              </picture>
+              <span class="author-card-v5__status-dot" title="Disponível para novos projetos" aria-hidden="true"></span>
+            </div>
+            <div class="author-card-v5__info">
+              <span class="author-card-v5__role">Desenvolvedor Front-End &amp; Web</span>
+              <h3 class="author-card-v5__name">Barcelos Neto</h3>
+              <p class="author-card-v5__desc">Especialista em interfaces de alto impacto, performance web e código sem dependências pesadas.</p>
+              <div class="author-card-v5__meta">
+                <span class="author-card-v5__status">
+                  <span class="pulse-dot" aria-hidden="true"></span>
+                  Disponível para novos projetos
+                </span>
               </div>
             </div>
+          </div>
 
-            <!-- Pane 1: Restaurante (Captura Real da Demo + Detalhe Fotográfico) -->
-            <div class="hero-showcase__pane is-active" data-showcase-pane="restaurante">
-              <div class="hero-showcase__preview">
-                <img src="./assets/img/home/mockup-restaurante.webp" width="1366" height="854" fetchpriority="high" alt="Captura real da demonstração navegável Sabor &amp; Brasa com cardápio digital interativo">
-                <div class="hero-showcase__inset">
-                  <img src="./assets/img/restaurante/thumb-restaurante.webp" width="108" height="80" alt="Detalhe gastronômico Sabor &amp; Brasa">
-                  <div class="hero-showcase__inset-txt">
-                    <strong>Cardápio + Lightbox</strong>
-                    Filtro por dieta e busca ao vivo
+          <!-- Mockups Cinematográficos das Demonstrações Reais -->
+          <div class="stage-mockups-v5" aria-label="Composição visual com mockups das demonstrações reais">
+            <!-- Mockup Principal em Destaque: Sabor & Brasa -->
+            <a href="./demos/restaurante/index.html" class="stage-window-v5 stage-window-v5--main" aria-label="Abrir demonstração Sabor &amp; Brasa">
+              <div class="stage-window-v5__chrome">
+                <div class="stage-window-v5__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <span class="stage-window-v5__url">demos/restaurante</span>
+                <span class="stage-window-v5__tag">Destaque • Gastronomia</span>
+              </div>
+              <div class="stage-window-v5__screen">
+                <img src="./assets/img/home/mockup-restaurante.webp" width="1366" height="854" fetchpriority="high" alt="Captura real da interface Sabor &amp; Brasa">
+                <div class="stage-window-v5__overlay">
+                  <div>
+                    <strong>Sabor &amp; Brasa</strong>
+                    <span>Cardápio Digital &amp; Reservas</span>
+                  </div>
+                  <span class="stage-window-v5__action">Abrir Demo Real →</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Sub-mockups Sobrepostos: Clínica Vitae e Horizonte Prime -->
+            <div class="stage-mockups-v5__secondary">
+              <a href="./demos/clinica/index.html" class="stage-window-v5 stage-window-v5--sub" aria-label="Abrir demonstração Clínica Vitae">
+                <div class="stage-window-v5__chrome">
+                  <div class="stage-window-v5__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <span class="stage-window-v5__url">demos/clinica</span>
+                </div>
+                <div class="stage-window-v5__screen">
+                  <img src="./assets/img/home/mockup-clinica.webp" width="1366" height="854" alt="Captura real da interface Clínica Vitae">
+                  <div class="stage-window-v5__mini-badge">
+                    <span>Clínica Vitae • Saúde</span>
                   </div>
                 </div>
-              </div>
-              <div class="hero-showcase__meta">
-                <div>
-                  <div class="hero-showcase__meta-title">Sabor &amp; Brasa — Gastronomia Autoral (Demo)</div>
-                  <div class="hero-showcase__meta-sub">Substitui cardápios lentos em PDF por experiência interativa no celular</div>
-                </div>
-                <a href="./demos/restaurante/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
-              </div>
-            </div>
+              </a>
 
-            <!-- Pane 2: Clínica (Captura Real da Demo + Detalhe Fotográfico) -->
-            <div class="hero-showcase__pane" data-showcase-pane="clinica" hidden>
-              <div class="hero-showcase__preview">
-                <img src="./assets/img/home/mockup-clinica.webp" width="1366" height="854" alt="Captura real da demonstração navegável Clínica Vitae com especialidades médicas e jornada do paciente">
-                <div class="hero-showcase__inset">
-                  <img src="./assets/img/clinica/thumb-clinica.webp" width="108" height="80" alt="Ambiente clínico Clínica Vitae">
-                  <div class="hero-showcase__inset-txt">
-                    <strong>Jornada do Paciente</strong>
-                    6 especialidades + pré-consulta
+              <a href="./demos/imobiliaria/index.html" class="stage-window-v5 stage-window-v5--sub" aria-label="Abrir demonstração Horizonte Prime Imóveis">
+                <div class="stage-window-v5__chrome">
+                  <div class="stage-window-v5__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  <span class="stage-window-v5__url">demos/imobiliaria</span>
+                </div>
+                <div class="stage-window-v5__screen">
+                  <img src="./assets/img/home/mockup-imobiliaria.webp" width="1366" height="854" alt="Captura real da interface Horizonte Prime Imobiliária">
+                  <div class="stage-window-v5__mini-badge">
+                    <span>Horizonte Prime • Imóveis</span>
                   </div>
                 </div>
-              </div>
-              <div class="hero-showcase__meta">
-                <div>
-                  <div class="hero-showcase__meta-title">Clínica Vitae — Saúde Integrada (Demo)</div>
-                  <div class="hero-showcase__meta-sub">Comunicação serena para apresentar especialidades e facilitar agendamentos</div>
-                </div>
-                <a href="./demos/clinica/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
-              </div>
-            </div>
-
-            <!-- Pane 3: Imobiliária (Captura Real da Demo + Detalhe Fotográfico) -->
-            <div class="hero-showcase__pane" data-showcase-pane="imobiliaria" hidden>
-              <div class="hero-showcase__preview">
-                <img src="./assets/img/home/mockup-imobiliaria.webp" width="1366" height="854" alt="Captura real da demonstração navegável Horizonte Prime com catálogo e filtros de imóveis">
-                <div class="hero-showcase__inset">
-                  <img src="./assets/img/imobiliaria/thumb-imobiliaria.webp" width="108" height="80" alt="Arquitetura residencial Horizonte Prime">
-                  <div class="hero-showcase__inset-txt">
-                    <strong>Busca Multicritério</strong>
-                    Filtro instantâneo + modal de vistas
-                  </div>
-                </div>
-              </div>
-              <div class="hero-showcase__meta">
-                <div>
-                  <div class="hero-showcase__meta-title">Horizonte Prime — Consultoria Imobiliária (Demo)</div>
-                  <div class="hero-showcase__meta-sub">Catálogo filtrável por tipologia, bairro, faixa de valor e dormitórios</div>
-                </div>
-                <a href="./demos/imobiliaria/index.html" class="btn btn--primary btn--sm">Abrir Demo →</a>
-              </div>
-            </div>
-
-            <div class="hero-showcase__metrics" aria-label="Resumo do acervo demonstrativo">
-              <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">3 Demos Navegáveis</span>
-                <span class="hero-metric-pill__lbl">Teste filtros e modais ao vivo</span>
-              </div>
-              <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">6 Projetos no Acervo</span>
-                <span class="hero-metric-pill__lbl">Demos reais + estudos de escopo</span>
-              </div>
-              <div class="hero-metric-pill">
-                <span class="hero-metric-pill__val">100% Responsivo</span>
-                <span class="hero-metric-pill__lbl">Do smartphone ao widescreen</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. PORTFÓLIO EM DESTAQUE — AS 3 DEMONSTRAÇÕES NAVEGÁVEIS + CATÁLOGO DE 6 PROJETOS -->
-    <section class="section" id="demos-destaque">
+    <!-- 2. PROJETOS EM DESTAQUE — DEMONSTRAÇÕES REAIS + CATÁLOGO DE 6 PROJETOS -->
+    <section class="section" id="projetos-destaque">
       <div class="container">
         <div class="section-header section-header--split" data-reveal>
           <div>
-            <span class="eyebrow">Portfólio em Destaque • Projetos Demonstrativos</span>
-            <h2 class="section-title">Experimente na prática antes de contratar</h2>
+            <span class="eyebrow">Projetos em Destaque • Demonstrações Reais</span>
+            <h2 class="section-title">Experimente na prática o acabamento do seu próximo site</h2>
             <p class="section-subtitle">
-              Desenvolvemos três aplicações demonstrativas completas para que você avalie acabamento visual, velocidade e usabilidade real no seu próprio navegador.
+              Desenvolvi aplicações demonstrativas completas para comprovar direção de arte, velocidade e usabilidade real no seu próprio navegador.
             </p>
           </div>
           <a href="./portfolio/index.html" class="btn btn--secondary">Ver Catálogo Completo (6 Projetos) →</a>
