@@ -108,74 +108,157 @@
   </header>
 
   <main id="conteudo-principal">
-    <!-- 1. HERO PRINCIPAL — PADRÃO ID7 COM IDENTIDADE AUTORAL BARCELOS NETO -->
-    <section class="hero hero-v7">
-      <div class="container hero__grid">
-        <div class="hero__content" data-reveal>
-          <div class="hero__badge">
-            <span class="hero__badge-dot" aria-hidden="true"></span>
+    <!-- 1. HERO PRINCIPAL — HERO V9.1 DEFINITIVO COM CARROSSEL SINCRONIZADO -->
+    <section class="hero-v9" id="hero-v9">
+      <div class="hero-v9__bg" aria-hidden="true">
+        <div class="hero-v9__grid-pattern"></div>
+        <img src="./assets/img/hero/leaf-accent.webp" class="hero-v9__leaf-accent" width="220" height="220" alt="" loading="lazy">
+      </div>
+
+      <div class="container hero-v9__container">
+        <!-- Coluna Esquerda: Conteúdo Editorial -->
+        <div class="hero-v9__col-content" data-reveal>
+          <div class="hero-v9__badge">
+            <span class="hero-v9__badge-dot" aria-hidden="true"></span>
             <span>Barcelos Neto | Estúdio Front-End &amp; Web</span>
           </div>
-          <h1 class="hero__title">
-            Criamos experiências digitais que fazem sua marca <span class="text-gradient">se destacar.</span>
+
+          <span class="hero-v9__eyebrow">DESENVOLVIMENTO WEB SOB MEDIDA</span>
+
+          <h1 class="hero-v9__title">
+            Sites que<br>
+            transformam<br>
+            <span class="hero-v9__title-highlight">negócios.</span>
           </h1>
-          <p class="hero__lead">
-            Desenvolvimento de sites institucionais, landing pages e experiências web sob medida. Engenharia front-end de excelência, carregamento ultrarrápido e direção visual refinada para posicionar seu negócio com autoridade.
+
+          <p class="hero-v9__lead">
+            Criação de websites profissionais, páginas institucionais e landing pages de alta conversão. Unindo design sofisticado, velocidade extrema e estratégia digital para destacar sua marca no mercado.
           </p>
-          <div class="hero__actions">
-            <a href="#projetos-destaque" class="btn btn--primary btn--lg">
-              Ver projetos
-              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+          <div class="hero-v9__actions">
+            <a href="#projetos-destaque" class="btn--hero-primary">
+              <span>Explorar Projetos</span>
+              <svg height="18" width="18" class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="./contato/index.html" class="btn btn--secondary btn--lg">Solicitar orçamento</a>
+            <a href="./contato/index.html" class="btn--hero-secondary">
+              Solicitar Orçamento
+            </a>
           </div>
-          <ul class="hero__trust" aria-label="Compromissos de entrega">
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Código semântico 100% autoral</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Design responsivo fluido e testado</li>
-            <li><span class="hero__trust-dot" aria-hidden="true"></span> Atendimento direto com quem desenvolve</li>
-          </ul>
+
+          <div class="hero-v9__features" aria-label="Diferenciais estratégicos">
+            <div class="hero-v9__feature-item">
+              <span class="hero-v9__feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D64F2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+              </span>
+              <div class="hero-v9__feature-text">
+                <strong>Design estratégico</strong>
+                <span>Foco em conversão</span>
+              </div>
+            </div>
+            <span class="hero-v9__feature-divider" aria-hidden="true"></span>
+            <div class="hero-v9__feature-item">
+              <span class="hero-v9__feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D64F2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </span>
+              <div class="hero-v9__feature-text">
+                <strong>Alta performance</strong>
+                <span>Carregamento rápido</span>
+              </div>
+            </div>
+            <span class="hero-v9__feature-divider" aria-hidden="true"></span>
+            <div class="hero-v9__feature-item">
+              <span class="hero-v9__feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1D64F2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="12" x="3" y="4" rx="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+              </span>
+              <div class="hero-v9__feature-text">
+                <strong>Totalmente responsivo</strong>
+                <span>Mobile first nativo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-v9__author-strip">
+            <div class="hero-v9__author-avatar">
+              <img src="./assets/img/hero/dev-cutout.webp" width="44" height="44" alt="Barcelos Neto" loading="lazy">
+            </div>
+            <div class="hero-v9__author-info">
+              <span class="hero-v9__author-name">Barcelos Neto</span>
+              <span class="hero-v9__author-role">Desenvolvedor Web</span>
+            </div>
+            <span class="hero-v9__author-divider" aria-hidden="true"></span>
+            <p class="hero-v9__author-quote">“Tecnologia, design e experiência a serviço da sua marca.”</p>
+          </div>
         </div>
 
-        <!-- Coluna Direita: Card Editorial do Desenvolvedor -->
-        <div class="hero__stage-v7" data-reveal>
-          <div class="author-card-v7">
-            <div class="author-card-v7__header">
-              <div class="author-card-v7__avatar">
-                <picture>
-                  <source srcset="./assets/img/foto-barcelos-neto.webp" type="image/webp">
-                  <img src="./assets/img/foto-barcelos-neto.png" width="164" height="164" alt="Fotografia profissional de Barcelos Neto, Desenvolvedor Web">
-                </picture>
-                <span class="author-card-v7__status-dot" title="Disponível para novos projetos" aria-hidden="true"></span>
+        <!-- Coluna Direita: Stage Visual com Carrossel Sincronizado -->
+        <div class="hero-v9__col-stage" id="hero-carousel-stage" data-reveal tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Demonstrações de Projetos em Destaque">
+          <!-- Forma Orgânica Translúcida de Fundo -->
+          <div class="hero-v9__backdrop-shape" aria-hidden="true">
+            <span class="hero-v9__floating-code">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1D64F2" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+          </div>
+
+          <!-- Fotografia Real do Desenvolvedor -->
+          <div class="hero-v9__dev-photo">
+            <img src="./assets/img/hero/dev-cutout.webp" width="430" height="645" alt="Barcelos Neto, Desenvolvedor Web">
+          </div>
+
+          <!-- Monitor Desktop 3D -->
+          <div class="hero-v9__monitor">
+            <a href="./demos/restaurante/index.html" class="monitor-link" data-carousel-link aria-label="Abrir demonstração Sabor &amp; Brasa">
+              <div class="monitor-frame">
+                <div class="monitor-screen">
+                  <img class="carousel-slide-desktop is-active" src="./assets/img/hero/slide-restaurante-desktop.webp" width="1280" height="800" alt="Captura da interface desktop Sabor &amp; Brasa" fetchpriority="high">
+                  <img class="carousel-slide-desktop" src="./assets/img/hero/slide-clinica-desktop.webp" width="1280" height="800" alt="Captura da interface desktop Clínica Vitae" loading="lazy">
+                  <img class="carousel-slide-desktop" src="./assets/img/hero/slide-imobiliaria-desktop.webp" width="1280" height="800" alt="Captura da interface desktop Horizonte Prime" loading="lazy">
+                </div>
+                <div class="monitor-chin"></div>
               </div>
-              <div class="author-card-v7__identity">
-                <span class="author-card-v7__role">Desenvolvedor Front-End &amp; Web</span>
-                <h3 class="author-card-v7__name">Barcelos Neto</h3>
-                <div class="author-card-v7__status">
-                  <span class="pulse-dot" aria-hidden="true"></span>
-                  <span>Disponível para novos projetos</span>
+              <div class="monitor-stand"></div>
+              <div class="monitor-base"></div>
+            </a>
+          </div>
+
+          <!-- Celular Mobile Sobreposto -->
+          <div class="hero-v9__phone">
+            <a href="./demos/restaurante/index.html" class="phone-link" data-carousel-link aria-label="Abrir demonstração mobile Sabor &amp; Brasa">
+              <div class="phone-frame">
+                <div class="phone-speaker" aria-hidden="true"></div>
+                <div class="phone-screen">
+                  <img class="carousel-slide-mobile is-active" src="./assets/img/hero/slide-restaurante-mobile.webp" width="780" height="1688" alt="Captura da interface mobile Sabor &amp; Brasa">
+                  <img class="carousel-slide-mobile" src="./assets/img/hero/slide-clinica-mobile.webp" width="780" height="1688" alt="Captura da interface mobile Clínica Vitae" loading="lazy">
+                  <img class="carousel-slide-mobile" src="./assets/img/hero/slide-imobiliaria-mobile.webp" width="780" height="1688" alt="Captura da interface mobile Horizonte Prime" loading="lazy">
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
 
-            <p class="author-card-v7__bio">
-              Desenvolvimento artesanal de interfaces web com arquitetura limpa, alta performance e cuidado minucioso em cada detalhe tipográfico e espacial.
-            </p>
+          <!-- Setas Circulares de Navegação -->
+          <button type="button" class="carousel-nav-btn carousel-nav-btn--prev" data-carousel-prev aria-label="Slide anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button type="button" class="carousel-nav-btn carousel-nav-btn--next" data-carousel-next aria-label="Próximo slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
 
-            <div class="author-card-v7__sectors">
-              <span class="author-card-v7__sectors-label">Demonstrações em Destaque:</span>
-              <div class="author-card-v7__pills">
-                <span class="sector-pill">Gastronomia</span>
-                <span class="sector-pill">Saúde</span>
-                <span class="sector-pill">Imóveis de Alto Padrão</span>
-              </div>
-            </div>
+          <!-- Indicadores de Slide (Dots) -->
+          <div class="carousel-indicators" role="tablist" aria-label="Selecionar slide">
+            <button type="button" class="carousel-dot is-active" data-dot="0" role="tab" aria-selected="true" aria-label="Slide 1 de 3: Sabor &amp; Brasa"></button>
+            <button type="button" class="carousel-dot" data-dot="1" role="tab" aria-selected="false" aria-label="Slide 2 de 3: Clínica Vitae"></button>
+            <button type="button" class="carousel-dot" data-dot="2" role="tab" aria-selected="false" aria-label="Slide 3 de 3: Horizonte Prime"></button>
+          </div>
 
-            <div class="author-card-v7__footer">
-              <a href="#projetos-destaque" class="author-card-v7__cta">
-                <span>Explorar vitrine de projetos</span>
-                <svg height="16" width="16" class="icon" viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
-              </a>
+          <!-- Faixa Inferior de Projeto em Destaque -->
+          <div class="hero-v9__featured-pill">
+            <div class="featured-pill__content">
+              <span class="featured-pill__label">PROJETO EM DESTAQUE</span>
+              <span class="featured-pill__title" data-carousel-title>Sabor &amp; Brasa</span>
+              <span class="featured-pill__cat" data-carousel-cat>GASTRONOMIA</span>
             </div>
+            <a href="./demos/restaurante/index.html" class="featured-pill__action" data-carousel-link aria-label="Ver demonstração Sabor &amp; Brasa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </div>
       </div>

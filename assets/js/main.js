@@ -342,12 +342,204 @@
     });
   }
 
+  /**
+   * Carrossel Sincronizado do Hero V9.1 (Monitor + Celular + Metadados + Indicadores)
+   */
+  function initHeroV9Carousel() {
+    var stage = document.getElementById("hero-carousel-stage");
+    if (!stage) return;
+
+    var SLIDES = [
+      {
+        name: "Sabor & Brasa",
+        category: "GASTRONOMIA",
+        url: "./demos/restaurante/index.html",
+        altDesktop: "Captura da interface desktop Sabor & Brasa",
+        altMobile: "Captura da interface mobile Sabor & Brasa"
+      },
+      {
+        name: "Clínica Vitae",
+        category: "SAÚDE",
+        url: "./demos/clinica/index.html",
+        altDesktop: "Captura da interface desktop Clínica Vitae",
+        altMobile: "Captura da interface mobile Clínica Vitae"
+      },
+      {
+        name: "Horizonte Prime",
+        category: "IMÓVEIS DE ALTO PADRÃO",
+        url: "./demos/imobiliaria/index.html",
+        altDesktop: "Captura da interface desktop Horizonte Prime",
+        altMobile: "Captura da interface mobile Horizonte Prime"
+      }
+    ];
+
+    var currentIndex = 0;
+    var totalSlides = SLIDES.length;
+    var timer = null;
+    var AUTOPLAY_DELAY = 5000;
+
+    var desktopImgs = stage.querySelectorAll(".carousel-slide-desktop");
+    var mobileImgs = stage.querySelectorAll(".carousel-slide-mobile");
+    var dots = stage.querySelectorAll("[data-dot]");
+    var titleEl = stage.querySelector("[data-carousel-title]");
+    var catEl = stage.querySelector("[data-carousel-cat]");
+    var links = stage.querySelectorAll("[data-carousel-link]");
+    var prevBtn = stage.querySelector("[data-carousel-prev]");
+    var nextBtn = stage.querySelector("[data-carousel-next]");
+
+    var prefersReduced =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function renderSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentIndex = index;
+
+      var current = SLIDES[currentIndex];
+
+      // Atualiza slides do monitor
+      desktopImgs.forEach(function (img, i) {
+        var active = i === currentIndex;
+        img.classList.toggle("is-active", active);
+        if (active) {
+          img.setAttribute("alt", current.altDesktop);
+        }
+      });
+
+      // Atualiza slides do celular
+      mobileImgs.forEach(function (img, i) {
+        var active = i === currentIndex;
+        img.classList.toggle("is-active", active);
+        if (active) {
+          img.setAttribute("alt", current.altMobile);
+        }
+      });
+
+      // Atualiza indicadores (dots)
+      dots.forEach(function (dot, i) {
+        var active = i === currentIndex;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", active ? "true" : "false");
+      });
+
+      // Atualiza título, categoria e links
+      if (titleEl) titleEl.textContent = current.name;
+      if (catEl) catEl.textContent = current.category;
+      links.forEach(function (link) {
+        link.setAttribute("href", current.url);
+        link.setAttribute("aria-label", "Abrir demonstração " + current.name);
+      });
+    }
+
+    function nextSlide() {
+      renderSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      renderSlide(currentIndex - 1);
+    }
+
+    function startAutoplay() {
+      if (prefersReduced) return;
+      stopAutoplay();
+      timer = setInterval(nextSlide, AUTOPLAY_DELAY);
+    }
+
+    function stopAutoplay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Controles de navegação
+    if (nextBtn) {
+      nextBtn.addEventListener("click", function () {
+        nextSlide();
+        startAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", function () {
+        prevSlide();
+        startAutoplay();
+      });
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        var targetIndex = parseInt(dot.getAttribute("data-dot"), 10);
+        if (!isNaN(targetIndex)) {
+          renderSlide(targetIndex);
+          startAutoplay();
+        }
+      });
+    });
+
+    // Pausa com hover e foco
+    stage.addEventListener("mouseenter", stopAutoplay);
+    stage.addEventListener("mouseleave", startAutoplay);
+    stage.addEventListener("focusin", stopAutoplay);
+    stage.addEventListener("focusout", startAutoplay);
+
+    // Suspende quando a aba não estiver visível
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) {
+        stopAutoplay();
+      } else {
+        startAutoplay();
+      }
+    });
+
+    // Suporte a teclado
+    stage.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") {
+        prevSlide();
+        startAutoplay();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
+        startAutoplay();
+      }
+    });
+
+    // Suporte a touch swipe
+    var touchStartX = 0;
+    stage.addEventListener(
+      "touchstart",
+      function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+    stage.addEventListener(
+      "touchend",
+      function (e) {
+        var diff = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(diff) > 40) {
+          if (diff < 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+          startAutoplay();
+        }
+      },
+      { passive: true }
+    );
+
+    renderSlide(0);
+    startAutoplay();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     injectConfigValues();
     initMobileNavigation();
     initBackToTop();
     initScrollReveal();
     initHeroShowcase();
+    initHeroV9Carousel();
     initShareButtons();
   });
 })();
