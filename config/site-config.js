@@ -17,13 +17,13 @@ window.SITE_CONFIG = {
   // Identidade Comercial Configurável
   brandName: "Barcelos Neto — Desenvolvimento Web",
   brandShortName: "Barcelos Neto",
-  professionalIdentity: "Barcelos Neto — Desenvolvedor Web",
-  brandTagline: "Desenvolvedor Web",
-  brandSlogan: "Sites profissionais que transformam visitas em oportunidades",
+  professionalIdentity: "Barcelos Neto — Desenvolvedor Full Stack",
+  brandTagline: "Desenvolvedor Full Stack",
+  brandSlogan: "Sites profissionais e sistemas web que transformam visitas em oportunidades",
   brandDescription:
-    "Desenvolvimento de landing pages, sites institucionais e interfaces web de alta performance, acessíveis e otimizadas para conversão.",
+    "Desenvolvimento Web & Full Stack: criação de landing pages, sites institucionais, sistemas web com APIs e banco de dados de alta performance, acessíveis e otimizados para conversão.",
   locationLabel: "Atendimento remoto para todo o Brasil",
-  businessStatusNote: "Barcelos Neto — Desenvolvedor Web | Configuração central em config/site-config.js",
+  businessStatusNote: "Barcelos Neto — Desenvolvedor Full Stack | Configuração central em config/site-config.js",
 
   // Configuração de URL e Caminho Base (GitHub Pages)
   productionUrl: "https://barcelosneto.github.io/site-portfolio",
@@ -203,6 +203,98 @@ window.SITE_CONFIG = {
       technologies: ["HTML5", "CSS Grid", "Temas Claro/Escuro", "Fotografia WebP"],
       demoPath: "servicos/index.html#portfolios",
       previewTheme: "cyan",
+      featured: false
+    },
+    {
+      id: "demo-petshop",
+      title: "Pata & Prosa — Pet Shop & Clínica Veterinária",
+      category: "petshop",
+      categoryLabel: "Pet Shop & Veterinária",
+      typeLabel: "Simulador de Serviços + Agendamento",
+      badge: "Demonstração em Preparação",
+      thumbnail: "assets/img/petshop/thumb-petshop.svg",
+      shortDescription:
+        "Interface dinâmica para pet shops e clínicas veterinárias com simulador instantâneo de banho, tosa e vacinas por porte do pet, além de fluxo rápido de pré-agendamento.",
+      problemSolved:
+        "Resolve a lentidão no atendimento por mensagens ao calcular orçamentos prévios e organizar solicitações com raça, porte e necessidades especiais do animal.",
+      deliverables: [
+        "Simulador interativo de pacotes de estética animal e consultas",
+        "Grade de seleção de horários e pré-agendamento responsivo",
+        "Encaminhamento estruturado dos dados do pet para atendimento comercial"
+      ],
+      technologies: ["HTML5 Semântico", "CSS Grid", "JavaScript Modular", "Acessibilidade"],
+      demoPath: "",
+      status: "em-breve",
+      previewTheme: "emerald",
+      featured: false
+    },
+    {
+      id: "demo-academia",
+      title: "Pulso Fit — Academia & Treinamento Personalizado",
+      category: "fitness",
+      categoryLabel: "Fitness & Academias",
+      typeLabel: "Comparador de Planos + Captação de Alunos",
+      badge: "Demonstração em Preparação",
+      thumbnail: "assets/img/academia/thumb-academia.svg",
+      shortDescription:
+        "Página de alta conversão para academias e estúdios fitness com grade horária de modalidades (spinning, pilates, cross), comparador de planos e passe livre experimental.",
+      problemSolved:
+        "Converte visitantes em alunos através de apresentação transparente de valores, sem pegadinhas contratuais, e agendamento instantâneo de aula experimental.",
+      deliverables: [
+        "Tabela comparativa interativa de planos com chave seletora mensal/anual",
+        "Grade horária filtrável por modalidade e nível de intensidade",
+        "Formulário enxuto de captação de leads para aula experimental gratuita"
+      ],
+      technologies: ["HTML5", "CSS Moderno", "Microinterações JS", "Conversão Mobile"],
+      demoPath: "",
+      status: "em-breve",
+      previewTheme: "orange",
+      featured: false
+    },
+    {
+      id: "demo-nexo",
+      title: "Nexo Academy — Cursos & Treinamentos de Tecnologia",
+      category: "educacao",
+      categoryLabel: "Educação & Tecnologia",
+      typeLabel: "Catálogo de Cursos + Comparador de Trilhas",
+      badge: "Demonstração em Preparação",
+      thumbnail: "assets/img/nexo/thumb-nexo.svg",
+      shortDescription:
+        "Plataforma educacional para escolas técnicas e treinamentos corporativos com busca em tempo real sem acentos, detalhamento de ementa e comparador lado a lado.",
+      problemSolved:
+        "Facilita a decisão de matrícula ao permitir comparar carga horária, tecnologias abordadas e projetos práticos de cada formação com clareza total.",
+      deliverables: [
+        "Busca e filtros multicritério por nível de experiência e tecnologia",
+        "Comparador visual de módulos e certificações de formação",
+        "Layout escaneável otimizado para retenção e clareza didática"
+      ],
+      technologies: ["HTML5", "CSS3 Flex/Grid", "Busca Instantânea Client-Side", "UI Educacional"],
+      demoPath: "",
+      status: "em-breve",
+      previewTheme: "indigo",
+      featured: false
+    },
+    {
+      id: "demo-linhaviva",
+      title: "Linha Viva — Arquitetura Contemporânea & Interiores",
+      category: "arquitetura",
+      categoryLabel: "Arquitetura & Interiores",
+      typeLabel: "Vitrine de Obras + Comparador Antes/Depois",
+      badge: "Demonstração em Preparação",
+      thumbnail: "assets/img/linhaviva/thumb-linhaviva.svg",
+      shortDescription:
+        "Portfólio visual para escritórios de arquitetura e design de interiores com controle deslizante de comparação antes/depois da reforma e triagem de briefing.",
+      problemSolved:
+        "Destaca a transformação real realizada nos imóveis e qualifica contatos ao coletar tipo de obra, metragem e estilo desejado no primeiro contato.",
+      deliverables: [
+        "Slider interativo de comparação visual antes e depois da reforma",
+        "Ficha técnica com memorial descritivo de materiais e fornecedores",
+        "Questionário inteligente de briefing prévio para orçamento de projeto"
+      ],
+      technologies: ["HTML5 Semântico", "CSS Grid Avançado", "Slider Interativo", "Design Editorial"],
+      demoPath: "",
+      status: "em-breve",
+      previewTheme: "neutral",
       featured: false
     }
   ]

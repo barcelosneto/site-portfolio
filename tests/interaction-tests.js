@@ -41,14 +41,14 @@ global.window = {};
 require(path.join(ROOT, "config/site-config.js"));
 const cfg = global.window.SITE_CONFIG;
 assert.strictEqual(cfg.brandName, "Barcelos Neto — Desenvolvimento Web", "BrandName deve ser Barcelos Neto — Desenvolvimento Web");
-assert.strictEqual(cfg.professionalIdentity, "Barcelos Neto — Desenvolvedor Web", "Identificação profissional deve estar configurada");
+assert.strictEqual(cfg.professionalIdentity, "Barcelos Neto — Desenvolvedor Full Stack", "Identificação profissional deve estar configurada como Full Stack");
 assert.strictEqual(cfg.productionUrl, "https://barcelosneto.github.io/site-portfolio", "productionUrl deve apontar para barcelosneto.github.io/site-portfolio");
 assert.strictEqual(cfg.basePath, "/site-portfolio", "basePath deve ser /site-portfolio");
 assert.strictEqual(cfg.socialLinks.github, "https://github.com/barcelosneto", "GitHub deve apontar para https://github.com/barcelosneto");
 assert.strictEqual(cfg.contact.email, "pedrobarcelos1980@gmail.com", "E-mail comercial deve ser pedrobarcelos1980@gmail.com");
 assert.strictEqual(cfg.contact.whatsappNumber, "", "WhatsApp (A confirmar) deve vir vazio para não inventar número");
 assert.strictEqual(cfg.socialLinks.linkedin, "https://www.linkedin.com/in/barcelosneto", "LinkedIn deve apontar para https://www.linkedin.com/in/barcelosneto");
-assert.strictEqual(cfg.portfolioProjects.length, 6, "Deve conter 6 projetos demonstrativos/conceituais no catálogo");
+assert.strictEqual(cfg.portfolioProjects.length, 10, "Deve conter 10 projetos demonstrativos/conceituais no catálogo");
 console.log(" [OK] Estrutura de config/site-config.js validada com os dados de Barcelos Neto (incluindo LinkedIn e GitHub)");
 
 // 3. Testar normalização de acentos e busca (mesmo algoritmo usado em portfolio.js e demo-restaurante.js)

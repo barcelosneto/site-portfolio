@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Prévia do projeto demonstrativo Pata &amp; Prosa — Pet Shop &amp; Clínica Veterinária">
+  <defs>
+    <linearGradient id="pet-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="pet-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#0B1311"/>
+  <rect width="800" height="500" fill="url(#pet-bg)" opacity="0.25"/>
+
+  <!-- Browser Window Chrome -->
+  <rect x="36" y="28" width="728" height="444" rx="16" fill="#13231F" stroke="#1E3E37" stroke-width="1.5"/>
+  <rect x="36" y="28" width="728" height="48" rx="16" fill="#0D1916"/>
+  <line x1="36" y1="76" x2="764" y2="76" stroke="#1E3E37" stroke-width="1"/>
+  
+  <!-- Window Dots -->
+  <circle cx="58" cy="52" r="5" fill="#EF4444"/>
+  <circle cx="74" cy="52" r="5" fill="#F59E0B"/>
+  <circle cx="90" cy="52" r="5" fill="#10B981"/>
+  <text x="110" y="56" fill="#6EE7B7" font-family="monospace" font-size="11">pataeprosa.demo/agendamento</text>
+
+  <!-- Navbar inside mockup -->
+  <rect x="520" y="40" width="220" height="24" rx="6" fill="#1A332C"/>
+  <text x="630" y="56" fill="#D1FAE5" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Serviços • Banho &amp; Tosa • Agendar</text>
+
+  <!-- Hero Content Left -->
+  <rect x="68" y="104" width="180" height="24" rx="12" fill="#064E3B" stroke="#059669"/>
+  <circle cx="84" cy="116" r="4" fill="#10B981"/>
+  <text x="160" y="120" fill="#A7F3D0" font-family="monospace" font-size="9.5" font-weight="700" text-anchor="middle">PET SHOP &amp; VETERINÁRIA</text>
+
+  <text x="68" y="164" fill="#ECFDF5" font-family="system-ui, sans-serif" font-size="28" font-weight="800">Cuidado integral</text>
+  <text x="68" y="196" fill="#34D399" font-family="system-ui, sans-serif" font-size="28" font-weight="800">para o seu pet.</text>
+  <text x="68" y="226" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">Simulador de serviços, pacotes de banho e tosa</text>
+  <text x="68" y="244" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="12">e agendamento transparente pelo celular.</text>
+
+  <rect x="68" y="266" width="140" height="34" rx="8" fill="#10B981"/>
+  <text x="138" y="287" fill="#064E3B" font-family="system-ui, sans-serif" font-size="11" font-weight="800" text-anchor="middle">Calcular Orçamento</text>
+
+  <!-- Service Cards Grid Right -->
+  <rect x="440" y="104" width="290" height="190" rx="12" fill="#162B25" stroke="#1F453B"/>
+  <text x="460" y="132" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Simulador de Pacotes Pet</text>
+  
+  <rect x="460" y="148" width="250" height="38" rx="8" fill="#0F1E1A"/>
+  <text x="475" y="171" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Banho Hidratante + Tosa Higiênica</text>
+  <text x="680" y="171" fill="#34D399" font-family="monospace" font-size="11" font-weight="700">R$ 85</text>
+
+  <rect x="460" y="194" width="250" height="38" rx="8" fill="#0F1E1A"/>
+  <text x="475" y="217" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Consulta Clínica Veterinária</text>
+  <text x="680" y="217" fill="#34D399" font-family="monospace" font-size="11" font-weight="700">R$ 130</text>
+
+  <rect x="460" y="240" width="250" height="38" rx="8" fill="#0F1E1A"/>
+  <text x="475" y="263" fill="#E5E7EB" font-family="system-ui, sans-serif" font-size="11">Plano Mensal Cuidados Pet</text>
+  <text x="680" y="263" fill="#F59E0B" font-family="monospace" font-size="11" font-weight="700">R$ 290</text>
+
+  <!-- Feature Strip Bottom -->
+  <rect x="68" y="320" width="662" height="126" rx="12" fill="#152722" stroke="#1E3E37"/>
+  <rect x="90" y="340" width="190" height="86" rx="8" fill="#0E1B17"/>
+  <text x="105" y="365" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✓ Porte &amp; Peso</text>
+  <text x="105" y="388" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Seleção dinâmica por raça e pelagem</text>
+
+  <rect x="300" y="340" width="190" height="86" rx="8" fill="#0E1B17"/>
+  <text x="315" y="365" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✓ Horário em Tempo Real</text>
+  <text x="315" y="388" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Grade visual de disponibilidade</text>
+
+  <rect x="510" y="340" width="200" height="86" rx="8" fill="#0E1B17"/>
+  <text x="525" y="365" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✓ Confirmação WhatsApp</text>
+  <text x="525" y="388" fill="#9CA3AF" font-family="system-ui, sans-serif" font-size="10">Disparo automático de dados da reserva</text>
+</svg>
