@@ -9,6 +9,11 @@ const artifactDir = 'C:\\Users\\82033625\\.gemini\\antigravity\\brain\\fb590790-
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
+  if (reqPath.startsWith('/site-portfolio/')) {
+    reqPath = reqPath.slice('/site-portfolio'.length);
+  } else if (reqPath === '/site-portfolio') {
+    reqPath = '/index.html';
+  }
   if (reqPath.endsWith('/')) reqPath += 'index.html';
   if (reqPath === '') reqPath = '/index.html';
   const filePath = path.join(rootDir, reqPath);
@@ -136,11 +141,14 @@ async function run() {
   };
 
   const pages = [
-    { name: 'Home', url: 'http://127.0.0.1:8128/index.html' },
-    { name: 'Portfolio', url: 'http://127.0.0.1:8128/portfolio/index.html' },
-    { name: 'Servicos', url: 'http://127.0.0.1:8128/servicos/index.html' },
-    { name: 'Sobre', url: 'http://127.0.0.1:8128/sobre/index.html' },
-    { name: 'Contato', url: 'http://127.0.0.1:8128/contato/index.html' },
+    { name: 'Home', url: 'http://127.0.0.1:8128/site-portfolio/index.html' },
+    { name: 'Portfolio', url: 'http://127.0.0.1:8128/site-portfolio/portfolio/index.html' },
+    { name: 'Servicos', url: 'http://127.0.0.1:8128/site-portfolio/servicos/index.html' },
+    { name: 'Sobre', url: 'http://127.0.0.1:8128/site-portfolio/sobre/index.html' },
+    { name: 'Contato', url: 'http://127.0.0.1:8128/site-portfolio/contato/index.html' },
+    { name: 'Demo-Restaurante', url: 'http://127.0.0.1:8128/site-portfolio/demos/restaurante/index.html' },
+    { name: 'Demo-Clinica', url: 'http://127.0.0.1:8128/site-portfolio/demos/clinica/index.html' },
+    { name: 'Demo-Imobiliaria', url: 'http://127.0.0.1:8128/site-portfolio/demos/imobiliaria/index.html' },
   ];
 
   const viewports = [
@@ -148,6 +156,7 @@ async function run() {
     { w: 768, h: 1024, name: '768x1024' },
     { w: 390, h: 844, name: '390x844' },
     { w: 375, h: 812, name: '375x812' },
+    { w: 360, h: 800, name: '360x800' },
   ];
 
   const results = [];
@@ -229,8 +238,8 @@ async function run() {
       if (!passConsole) console.log('    Erros console:', consoleErrors);
       if (!passNetwork) console.log('    Requisições 404:', network404s);
 
-      // Salva screenshots dos viewports chave (1440 e 390) para o diretório de artifacts
-      if (vp.w === 1440 || vp.w === 390) {
+      // Salva screenshots dos viewports chave (1440, 390 e 360) para o diretório de artifacts
+      if (vp.w === 1440 || vp.w === 390 || vp.w === 360) {
         const screenshot = await client.send('Page.captureScreenshot', { format: 'png' });
         const shotName = `v11-${page.name.toLowerCase()}-${vp.w}.png`;
         const shotPath = path.join(artifactDir, shotName);

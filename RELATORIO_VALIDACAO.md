@@ -74,28 +74,53 @@ A matriz comparativa foi expandida com uma 4ª coluna (*Sistema Web & APIs*), de
 
 ### C. Auditoria Multi-Viewport via Headless Chrome DevTools Protocol (`node tests/cdp-validate.js`)
 
+Auditoria automatizada executada sob o subpath real do GitHub Pages (`http://127.0.0.1:8128/site-portfolio/`), abrangendo as 5 páginas principais e as 3 demonstrações navegáveis completas em 5 resoluções de tela:
+
 | Página | Viewport | Dimensões | Overflow Horizontal | Imagens Quebradas | Erros 404 | Erros Console | Status |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Home** | Desktop | `1440x900` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
 | **Home** | Tablet | `768x1024` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
 | **Home** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
 | **Home** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Home** | Mobile (Android) | `360x800` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
 | **Portfólio** | Desktop | `1440x900` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
 | **Portfólio** | Tablet | `768x1024` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
 | **Portfólio** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
 | **Portfólio** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
+| **Portfólio** | Mobile (Android) | `360x800` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
 | **Serviços** | Desktop | `1440x900` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
 | **Serviços** | Tablet | `768x1024` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
 | **Serviços** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
 | **Serviços** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
+| **Serviços** | Mobile (Android) | `360x800` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
 | **Sobre** | Desktop | `1440x900` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
 | **Sobre** | Tablet | `768x1024` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
 | **Sobre** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
 | **Sobre** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
+| **Sobre** | Mobile (Android) | `360x800` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
 | **Contato** | Desktop | `1440x900` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
 | **Contato** | Tablet | `768x1024` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
 | **Contato** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
 | **Contato** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
+| **Contato** | Mobile (Android) | `360x800` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Desktop | `1440x900` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Tablet | `768x1024` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Mobile (Android) | `360x800` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Desktop | `1440x900` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Tablet | `768x1024` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Mobile (Android) | `360x800` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Desktop | `1440x900` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Tablet | `768x1024` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Mobile (Android) | `360x800` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+
+**Total de testes automatizados em navegador real:** 40  
+**Aprovações:** 40 (100%) | **Falhas:** 0
 
 ---
 
