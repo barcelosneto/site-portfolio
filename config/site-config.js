@@ -211,8 +211,8 @@ window.SITE_CONFIG = {
       category: "petshop",
       categoryLabel: "Pet Shop & Veterinária",
       typeLabel: "Simulador de Serviços + Agendamento",
-      badge: "Demonstração em Preparação",
-      thumbnail: "assets/img/petshop/thumb-petshop.svg",
+      badge: "Demo Interativa Completa",
+      thumbnail: "assets/img/petshop/thumb-petshop.webp",
       shortDescription:
         "Interface dinâmica para pet shops e clínicas veterinárias com simulador instantâneo de banho, tosa e vacinas por porte do pet, além de fluxo rápido de pré-agendamento.",
       problemSolved:
@@ -223,8 +223,8 @@ window.SITE_CONFIG = {
         "Encaminhamento estruturado dos dados do pet para atendimento comercial"
       ],
       technologies: ["HTML5 Semântico", "CSS Grid", "JavaScript Modular", "Acessibilidade"],
-      demoPath: "",
-      status: "em-breve",
+      demoPath: "demos/petshop/index.html",
+      status: "disponivel",
       previewTheme: "emerald",
       featured: false
     },
@@ -234,8 +234,8 @@ window.SITE_CONFIG = {
       category: "fitness",
       categoryLabel: "Fitness & Academias",
       typeLabel: "Comparador de Planos + Captação de Alunos",
-      badge: "Demonstração em Preparação",
-      thumbnail: "assets/img/academia/thumb-academia.svg",
+      badge: "Demo Interativa Completa",
+      thumbnail: "assets/img/academia/thumb-academia.webp",
       shortDescription:
         "Página de alta conversão para academias e estúdios fitness com grade horária de modalidades (spinning, pilates, cross), comparador de planos e passe livre experimental.",
       problemSolved:
@@ -246,8 +246,8 @@ window.SITE_CONFIG = {
         "Formulário enxuto de captação de leads para aula experimental gratuita"
       ],
       technologies: ["HTML5", "CSS Moderno", "Microinterações JS", "Conversão Mobile"],
-      demoPath: "",
-      status: "em-breve",
+      demoPath: "demos/academia/index.html",
+      status: "disponivel",
       previewTheme: "orange",
       featured: false
     },
@@ -257,8 +257,8 @@ window.SITE_CONFIG = {
       category: "educacao",
       categoryLabel: "Educação & Tecnologia",
       typeLabel: "Catálogo de Cursos + Comparador de Trilhas",
-      badge: "Demonstração em Preparação",
-      thumbnail: "assets/img/nexo/thumb-nexo.svg",
+      badge: "Demo Interativa Completa",
+      thumbnail: "assets/img/nexo/thumb-nexo.webp",
       shortDescription:
         "Plataforma educacional para escolas técnicas e treinamentos corporativos com busca em tempo real sem acentos, detalhamento de ementa e comparador lado a lado.",
       problemSolved:
@@ -269,8 +269,8 @@ window.SITE_CONFIG = {
         "Layout escaneável otimizado para retenção e clareza didática"
       ],
       technologies: ["HTML5", "CSS3 Flex/Grid", "Busca Instantânea Client-Side", "UI Educacional"],
-      demoPath: "",
-      status: "em-breve",
+      demoPath: "demos/nexo/index.html",
+      status: "disponivel",
       previewTheme: "indigo",
       featured: false
     },
@@ -280,8 +280,8 @@ window.SITE_CONFIG = {
       category: "arquitetura",
       categoryLabel: "Arquitetura & Interiores",
       typeLabel: "Vitrine de Obras + Comparador Antes/Depois",
-      badge: "Demonstração em Preparação",
-      thumbnail: "assets/img/linhaviva/thumb-linhaviva.svg",
+      badge: "Demo Interativa Completa",
+      thumbnail: "assets/img/linhaviva/thumb-linhaviva.webp",
       shortDescription:
         "Portfólio visual para escritórios de arquitetura e design de interiores com controle deslizante de comparação antes/depois da reforma e triagem de briefing.",
       problemSolved:
@@ -292,8 +292,8 @@ window.SITE_CONFIG = {
         "Questionário inteligente de briefing prévio para orçamento de projeto"
       ],
       technologies: ["HTML5 Semântico", "CSS Grid Avançado", "Slider Interativo", "Design Editorial"],
-      demoPath: "",
-      status: "em-breve",
+      demoPath: "demos/linhaviva/index.html",
+      status: "disponivel",
       previewTheme: "neutral",
       featured: false
     }

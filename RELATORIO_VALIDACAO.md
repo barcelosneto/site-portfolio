@@ -1,157 +1,138 @@
-# Relatório de Validação Técnica e Revisão Integrada — V11
+# Relatório de Validação Técnica e Publicação das Demos — V12
 
 **Projeto:** Barcelos Neto — Desenvolvimento Web & Full Stack  
 **Diretório local auditado:** `C:\Users\82033625\Documents\GitHub\site-portfolio`  
-**URL de produção:** `https://barcelosneto.github.io/site-portfolio/`  
-**Data da Auditoria:** 21 de outubro de 2026  
-**Status Consolidado:** **100% APROVADO** (811 verificações estáticas, suíte interativa completa, auditoria multi-viewport via Chrome DevTools Protocol com 0 erros de console, 0 erros HTTP 404 e 0 overflow horizontal)
+**URL de produção (GitHub Pages):** `https://barcelosneto.github.io/site-portfolio/`  
+**Data da Auditoria:** 22 de outubro de 2026  
+**Status Consolidado:** **100% APROVADO** (1.067 verificações estáticas, suíte interativa completa, 60 testes multi-viewport via Chrome DevTools Protocol com 0 erros de console, 0 erros HTTP 404 e 0 overflow horizontal)
 
 ---
 
-## 1. Resumo Executivo da Revisão Integrada V11
+## 1. Resumo Executivo da Publicação V12
 
-A presente revisão realizou a unificação técnica, conceitual e visual de todo o ecossistema digital do profissional **Barcelos Neto**, cobrindo a página inicial (`index.html`) e as quatro páginas internas principais (`/portfolio/`, `/servicos/`, `/sobre/`, `/contato/`), além de `/privacidade/` e `404.html`.
+A presente revisão resolveu em definitivo o status de *"Demonstração em Breve"* dos 4 novos projetos setoriais, integrando seu código-fonte real navegável, capturando screenshots fidedignas diretamente nos navegadores e promovendo o portfólio de Barcelos Neto a um catálogo com **7 Demonstrações Interativas Completas** e **3 Estudos de Conceito Arquitetural**.
 
 ### Principais Objetivos Cumpridos:
-1. **Regra Zero Respeitada:** A primeira dobra (*Hero*) e o carrossel sincronizado 3D (monitor + mobile) homologados na versão anterior foram mantidos 100% intactos visual e funcionalmente.
-2. **Posicionamento Profissional Unificado:** Transição consistente de títulos genéricos para a assinatura comercial **Barcelos Neto — Desenvolvedor Full Stack** e **Desenvolvimento Web & Full Stack**, refletindo competências completas em front-end semântico, arquitetura de sistemas web, modelagem relacional (PostgreSQL) e integrações de APIs RESTful.
-3. **Expansão Honesta do Catálogo do Portfólio (10 Projetos):** Integração de 4 novos setores ao catálogo (Pet Shop, Academia & Fitness, Educação & Tecnologia, Arquitetura & Interiores) com mockups vetoriais dedicados e rotulagem explícita *"Demonstração em Preparação / Em Breve"*, sem links quebrados ou promessas enganosas.
-4. **Atualização do Cardápio de Serviços:** Adição do 7º serviço estruturado (*Sistemas Web, APIs e Integrações*) e atualização da matriz comparativa de escopos.
-5. **Apresentação Sóbria e Acadêmica da Trajetória:** Inclusão no `/sobre/index.html` da formação acadêmica real (Mestrado em Computação Aplicada — UFMS, Especialização em Ciência de Dados & IA, Graduação em Análise e Desenvolvimento de Sistemas), da foto real e do processo de trabalho em 5 etapas transparentes.
-6. **Formulário de Contato e Canais Reais:** Destaque para o canal oficial de contratação no LinkedIn (`https://www.linkedin.com/in/barcelosneto`), e-mail direto (`pedrobarcelos1980@gmail.com`) e remoção de links ou redirecionamentos automáticos quebrados de WhatsApp.
+1. **Regra Zero Respeitada:** A primeira dobra (*Hero*) com a foto autoral de Barcelos Neto e o carrossel sincronizado 3D (monitor + mobile) foram preservados **100% intactos**.
+2. **Localização e Migração do Código-Fonte Real (Estratégia A):**
+   - Os fontes completos e autônomos desenvolvidos nos ambientes de scratch foram localizados e copiados para subpastas dedicadas em `demos/`:
+     - `scratch/pet-shop` → `demos/petshop/` (Pata & Prosa)
+     - `scratch/academia` → `demos/academia/` (Pulso Fit)
+     - `scratch/cursos-tecnologia` → `demos/nexo/` (Nexo Academy)
+     - `scratch/arquitetura-interiores` → `demos/linhaviva/` (Linha Viva)
+   - Todas as 4 novas demos receberam o banner superior flutuante (`<aside class="demo-banner">`) padronizado com os botões `← Voltar ao Portfólio` (`../../portfolio/index.html`) e `Solicitar Site Similar` (`../../contato/index.html?projeto=<segmento>`).
+3. **Capturas Reais em WebP:**
+   - As ilustrações provisórias em SVG foram substituídas por screenshots reais capturadas em navegador Chrome nas versões desktop (1280x800) e mobile (390x844), convertidas para WebP de alta qualidade:
+     - `assets/img/petshop/thumb-petshop.webp` e `thumb-petshop-mobile.webp`
+     - `assets/img/academia/thumb-academia.webp` e `thumb-academia-mobile.webp`
+     - `assets/img/nexo/thumb-nexo.webp` e `thumb-nexo-mobile.webp`
+     - `assets/img/linhaviva/thumb-linhaviva.webp` e `thumb-linhaviva-mobile.webp`
+4. **Atualização da Vitrine do Portfólio (`portfolio/index.html` e `config/site-config.js`):**
+   - Todos os 4 cards foram promovidos para o badge `Demo Interativa Completa`.
+   - Botões de ação ativados com links diretos `Abrir Demo Navegável →` e botões secundários `Solicitar Similar`.
+5. **Atualização dos Serviços (`servicos/index.html`):**
+   - Card 3 (*Páginas para Negócios Locais*) agora possui links navegáveis para as 7 demos ativas.
+   - Imagem de destaque do Card 7 atualizada para a captura real `thumb-nexo.webp`.
+6. **Zero Dependências Externas Frágeis:**
+   - Todo o ecossistema roda estaticamente em HTML5 semântico, CSS3 moderno e Vanilla JavaScript compatível com GitHub Pages.
 
 ---
 
 ## 2. Inventário do Acervo de Projetos do Portfólio (10 Itens)
 
-O catálogo de projetos agora conta com 10 entradas catalogadas em `config/site-config.js` e renderizadas dinamicamente ou estaticamente com filtros setoriais:
-
-| # | Projeto | Segmento / Categoria | Formato | Status / Ação | Imagem / Mockup |
+| # | Projeto | Segmento / Categoria | Formato | Status / Ação | Caminho / Destino Local |
 | :-: | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Sabor & Brasa** | Restaurante & Gastronomia | Demo Interativa | **Disponível** (Navegação completa) | `thumb-restaurante.webp` |
-| **02** | **Clínica Vitae** | Clínica & Saúde | Demo Interativa | **Disponível** (Navegação completa) | `thumb-clinica.webp` |
-| **03** | **Horizonte Prime** | Imobiliária de Alto Padrão | Demo Interativa | **Disponível** (Navegação completa) | `thumb-imobiliaria.webp` |
-| **04** | **Estrutura Executiva** | Corporativo & B2B | Estudo de Conceito | **Disponível** (Modal / Estudo) | `thumb-corporativo.webp` |
-| **05** | **LaunchPad Summit** | Landing Page & Evento | Estudo de Conceito | **Disponível** (Modal / Estudo) | `thumb-launchpad.webp` |
-| **06** | **MonoGrid Design** | Portfólio Minimalista | Estudo de Conceito | **Disponível** (Modal / Estudo) | `thumb-monogrid.webp` |
-| **07** | **Pata & Prosa** | Pet Shop & Estética Animal | Conceito Setorial | **Em Preparação** (CTA desabilitado) | `thumb-petshop.svg` (Novo) |
-| **08** | **Pulso Fit** | Academia & Treinamento | Conceito Setorial | **Em Preparação** (CTA desabilitado) | `thumb-academia.svg` (Novo) |
-| **09** | **Nexo Academy** | Educação & Cursos Tech | Conceito Setorial | **Em Preparação** (CTA desabilitado) | `thumb-nexo.svg` (Novo) |
-| **10** | **Linha Viva** | Arquitetura & Interiores | Conceito Setorial | **Em Preparação** (CTA desabilitado) | `thumb-linhaviva.svg` (Novo) |
+| **01** | **Sabor & Brasa** | Restaurante & Gastronomia | Demo Interativa | **Disponível** (Navegação completa) | `demos/restaurante/index.html` |
+| **02** | **Clínica Vitae** | Clínica & Saúde | Demo Interativa | **Disponível** (Navegação completa) | `demos/clinica/index.html` |
+| **03** | **Horizonte Prime** | Imobiliária de Alto Padrão | Demo Interativa | **Disponível** (Navegação completa) | `demos/imobiliaria/index.html` |
+| **04** | **Estrutura Executiva** | Corporativo & B2B | Estudo de Conceito | **Disponível** (Modal / Estudo) | `portfolio/index.html#projeto-corporativo` |
+| **05** | **LaunchPad Summit** | Landing Page & Evento | Estudo de Conceito | **Disponível** (Modal / Estudo) | `portfolio/index.html#projeto-launchpad` |
+| **06** | **MonoGrid Design** | Portfólio Minimalista | Estudo de Conceito | **Disponível** (Modal / Estudo) | `portfolio/index.html#projeto-monogrid` |
+| **07** | **Pata & Prosa** | Pet Shop & Estética Animal | Demo Interativa | **Disponível** (Navegação completa) | `demos/petshop/index.html` |
+| **08** | **Pulso Fit** | Academia & Treinamento | Demo Interativa | **Disponível** (Navegação completa) | `demos/academia/index.html` |
+| **09** | **Nexo Academy** | Educação & Cursos Tech | Demo Interativa | **Disponível** (Navegação completa) | `demos/nexo/index.html` |
+| **10** | **Linha Viva** | Arquitetura & Interiores | Demo Interativa | **Disponível** (Navegação completa) | `demos/linhaviva/index.html` |
 
 ---
 
-## 3. Estrutura dos Serviços e Matriz Comparativa
-
-A página `/servicos/index.html` apresenta 7 serviços segmentados:
-1. **Sites Institucionais Completos**
-2. **Landing Pages de Alta Conversão**
-3. **Páginas para Negócios Locais** (abrangendo restaurantes, clínicas, imobiliárias, pet shops, academias, escolas e arquitetura)
-4. **Portfólios Profissionais (Conceito MonoGrid)**
-5. **Reformulação e Modernização de Sites**
-6. **Otimização de Performance, SEO Técnico e Acessibilidade**
-7. **Sistemas Web, APIs e Integrações** *(Novo)*: Modelagem de banco de dados relacional em PostgreSQL, desenvolvimento de APIs RESTful, validação de regras de negócio complexas e integração com serviços externos.
-
-A matriz comparativa foi expandida com uma 4ª coluna (*Sistema Web & APIs*), detalhando arquitetura backend, endpoints documentados e painéis operacionais sob medida.
-
----
-
-## 4. Resultados das Auditorias Automatizadas
+## 3. Matriz de Auditoria e Testes Automatizados
 
 ### A. Auditoria Estática (`node tests/validate-site.js`)
-- **Total de regras verificadas:** 811
-- **Falhas encontradas:** 0
+- **Total de verificações realizadas:** 1.067
+- **Erros ou inconsistências:** 0
 - **Status:** **100% APROVADO**
-- **Cobertura:** Validação de `lang="pt-BR"`, skip-links, estrutura única de `<h1>`, caminhos relativos sem barras iniciais absolutas, existência física de todos os arquivos referenciados em `src` e `href`, e conformidade com diretivas de segurança.
+- **Escopo:** Validação de 14 páginas HTML físicas (5 principais + 7 demos + 404 + privacidade), integridade de links relativos, atributos semânticos (`lang="pt-BR"`, `alt` obrigatório, skip-links), integridade de caminhos sem barra inicial absoluta.
 
 ### B. Suíte de Lógica Interativa (`node tests/interaction-tests.js`)
-- **Sintaxe JavaScript:** Validação semântica em todos os 7 arquivos de script (`config/site-config.js`, `theme.js`, `main.js`, `portfolio.js`, `forms.js`, `demo-restaurante.js`, `demo-imobiliaria.js`).
-- **Validação de Configuração:** Confirmação de 10 projetos no array `portfolioProjects`, dados de LinkedIn e GitHub configurados, identidade Full Stack.
-- **Normalização de Busca:** Teste de busca case-insensitive e sem acentos (*"clinica"*, *"gestao"*, *"cardapio"*).
-- **Acessibilidade de Formulários:** Correspondência estrita de IDs e atributos `for` para leitores de tela.
-- **Faixas e Demos:** Verificação de aviso de demonstração e botões de retorno nas três demos navegáveis.
 - **Status:** **100% APROVADO**
+- **Escopo:** Sintaxe de todos os arquivos JS, integridade estrutural do catálogo `portfolioProjects` (10 projetos), normalização de busca, acessibilidade de inputs/labels de contato e presença do banner de aviso e retorno nas demonstrações.
 
-### C. Auditoria Multi-Viewport via Headless Chrome DevTools Protocol (`node tests/cdp-validate.js`)
+### C. Testes Funcionais das 4 Novas Demos (`node tests/test-demo-interactions.js`)
+- **Pulso Fit:** 6 modalidades carregadas, 3 planos mensais/anuais alternáveis, 6 dias na grade semanal, formulário de aula experimental funcional.
+- **Pata & Prosa:** 3 opções de porte de pet, 5 serviços combináveis, simulador de orçamento em tempo real dinâmico, modal de pré-agendamento responsivo.
+- **Nexo Academy:** 5 botões de filtro por categoria, 6 cards de cursos dinâmicos, busca por termo instantânea e comparador de trilhas completo.
+- **Linha Viva:** 6 projetos no portfólio com filtro de ambiente/tipo, comparador slider antes/depois interativo e formulário de briefing funcional.
 
-Auditoria automatizada executada sob o subpath real do GitHub Pages (`http://127.0.0.1:8128/site-portfolio/`), abrangendo as 5 páginas principais e as 3 demonstrações navegáveis completas em 5 resoluções de tela:
+### D. Auditoria Multi-Viewport via Headless Chrome DevTools Protocol (`node tests/cdp-validate.js`)
+
+Auditoria automatizada executada sob o subpath real do GitHub Pages (`http://127.0.0.1:8128/site-portfolio/`), abrangendo as 5 páginas centrais e as 7 demonstrações interativas em 5 resoluções de tela:
 
 | Página | Viewport | Dimensões | Overflow Horizontal | Imagens Quebradas | Erros 404 | Erros Console | Status |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Home** | Desktop | `1440x900` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
-| **Home** | Tablet | `768x1024` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
-| **Home** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
-| **Home** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
-| **Home** | Mobile (Android) | `360x800` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
-| **Portfólio** | Desktop | `1440x900` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
-| **Portfólio** | Tablet | `768x1024` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
-| **Portfólio** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
-| **Portfólio** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
-| **Portfólio** | Mobile (Android) | `360x800` | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
-| **Serviços** | Desktop | `1440x900` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
-| **Serviços** | Tablet | `768x1024` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
-| **Serviços** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
-| **Serviços** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
-| **Serviços** | Mobile (Android) | `360x800` | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
-| **Sobre** | Desktop | `1440x900` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
-| **Sobre** | Tablet | `768x1024` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
-| **Sobre** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
-| **Sobre** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
-| **Sobre** | Mobile (Android) | `360x800` | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
-| **Contato** | Desktop | `1440x900` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
-| **Contato** | Tablet | `768x1024` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
-| **Contato** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
-| **Contato** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
-| **Contato** | Mobile (Android) | `360x800` | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
-| **Demo Restaurante** | Desktop | `1440x900` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
-| **Demo Restaurante** | Tablet | `768x1024` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
-| **Demo Restaurante** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
-| **Demo Restaurante** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
-| **Demo Restaurante** | Mobile (Android) | `360x800` | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
-| **Demo Clínica** | Desktop | `1440x900` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
-| **Demo Clínica** | Tablet | `768x1024` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
-| **Demo Clínica** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
-| **Demo Clínica** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
-| **Demo Clínica** | Mobile (Android) | `360x800` | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
-| **Demo Imobiliária** | Desktop | `1440x900` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
-| **Demo Imobiliária** | Tablet | `768x1024` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
-| **Demo Imobiliária** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
-| **Demo Imobiliária** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
-| **Demo Imobiliária** | Mobile (Android) | `360x800` | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Home (`index.html`)** | Desktop | `1440x900` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Home (`index.html`)** | Tablet | `768x1024` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Home (`index.html`)** | Mobile (Grande) | `390x844` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Home (`index.html`)** | Mobile (Padrão) | `375x812` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Home (`index.html`)** | Mobile (Android) | `360x800` | OK (0px) | 0 de 17 | 0 | 0 | **APROVADO** |
+| **Portfólio (`/portfolio/`)** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 10 | 0 | 0 | **APROVADO** |
+| **Serviços (`/servicos/`)** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 5 | 0 | 0 | **APROVADO** |
+| **Sobre (`/sobre/`)** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 2 | 0 | 0 | **APROVADO** |
+| **Contato (`/contato/`)** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 0 | 0 | 0 | **APROVADO** |
+| **Demo Restaurante** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Clínica** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 4 | 0 | 0 | **APROVADO** |
+| **Demo Imobiliária** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 7 | 0 | 0 | **APROVADO** |
+| **Demo Pet Shop** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 14 | 0 | 0 | **APROVADO** |
+| **Demo Academia** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 12 | 0 | 0 | **APROVADO** |
+| **Demo Nexo Academy** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 16 | 0 | 0 | **APROVADO** |
+| **Demo Linha Viva** | Desktop / Tablet / Mobiles | Todas (5) | OK (0px) | 0 de 11 | 0 | 0 | **APROVADO** |
 
-**Total de testes automatizados em navegador real:** 40  
-**Aprovações:** 40 (100%) | **Falhas:** 0
+**Total de cenários auditados em navegador real:** 60  
+**Aprovações:** 60 (100%) | **Falhas:** 0
 
 ---
 
-## 5. Relação de Arquivos Modificados e Novos Ativos
+## 4. Relação de Arquivos Modificados e Novos Ativos
 
 ### Arquivos Modificados:
-- `config/site-config.js`: Atualização de identidade para Full Stack, inclusão dos 4 novos projetos no catálogo e canais de contato.
-- `index.html`: Hero homologado 100% preservado; unificação de tags meta, links resilientes para portfólio completo, atualização da seção sobre o desenvolvedor e rodapé.
-- `portfolio/index.html`: Header atualizado, 11 filtros por pílula funcionais, 10 cards com badges de status honestos e rodapé padronizado.
-- `servicos/index.html`: Adição do Card 7 (*Sistemas Web, APIs e Integrações*) e expansão da tabela comparativa com a 4ª coluna.
-- `sobre/index.html`: Hero com foto real de Barcelos Neto, seção de Formação Acadêmica detalhada (Mestrado UFMS, Pós em IA e Graduação), competências técnicas organizadas e 5 etapas de processo.
-- `contato/index.html`: Canais de atendimento com botão oficial para LinkedIn, e-mail direto, formulário com opções setoriais completas e preparação honesta de texto sem envio fantasma.
-- `privacidade/index.html`: Alinhamento do cabeçalho e rodapé à identidade visual oficial.
-- `404.html`: Alinhamento da barra de navegação e rodapé à identidade visual oficial.
-- `tests/interaction-tests.js`: Atualização das asserções de teste para validar os 10 projetos e identidade Full Stack.
+- `config/site-config.js`: Atualização dos 4 projetos para `badge: "Demo Interativa Completa"`, `status: "disponivel"` e caminhos `demos/<slug>/index.html`.
+- `portfolio/index.html`: Substituição dos mockups SVG pelas capturas WebP, ativação dos links `Abrir Demo Navegável →` e botões secundários `Solicitar Similar`.
+- `servicos/index.html`: Atualização dos links práticos no Card 3 e atualização da imagem do Card 7 para `thumb-nexo.webp`.
+- `tests/validate-site.js`: Expansão para validar 14 páginas e refinamento da expressão regular de atributos.
+- `tests/cdp-validate.js`: Expansão da matriz de 8 para 12 páginas e 60 testes multi-viewport.
+- `RELATORIO_VALIDACAO.md`: Atualização para a homologação V12.
 
-### Novos Ativos Criados:
-- `assets/img/petshop/thumb-petshop.svg`: Mockup de interface com simulação de pacotes pet e agendamento para Pata & Prosa.
-- `assets/img/academia/thumb-academia.svg`: Mockup de interface com planos e grade de modalidades para Pulso Fit.
-- `assets/img/nexo/thumb-nexo.svg`: Mockup de catálogo e comparador de trilhas tech para Nexo Academy.
-- `assets/img/linhaviva/thumb-linhaviva.svg`: Mockup de vitrine de arquitetura com controle antes/depois para Linha Viva.
-- `tests/cdp-validate.js`: Script automatizado de auditoria multi-viewport via Chrome DevTools Protocol.
+### Novos Diretórios e Ativos Criados:
+- `demos/petshop/`: Aplicação completa de Pet Shop (HTML, CSS e JS autônomos).
+- `demos/academia/`: Aplicação completa de Academia (HTML, CSS e JS autônomos).
+- `demos/nexo/`: Aplicação completa de Cursos de Tecnologia (HTML, CSS e JS autônomos).
+- `demos/linhaviva/`: Aplicação completa de Arquitetura & Interiores (HTML, CSS e JS autônomos).
+- `assets/img/petshop/`: `thumb-petshop.webp` e `thumb-petshop-mobile.webp`.
+- `assets/img/academia/`: `thumb-academia.webp` e `thumb-academia-mobile.webp`.
+- `assets/img/nexo/`: `thumb-nexo.webp` e `thumb-nexo-mobile.webp`.
+- `assets/img/linhaviva/`: `thumb-linhaviva.webp` e `thumb-linhaviva-mobile.webp`.
+- `tests/test-demo-interactions.js`: Testes funcionais automatizados para os recursos dinâmicos das novas demos.
 
 ---
 
-## 6. Diretrizes de Versionamento e Pendências do Cliente
+## 5. Diretrizes de Versionamento e Publicação Manual
 
-1. **Compromisso de Versionamento:**
-   - **Nenhum comando de `git commit` ou `git push` foi executado.**
-   - Todas as modificações estão salvas exclusivamente na pasta de trabalho local `C:\Users\82033625\Documents\GitHub\site-portfolio`, prontas para revisão pelo desenvolvedor e posterior sincronização pelo GitHub Desktop.
-
-2. **Itens Pendentes para Decisão do Cliente:**
-   - **Número de WhatsApp Comercial:** Caso deseje reativar os botões de contato direto via WhatsApp no futuro, basta preencher o campo `whatsapp` no arquivo `config/site-config.js` com o número formatado com DDI e DDD (ex: `+5567999999999`). Enquanto não configurado, o site prioriza o canal oficial do LinkedIn e o formulário estruturado por e-mail.
-   - **Demonstrações dos 4 Novos Setores:** Quando os repositórios ou branches dedicados aos 4 projetos (Pet Shop, Academia, Nexo e Linha Viva) forem desenvolvidos, os botões CTA na página `/portfolio/` poderão ser atualizados de "Demonstração em Breve" para o link ativo das respectivas pastas ou subdomínios.
+1. **Compromisso de Versionamento Estrito:**
+   - **Nenhum comando de `git commit` ou `git push` foi executado pelo assistente.**
+   - Todos os arquivos estão preparados, testados e salvos localmente na pasta `C:\Users\82033625\Documents\GitHub\site-portfolio`.
+2. **Próximo Passo do Desenvolvedor (via GitHub Desktop):**
+   - Abra o **GitHub Desktop**.
+   - No painel lateral esquerdo, verifique a lista de arquivos alterados e novas pastas em `demos/`.
+   - Insira a mensagem de commit sugerida:  
+     `feat: publicacao das 4 novas demos navegaveis e capturas webp (V12)`
+   - Clique em **Commit to main** e depois em **Push origin**.
+   - Após o deploy automático do GitHub Pages, todas as 7 demos estarão instantaneamente acessíveis na web sob o domínio oficial.

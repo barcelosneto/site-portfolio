@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de atendimento exclusivo e silencioso para gatos">
+  <rect width="360" height="240" rx="24" fill="#F2ECE1"/>
+  <circle cx="180" cy="122" r="84" fill="#FAF6F0"/>
+  <!-- Cat head -->
+  <polygon points="128,92 136,42 170,72" fill="#D9C7B2"/>
+  <polygon points="135,86 141,52 164,73" fill="#E8A598"/>
+  <polygon points="232,92 224,42 190,72" fill="#D9C7B2"/>
+  <polygon points="225,86 219,52 196,73" fill="#E8A598"/>
+  <ellipse cx="180" cy="116" rx="54" ry="46" fill="#EAE0D2"/>
+  <!-- Calm eyes -->
+  <ellipse cx="158" cy="112" rx="7" ry="8" fill="#4A6B5D"/>
+  <circle cx="156" cy="109" r="2.5" fill="#FFFFFF"/>
+  <ellipse cx="202" cy="112" rx="7" ry="8" fill="#4A6B5D"/>
+  <circle cx="200" cy="109" r="2.5" fill="#FFFFFF"/>
+  <!-- Nose and whiskers -->
+  <polygon points="180,124 174,117 186,117" fill="#E06D53"/>
+  <path d="M170 129 Q175 135 180 129 Q185 135 190 129" stroke="#364940" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="112" y1="116" x2="140" y2="120" stroke="#9E9284" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="126" x2="140" y2="126" stroke="#9E9284" stroke-width="2" stroke-linecap="round"/>
+  <line x1="220" y1="120" x2="248" y2="116" stroke="#9E9284" stroke-width="2" stroke-linecap="round"/>
+  <line x1="220" y1="126" x2="250" y2="126" stroke="#9E9284" stroke-width="2" stroke-linecap="round"/>
+  <!-- Quiet/Zen heart badge -->
+  <path d="M180 176 C173 168, 162 168, 162 178 C162 186, 180 196, 180 196 C180 196, 198 186, 198 178 C198 168, 187 168, 180 176 Z" fill="#E06D53"/>
+</svg>

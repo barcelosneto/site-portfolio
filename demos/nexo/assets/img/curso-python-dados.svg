@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Ilustração do curso Python para Dados e Automação">
+  <defs>
+    <linearGradient id="bgPy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071A2C" />
+      <stop offset="100%" stop-color="#0E2F44" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" rx="16" fill="url(#bgPy)" />
+  <circle cx="340" cy="40" r="80" fill="#06B6D4" opacity="0.16" />
+  <rect x="24" y="24" width="352" height="172" rx="12" fill="#05121F" stroke="#0891B2" stroke-opacity="0.45" />
+  <circle cx="44" cy="44" r="5" fill="#EF4444" />
+  <circle cx="60" cy="44" r="5" fill="#F59E0B" />
+  <circle cx="76" cy="44" r="5" fill="#10B981" />
+  <text x="96" y="48" fill="#64748B" font-family="monospace" font-size="11">etl_pipeline.py</text>
+  <text x="40" y="82" fill="#22D3EE" font-family="monospace" font-size="13">def</text>
+  <text x="72" y="82" fill="#F8FAFC" font-family="monospace" font-size="13">processar_base(df):</text>
+  <text x="56" y="106" fill="#94A3B8" font-family="monospace" font-size="12">df = df.dropna(subset=['receita'])</text>
+  <text x="56" y="128" fill="#A78BFA" font-family="monospace" font-size="12">return df.groupby('regiao').sum()</text>
+  <rect x="40" y="148" width="140" height="28" rx="6" fill="#0E3A53" />
+  <text x="110" y="166" text-anchor="middle" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="11" font-weight="700">PANDAS • AUTOMAÇÃO</text>
+</svg>

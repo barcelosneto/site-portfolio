@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Linha Viva Arquitetura e Interiores">
+  <rect width="64" height="64" rx="8" fill="#1F1E1C"/>
+  <path d="M16 48V16h4v28h18v4H16z" fill="#F5F2EB"/>
+  <path d="M30 16h4l10 24 10-24h4L46 48h-4L30 16z" fill="#B86B4B"/>
+  <line x1="16" y1="52" x2="48" y2="52" stroke="#D8CEBE" stroke-width="1.5" opacity="0.6"/>
+</svg>

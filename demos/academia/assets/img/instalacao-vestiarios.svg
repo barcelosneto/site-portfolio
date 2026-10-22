@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Ilustração dos Vestiários Individuais e Lounge de Convivência da Pulso Fit">
+  <rect width="640" height="400" rx="16" fill="#15181C" />
+  <!-- Lockers -->
+  <rect x="55" y="75" width="230" height="225" rx="8" fill="#1E232A" stroke="#363E4A" stroke-width="3" />
+  <line x1="132" y1="75" x2="132" y2="300" stroke="#363E4A" stroke-width="2" />
+  <line x1="208" y1="75" x2="208" y2="300" stroke="#363E4A" stroke-width="2" />
+  <line x1="55" y1="187" x2="285" y2="187" stroke="#363E4A" stroke-width="2" />
+  <circle cx="118" cy="130" r="4" fill="#C8FF00" />
+  <circle cx="194" cy="130" r="4" fill="#C8FF00" />
+  <circle cx="270" cy="130" r="4" fill="#C8FF00" />
+  <!-- Vanity mirror & warm lighting -->
+  <rect x="345" y="85" width="235" height="125" rx="12" fill="#111315" stroke="#C8FF00" stroke-width="2.5" />
+  <line x1="375" y1="115" x2="415" y2="175" stroke="#38BDF8" stroke-width="2" opacity="0.5" />
+  <!-- Bench & towel service -->
+  <rect x="345" y="245" width="235" height="22" rx="6" fill="#94A3B8" />
+  <line x1="375" y1="267" x2="375" y2="302" stroke="#475569" stroke-width="6" />
+  <line x1="550" y1="267" x2="550" y2="302" stroke="#475569" stroke-width="6" />
+  <rect x="370" y="223" width="55" height="20" rx="6" fill="#F8FAFC" />
+  <rect x="435" y="223" width="55" height="20" rx="6" fill="#C8FF00" />
+  <line x1="25" y1="312" x2="615" y2="312" stroke="#2D333B" stroke-width="4" />
+  <text x="45" y="360" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Vestiários Completos &amp; Lounge Pós-Treino</text>
+</svg>

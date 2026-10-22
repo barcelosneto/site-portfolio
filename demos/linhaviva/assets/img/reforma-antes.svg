@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" role="img" aria-label="Antes da reforma: ambiente compartimentado por alvenaria divisória, forro rebaixado escuro, iluminação fria pontual e pouca entrada de luz natural">
+  <rect width="960" height="620" fill="#D2CEC7"/>
+  <polygon points="0,0 960,0 820,135 140,135" fill="#B8B3AA"/>
+  <polygon points="140,465 820,465 960,620 0,620" fill="#8E877D"/>
+  <rect x="140" y="135" width="430" height="330" fill="#C4BFB6" stroke="#9E988E" stroke-width="2"/>
+  <rect x="570" y="135" width="250" height="330" fill="#A49E94"/>
+  <rect x="615" y="195" width="135" height="270" fill="#7A746B"/>
+  <rect x="215" y="195" width="170" height="145" fill="#B0ABA2" stroke="#6E6960" stroke-width="3"/>
+  <g stroke="#7A746B" stroke-width="3">
+    <line x1="215" y1="220" x2="385" y2="220"/><line x1="215" y1="245" x2="385" y2="245"/>
+    <line x1="215" y1="270" x2="385" y2="270"/><line x1="215" y1="295" x2="385" y2="295"/>
+    <line x1="215" y1="320" x2="385" y2="320"/>
+  </g>
+  <rect x="180" y="385" width="310" height="80" rx="4" fill="#5E5850"/>
+  <g font-family="monospace" font-size="12" fill="#F5F2EB">
+    <rect x="215" y="150" width="290" height="28" rx="4" fill="#2B2927" opacity="0.85"/>
+    <text x="230" y="168">ALVENARIA DIVISÓRIA BLOQUEANDO LUZ</text>
+    <rect x="580" y="150" width="230" height="28" rx="4" fill="#2B2927" opacity="0.85"/>
+    <text x="595" y="168">COZINHA ISOLADA E ESCURA</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Ilustração do Estúdio Climatizado de Bike Indoor com 14 bikes posicionadas em anfiteatro">
+  <rect width="640" height="400" rx="16" fill="#111418" />
+  <path d="M 60 280 Q 320 90, 580 280" fill="none" stroke="#C8FF00" stroke-width="3" opacity="0.4" />
+  <path d="M 100 280 Q 320 130, 540 280" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.4" />
+  <!-- Row of 3 stylized bikes -->
+  <g transform="translate(95, 175)">
+    <circle cx="85" cy="80" r="28" fill="none" stroke="#C8FF00" stroke-width="5" />
+    <path d="M 20 105 L 45 70 L 85 80 L 70 35 L 35 45 Z" fill="none" stroke="#F8FAFC" stroke-width="5" />
+  </g>
+  <g transform="translate(260, 155)">
+    <circle cx="95" cy="90" r="32" fill="none" stroke="#C8FF00" stroke-width="6" />
+    <path d="M 20 120 L 50 80 L 95 90 L 80 35 L 38 48 Z" fill="none" stroke="#F8FAFC" stroke-width="6" />
+  </g>
+  <g transform="translate(435, 175)">
+    <circle cx="85" cy="80" r="28" fill="none" stroke="#C8FF00" stroke-width="5" />
+    <path d="M 20 105 L 45 70 L 85 80 L 70 35 L 35 45 Z" fill="none" stroke="#F8FAFC" stroke-width="5" />
+  </g>
+  <line x1="25" y1="312" x2="615" y2="312" stroke="#2D333B" stroke-width="4" />
+  <text x="45" y="360" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Estúdio de Bike Indoor • Acústica &amp; Climatização</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Comparativo ilustrativo Antes e Depois: Golden Retriever com desembolo e hidratação de Argan">
+  <rect width="640" height="420" rx="24" fill="#FAF6F0"/>
+  <!-- Left Side: ANTES -->
+  <rect x="16" y="16" width="296" height="388" rx="18" fill="#EFE7DA"/>
+  <rect x="32" y="32" width="92" height="30" rx="15" fill="#6E6256"/>
+  <text x="78" y="52" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#FAF6F0">ANTES</text>
+  <!-- Messy coat Golden -->
+  <g transform="translate(84, 98)">
+    <path d="M20 140 C5 190, 20 235, 80 235 C140 235, 155 190, 140 140 Z" fill="#C98F5B"/>
+    <!-- Messy tufts -->
+    <path d="M12 155 L2 148 L18 135 M148 155 L158 148 L142 135" stroke="#A67040" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="80" cy="88" r="52" fill="#D59B66"/>
+    <ellipse cx="32" cy="92" rx="16" ry="34" transform="rotate(18 32 92)" fill="#9E6838"/>
+    <ellipse cx="128" cy="92" rx="16" ry="34" transform="rotate(-18 128 92)" fill="#9E6838"/>
+    <!-- Leaves/twigs stuck in fur -->
+    <circle cx="48" cy="52" r="5" fill="#7D8C75"/>
+    <circle cx="115" cy="165" r="6" fill="#8C7A68"/>
+    <circle cx="62" cy="84" r="6" fill="#2A2421"/>
+    <circle cx="98" cy="84" r="6" fill="#2A2421"/>
+    <ellipse cx="80" cy="100" rx="10" ry="7" fill="#2A2421"/>
+    <path d="M68 116 Q80 112 92 116" stroke="#2A2421" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="164" y="376" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5C5349">Pelagem opaca e com nós pós-passeio</text>
+
+  <!-- Right Side: DEPOIS -->
+  <rect x="328" y="16" width="296" height="388" rx="18" fill="#E6EFEA"/>
+  <rect x="344" y="32" width="98" height="30" rx="15" fill="#4A6B5D"/>
+  <text x="393" y="52" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#FAF6F0">DEPOIS</text>
+  <!-- Brushed shiny coat Golden -->
+  <g transform="translate(396, 98)">
+    <path d="M24 140 C12 190, 24 235, 80 235 C136 235, 148 190, 136 140 Z" fill="#EBB17C"/>
+    <path d="M42 135 L118 135 L80 172 Z" fill="#E06D53"/>
+    <circle cx="80" cy="88" r="52" fill="#F2BC88"/>
+    <ellipse cx="34" cy="92" rx="15" ry="34" transform="rotate(12 34 92)" fill="#BA7B45"/>
+    <ellipse cx="126" cy="92" rx="15" ry="34" transform="rotate(-12 126 92)" fill="#BA7B45"/>
+    <circle cx="62" cy="84" r="6.5" fill="#2A2421"/>
+    <circle cx="60" cy="82" r="2" fill="#FFFFFF"/>
+    <circle cx="98" cy="84" r="6.5" fill="#2A2421"/>
+    <circle cx="96" cy="82" r="2" fill="#FFFFFF"/>
+    <ellipse cx="80" cy="100" rx="10" ry="7" fill="#2A2421"/>
+    <path d="M66 112 Q80 124 94 112" stroke="#2A2421" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Sparkles -->
+    <path d="M135 28 L139 38 L149 42 L139 46 L135 56 L131 46 L121 42 L131 38 Z" fill="#E06D53"/>
+    <path d="M18 42 L21 50 L29 53 L21 56 L18 64 L15 56 L7 53 L15 50 Z" fill="#4A6B5D"/>
+  </g>
+  <text x="476" y="376" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#2F473D">Fios alinhados, macios e hidratados</text>
+  <!-- Badge Ilustrativo -->
+  <rect x="200" y="388" width="240" height="24" rx="12" fill="#2A3630"/>
+  <text x="320" y="404" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#FAF6F0">ARTE ILUSTRATIVA DEMONSTRATIVA</text>
+</svg>

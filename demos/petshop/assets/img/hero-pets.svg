@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" role="img" aria-label="Ilustração afetiva de um cão caramelo e uma gatinha branca relaxados após o banho na Pata e Prosa">
+  <defs>
+    <linearGradient id="heroCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E7F0EC"/>
+      <stop offset="100%" stop-color="#F2ECE1"/>
+    </linearGradient>
+    <linearGradient id="sageAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#688B7B"/>
+      <stop offset="100%" stop-color="#4A6B5D"/>
+    </linearGradient>
+    <linearGradient id="coralAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E06D53"/>
+      <stop offset="100%" stop-color="#C8553D"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#2D3E36" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background organic backdrop -->
+  <rect x="30" y="30" width="620" height="500" rx="48" fill="url(#heroCardGrad)" filter="url(#softShadow)"/>
+  <circle cx="540" cy="120" r="76" fill="#FAF6F0" opacity="0.85"/>
+  <circle cx="135" cy="145" r="52" fill="#F9E5DF" opacity="0.8"/>
+
+  <!-- Botanical sage leaves left & right -->
+  <g fill="#688B7B" opacity="0.28">
+    <path d="M75 390 C45 340, 65 270, 115 250 C115 310, 95 360, 75 390 Z"/>
+    <path d="M90 410 C80 355, 115 305, 160 295 C145 345, 115 385, 90 410 Z"/>
+    <path d="M595 385 C625 335, 605 265, 555 245 C555 305, 575 355, 595 385 Z"/>
+  </g>
+
+  <!-- Wooden grooming table / cozy cushion base -->
+  <ellipse cx="340" cy="435" rx="235" ry="44" fill="#D8CBB8"/>
+  <ellipse cx="340" cy="426" rx="220" ry="36" fill="#FAF6F0"/>
+
+  <!-- Happy Golden/Caramelo Dog (Left/Center) -->
+  <g id="happy-dog" transform="translate(155, 125)">
+    <!-- Tail wagging -->
+    <path d="M35 245 C-10 220, -15 170, 20 155 C35 150, 42 175, 30 195" fill="none" stroke="#D8955B" stroke-width="20" stroke-linecap="round"/>
+    <!-- Body -->
+    <path d="M55 175 C45 235, 55 295, 125 295 C195 295, 205 235, 195 175 Z" fill="#E3A46B"/>
+    <!-- Chest fur -->
+    <path d="M90 175 Q125 215 160 175 Q145 235 125 240 Q105 235 90 175 Z" fill="#F5DEC4"/>
+    <!-- Front Paws -->
+    <rect x="76" y="255" width="32" height="52" rx="16" fill="#E3A46B"/>
+    <rect x="142" y="255" width="32" height="52" rx="16" fill="#E3A46B"/>
+    <ellipse cx="92" cy="303" rx="18" ry="10" fill="#F5DEC4"/>
+    <ellipse cx="158" cy="303" rx="18" ry="10" fill="#F5DEC4"/>
+
+    <!-- Coral Bandana with pattern -->
+    <path d="M62 162 L188 162 L125 218 Z" fill="url(#coralAccent)"/>
+    <circle cx="110" cy="180" r="3" fill="#FAF6F0" opacity="0.8"/>
+    <circle cx="125" cy="194" r="3" fill="#FAF6F0" opacity="0.8"/>
+    <circle cx="140" cy="180" r="3" fill="#FAF6F0" opacity="0.8"/>
+
+    <!-- Floppy Ears -->
+    <path d="M58 62 C22 72, 18 140, 46 155 C66 164, 76 125, 72 85 Z" fill="#BA7741"/>
+    <path d="M192 62 C228 72, 232 140, 204 155 C184 164, 174 125, 178 85 Z" fill="#BA7741"/>
+
+    <!-- Head -->
+    <rect x="58" y="38" width="134" height="128" rx="62" fill="#EBB17C"/>
+    <!-- Cheeks -->
+    <ellipse cx="78" cy="118" rx="14" ry="9" fill="#E06D53" opacity="0.32"/>
+    <ellipse cx="172" cy="118" rx="14" ry="9" fill="#E06D53" opacity="0.32"/>
+
+    <!-- Eyes (warm and expressive) -->
+    <circle cx="96" cy="95" r="9.5" fill="#2A2421"/>
+    <circle cx="93" cy="92" r="3.2" fill="#FFFFFF"/>
+    <circle cx="154" cy="95" r="9.5" fill="#2A2421"/>
+    <circle cx="151" cy="92" r="3.2" fill="#FFFFFF"/>
+
+    <!-- Eyebrows -->
+    <path d="M83 76 Q96 70 106 77" stroke="#BA7741" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M144 77 Q154 70 167 76" stroke="#BA7741" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Snout & Happy Smile -->
+    <ellipse cx="125" cy="122" rx="34" ry="25" fill="#FAF0E4"/>
+    <ellipse cx="125" cy="110" rx="13" ry="9.5" fill="#332924"/>
+    <ellipse cx="121" cy="107" rx="4" ry="2.2" fill="#786860"/>
+    <!-- Tongue -->
+    <path d="M116 129 C116 149, 134 149, 134 129 Z" fill="#E06D53"/>
+    <path d="M106 124 Q125 138 144 124" stroke="#332924" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Soft towel turban / bow on top -->
+    <path d="M82 44 Q125 18 168 44 Q152 24 125 24 Q98 24 82 44 Z" fill="#FAF6F0"/>
+  </g>
+
+  <!-- Serene White & Sage-Eared Cat (Right) -->
+  <g id="serene-cat" transform="translate(375, 195)">
+    <!-- Tail curled gracefully -->
+    <path d="M135 205 C180 205, 195 155, 165 140 C148 132, 142 152, 155 162" fill="none" stroke="#EAE1D3" stroke-width="16" stroke-linecap="round"/>
+    <!-- Body -->
+    <path d="M35 135 C25 185, 35 230, 88 230 C140 230, 148 185, 138 135 Z" fill="#FAF6F0" stroke="#DFD5C6" stroke-width="2"/>
+    <!-- Sage Bow Ribbon -->
+    <path d="M46 134 Q86 146 126 134" stroke="#4A6B5D" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <circle cx="86" cy="140" r="8" fill="#E06D53"/>
+    <!-- Ears -->
+    <polygon points="34,68 42,16 76,46" fill="#EAE1D3" stroke="#DFD5C6" stroke-width="2"/>
+    <polygon points="42,62 47,28 69,48" fill="#F3B9AC"/>
+    <polygon points="138,68 130,16 96,46" fill="#EAE1D3" stroke="#DFD5C6" stroke-width="2"/>
+    <polygon points="130,62 125,28 103,48" fill="#F3B9AC"/>
+    <!-- Head -->
+    <ellipse cx="86" cy="84" rx="56" ry="48" fill="#FAF6F0" stroke="#DFD5C6" stroke-width="2"/>
+    <!-- Peaceful closed/happy eyes -->
+    <path d="M56 82 Q67 72 78 82" stroke="#364940" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M94 82 Q105 72 116 82" stroke="#364940" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Pink nose & mouth -->
+    <polygon points="86,93 80,86 92,86" fill="#E06D53"/>
+    <path d="M76 98 Q81 103 86 97 Q91 103 96 98" stroke="#364940" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <line x1="22" y1="86" x2="46" y2="90" stroke="#B8AEA0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="20" y1="96" x2="46" y2="96" stroke="#B8AEA0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="126" y1="90" x2="150" y2="86" stroke="#B8AEA0" stroke-width="2" stroke-linecap="round"/>
+    <line x1="126" y1="96" x2="152" y2="96" stroke="#B8AEA0" stroke-width="2" stroke-linecap="round"/>
+    <!-- Paws -->
+    <ellipse cx="64" cy="226" rx="15" ry="9" fill="#FAF6F0" stroke="#DFD5C6" stroke-width="2"/>
+    <ellipse cx="108" cy="226" rx="15" ry="9" fill="#FAF6F0" stroke="#DFD5C6" stroke-width="2"/>
+  </g>
+
+  <!-- Floating Soap Bubbles & Affection Hearts -->
+  <g>
+    <circle cx="135" cy="115" r="20" fill="#FFFFFF" fill-opacity="0.65" stroke="#688B7B" stroke-width="2"/>
+    <circle cx="128" cy="108" r="5" fill="#FFFFFF"/>
+    <circle cx="172" cy="82" r="12" fill="#FFFFFF" fill-opacity="0.65" stroke="#688B7B" stroke-width="1.8"/>
+    <circle cx="485" cy="128" r="24" fill="#FFFFFF" fill-opacity="0.65" stroke="#688B7B" stroke-width="2"/>
+    <circle cx="477" cy="120" r="6" fill="#FFFFFF"/>
+    <circle cx="525" cy="165" r="13" fill="#FFFFFF" fill-opacity="0.65" stroke="#688B7B" stroke-width="1.8"/>
+    <!-- Heart icon -->
+    <path d="M368 112 C360 102, 344 102, 344 115 C344 126, 368 140, 368 140 C368 140, 392 126, 392 115 C392 102, 376 102, 368 112 Z" fill="#E06D53"/>
+  </g>
+
+  <!-- Floating Badge Top Left -->
+  <g transform="translate(55, 52)" filter="url(#softShadow)">
+    <rect width="215" height="62" rx="18" fill="#FAF6F0" stroke="#E2D9C8" stroke-width="1.5"/>
+    <circle cx="34" cy="31" r="18" fill="#E7F0EC"/>
+    <path d="M27 31 L32 36 L42 25" stroke="#4A6B5D" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="27" font-family="sans-serif" font-size="13" font-weight="700" fill="#2A3630">Secagem Silenciosa</text>
+    <text x="62" y="45" font-family="sans-serif" font-size="11.5" fill="#5C6B64">Manejo calmo e hora marcada</text>
+  </g>
+
+  <!-- Floating Badge Bottom Right -->
+  <g transform="translate(415, 445)" filter="url(#softShadow)">
+    <rect width="220" height="62" rx="18" fill="#4A6B5D"/>
+    <circle cx="34" cy="31" r="18" fill="#FAF6F0"/>
+    <path d="M34 38 C29 34, 25 30, 25 26 C25 23, 27.5 21, 30.5 21 C32.2 21, 33.4 22, 34 23.2 C34.6 22, 35.8 21, 37.5 21 C40.5 21, 43 23, 43 26 C43 30, 39 34, 34 38 Z" fill="#E06D53"/>
+    <text x="62" y="27" font-family="sans-serif" font-size="13" font-weight="700" fill="#FAF6F0">Toalhas Esterilizadas</text>
+    <text x="62" y="45" font-family="sans-serif" font-size="11.5" fill="#DCE8E2">100% individuais por pet</text>
+  </g>
+</svg>

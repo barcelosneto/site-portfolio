@@ -1,0 +1,9 @@
+# robots.txt — Pata & Prosa | Pet Shop e Banho & Tosa
+# Por padrão bloqueado para indexação enquanto os dados forem demonstrativos.
+# Após substituir os dados reais em assets/js/config.js e index.html,
+# altere "Disallow: /" para "Allow: /" e atualize o domínio do Sitemap.
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://SEU-USUARIO.github.io/pet-shop/sitemap.xml

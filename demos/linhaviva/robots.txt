@@ -1,0 +1,18 @@
+# ==========================================================================
+# LINHA VIVA | Arquitetura e Interiores — robots.txt
+# ==========================================================================
+# MODO DEMONSTRAÇÃO (PADRÃO ATUAL):
+# Para evitar a indexação acidental de dados fictícios de demonstração em
+# buscadores, o bloqueio está ativo por padrão (junto à meta tag noindex no HTML).
+#
+# QUANDO PUBLICAR EM PRODUÇÃO COM DADOS REAIS DO ESCRITÓRIO:
+# 1. Altere "Disallow: /" para "Allow: /"
+# 2. Substitua a URL do Sitemap abaixo pelo seu domínio definitivo.
+# 3. No index.html, altere <meta name="robots" content="index, follow">.
+# ==========================================================================
+
+User-agent: *
+Disallow: /
+
+# Exemplo substituível pelo domínio oficial ou URL do GitHub Pages:
+Sitemap: https://usuario.github.io/arquitetura-interiores/sitemap.xml

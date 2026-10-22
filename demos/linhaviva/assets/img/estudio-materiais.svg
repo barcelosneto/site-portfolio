@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Mesa de materialidade do estúdio Linha Viva: amostras físicas de travertino bruto, madeira certificada, cerâmica terracota, linho cru e desenho técnico de planta baixa">
+  <rect width="800" height="640" fill="#EAE3D5"/>
+  <g transform="rotate(-4 400 320)">
+    <rect x="90" y="80" width="540" height="420" fill="#FAF7F2" stroke="#C8BCA8" stroke-width="1.5"/>
+    <g stroke="#6E6559" stroke-width="1" fill="none" opacity="0.65">
+      <rect x="130" y="120" width="460" height="340"/>
+      <line x1="290" y1="120" x2="290" y2="460"/>
+      <line x1="130" y1="280" x2="590" y2="280"/>
+      <path d="M290 220 A60 60 0 0 1 350 280"/>
+      <circle cx="440" cy="200" r="42"/>
+      <rect x="330" y="320" width="180" height="90"/>
+    </g>
+    <text x="145" y="445" font-family="monospace" font-size="11" fill="#6E6559">CADERNO EXECUTIVO • ESCALA 1:50 • ESTUDO CONCEITUAL</text>
+  </g>
+  <rect x="420" y="130" width="260" height="190" rx="6" fill="#DFD5C4" stroke="#B8AA93" stroke-width="2"/>
+  <text x="445" y="295" font-family="monospace" font-size="11" fill="#5C5346">01. TRAVERTINO NAVONA BRUTO</text>
+  <rect x="480" y="270" width="230" height="150" rx="6" fill="#9E6B47" stroke="#784E30" stroke-width="2"/>
+  <text x="502" y="398" font-family="monospace" font-size="11" fill="#F5F2EB">02. FREIJÓ NATURAL CERTIFICADO</text>
+  <circle cx="330" cy="430" r="95" fill="#B86B4B" stroke="#8F4C30" stroke-width="2"/>
+  <text x="265" y="435" font-family="monospace" font-size="11" fill="#F5F2EB">03. ARGILA TERRACOTA</text>
+  <rect x="130" y="350" width="175" height="185" rx="8" fill="#F4EFE6" stroke="#CFC4B2" stroke-width="1.5"/>
+  <text x="152" y="510" font-family="monospace" font-size="11" fill="#5C5346">04. LINHO CRU 420G</text>
+  <rect x="390" y="475" width="290" height="36" rx="4" fill="#C5A368" stroke="#9E7E47" stroke-width="1.5"/>
+  <text x="415" y="498" font-family="monospace" font-size="11" fill="#1F1E1C">05. LATÃO ESCOVADO FOSCO</text>
+</svg>

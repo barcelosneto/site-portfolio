@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Ilustração de Estúdio de Bike Indoor com bicicletas estacionárias e iluminação rítmica suave">
+  <defs>
+    <linearGradient id="bgM3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1216" />
+      <stop offset="100%" stop-color="#1A202C" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#bgM3)" />
+  <!-- Neon studio ambient arcs -->
+  <path d="M 80 330 A 240 240 0 0 1 560 330" fill="none" stroke="#C8FF00" stroke-width="3" opacity="0.28" />
+  <path d="M 130 330 A 190 190 0 0 1 510 330" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.25" />
+  <line x1="40" y1="345" x2="600" y2="345" stroke="#2D3748" stroke-width="4" />
+
+  <!-- Stationary Bike Center -->
+  <g transform="translate(175, 115)">
+    <!-- Heavy Flywheel -->
+    <circle cx="220" cy="165" r="56" fill="#1A202C" stroke="#C8FF00" stroke-width="8" />
+    <circle cx="220" cy="165" r="20" fill="#C8FF00" />
+    <!-- Rear stabilizer & base -->
+    <line x1="25" y1="225" x2="255" y2="225" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" />
+    <!-- Bike Frame -->
+    <path d="M 65 225 L 115 155 L 220 165 L 185 75 L 95 95 Z" fill="none" stroke="#E2E8F0" stroke-width="10" stroke-linejoin="round" />
+    <!-- Seat post & saddle -->
+    <line x1="95" y1="95" x2="78" y2="55" stroke="#94A3B8" stroke-width="9" stroke-linecap="round" />
+    <path d="M 52 55 H 105" stroke="#C8FF00" stroke-width="12" stroke-linecap="round" />
+    <!-- Handlebars & console -->
+    <line x1="185" y1="75" x2="205" y2="32" stroke="#94A3B8" stroke-width="9" stroke-linecap="round" />
+    <path d="M 185 32 H 235 C 248 32, 248 52, 232 52" fill="none" stroke="#C8FF00" stroke-width="9" stroke-linecap="round" />
+    <!-- Crank -->
+    <circle cx="115" cy="155" r="18" fill="#111315" stroke="#38BDF8" stroke-width="4" />
+  </g>
+
+  <!-- Cadence / RPM display card -->
+  <rect x="440" y="42" width="155" height="68" rx="12" fill="#111315" stroke="#2D3748" stroke-width="2" />
+  <text x="460" y="68" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">CADÊNCIA GUIADA</text>
+  <text x="460" y="96" fill="#C8FF00" font-family="system-ui, sans-serif" font-size="22" font-weight="800">75–95 RPM</text>
+
+  <!-- Tag -->
+  <rect x="40" y="34" width="180" height="32" rx="16" fill="#111315" stroke="#C8FF00" stroke-width="1.5" />
+  <text x="130" y="55" text-anchor="middle" fill="#C8FF00" font-family="system-ui, sans-serif" font-size="13" font-weight="700">BIKE INDOOR</text>
+</svg>

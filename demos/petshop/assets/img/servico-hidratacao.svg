@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de hidratação botânica e dermocosmética para pelagem">
+  <rect width="360" height="240" rx="24" fill="#E6EFEA"/>
+  <circle cx="180" cy="120" r="84" fill="#FAF6F0"/>
+  <!-- Botanical Serum Bottle -->
+  <rect x="148" y="88" width="64" height="86" rx="18" fill="#4A6B5D"/>
+  <rect x="166" y="66" width="28" height="22" rx="5" fill="#D5C7B4"/>
+  <path d="M180 48 L180 66 M180 52 L202 52" stroke="#2A3630" stroke-width="5" stroke-linecap="round"/>
+  <rect x="158" y="110" width="44" height="44" rx="10" fill="#FAF6F0"/>
+  <!-- Leaf inside bottle label -->
+  <path d="M180 120 C192 120, 194 136, 180 144 C166 136, 168 120, 180 120 Z" fill="#688B7B"/>
+  <!-- Droplets -->
+  <path d="M242 98 C242 98, 254 114, 254 122 C254 129, 248.5 134, 242 134 C235.5 134, 230 129, 230 122 C230 114, 242 98, 242 98 Z" fill="#E06D53"/>
+  <path d="M114 118 C114 118, 123 130, 123 136 C123 141, 119 145, 114 145 C109 145, 105 141, 105 136 C105 130, 114 118, 114 118 Z" fill="#688B7B"/>
+</svg>

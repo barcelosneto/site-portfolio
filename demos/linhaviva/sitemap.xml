@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LINHA VIVA | Arquitetura e Interiores — Mapa do Site (sitemap.xml)
+  IMPORTANTE: Substitua "https://usuario.github.io/arquitetura-interiores/"
+  pela URL definitiva do seu repositório no GitHub Pages ou domínio próprio
+  antes de submeter ao Google Search Console.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://usuario.github.io/arquitetura-interiores/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

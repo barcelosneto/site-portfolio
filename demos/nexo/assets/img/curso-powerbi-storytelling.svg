@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Ilustração do curso Power BI, DAX e Storytelling com Dados">
+  <defs>
+    <linearGradient id="bgBi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B192E" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" rx="16" fill="url(#bgBi)" />
+  <rect x="24" y="24" width="352" height="172" rx="12" fill="#071120" stroke="#6366F1" stroke-opacity="0.45" />
+  <rect x="42" y="42" width="135" height="62" rx="8" fill="#0F2038" />
+  <text x="54" y="62" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">RECEITA RECORRENTE</text>
+  <text x="54" y="88" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="20" font-weight="800">R$ 1,84M</text>
+  <rect x="42" y="114" width="135" height="64" rx="8" fill="#0F2038" />
+  <text x="54" y="134" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">MODELO STAR SCHEMA</text>
+  <text x="54" y="158" fill="#A78BFA" font-family="monospace" font-size="12" font-weight="700">CALCULATE(SUM())</text>
+  <!-- Chart -->
+  <rect x="192" y="42" width="166" height="136" rx="8" fill="#0F2038" />
+  <rect x="212" y="122" width="20" height="40" rx="4" fill="#06B6D4" />
+  <rect x="242" y="102" width="20" height="60" rx="4" fill="#06B6D4" />
+  <rect x="272" y="84" width="20" height="78" rx="4" fill="#8B5CF6" />
+  <rect x="302" y="64" width="20" height="98" rx="4" fill="#22D3EE" />
+  <polyline points="222,115 252,95 282,78 312,58" fill="none" stroke="#F43F5E" stroke-width="2.5" />
+</svg>

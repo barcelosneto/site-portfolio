@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Nexo Academy - Cursos Livres de Tecnologia em Python, Excel, Power BI e IA">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06131F" />
+      <stop offset="55%" stop-color="#0B2236" />
+      <stop offset="100%" stop-color="#1E1338" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g stroke="#1E3A5F" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+    <line x1="240" y1="0" x2="240" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" />
+    <line x1="720" y1="0" x2="720" y2="630" />
+    <line x1="960" y1="0" x2="960" y2="630" />
+  </g>
+  <circle cx="1020" cy="140" r="220" fill="#7C3AED" opacity="0.18" />
+  <circle cx="180" cy="520" r="240" fill="#06B6D4" opacity="0.15" />
+  <rect x="80" y="80" width="1040" height="470" rx="28" fill="#0B1B2B" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="2" />
+  <rect x="130" y="135" width="290" height="38" rx="19" fill="#112C44" />
+  <text x="155" y="160" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">NEXO ACADEMY • DEMO</text>
+  <text x="130" y="250" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="52" font-weight="800">Tecnologia na Prática:</text>
+  <text x="130" y="315" fill="url(#accent)" font-family="system-ui, sans-serif" font-size="48" font-weight="800">Python, Excel, Power BI e IA</text>
+  <text x="130" y="385" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="24">Formação intensiva orientada a projetos reais e portfólio técnico.</text>
+  <g transform="translate(130, 435)">
+    <rect width="160" height="48" rx="12" fill="#122B42" stroke="#22D3EE" stroke-opacity="0.4" />
+    <text x="80" y="30" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Python &amp; SQL</text>
+    <rect x="180" width="175" height="48" rx="12" fill="#122B42" stroke="#22D3EE" stroke-opacity="0.4" />
+    <text x="267" y="30" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Power BI &amp; DAX</text>
+    <rect x="375" width="175" height="48" rx="12" fill="#122B42" stroke="#8B5CF6" stroke-opacity="0.5" />
+    <text x="462" y="30" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="18" font-weight="600">Excel Modelagem</text>
+    <rect x="570" width="175" height="48" rx="12" fill="#122B42" stroke="#8B5CF6" stroke-opacity="0.5" />
+    <text x="657" y="30" text-anchor="middle" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="18" font-weight="600">IA &amp; Automação</text>
+  </g>
+</svg>

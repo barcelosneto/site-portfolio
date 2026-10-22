@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Ilustração de perfil demonstrativo — Instrutora 2">
+  <defs>
+    <linearGradient id="av2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="80" fill="#171332" />
+  <circle cx="80" cy="60" r="28" fill="url(#av2)" opacity="0.9" />
+  <path d="M32 142c8-28 28-42 48-42s40 14 48 42" fill="url(#av2)" opacity="0.75" />
+  <circle cx="80" cy="80" r="76" fill="none" stroke="#A78BFA" stroke-width="3" opacity="0.5" />
+</svg>

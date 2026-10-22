@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de calendário de pacotes mensais e quinzenais de banho e higiene">
+  <rect width="360" height="240" rx="24" fill="#E8F0EC"/>
+  <rect x="95" y="48" width="170" height="148" rx="20" fill="#FAF6F0" stroke="#4A6B5D" stroke-width="3"/>
+  <path d="M95 78 Q95 48 125 48 L235 48 Q265 48 265 78 L265 88 L95 88 Z" fill="#4A6B5D"/>
+  <rect x="130" y="34" width="12" height="26" rx="6" fill="#E06D53"/>
+  <rect x="218" y="34" width="12" height="26" rx="6" fill="#E06D53"/>
+  <!-- Checkmarks & Paw stamps on calendar -->
+  <circle cx="138" cy="120" r="14" fill="#E6EFEA"/>
+  <path d="M132 120 L137 125 L146 115" stroke="#4A6B5D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="180" cy="120" r="14" fill="#F9E5DF"/>
+  <circle cx="180" cy="120" r="6" fill="#E06D53"/>
+  <circle cx="222" cy="120" r="14" fill="#E6EFEA"/>
+  <path d="M216 120 L221 125 L230 115" stroke="#4A6B5D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="124" y="152" width="112" height="22" rx="11" fill="#E06D53"/>
+  <text x="180" y="167" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#FAF6F0">ROTINA DE CUIDADO</text>
+</svg>

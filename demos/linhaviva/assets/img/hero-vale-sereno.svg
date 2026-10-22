@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="Perspectiva arquitetônica conceitual da Residência Vale Sereno com pé-direito duplo, brises de madeira, luz natural e mobiliário orgânico em tons de areia e terracota">
+  <defs>
+    <linearGradient id="wallBack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EFECE6"/>
+      <stop offset="55%" stop-color="#E2DACB"/>
+      <stop offset="100%" stop-color="#D2C6B2"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D5C8B4"/>
+      <stop offset="100%" stop-color="#B9A78E"/>
+    </linearGradient>
+    <linearGradient id="sunBeam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFDF8" stop-opacity="0.65"/>
+      <stop offset="60%" stop-color="#FDF8EE" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#E5D9C5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DFD7C8"/>
+      <stop offset="50%" stop-color="#EDE7DC"/>
+      <stop offset="100%" stop-color="#F7F3EB"/>
+    </linearGradient>
+    <linearGradient id="terracottaGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C87A57"/>
+      <stop offset="100%" stop-color="#9A5234"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#wallBack)"/>
+  <polygon points="0,0 1200,0 1050,130 140,130" fill="#F7F4EE"/>
+  <line x1="140" y1="130" x2="1050" y2="130" stroke="#A69780" stroke-width="3"/>
+  <line x1="140" y1="134" x2="1050" y2="134" stroke="#FFFDF9" stroke-width="4" opacity="0.8"/>
+
+  <polygon points="0,0 140,130 140,680 0,790" fill="#DDD3C2"/>
+  <g stroke="#C8BCA8" stroke-width="1" opacity="0.65">
+    <line x1="0" y1="190" x2="140" y2="260"/>
+    <line x1="0" y1="360" x2="140" y2="400"/>
+    <line x1="0" y1="530" x2="140" y2="540"/>
+    <line x1="70" y1="65" x2="70" y2="735"/>
+  </g>
+
+  <polygon points="140,650 1050,650 1200,900 0,900" fill="url(#floorGrad)"/>
+  <g stroke="#A8967C" stroke-width="1" opacity="0.45">
+    <line x1="140" y1="650" x2="0" y2="900"/>
+    <line x1="360" y1="650" x2="260" y2="900"/>
+    <line x1="590" y1="650" x2="580" y2="900"/>
+    <line x1="820" y1="650" x2="900" y2="900"/>
+    <line x1="1050" y1="650" x2="1200" y2="900"/>
+    <line x1="90" y1="720" x2="1100" y2="720"/>
+    <line x1="40" y1="805" x2="1150" y2="805"/>
+  </g>
+
+  <rect x="200" y="175" width="430" height="475" fill="url(#skyWarm)" stroke="#9C8C74" stroke-width="2"/>
+  <path d="M200 510 Q320 465 440 495 T630 480 L630 650 L200 650 Z" fill="#C9BEA9" opacity="0.65"/>
+  <path d="M200 560 Q360 530 510 555 T630 545 L630 650 L200 650 Z" fill="#B5A892" opacity="0.7"/>
+
+  <g fill="#8F6343" stroke="#6E4A30" stroke-width="1">
+    <rect x="225" y="175" width="10" height="475"/>
+    <rect x="260" y="175" width="10" height="475"/>
+    <rect x="295" y="175" width="10" height="475"/>
+    <rect x="330" y="175" width="10" height="475"/>
+    <rect x="365" y="175" width="10" height="475"/>
+    <rect x="400" y="175" width="10" height="475"/>
+    <rect x="435" y="175" width="10" height="475"/>
+    <rect x="470" y="175" width="10" height="475"/>
+  </g>
+  <line x1="495" y1="175" x2="495" y2="650" stroke="#2B2927" stroke-width="4"/>
+  <line x1="200" y1="490" x2="630" y2="490" stroke="#2B2927" stroke-width="3"/>
+
+  <rect x="700" y="175" width="310" height="475" fill="#DFD5C4"/>
+  <path d="M745 650 V290 A110 110 0 0 1 965 290 V650 Z" fill="#CEBFA8"/>
+  <path d="M760 650 V295 A95 95 0 0 1 950 295 V650 Z" fill="#EFEAE1"/>
+  <rect x="775" y="370" width="160" height="8" fill="#8C5E3C"/>
+  <rect x="775" y="445" width="160" height="8" fill="#8C5E3C"/>
+  <rect x="775" y="520" width="160" height="8" fill="#8C5E3C"/>
+  <circle cx="815" cy="355" r="14" fill="#B86B4B"/>
+  <rect x="865" y="338" width="22" height="32" rx="4" fill="#D5C7B2"/>
+  <path d="M830 445 Q845 410 860 445 Z" fill="#2B2927"/>
+  <ellipse cx="890" cy="503" rx="18" ry="17" fill="#B86B4B"/>
+
+  <polygon points="210,180 630,180 1090,860 390,860" fill="url(#sunBeam)"/>
+  <g fill="#8F7D65" opacity="0.18">
+    <polygon points="240,650 265,650 420,830 390,830"/>
+    <polygon points="290,650 315,650 475,830 445,830"/>
+    <polygon points="340,650 365,650 530,830 500,830"/>
+    <polygon points="390,650 415,650 585,830 555,830"/>
+    <polygon points="440,650 465,650 640,830 610,830"/>
+  </g>
+
+  <polygon points="180,715 980,715 1090,875 80,875" fill="#F4EFE6" stroke="#DED4C3" stroke-width="2"/>
+
+  <g>
+    <ellipse cx="520" cy="748" rx="280" ry="22" fill="#6E5F4B" opacity="0.35"/>
+    <rect x="245" y="710" width="530" height="20" rx="4" fill="#8C5E3C"/>
+    <rect x="260" y="590" width="165" height="90" rx="14" fill="#EFEAE1" stroke="#D5CBB8" stroke-width="1.5"/>
+    <rect x="428" y="590" width="165" height="90" rx="14" fill="#F3EFE6" stroke="#D5CBB8" stroke-width="1.5"/>
+    <rect x="596" y="590" width="160" height="90" rx="14" fill="#EFEAE1" stroke="#D5CBB8" stroke-width="1.5"/>
+    <rect x="245" y="655" width="175" height="60" rx="12" fill="#FAF7F2" stroke="#DCD2C0" stroke-width="1.5"/>
+    <rect x="422" y="655" width="175" height="60" rx="12" fill="#FAF7F2" stroke="#DCD2C0" stroke-width="1.5"/>
+    <rect x="599" y="655" width="176" height="60" rx="12" fill="#FAF7F2" stroke="#DCD2C0" stroke-width="1.5"/>
+    <rect x="215" y="625" width="42" height="95" rx="10" fill="#EAE3D5" stroke="#D0C4B0" stroke-width="1.5"/>
+    <rect x="760" y="625" width="42" height="95" rx="10" fill="#EAE3D5" stroke="#D0C4B0" stroke-width="1.5"/>
+    <rect x="280" y="612" width="58" height="46" rx="10" fill="url(#terracottaGrad)"/>
+    <rect x="675" y="615" width="62" height="44" rx="10" fill="#C7B69E"/>
+  </g>
+
+  <g>
+    <ellipse cx="555" cy="825" rx="195" ry="18" fill="#6E5F4B" opacity="0.4"/>
+    <rect x="410" y="775" width="38" height="42" rx="4" fill="#C9BCA6"/>
+    <rect x="655" y="775" width="38" height="42" rx="4" fill="#B8AA93"/>
+    <rect x="365" y="755" width="375" height="24" rx="6" fill="#E6DEC8" stroke="#C5B69E" stroke-width="1.5"/>
+    <rect x="420" y="743" width="95" height="12" rx="2" fill="#2B2927"/>
+    <rect x="426" y="735" width="82" height="8" rx="2" fill="#F5F2EB"/>
+    <path d="M595 755 Q625 775 655 755 Z" fill="#B86B4B"/>
+    <ellipse cx="625" cy="742" rx="30" ry="14" fill="#B86B4B"/>
+    <ellipse cx="625" cy="738" rx="24" ry="8" fill="#8E4B2F"/>
+  </g>
+
+  <line x1="855" y1="130" x2="855" y2="310" stroke="#1F1E1C" stroke-width="2"/>
+  <path d="M810 310 Q855 280 900 310 Z" fill="#D8C8B0" stroke="#1F1E1C" stroke-width="1.5"/>
+  <circle cx="855" cy="316" r="10" fill="#FFF8E7"/>
+
+  <g>
+    <ellipse cx="980" cy="785" rx="60" ry="16" fill="#6E5F4B" opacity="0.38"/>
+    <path d="M935 665 L1025 665 L1010 780 L950 780 Z" fill="url(#terracottaGrad)"/>
+    <ellipse cx="980" cy="665" rx="45" ry="10" fill="#7D3E25"/>
+    <path d="M980 665 Q970 590 990 520 Q1005 470 965 420" fill="none" stroke="#5C4633" stroke-width="7" stroke-linecap="round"/>
+    <path d="M982 560 Q940 520 915 490" fill="none" stroke="#5C4633" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M986 510 Q1025 475 1045 445" fill="none" stroke="#5C4633" stroke-width="4" stroke-linecap="round"/>
+    <g fill="#6D7861" opacity="0.9">
+      <ellipse cx="910" cy="480" rx="38" ry="22" transform="rotate(-15 910 480)"/>
+      <ellipse cx="960" cy="415" rx="46" ry="26" transform="rotate(8 960 415)"/>
+      <ellipse cx="1040" cy="440" rx="42" ry="24" transform="rotate(20 1040 440)"/>
+      <ellipse cx="995" cy="460" rx="36" ry="20"/>
+    </g>
+    <g fill="#8A967C" opacity="0.85">
+      <ellipse cx="930" cy="465" rx="28" ry="16"/>
+      <ellipse cx="975" cy="400" rx="32" ry="18"/>
+      <ellipse cx="1025" cy="430" rx="28" ry="15"/>
+    </g>
+  </g>
+
+  <g transform="translate(55, 815)">
+    <rect width="380" height="44" rx="4" fill="#1F1E1C" opacity="0.82"/>
+    <text x="18" y="27" font-family="monospace" font-size="13" letter-spacing="1.5" fill="#F5F2EB">ESTUDO VOLUMÉTRICO • RESIDÊNCIA VALE SERENO</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de cão tomando banho morno com espuma hipoalergênica">
+  <rect width="360" height="240" rx="24" fill="#E8F0EC"/>
+  <circle cx="290" cy="55" r="35" fill="#FAF6F0" opacity="0.7"/>
+  <!-- Tub -->
+  <path d="M55 145 L305 145 L285 210 C280 220, 265 225, 250 225 L110 225 C95 225, 80 220, 75 210 Z" fill="#FAF6F0" stroke="#688B7B" stroke-width="3"/>
+  <rect x="45" y="135" width="270" height="16" rx="8" fill="#688B7B"/>
+  <!-- Foam bubbles -->
+  <circle cx="95" cy="130" r="22" fill="#FFFFFF"/>
+  <circle cx="130" cy="125" r="26" fill="#FFFFFF"/>
+  <circle cx="230" cy="125" r="25" fill="#FFFFFF"/>
+  <circle cx="265" cy="132" r="20" fill="#FFFFFF"/>
+  <!-- Happy Dog in tub -->
+  <ellipse cx="145" cy="96" rx="12" ry="26" transform="rotate(15 145 96)" fill="#B57642"/>
+  <ellipse cx="215" cy="96" rx="12" ry="26" transform="rotate(-15 215 96)" fill="#B57642"/>
+  <circle cx="180" cy="95" r="38" fill="#E3A46B"/>
+  <!-- Foam on head -->
+  <circle cx="168" cy="58" r="14" fill="#FFFFFF"/>
+  <circle cx="186" cy="54" r="16" fill="#FFFFFF"/>
+  <circle cx="198" cy="62" r="11" fill="#FFFFFF"/>
+  <!-- Eyes & smile -->
+  <circle cx="166" cy="92" r="4.5" fill="#2A2421"/>
+  <circle cx="194" cy="92" r="4.5" fill="#2A2421"/>
+  <ellipse cx="180" cy="103" rx="8" ry="6" fill="#2A2421"/>
+  <path d="M170 112 Q180 120 190 112" stroke="#2A2421" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Floating bubbles -->
+  <circle cx="85" cy="70" r="10" fill="#FAF6F0" stroke="#688B7B" stroke-width="2"/>
+  <circle cx="275" cy="82" r="13" fill="#FAF6F0" stroke="#688B7B" stroke-width="2"/>
+  <circle cx="250" cy="50" r="7" fill="#FAF6F0" stroke="#688B7B" stroke-width="1.5"/>
+</svg>

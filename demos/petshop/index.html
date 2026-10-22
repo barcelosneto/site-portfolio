@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Por padrão noindex para evitar indexação enganosa até que o cliente configure dados reais -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pata &amp; Prosa | Pet Shop e Banho &amp; Tosa Acolhedor com Hora Marcada</title>
+  <meta name="description" content="Banho e tosa com hora marcada, secagem com ruído reduzido, toalhas individuais esterilizadas e espaço exclusivo para gatos. Simule o orçamento estimado e pré-agende pelo WhatsApp.">
+  <meta name="theme-color" content="#4A6B5D">
+
+  <!-- Canonical configurável -->
+  <link rel="canonical" href="https://SEU-USUARIO.github.io/pet-shop/">
+
+  <!-- Favicons locais (relativos para compatibilidade com GitHub Pages) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="assets/img/favicon.svg">
+
+  <!-- Open Graph / Compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Pata &amp; Prosa | Pet Shop e Banho &amp; Tosa com Hora Marcada">
+  <meta property="og:description" content="Cuidado de higiene e estética afetiva para cães e gatos. Produtos hipoalergênicos, baixo ruído e atendimento com hora marcada.">
+  <meta property="og:url" content="https://SEU-USUARIO.github.io/pet-shop/">
+  <meta property="og:image" content="assets/img/og-image.svg">
+
+  <!-- Tipografia amigável e elegante com fallback seguro no CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- JSON-LD explícito de demonstração -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Pata & Prosa | Pet Shop e Banho & Tosa (Página Demonstrativa)",
+    "description": "Projeto demonstrativo configurável de Pet Shop e Estética Animal (Banho e Tosa com hora marcada). Dados ilustrativos.",
+    "url": "https://SEU-USUARIO.github.io/pet-shop/",
+    "image": "assets/img/og-image.svg",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua das Magnólias, 240 - Loja B (Endereço Ilustrativo de Exemplo)",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "00000-000",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- 1. Aviso de Demonstração Visível e Discreto -->
+  <aside class="demo-banner" aria-label="Aviso de ambiente demonstrativo">
+    <div class="container demo-banner__inner" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="demo-banner__badge">Demonstração de portfólio</span>
+        <p style="margin:0;font-size:0.82rem;">
+          <strong>Pata &amp; Prosa:</strong> Pet shop e estética animal com simulador interativo de serviços.
+        </p>
+      </div>
+      <div class="demo-banner__actions" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <a href="../../portfolio/index.html" class="btn btn--secondary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">← Voltar ao Portfólio</a>
+        <a href="../../contato/index.html?projeto=petshop" class="btn btn--primary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:#E76F51;color:#fff;font-weight:600;">Solicitar Site Similar</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Cabeçalho com Navegação Responsiva -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#topo" class="brand" id="topo" aria-label="Pata &amp; Prosa — Início">
+        <img src="assets/img/favicon.svg" alt="" class="brand__logo" width="44" height="44">
+        <span class="brand__text">
+          <span class="brand__name">Pata &amp; Prosa</span>
+          <span class="brand__tagline">Banho &amp; Tosa Afetivo</span>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menu de navegação"
+      >
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Navegação principal">
+        <ul class="nav-menu__list">
+          <li><a href="#servicos" class="nav-menu__link">Serviços</a></li>
+          <li><a href="#simulador" class="nav-menu__link">Simulador de Valor</a></li>
+          <li><a href="#processo" class="nav-menu__link">Como Cuidamos</a></li>
+          <li><a href="#galeria" class="nav-menu__link">Antes &amp; Depois</a></li>
+          <li><a href="#pacotes" class="nav-menu__link">Pacotes</a></li>
+          <li><a href="#faq" class="nav-menu__link">Dúvidas</a></li>
+          <li><a href="#localizacao" class="nav-menu__link">Localização</a></li>
+        </ul>
+        <div class="nav-menu__cta">
+          <a href="#agendamento" class="btn btn--primary btn--sm">Agendar banho e tosa</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- 3. Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="eyebrow">🐾 Estética afetiva para cães e gatos</span>
+          <h1 id="hero-heading" class="hero__title">
+            Banho morno, conversa mansa e <span>respeito ao tempo</span> do seu melhor amigo.
+          </h1>
+          <p class="hero__subtitle">
+            Na <strong>Pata &amp; Prosa</strong>, cada atendimento é com hora marcada para evitar esperas longas e barulho excessivo. Usamos toalhas individuais esterilizadas, cosméticos hipoalergênicos e temos horário exclusivo para felinos.
+          </p>
+
+          <div class="hero__ctas">
+            <a href="#agendamento" class="btn btn--primary">
+              Agendar banho e tosa
+            </a>
+            <a href="#servicos" class="btn btn--secondary">
+              Ver serviços
+            </a>
+          </div>
+
+          <div class="hero__trust" role="list" aria-label="Diferenciais de segurança e conforto">
+            <div class="hero__trust-item" role="listitem">
+              <span class="hero__trust-icon" aria-hidden="true">✓</span>
+              <span><strong>Hora marcada real:</strong> menos tempo fora de casa e sem estresse.</span>
+            </div>
+            <div class="hero__trust-item" role="listitem">
+              <span class="hero__trust-icon" aria-hidden="true">✓</span>
+              <span><strong>Check-in da pelagem:</strong> orçamento alinhado antes do banho começar.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <img
+            src="assets/img/hero-pets.svg"
+            alt="Ilustração afetiva de um cão caramelo sorridente e uma gatinha branca relaxados após o banho na Pata e Prosa"
+            class="hero__img"
+            width="680"
+            height="560"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Faixa de Benefícios Objetivos -->
+    <section class="beneficios-strip" aria-label="Pilares de higiene e bem-estar">
+      <div class="container beneficios-strip__grid">
+        <article class="beneficio-item">
+          <span class="beneficio-item__icon" aria-hidden="true">🌿</span>
+          <h2 class="beneficio-item__title">Linha 100% Hipoalergênica</h2>
+          <p class="beneficio-item__desc">Xampus e máscaras biodegradáveis com pH fisiológico seguro para peles sensíveis.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <span class="beneficio-item__icon" aria-hidden="true">🔉</span>
+          <h2 class="beneficio-item__title">Secagem com Ruído Reduzido</h2>
+          <p class="beneficio-item__desc">Equipamentos silenciosos, temperatura morna controlada e protetores auriculares macios.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <span class="beneficio-item__icon" aria-hidden="true">🧺</span>
+          <h2 class="beneficio-item__title">Toalhas Esterilizadas</h2>
+          <p class="beneficio-item__desc">Higienizadas termicamente e lacradas individualmente para cada pet atendido.</p>
+        </article>
+
+        <article class="beneficio-item">
+          <span class="beneficio-item__icon" aria-hidden="true">🐈</span>
+          <h2 class="beneficio-item__title">Janelas Exclusivas para Gatos</h2>
+          <p class="beneficio-item__desc">Atendimento felino em sala reservada, livre de latidos e odores de cães.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. Seção de Serviços com Filtro Interativo por Tipo de Pet -->
+    <section id="servicos" class="section" aria-labelledby="servicos-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Cuidado sob medida</span>
+          <h2 id="servicos-heading" class="section-title">Serviços de higiene, estética e bem-estar</h2>
+          <p class="section-subtitle">
+            Filtre pelo perfil do seu companheiro e escolha o cuidado ideal. Todos os banhos incluem limpeza auricular externa, corte de unhas e escovação completa.
+          </p>
+        </div>
+
+        <div class="filtro-bar" role="group" aria-label="Filtrar serviços por tipo de pet">
+          <button type="button" class="filtro-btn is-active" data-filtro-pet="todos" aria-pressed="true">
+            Todos os cuidados
+          </button>
+          <button type="button" class="filtro-btn" data-filtro-pet="caes" aria-pressed="false">
+            🐕 Para Cães
+          </button>
+          <button type="button" class="filtro-btn" data-filtro-pet="gatos" aria-pressed="false">
+            🐈 Para Gatos
+          </button>
+          <button type="button" class="filtro-btn" data-filtro-pet="pacotes" aria-pressed="false">
+            📅 Pacotes Mensais
+          </button>
+        </div>
+
+        <p id="servicos-filtro-status" class="filtro-status" aria-live="polite">
+          Exibindo 6 opções para todos os pets e pacotes.
+        </p>
+
+        <div id="servicos-grid" class="servicos-grid">
+          <!-- Preenchido via assets/js/main.js a partir de config.js -->
+        </div>
+
+        <p class="servicos-nota">
+          * Valores de referência demonstrativos para porte pequeno. Utilize o simulador abaixo para ver a estimativa conforme o porte do seu pet.
+          <strong>Importante:</strong> não realizamos procedimentos clínicos, sedação ou consultas veterinárias.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. Simulador de Orçamento Estimado por Porte e Serviço -->
+    <section id="simulador" class="section section--alt" aria-labelledby="simulador-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow--coral">Transparência antes de sair de casa</span>
+          <h2 id="simulador-heading" class="section-title">Simulador de orçamento estimado</h2>
+          <p class="section-subtitle">
+            Selecione o porte ou espécie, o cuidado principal e opcionais para consultar nossa tabela demonstrativa. Você pode enviar a simulação direto para o pré-agendamento.
+          </p>
+        </div>
+
+        <div class="simulador-box">
+          <div class="simulador-controles">
+            <div class="simulador-step">
+              <span class="simulador-step__label" id="label-passo-porte">1. Qual a espécie e o porte do seu pet?</span>
+              <div id="simulador-portes" class="portes-grid" role="group" aria-labelledby="label-passo-porte">
+                <!-- Botões gerados via main.js -->
+              </div>
+            </div>
+
+            <div class="simulador-step">
+              <label for="simulador-servico" class="simulador-step__label">2. Escolha o serviço principal</label>
+              <select id="simulador-servico" class="form-select">
+                <!-- Opções geradas via main.js -->
+              </select>
+            </div>
+
+            <div class="simulador-step">
+              <span class="simulador-step__label" id="label-passo-adicionais">3. Deseja incluir algum cuidado extra opcional?</span>
+              <div id="simulador-adicionais" class="adicionais-grid" role="group" aria-labelledby="label-passo-adicionais">
+                <!-- Checkboxes gerados via main.js -->
+              </div>
+            </div>
+          </div>
+
+          <aside class="simulador-resumo" aria-live="polite" aria-label="Resumo do orçamento estimado">
+            <span class="simulador-resumo__tag">Estimativa Demonstrativa</span>
+            <div class="simulador-resumo__preco-box">
+              <span class="simulador-resumo__preco-label">Valor total estimado:</span>
+              <strong id="simulador-valor-total" class="simulador-resumo__valor">R$ 65,00</strong>
+            </div>
+
+            <ul class="simulador-resumo__lista">
+              <li>
+                <strong>Espécie / Porte selecionado</strong>
+                <span id="simulador-resumo-porte">Cão Porte Pequeno</span>
+              </li>
+              <li>
+                <strong>Serviço principal</strong>
+                <span id="simulador-resumo-servico">Banho Completo &amp; Escovação (R$ 65,00)</span>
+              </li>
+              <li>
+                <strong>Cuidados extras opcionais</strong>
+                <span id="simulador-resumo-adicionais">Nenhum item opcional selecionado</span>
+              </li>
+              <li>
+                <strong>Tempo médio no estúdio</strong>
+                <span id="simulador-resumo-tempo">1h15 a 2h00</span>
+              </li>
+            </ul>
+
+            <p class="simulador-resumo__aviso">
+              <strong>Aviso de estimativa:</strong> Valores exemplificativos configuráveis. O valor final é confirmado presencialmente no check-in após avaliar a densidade da pelagem e eventual presença de nós.
+            </p>
+
+            <div class="simulador-resumo__actions">
+              <button type="button" id="btn-simulador-agendar" class="btn btn--primary btn--full">
+                Usar simulação no pré-agendamento
+              </button>
+              <button type="button" id="btn-simulador-whatsapp" class="btn btn--secondary btn--full">
+                Consultar este orçamento no WhatsApp
+              </button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Processo em 3 Passos -->
+    <section id="processo" class="section" aria-labelledby="processo-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Sem pressa e sem surpresas</span>
+          <h2 id="processo-heading" class="section-title">Como funciona nossa rotina em 3 passos</h2>
+          <p class="section-subtitle">
+            Desenhamos cada etapa para que o banho seja uma experiência positiva, segura e previsível para o pet e para você.
+          </p>
+        </div>
+
+        <div class="passos-grid">
+          <article class="passo-card">
+            <span class="passo-card__num" aria-hidden="true">1</span>
+            <h3 class="passo-card__title">Recepção calma e check-in da pelagem</h3>
+            <p>
+              Ao chegar no horário combinado, conversamos sobre o comportamento do seu pet, avaliamos a pelagem e ouvidos junto com você e alinhamos o comprimento da tosa e o valor exato.
+            </p>
+          </article>
+
+          <article class="passo-card">
+            <span class="passo-card__num" aria-hidden="true">2</span>
+            <h3 class="passo-card__title">Banho morno e secagem sem estresse</h3>
+            <p>
+              Utilizamos água em temperatura agradável, produtos hipoalergênicos, bancadas antiderrapantes e sopradores de ruído reduzido. Respeitamos pausas para água fresca em pets idosos ou filhotes.
+            </p>
+          </article>
+
+          <article class="passo-card">
+            <span class="passo-card__num" aria-hidden="true">3</span>
+            <h3 class="passo-card__title">Finalização afetiva e aviso no WhatsApp</h3>
+            <p>
+              Após a escovação final, enviamos uma mensagem no seu WhatsApp avisando que seu amigo está pronto, cheiroso e descansando em espaço amplo até você chegar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Galeria Antes/Depois com Identificação de Imagens Ilustrativas -->
+    <section id="galeria" class="section section--sage" aria-labelledby="galeria-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Cuidado que se vê no brilho</span>
+          <h2 id="galeria-heading" class="section-title">Galeria Antes &amp; Depois (Ilustrativa)</h2>
+          <p class="section-subtitle">
+            Veja exemplos ilustrativos dos resultados de escovação, desembolo, hidratação e tosa na tesoura. Clique em qualquer card para ampliar os detalhes no painel acessível.
+          </p>
+        </div>
+
+        <div id="galeria-grid" class="galeria-grid">
+          <!-- Preenchido via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Lightbox Acessível da Galeria -->
+    <div
+      id="lightbox-modal"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-titulo"
+      aria-hidden="true"
+      hidden
+    >
+      <div class="lightbox__dialog">
+        <div class="lightbox__header">
+          <span id="lightbox-contador" class="lightbox__contador">Item 1 de 4</span>
+          <button type="button" id="lightbox-fechar" class="lightbox__close" aria-label="Fechar visualização ampliada">
+            ✕ Fechar (Esc)
+          </button>
+        </div>
+        <div class="lightbox__media">
+          <img id="lightbox-img" src="assets/img/galeria-1.svg" alt="" width="640" height="420">
+        </div>
+        <h3 id="lightbox-titulo" class="lightbox__title">Título do Antes e Depois</h3>
+        <p id="lightbox-meta" class="lightbox__meta"></p>
+        <div class="lightbox__comparativo">
+          <div class="lightbox__box">
+            <strong>Como chegou (Antes):</strong>
+            <span id="lightbox-antes"></span>
+          </div>
+          <div class="lightbox__box">
+            <strong>Resultado do cuidado (Depois):</strong>
+            <span id="lightbox-depois"></span>
+          </div>
+        </div>
+        <p id="lightbox-aviso" class="lightbox__aviso"></p>
+        <div class="lightbox__nav">
+          <button type="button" id="lightbox-prev" class="btn btn--secondary btn--sm">
+            ← Anterior
+          </button>
+          <button type="button" id="lightbox-next" class="btn btn--secondary btn--sm">
+            Próximo →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Tabela de Pacotes com Valores Exemplificativos -->
+    <section id="pacotes" class="section" aria-labelledby="pacotes-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Higiene em dia o mês inteiro</span>
+          <h2 id="pacotes-heading" class="section-title">Pacotes quinzenais e mensais</h2>
+          <p class="section-subtitle">
+            Manter a frequência de banho evita nós dolorosos, reduz a queda de pelos pela casa e garante economia com horário fixo reservado na agenda.
+          </p>
+        </div>
+
+        <div id="pacotes-grid" class="pacotes-grid">
+          <!-- Preenchido via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Depoimentos Marcados como Demonstrativos -->
+    <section id="depoimentos" class="section section--alt" aria-labelledby="depoimentos-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Carinho reconhecido</span>
+          <h2 id="depoimentos-heading" class="section-title">Relatos de tutores (Exemplos Demonstrativos)</h2>
+          <p class="section-subtitle">
+            Os depoimentos abaixo são modelos ilustrativos de demonstração e devem ser substituídos por avaliações reais autorizadas pelos clientes da unidade.
+          </p>
+        </div>
+
+        <div id="depoimentos-grid" class="depoimentos-grid">
+          <!-- Preenchido via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Perguntas Frequentes (FAQ Accordion) -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Tire suas dúvidas</span>
+          <h2 id="faq-heading" class="section-title">Perguntas frequentes sobre o banho e tosa</h2>
+          <p class="section-subtitle">
+            Respondemos com clareza às principais dúvidas sobre segurança, produtos utilizados, atendimento felino e funcionamento do pré-agendamento.
+          </p>
+        </div>
+
+        <div id="faq-lista" class="faq-lista">
+          <!-- Preenchido via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Localização Ilustrativa sem Endereço Real -->
+    <section id="localizacao" class="section section--sage" aria-labelledby="localizacao-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Fácil acesso no bairro</span>
+          <h2 id="localizacao-heading" class="section-title">Nossa localização e horários (Ilustrativos)</h2>
+          <p class="section-subtitle">
+            Endereço fictício demonstrativo configurável no arquivo <code>assets/js/config.js</code>. Projetado com vaga de embarque rápido para facilitar a chegada com seu pet.
+          </p>
+        </div>
+
+        <div class="localizacao-grid">
+          <div class="localizacao-card">
+            <span class="eyebrow eyebrow--coral">Unidade Demonstrativa Configurável</span>
+            <h3 class="servico-card__title">Pata &amp; Prosa — Estúdio de Banho &amp; Tosa</h3>
+            <ul class="localizacao-card__list">
+              <li>
+                <strong>📍 Endereço de exemplo:</strong><br>
+                <span data-config-endereco>Rua das Magnólias, 240 — Loja B (Endereço de Exemplo) — Vila Jardim, São Paulo — SP</span>
+              </li>
+              <li>
+                <strong>🚗 Embarque seguro:</strong><br>
+                Recuo frontal exclusivo para desembarque tranquilo com guia ou caixa de transporte.
+              </li>
+              <li>
+                <strong>📱 WhatsApp da recepção:</strong><br>
+                <span data-config-whatsapp-exibicao>(11) 99999-0000 (Exemplo)</span>
+              </li>
+            </ul>
+
+            <div class="localizacao-card__horarios">
+              <strong>🕒 Horários de atendimento (com hora marcada):</strong>
+              <p>Terça a Sexta: 08h30 às 18h30 • Sábados: 08h30 às 17h00</p>
+              <p>Domingos, Segundas e Feriados: fechado para higienização.</p>
+            </div>
+
+            <a href="#agendamento" class="btn btn--sage btn--full">
+              Solicitar horário nesta unidade
+            </a>
+          </div>
+
+          <div class="localizacao-mapa">
+            <img
+              src="assets/img/mapa-ilustrativo.svg"
+              alt="Mapa ilustrativo demonstrativo indicando o estúdio Pata e Prosa próximo à Praça das Árvores"
+              width="640"
+              height="420"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Formulário de Pré-Agendamento sem Backend -->
+    <section id="agendamento" class="section" aria-labelledby="agendamento-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow eyebrow--coral">Rápido e direto pelo WhatsApp</span>
+          <h2 id="agendamento-heading" class="section-title">Solicite seu pré-agendamento</h2>
+          <p class="section-subtitle">
+            Preencha os dados básicos abaixo para gerarmos sua mensagem organizada. <strong>Importante:</strong> este formulário não confirma reserva automática; nossa equipe responderá pelo WhatsApp ou e-mail confirmando o horário disponível.
+          </p>
+        </div>
+
+        <div class="agendamento-grid">
+          <div class="agendamento-form-card">
+            <form id="form-agendamento" novalidate>
+              <div class="form-grid form-grid--2cols">
+                <div class="form-group">
+                  <label for="campo-nome-pet" class="form-label">Nome do pet *</label>
+                  <input
+                    type="text"
+                    id="campo-nome-pet"
+                    name="nomePet"
+                    class="form-input"
+                    placeholder="Ex.: Bento, Amora, Nino..."
+                    required
+                    autocomplete="off"
+                  >
+                  <span id="erro-campo-nome-pet" class="form-error" hidden></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-porte" class="form-label">Espécie e porte *</label>
+                  <select id="campo-porte" name="porte" class="form-select" required>
+                    <!-- Preenchido via main.js -->
+                  </select>
+                  <span id="erro-campo-porte" class="form-error" hidden></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-servico" class="form-label">Serviço ou pacote desejado *</label>
+                  <select id="campo-servico" name="servico" class="form-select" required>
+                    <!-- Preenchido via main.js -->
+                  </select>
+                  <span id="erro-campo-servico" class="form-error" hidden></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-data" class="form-label">Data preferida *</label>
+                  <input type="date" id="campo-data" name="data" class="form-input" required>
+                  <span id="erro-campo-data" class="form-error" hidden></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-turno" class="form-label">Turno de preferência *</label>
+                  <select id="campo-turno" name="turno" class="form-select" required>
+                    <option value="">Selecione o período...</option>
+                    <option value="Manhã (08h30 às 12h00)">Manhã (08h30 às 12h00)</option>
+                    <option value="Tarde (13h00 às 17h30)">Tarde (13h00 às 17h30)</option>
+                    <option value="Janela Silenciosa Felina (Horário reservado)">Janela Silenciosa Felina (Horário reservado)</option>
+                  </select>
+                  <span id="erro-campo-turno" class="form-error" hidden></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="campo-nome-tutor" class="form-label">Seu nome (Tutor/a) *</label>
+                  <input
+                    type="text"
+                    id="campo-nome-tutor"
+                    name="nomeTutor"
+                    class="form-input"
+                    placeholder="Como podemos te chamar?"
+                    required
+                    autocomplete="name"
+                  >
+                  <span id="erro-campo-nome-tutor" class="form-error" hidden></span>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: 18px;">
+                <label for="campo-telefone" class="form-label">Seu WhatsApp ou telefone de contato *</label>
+                <input
+                  type="tel"
+                  id="campo-telefone"
+                  name="telefone"
+                  class="form-input"
+                  placeholder="(11) 99999-0000"
+                  required
+                  autocomplete="tel"
+                >
+                <span id="erro-campo-telefone" class="form-error" hidden></span>
+              </div>
+
+              <div class="form-group" style="margin-top: 18px;">
+                <label for="campo-observacoes" class="form-label">Observações opcionais (comportamento, alergias, nós na pelagem)</label>
+                <textarea
+                  id="campo-observacoes"
+                  name="observacoes"
+                  class="form-textarea"
+                  rows="3"
+                  placeholder="Ex.: É idoso, tem medo de secador forte, ou simulação transferida do site..."
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" id="btn-enviar-whatsapp" class="btn btn--primary btn--full">
+                  Gerar pedido de pré-agendamento no WhatsApp
+                </button>
+                <button type="button" id="btn-enviar-email" class="btn btn--secondary btn--full">
+                  Ou enviar solicitação por E-mail (mailto:)
+                </button>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+
+          <aside class="agendamento-preview-card" aria-label="Prévia da mensagem que será gerada">
+            <span class="simulador-resumo__tag">Transparência &amp; Privacidade</span>
+            <h3 class="footer-title" style="margin-top: 10px;">Como funciona o envio?</h3>
+            <p style="font-size: 0.9rem; color: #DCE8E2;">
+              Não armazenamos seus dados em banco de dados nem utilizamos rastreadores ocultos. Ao clicar em enviar, abrimos o seu WhatsApp ou aplicativo de e-mail com a mensagem abaixo pronta para você revisar e disparar:
+            </p>
+            <pre id="agendamento-preview-texto" class="agendamento-preview-box"></pre>
+            <p style="font-size: 0.82rem; color: #C9DBD2;">
+              ✓ Sem promessa de confirmação automática: nossa recepção confere a agenda do dia e responde confirmando seu horário.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 14. Rodapé Completo com Contatos Editáveis e Aviso Legal -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h2 class="footer-title">Pata &amp; Prosa</h2>
+          <p style="margin-bottom: 12px;">
+            Pet Shop de Bairro &amp; Estética Afetiva. Banho morno, secagem com ruído reduzido e carinho genuíno para cães e gatos.
+          </p>
+          <p style="font-size: 0.82rem; color: #A7B8B0;">
+            CNPJ Ilustrativo: 00.000.000/0001-00 (Substituir pelos dados reais do contratante).
+          </p>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Navegação Rápida</h2>
+          <ul class="footer-links">
+            <li><a href="#servicos">Serviços de Banho e Tosa</a></li>
+            <li><a href="#simulador">Simulador de Orçamento</a></li>
+            <li><a href="#processo">Nosso Processo em 3 Passos</a></li>
+            <li><a href="#galeria">Galeria Antes &amp; Depois</a></li>
+            <li><a href="#pacotes">Pacotes Quinzenais e Mensais</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Contatos Demonstrativos</h2>
+          <ul class="footer-links">
+            <li>
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/5511999990000" data-whatsapp-link target="_blank" rel="noopener noreferrer" data-config-whatsapp-exibicao>(11) 99999-0000 (Exemplo)</a>
+            </li>
+            <li>
+              <strong>Telefone:</strong>
+              <span data-config-telefone-exibicao>(11) 3000-0000 (Exemplo)</span>
+            </li>
+            <li>
+              <strong>E-mail:</strong>
+              <a href="mailto:contato@pataeprosa.exemplo.com.br" data-config-email>contato@pataeprosa.exemplo.com.br</a>
+            </li>
+            <li>
+              <strong>Endereço (Exemplo):</strong>
+              <span data-config-endereco>Rua das Magnólias, 240 — Loja B — Vila Jardim, São Paulo — SP</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          <strong>Aviso Importante de Transparência:</strong> Este site é um modelo demonstrativo estático configurável. Preços, pacotes, endereço, contatos, imagens comparativas e depoimentos são ilustrativos até personalização pelo proprietário. A Pata &amp; Prosa atua exclusivamente com higiene e estética animal, não oferecendo serviços médicos-veterinários.
+        </p>
+        <p>
+          &copy; <span id="ano-atual">2026</span> Pata &amp; Prosa — Todos os direitos reservados. Desenvolvido com foco em acessibilidade WCAG 2.2 AA e alta performance.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp Configurável -->
+  <a
+    href="https://wa.me/5511999990000"
+    data-whatsapp-link
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar com a Pata e Prosa pelo WhatsApp"
+  >
+    <span aria-hidden="true">💬</span>
+    <span class="whatsapp-float__text">Agendar pelo WhatsApp</span>
+  </a>
+
+  <!-- Scripts com defer e config.js carregado antes de main.js -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

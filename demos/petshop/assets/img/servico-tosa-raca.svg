@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de cãozinho fofo com tosa na tesoura e gravatinha">
+  <rect width="360" height="240" rx="24" fill="#F9E8E3"/>
+  <circle cx="180" cy="125" r="86" fill="#FAF6F0"/>
+  <!-- Fluffy Poodle/Bichon head -->
+  <circle cx="132" cy="115" r="24" fill="#F3ECE1" stroke="#DED2C1" stroke-width="2"/>
+  <circle cx="228" cy="115" r="24" fill="#F3ECE1" stroke="#DED2C1" stroke-width="2"/>
+  <circle cx="180" cy="112" r="46" fill="#FAF6F0" stroke="#DED2C1" stroke-width="2"/>
+  <circle cx="160" cy="70" r="22" fill="#FAF6F0"/>
+  <circle cx="182" cy="64" r="24" fill="#FAF6F0"/>
+  <circle cx="204" cy="72" r="20" fill="#FAF6F0"/>
+  <!-- Eyes & smile -->
+  <circle cx="164" cy="108" r="5" fill="#2A2421"/>
+  <circle cx="196" cy="108" r="5" fill="#2A2421"/>
+  <ellipse cx="180" cy="119" rx="7" ry="5" fill="#2A2421"/>
+  <path d="M172 128 Q180 135 188 128" stroke="#2A2421" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Sage Bowtie -->
+  <polygon points="180,162 155,148 155,176" fill="#4A6B5D"/>
+  <polygon points="180,162 205,148 205,176" fill="#4A6B5D"/>
+  <circle cx="180" cy="162" r="7" fill="#E06D53"/>
+</svg>

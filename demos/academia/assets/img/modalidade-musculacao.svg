@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Ilustração de Musculação Orientada com racks de força, halteres e orientação técnica">
+  <defs>
+    <linearGradient id="bgM1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121417" />
+      <stop offset="100%" stop-color="#1C2026" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#bgM1)" />
+  <!-- Grid accent -->
+  <line x1="40" y1="340" x2="600" y2="340" stroke="#2E343E" stroke-width="3" />
+  <!-- Power Rack -->
+  <rect x="130" y="60" width="190" height="280" fill="none" stroke="#3B424F" stroke-width="8" rx="4" />
+  <line x1="100" y1="155" x2="350" y2="155" stroke="#F8FAFC" stroke-width="6" stroke-linecap="round" />
+  <!-- Barbell plates -->
+  <rect x="108" y="120" width="16" height="70" rx="4" fill="#C8FF00" />
+  <rect x="128" y="130" width="12" height="50" rx="3" fill="#94A3B8" />
+  <rect x="316" y="120" width="16" height="70" rx="4" fill="#C8FF00" />
+  <rect x="300" y="130" width="12" height="50" rx="3" fill="#94A3B8" />
+  <!-- Adjustable bench -->
+  <path d="M 185 340 L 205 255 L 285 255 L 305 340" fill="none" stroke="#475569" stroke-width="8" stroke-linecap="round" />
+  <rect x="190" y="242" width="110" height="16" rx="6" fill="#C8FF00" />
+  <!-- Dumbbell rack on right -->
+  <path d="M 410 340 L 430 190 L 560 190 L 580 340" fill="none" stroke="#3B424F" stroke-width="6" />
+  <line x1="422" y1="235" x2="568" y2="235" stroke="#2E343E" stroke-width="6" />
+  <line x1="416" y1="285" x2="574" y2="285" stroke="#2E343E" stroke-width="6" />
+  <!-- Dumbbells -->
+  <circle cx="450" cy="222" r="11" fill="#F8FAFC" />
+  <circle cx="495" cy="222" r="13" fill="#C8FF00" />
+  <circle cx="540" cy="222" r="15" fill="#F8FAFC" />
+  <circle cx="450" cy="272" r="15" fill="#94A3B8" />
+  <circle cx="495" cy="272" r="17" fill="#F8FAFC" />
+  <circle cx="542" cy="272" r="19" fill="#C8FF00" />
+  <!-- Tag -->
+  <rect x="40" y="34" width="235" height="32" rx="16" fill="#111315" stroke="#C8FF00" stroke-width="1.5" />
+  <text x="157" y="55" text-anchor="middle" fill="#C8FF00" font-family="system-ui, sans-serif" font-size="13" font-weight="700">MUSCULAÇÃO ORIENTADA</text>
+</svg>

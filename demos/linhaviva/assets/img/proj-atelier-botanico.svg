@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="Projeto conceitual Flagship e Atelier Botânico Raiz: arquitetura comercial sensorial com expositores em terracota, arcos acústicos e ilha central de atendimento">
+    <defs>
+      <linearGradient id="bg_atelier" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#EFEAE1"/>
+        <stop offset="100%" stop-color="#D8C6B4"/>
+      </linearGradient>
+      <linearGradient id="light_atelier" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#D8C6B4" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="960" height="720" fill="url(#bg_atelier)"/>
+    <g stroke="#1F1E1C" stroke-width="0.75" opacity="0.1">
+      <line x1="120" y1="0" x2="120" y2="720"/>
+      <line x1="480" y1="0" x2="480" y2="720"/>
+      <line x1="840" y1="0" x2="840" y2="720"/>
+      <line x1="0" y1="140" x2="960" y2="140"/>
+      <line x1="0" y1="520" x2="960" y2="520"/>
+    </g>
+    
+    <polygon points="0,540 960,540 960,720 0,720" fill="#C4B099"/>
+    <g fill="#E2D6C5" stroke="#B86B4B" stroke-width="1.5">
+      <path d="M110 540 V230 A95 95 0 0 1 300 230 V540 Z"/>
+      <path d="M385 540 V230 A95 95 0 0 1 575 230 V540 Z"/>
+      <path d="M660 540 V230 A95 95 0 0 1 850 230 V540 Z"/>
+    </g>
+    <g fill="#8C5E3C">
+      <rect x="130" y="300" width="150" height="7"/><rect x="130" y="390" width="150" height="7"/>
+      <rect x="405" y="300" width="150" height="7"/><rect x="405" y="390" width="150" height="7"/>
+      <rect x="680" y="300" width="150" height="7"/><rect x="680" y="390" width="150" height="7"/>
+    </g>
+    <g fill="#B86B4B">
+      <rect x="160" y="268" width="18" height="32" rx="3"/><rect x="190" y="274" width="16" height="26" rx="3"/>
+      <circle cx="235" cy="372" r="18"/>
+      <rect x="445" y="265" width="22" height="35" rx="4"/><circle cx="505" cy="282" r="16"/>
+      <rect x="720" y="268" width="18" height="32" rx="3"/><rect x="750" y="355" width="28" height="35" rx="4"/>
+    </g>
+    <rect x="270" y="450" width="420" height="135" rx="12" fill="#B86B4B"/>
+    <g stroke="#965034" stroke-width="3">
+      <line x1="300" y1="455" x2="300" y2="580"/><line x1="325" y1="455" x2="325" y2="580"/>
+      <line x1="350" y1="455" x2="350" y2="580"/><line x1="375" y1="455" x2="375" y2="580"/>
+      <line x1="400" y1="455" x2="400" y2="580"/><line x1="425" y1="455" x2="425" y2="580"/>
+      <line x1="450" y1="455" x2="450" y2="580"/><line x1="475" y1="455" x2="475" y2="580"/>
+      <line x1="500" y1="455" x2="500" y2="580"/><line x1="525" y1="455" x2="525" y2="580"/>
+      <line x1="550" y1="455" x2="550" y2="580"/><line x1="575" y1="455" x2="575" y2="580"/>
+      <line x1="600" y1="455" x2="600" y2="580"/><line x1="625" y1="455" x2="625" y2="580"/>
+      <line x1="650" y1="455" x2="650" y2="580"/>
+    </g>
+    <rect x="255" y="438" width="450" height="18" rx="4" fill="#F5F2EB"/>
+  
+    <polygon points="140,80 560,80 880,680 260,680" fill="url(#light_atelier)"/>
+    <rect x="40" y="640" width="880" height="48" rx="4" fill="#1F1E1C" opacity="0.86"/>
+    <text x="64" y="669" font-family="monospace" font-size="13" letter-spacing="1.5" fill="#F5F2EB">ESTUDO 03 • COMERCIAL — ATELIER BOTÂNICO RAIZ (165 m²)</text>
+    <text x="896" y="669" text-anchor="end" font-family="monospace" font-size="12" letter-spacing="1" fill="#D8CEBE">CONCEITO DEMONSTRATIVO</text>
+  </svg>

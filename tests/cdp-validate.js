@@ -149,6 +149,10 @@ async function run() {
     { name: 'Demo-Restaurante', url: 'http://127.0.0.1:8128/site-portfolio/demos/restaurante/index.html' },
     { name: 'Demo-Clinica', url: 'http://127.0.0.1:8128/site-portfolio/demos/clinica/index.html' },
     { name: 'Demo-Imobiliaria', url: 'http://127.0.0.1:8128/site-portfolio/demos/imobiliaria/index.html' },
+    { name: 'Demo-PetShop', url: 'http://127.0.0.1:8128/site-portfolio/demos/petshop/index.html' },
+    { name: 'Demo-Academia', url: 'http://127.0.0.1:8128/site-portfolio/demos/academia/index.html' },
+    { name: 'Demo-Nexo', url: 'http://127.0.0.1:8128/site-portfolio/demos/nexo/index.html' },
+    { name: 'Demo-LinhaViva', url: 'http://127.0.0.1:8128/site-portfolio/demos/linhaviva/index.html' },
   ];
 
   const viewports = [

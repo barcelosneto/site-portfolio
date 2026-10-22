@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="Projeto conceitual Pavilhão Vento Sul: refúgio de montanha em estrutura mista de aço oxidado, pedra natural e madeira engenheirada com lareira central suspensa">
+    <defs>
+      <linearGradient id="bg_mantiqueira" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#EDE7DC"/>
+        <stop offset="100%" stop-color="#CBBCA7"/>
+      </linearGradient>
+      <linearGradient id="light_mantiqueira" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFFDF9" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#CBBCA7" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <rect width="960" height="720" fill="url(#bg_mantiqueira)"/>
+    <g stroke="#1F1E1C" stroke-width="0.75" opacity="0.1">
+      <line x1="120" y1="0" x2="120" y2="720"/>
+      <line x1="480" y1="0" x2="480" y2="720"/>
+      <line x1="840" y1="0" x2="840" y2="720"/>
+      <line x1="0" y1="140" x2="960" y2="140"/>
+      <line x1="0" y1="520" x2="960" y2="520"/>
+    </g>
+    
+    <polygon points="0,0 960,0 960,190 0,90" fill="#8C5E3C"/>
+    <polygon points="0,530 960,530 960,720 0,720" fill="#B5A48D"/>
+    <rect x="90" y="150" width="780" height="380" fill="#DFD6C5" stroke="#2B2927" stroke-width="4"/>
+    <path d="M90 430 Q310 350 560 400 T870 360 L870 530 L90 530 Z" fill="#9E9685" opacity="0.6"/>
+    <rect x="462" y="110" width="36" height="240" fill="#242220"/>
+    <ellipse cx="480" cy="375" rx="85" ry="48" fill="#242220"/>
+    <ellipse cx="480" cy="382" rx="48" ry="20" fill="#B86B4B"/>
+    <circle cx="480" cy="384" r="14" fill="#FFE0A3"/>
+    <ellipse cx="480" cy="555" rx="130" ry="24" fill="#8A7E6D"/>
+    <rect x="190" y="465" width="150" height="85" rx="16" fill="#9E583B"/>
+    <rect x="620" y="465" width="150" height="85" rx="16" fill="#FAF7F2" stroke="#BFB29E" stroke-width="2"/>
+  
+    <polygon points="140,80 560,80 880,680 260,680" fill="url(#light_mantiqueira)"/>
+    <rect x="40" y="640" width="880" height="48" rx="4" fill="#1F1E1C" opacity="0.86"/>
+    <text x="64" y="669" font-family="monospace" font-size="13" letter-spacing="1.5" fill="#F5F2EB">ESTUDO 06 • RESIDENCIAL — PAVILHÃO VENTO SUL — MANTIQUEIRA (310 m²)</text>
+    <text x="896" y="669" text-anchor="end" font-family="monospace" font-size="12" letter-spacing="1" fill="#D8CEBE">CONCEITO DEMONSTRATIVO</text>
+  </svg>

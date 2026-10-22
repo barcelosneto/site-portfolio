@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Ilustração da Zona Funcional e Mobilidade com pista amortecida e acessórios">
+  <rect width="640" height="400" rx="16" fill="#13171B" />
+  <rect x="45" y="220" width="550" height="90" rx="12" fill="#1A261D" stroke="#C8FF00" stroke-width="2" />
+  <line x1="80" y1="265" x2="560" y2="265" stroke="#C8FF00" stroke-width="3" stroke-dasharray="14 12" />
+  <!-- TRX suspension straps from ceiling -->
+  <line x1="170" y1="35" x2="145" y2="175" stroke="#C8FF00" stroke-width="4" />
+  <line x1="170" y1="35" x2="195" y2="175" stroke="#C8FF00" stroke-width="4" />
+  <circle cx="145" cy="182" r="8" fill="none" stroke="#F8FAFC" stroke-width="3" />
+  <circle cx="195" cy="182" r="8" fill="none" stroke="#F8FAFC" stroke-width="3" />
+  <!-- Wall balls & mats -->
+  <circle cx="330" cy="175" r="24" fill="#232B34" stroke="#38BDF8" stroke-width="3" />
+  <circle cx="395" cy="175" r="28" fill="#232B34" stroke="#C8FF00" stroke-width="3" />
+  <rect x="465" y="135" width="95" height="75" rx="8" fill="#232B34" stroke="#94A3B8" stroke-width="2" />
+  <text x="45" y="360" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Zona Funcional &amp; Mobilidade • Piso Amortecido</text>
+</svg>

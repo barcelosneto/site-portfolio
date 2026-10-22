@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Comparativo ilustrativo Antes e Depois: Gato de pelo longo com escovação de subpelo">
+  <rect width="640" height="420" rx="24" fill="#FAF6F0"/>
+  <!-- Left Side: ANTES -->
+  <rect x="16" y="16" width="296" height="388" rx="18" fill="#EFE7DA"/>
+  <rect x="32" y="32" width="92" height="30" rx="15" fill="#6E6256"/>
+  <text x="78" y="52" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#FAF6F0">ANTES</text>
+  <g transform="translate(84, 102)">
+    <ellipse cx="80" cy="175" rx="58" ry="52" fill="#D5CBBF"/>
+    <polygon points="34,76 42,26 74,56" fill="#C2B6A7"/>
+    <polygon points="126,76 118,26 86,56" fill="#C2B6A7"/>
+    <ellipse cx="80" cy="95" rx="54" ry="46" fill="#D5CBBF"/>
+    <circle cx="60" cy="92" r="6" fill="#4A6B5D"/>
+    <circle cx="100" cy="92" r="6" fill="#4A6B5D"/>
+    <polygon points="80,104 75,98 85,98" fill="#C8553D"/>
+  </g>
+  <text x="164" y="376" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5C5349">Subpelo acumulado em época de troca</text>
+
+  <!-- Right Side: DEPOIS -->
+  <rect x="328" y="16" width="296" height="388" rx="18" fill="#F2ECE1"/>
+  <rect x="344" y="32" width="98" height="30" rx="15" fill="#4A6B5D"/>
+  <text x="393" y="52" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#FAF6F0">DEPOIS</text>
+  <g transform="translate(396, 102)">
+    <ellipse cx="80" cy="175" rx="52" ry="48" fill="#FAF6F0"/>
+    <polygon points="34,76 42,26 74,56" fill="#EAE0D2"/>
+    <polygon points="126,76 118,26 86,56" fill="#EAE0D2"/>
+    <ellipse cx="80" cy="95" rx="52" ry="44" fill="#FAF6F0"/>
+    <path d="M52 92 Q60 82 68 92" stroke="#364940" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M92 92 Q100 82 108 92" stroke="#364940" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <polygon points="80,104 75,98 85,98" fill="#E06D53"/>
+    <path d="M70 110 Q80 118 90 110" stroke="#364940" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M135 30 L139 40 L149 44 L139 48 L135 58 L131 48 L121 44 L131 40 Z" fill="#E06D53"/>
+  </g>
+  <text x="476" y="376" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#2F473D">Escovação suave sem estresse e pelo sedoso</text>
+  <rect x="200" y="388" width="240" height="24" rx="12" fill="#2A3630"/>
+  <text x="320" y="404" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="600" fill="#FAF6F0">ARTE ILUSTRATIVA DEMONSTRATIVA</text>
+</svg>

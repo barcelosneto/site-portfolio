@@ -1,0 +1,12 @@
+# robots.txt — Nexo Academy (Modo Demonstração)
+# Por padrão bloqueia indexação enquanto contiver dados demonstrativos.
+# Após substituir pelos dados reais da escola em config.js e index.html,
+# troque "Disallow: /" por "Allow: /" e ajuste a URL do Sitemap abaixo.
+
+User-agent: *
+Disallow: /
+
+# Exemplo para produção:
+# User-agent: *
+# Allow: /
+# Sitemap: https://usuario.github.io/cursos-tecnologia/sitemap.xml

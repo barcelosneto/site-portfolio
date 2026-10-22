@@ -1,0 +1,9 @@
+# PULSO FIT | Academia e Treinamento (Demonstração Comercial)
+# Por padrão, bloqueamos a indexação enquanto o site estiver com dados fictícios de demonstração.
+# Após substituir pelos dados reais e domínio definitivo do cliente, troque "Disallow: /" por "Allow: /".
+
+User-agent: *
+Disallow: /
+
+# Substitua usuario.github.io/academia pelo domínio definitivo antes de liberar a indexação:
+Sitemap: https://usuario.github.io/academia/sitemap.xml

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="Ilustração de cuidado higiênico delicado em patinhas e orelhas">
+  <rect width="360" height="240" rx="24" fill="#F6EFE4"/>
+  <circle cx="180" cy="120" r="82" fill="#FAF6F0"/>
+  <!-- Cute paw with sparkles -->
+  <circle cx="180" cy="138" r="28" fill="#E3A46B"/>
+  <ellipse cx="144" cy="102" rx="11" ry="15" transform="rotate(-18 144 102)" fill="#E3A46B"/>
+  <ellipse cx="167" cy="88" rx="11" ry="15" transform="rotate(-6 167 88)" fill="#E3A46B"/>
+  <ellipse cx="193" cy="88" rx="11" ry="15" transform="rotate(6 193 88)" fill="#E3A46B"/>
+  <ellipse cx="216" cy="102" rx="11" ry="15" transform="rotate(18 216 102)" fill="#E3A46B"/>
+  <!-- Pink pads -->
+  <circle cx="180" cy="140" r="16" fill="#E06D53" opacity="0.85"/>
+  <circle cx="145" cy="103" r="6" fill="#E06D53" opacity="0.85"/>
+  <circle cx="167" cy="89" r="6" fill="#E06D53" opacity="0.85"/>
+  <circle cx="193" cy="89" r="6" fill="#E06D53" opacity="0.85"/>
+  <circle cx="215" cy="103" r="6" fill="#E06D53" opacity="0.85"/>
+  <!-- Sparkles & comb icon -->
+  <path d="M88 68 L93 82 L107 87 L93 92 L88 106 L83 92 L69 87 L83 82 Z" fill="#4A6B5D"/>
+  <path d="M276 62 L280 72 L290 76 L280 80 L276 90 L272 80 L262 76 L272 72 Z" fill="#E06D53"/>
+  <rect x="248" y="148" width="56" height="14" rx="7" transform="rotate(-30 248 148)" fill="#4A6B5D"/>
+</svg>

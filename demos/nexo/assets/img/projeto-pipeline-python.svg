@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240" role="img" aria-label="Projeto demonstrativo: Pipeline Automatizado de Vendas e Estoque em Python">
+  <rect width="420" height="240" rx="16" fill="#071624" />
+  <rect x="20" y="20" width="380" height="200" rx="12" fill="#0B1F33" stroke="#06B6D4" stroke-opacity="0.4" />
+  <text x="40" y="52" fill="#22D3EE" font-family="monospace" font-size="12" font-weight="700">PROJETO 01 • PYTHON &amp; PANDAS</text>
+  <text x="40" y="80" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Auditoria &amp; Consolidação de 50 Planilhas</text>
+  <rect x="40" y="100" width="340" height="60" rx="8" fill="#06121E" />
+  <text x="54" y="124" fill="#94A3B8" font-family="monospace" font-size="11">&gt; Lendo arquivos CSV/XLSX... [OK]</text>
+  <text x="54" y="144" fill="#34D399" font-family="monospace" font-size="11">&gt; Base higienizada exportada em 3.2s</text>
+  <text x="40" y="192" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="12">Saída pronta para consumo executivo</text>
+</svg>

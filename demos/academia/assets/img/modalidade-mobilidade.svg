@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Ilustração de Mobilidade e Core com tatames acolchoados, rolos de liberação, bolas suíças e postura controlada">
+  <defs>
+    <linearGradient id="bgM4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#13171B" />
+      <stop offset="100%" stop-color="#1D252C" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#bgM4)" />
+  <!-- Calm Zen/Mobility circle -->
+  <circle cx="320" cy="215" r="125" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.3" />
+  <circle cx="320" cy="215" r="90" fill="#C8FF00" opacity="0.06" />
+
+  <!-- Exercise Mats -->
+  <polygon points="90,335 160,265 495,265 425,335" fill="#232B35" stroke="#C8FF00" stroke-width="2.5" />
+  <polygon points="155,360 225,290 560,290 490,360" fill="#181E25" stroke="#38BDF8" stroke-width="2" opacity="0.9" />
+
+  <!-- Stability Ball -->
+  <circle cx="465" cy="215" r="56" fill="#26313E" stroke="#38BDF8" stroke-width="3" />
+  <path d="M 412 200 Q 465 230, 518 200" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.6" />
+  <path d="M 418 235 Q 465 260, 512 235" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.6" />
+
+  <!-- Foam Roller & Mobility Rings -->
+  <rect x="135" y="230" width="115" height="32" rx="16" fill="#C8FF00" />
+  <circle cx="250" cy="246" r="16" fill="#111315" stroke="#C8FF00" stroke-width="3" />
+
+  <!-- Person silhouette in thoracic stretch / bird-dog alignment -->
+  <path d="M 235 245 L 300 205 L 365 205 L 415 170" fill="none" stroke="#F8FAFC" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="385" cy="165" r="16" fill="#C8FF00" />
+  <path d="M 300 205 L 285 275" fill="none" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" />
+  <path d="M 365 205 L 365 275" fill="none" stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Tag -->
+  <rect x="40" y="34" width="215" height="32" rx="16" fill="#111315" stroke="#C8FF00" stroke-width="1.5" />
+  <text x="147" y="55" text-anchor="middle" fill="#C8FF00" font-family="system-ui, sans-serif" font-size="13" font-weight="700">MOBILIDADE &amp; CORE</text>
+</svg>

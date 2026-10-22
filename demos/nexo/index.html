@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Por padrão configurado como noindex enquanto contiver dados demonstrativos. Altere para "index, follow" em produção. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Nexo Academy | Cursos Práticos de Python, Excel, Power BI e Inteligência Artificial</title>
+  <meta name="description" content="Formação prática em tecnologia focada em projetos reais de portfólio: cursos livres de Python para Dados, Excel Avançado, Power BI e Inteligência Artificial Aplicada." />
+  <meta name="theme-color" content="#081C2E" />
+
+  <!-- Canonical configurável (substitua pelo domínio definitivo antes de publicar) -->
+  <link rel="canonical" href="https://usuario.github.io/cursos-tecnologia/" />
+
+  <!-- Favicon local (compatível com subdiretório do GitHub Pages) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="assets/img/favicon.svg" />
+
+  <!-- Open Graph / Compartilhamento Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Nexo Academy (Demonstração)" />
+  <meta property="og:title" content="Nexo Academy | Cursos Livres de Python, Excel, Power BI e IA" />
+  <meta property="og:description" content="Desenvolva competências técnicas reais com projetos guiados de dados, automação, dashboards executivos e engenharia de prompt." />
+  <meta property="og:url" content="https://usuario.github.io/cursos-tecnologia/" />
+  <meta property="og:image" content="assets/img/og-image.svg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nexo Academy | Cursos Livres de Python, Excel, Power BI e IA" />
+  <meta name="twitter:description" content="Formação intensiva orientada a projetos práticos e competências técnicas verificáveis." />
+  <meta name="twitter:image" content="assets/img/og-image.svg" />
+
+  <!-- Folha de estilos local -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Dados estruturados JSON-LD explicitamente identificados como demonstração -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Nexo Academy (Projeto Demonstrativo)",
+    "description": "Página demonstrativa de escola de cursos livres de tecnologia em Python, Excel, Power BI e Inteligência Artificial.",
+    "url": "https://usuario.github.io/cursos-tecnologia/",
+    "logo": "https://usuario.github.io/cursos-tecnologia/assets/img/favicon.svg",
+    "email": "contato@nexoacademy.exemplo.com.br",
+    "telephone": "+55-11-99999-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Paulista, 1000 - Conj. 1204 (Endereço Demonstrativo)",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01310-100",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip link para acessibilidade por teclado -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- Aviso de Demonstração Visível e Discreto -->
+  <aside class="demo-banner" role="region" aria-label="Aviso de ambiente de demonstração">
+    <div class="container demo-banner__inner" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="demo-badge">Demonstração de portfólio</span>
+        <p id="demo-banner-text" class="demo-banner__text" style="margin:0;font-size:0.82rem;">
+          <strong>Nexo Academy:</strong> Plataforma de cursos tech com comparador dinâmico de trilhas.
+        </p>
+      </div>
+      <div class="demo-banner__actions" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <a href="../../portfolio/index.html" class="btn btn--secondary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">← Voltar ao Portfólio</a>
+        <a href="../../contato/index.html?projeto=educacao" class="btn btn--primary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:#6366F1;color:#fff;font-weight:600;">Solicitar Site Similar</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho Principal -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a href="#topo" class="brand" aria-label="Nexo Academy — Voltar ao início">
+        <img src="assets/img/favicon.svg" alt="" width="38" height="38" class="brand__logo" />
+        <div class="brand__text">
+          <span class="brand__name" id="brand-name">Nexo Academy</span>
+          <span class="brand__tag">Tech &amp; Data School</span>
+        </div>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="btn-menu-mobile"
+        aria-expanded="false"
+        aria-controls="menu-navegacao"
+        aria-label="Abrir menu de navegação"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="menu-navegacao" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="#cursos" class="site-nav__link">Cursos</a></li>
+          <li><a href="#comparador" class="site-nav__link">Comparador <span class="nav-counter" id="nav-compare-count" aria-label="cursos selecionados para comparar">0</span></a></li>
+          <li><a href="#trilhas" class="site-nav__link">Trilhas</a></li>
+          <li><a href="#metodologia" class="site-nav__link">Metodologia</a></li>
+          <li><a href="#turmas" class="site-nav__link">Turmas</a></li>
+          <li><a href="#projetos" class="site-nav__link">Projetos</a></li>
+          <li><a href="#instrutores" class="site-nav__link">Instrutores</a></li>
+          <li><a href="#faq" class="site-nav__link">FAQ</a></li>
+        </ul>
+        <div class="site-nav__cta">
+          <a href="#inscricao" class="btn btn--primary btn--sm">Solicitar programa</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal">
+    <!-- 1. HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            Cursos Livres de Tecnologia • Python • Excel • Power BI • IA
+          </div>
+          <h1 id="hero-titulo" class="hero__title">
+            Desenvolva autonomia técnica com <span class="text-gradient">projetos reais de dados e automação</span>
+          </h1>
+          <p class="hero__subtitle">
+            Formação prática e direta ao ponto para estudantes e profissionais em evolução ou transição de carreira. Construa pipelines em Python, modelos financeiros em Excel, dashboards em Power BI e fluxos estruturados de Inteligência Artificial.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#cursos" class="btn btn--primary btn--lg">Explorar cursos</a>
+            <a href="#trilhas" class="btn btn--outline btn--lg">Ver trilhas de aprendizagem</a>
+          </div>
+
+          <div class="hero__commitment" role="note" aria-label="Compromisso de transparência pedagógica">
+            <strong>Transparência pedagógica:</strong> Foco 100% em competências técnicas aplicáveis e construção de portfólio. Sem promessas irreais de emprego garantido ou salários mágicos.
+          </div>
+
+          <dl class="hero__stats" aria-label="Indicadores da estrutura pedagógica">
+            <div class="hero__stat">
+              <dt>4 Áreas Nucleares</dt>
+              <dd>Python, Excel, Power BI &amp; IA</dd>
+            </div>
+            <div class="hero__stat">
+              <dt>100% Mão na Massa</dt>
+              <dd>1 projeto completo por curso</dd>
+            </div>
+            <div class="hero__stat">
+              <dt>Turmas Ao Vivo</dt>
+              <dd>Online, híbrido ou executivo</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__card-frame">
+            <img
+              src="assets/img/hero-edtech-dashboard.svg"
+              alt="Interface ilustrativa da Nexo Academy exibindo script Python com Pandas, gráfico executivo de Power BI, modelagem em Excel e fluxo de engenharia de prompt em IA"
+              width="680"
+              height="520"
+              class="hero__img"
+            />
+            <div class="hero__floating-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Ambiente de prática guiada • Bases de dados inclusas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. VITRINE DE CURSOS COM BUSCA E FILTROS LOCAIS -->
+    <section class="section" id="cursos" aria-labelledby="titulo-cursos">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Catálogo de Formações</span>
+            <h2 id="titulo-cursos" class="section__title">Vitrine de Cursos Livres</h2>
+            <p class="section__desc">
+              Explore os programas, consulte a ementa detalhada por módulo, selecione até 3 formações para comparar lado a lado ou pré-preencha seu interesse.
+            </p>
+          </div>
+          <div class="demo-inline-note">
+            Valores e cargas horárias exibidos como referência demonstrativa (editáveis em <code>config.js</code>).
+          </div>
+        </div>
+
+        <!-- Barra de Busca e Filtros -->
+        <div class="filters-panel" role="search" aria-label="Filtrar e buscar cursos">
+          <div class="filters-panel__search">
+            <label for="busca-curso" class="form-label">Buscar por tema, ferramenta ou palavra-chave</label>
+            <div class="search-input-wrap">
+              <input
+                type="search"
+                id="busca-curso"
+                class="form-input"
+                placeholder="Ex.: Pandas, DAX, Power Query, Prompt, SQL..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="filters-panel__selects">
+            <div class="filter-group">
+              <label for="filtro-categoria" class="form-label">Categoria</label>
+              <select id="filtro-categoria" class="form-select">
+                <option value="all">Todas as categorias</option>
+                <option value="Python">Python &amp; SQL</option>
+                <option value="Excel">Excel &amp; Modelagem</option>
+                <option value="Power BI">Power BI &amp; DAX</option>
+                <option value="IA">Inteligência Artificial</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filtro-nivel" class="form-label">Nível</label>
+              <select id="filtro-nivel" class="form-select">
+                <option value="all">Todos os níveis</option>
+                <option value="Iniciante">Iniciante</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filtro-modalidade" class="form-label">Modalidade</label>
+              <select id="filtro-modalidade" class="form-select">
+                <option value="all">Todas as modalidades</option>
+                <option value="Ao vivo online">Ao vivo online</option>
+                <option value="Híbrido">Híbrido</option>
+                <option value="Presencial executivo">Presencial executivo</option>
+              </select>
+            </div>
+
+            <div class="filter-group filter-group--action">
+              <button type="button" id="btn-limpar-filtros" class="btn btn--ghost btn--sm">
+                Limpar filtros
+              </button>
+            </div>
+          </div>
+
+          <!-- Atalhos rápidos por categoria -->
+          <div class="category-pills" role="group" aria-label="Filtro rápido por categoria">
+            <button type="button" class="pill-btn is-active" data-quick-category="all">Todos (6)</button>
+            <button type="button" class="pill-btn" data-quick-category="Python">Python (2)</button>
+            <button type="button" class="pill-btn" data-quick-category="Excel">Excel (1)</button>
+            <button type="button" class="pill-btn" data-quick-category="Power BI">Power BI (1)</button>
+            <button type="button" class="pill-btn" data-quick-category="IA">IA Aplicada (2)</button>
+          </div>
+
+          <div class="filters-panel__status">
+            <p id="contador-cursos" class="results-counter" aria-live="polite">
+              Exibindo 6 de 6 cursos disponíveis
+            </p>
+            <a href="#comparador" class="compare-shortcut" id="atalho-comparador">
+              Ir para o comparador de cursos (<span id="atalho-compare-num">0</span>/3 selecionados)
+            </a>
+          </div>
+        </div>
+
+        <!-- Grade de Cursos -->
+        <div class="courses-grid" id="grade-cursos" aria-live="polite">
+          <!-- Renderizado via main.js a partir de config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. COMPARADOR DE ATÉ 3 CURSOS -->
+    <section class="section section--alt" id="comparador" aria-labelledby="titulo-comparador">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Decisão Técnica Consciente</span>
+            <h2 id="titulo-comparador" class="section__title">Comparador Interativo de Cursos (até 3 opções)</h2>
+            <p class="section__desc">
+              Selecione até 3 cursos nos botões abaixo ou diretamente na vitrine para comparar carga horária, nível, pré-requisitos, ferramentas ensinadas e projeto de portfólio.
+            </p>
+          </div>
+          <div class="comparator-controls">
+            <span class="comparator-badge" id="status-comparador" aria-live="polite">2 de 3 cursos selecionados</span>
+            <button type="button" id="btn-limpar-comparador" class="btn btn--ghost btn--sm">
+              Limpar seleção
+            </button>
+          </div>
+        </div>
+
+        <!-- Seletor rápido de cursos para comparação -->
+        <div class="comparator-selector" id="seletor-rapido-comparador" role="group" aria-label="Selecionar cursos para comparação">
+          <!-- Preenchido via JS -->
+        </div>
+
+        <p id="aviso-limite-comparador" class="comparator-alert" role="status" aria-live="polite" hidden></p>
+
+        <!-- Tabela Comparativa -->
+        <div class="table-responsive" id="container-tabela-comparador">
+          <!-- Renderizado via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BENEFÍCIOS E DIFERENCIAIS -->
+    <section class="section" id="beneficios" aria-labelledby="titulo-beneficios">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Por que estudar na Nexo Academy</span>
+            <h2 id="titulo-beneficios" class="section__title">Aprendizado estruturado para o mundo real</h2>
+            <p class="section__desc">
+              Substituímos exercícios abstratos por desafios operacionais idênticos aos encontrados em equipes de dados, finanças, operações e tecnologia.
+            </p>
+          </div>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">01</div>
+            <h3 class="benefit-card__title">Projetos de Portfólio Verificáveis</h3>
+            <p class="benefit-card__text">
+              Cada curso culmina na construção de um projeto completo — scripts documentados no GitHub, modelos dinâmicos de DRE ou painéis executivos em Power BI.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">02</div>
+            <h3 class="benefit-card__title">Bases com Imperfeições Reais</h3>
+            <p class="benefit-card__text">
+              Nada de tabelas perfeitas de laboratório: você aprende a tratar valores ausentes, padronizar colunas divergentes e auditar inconsistências de dados.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">03</div>
+            <h3 class="benefit-card__title">Integração entre Ferramentas</h3>
+            <p class="benefit-card__text">
+              Entenda como conectar Excel, Power Query, SQL, Python e LLMs em fluxos coesos, escolhendo a ferramenta certa para cada volume e problema.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">04</div>
+            <h3 class="benefit-card__title">Turmas Reduzidas e Ao Vivo</h3>
+            <p class="benefit-card__text">
+              Acompanhamento próximo para tirar dúvidas de código, revisar medidas DAX e destravar raciocínios lógicos durante as aulas práticas.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">05</div>
+            <h3 class="benefit-card__title">IA com Método e Governança</h3>
+            <p class="benefit-card__text">
+              Aprenda Engenharia de Prompt técnica, validação de saídas estruturadas e boas práticas de privacidade para usar IA sem expor dados sensíveis.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-card__icon" aria-hidden="true">06</div>
+            <h3 class="benefit-card__title">Ética e Compromisso Real</h3>
+            <p class="benefit-card__text">
+              Sem atalhos ilusórios: oferecemos carga horária clara, avaliação por entrega técnica e certificado de curso livre fiel às competências desenvolvidas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TRILHAS DE APRENDIZAGEM COM SIMULADOR ILUSTRATIVO DE PROGRESSO -->
+    <section class="section section--alt" id="trilhas" aria-labelledby="titulo-trilhas">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Jornadas Recomendadas</span>
+            <h2 id="titulo-trilhas" class="section__title">Trilhas de Aprendizagem Passo a Passo</h2>
+            <p class="section__desc">
+              Combine cursos complementares em uma sequência lógica de estudos. Marque as etapas que você já domina ou deseja concluir para simular visualmente sua jornada.
+            </p>
+          </div>
+          <div class="demo-inline-note" role="note">
+            <strong>Indicador apenas ilustrativo:</strong> O progresso marcado abaixo funciona apenas como simulação visual nesta tela e não é salvo em banco de dados nem vinculado a conta de aluno.
+          </div>
+        </div>
+
+        <div class="tracks-grid" id="container-trilhas">
+          <!-- Renderizado via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. METODOLOGIA PRÁTICA -->
+    <section class="section" id="metodologia" aria-labelledby="titulo-metodologia">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Como Você Aprende</span>
+            <h2 id="titulo-metodologia" class="section__title">Metodologia de Ciclo Prático em 4 Etapas</h2>
+            <p class="section__desc">
+              Cada módulo é desenhado para transformar conceitos técnicos em entregas aplicáveis já na semana seguinte no seu trabalho ou portfólio.
+            </p>
+          </div>
+        </div>
+
+        <div class="methodology-steps">
+          <div class="method-step">
+            <span class="method-step__num">Etapa 1</span>
+            <h3 class="method-step__title">Diagnóstico do Problema de Negócio</h3>
+            <p class="method-step__desc">
+              Toda aula começa com uma pergunta real: como reduzir o tempo de fechamento de relatórios de 6 horas para 2 minutos ou identificar queda de margem por canal.
+            </p>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step__num">Etapa 2</span>
+            <h3 class="method-step__title">Construção Guiada Linha a Linha</h3>
+            <p class="method-step__desc">
+              Você escreve scripts Python, consultas Power Query, medidas DAX e templates de prompt junto com o instrutor, compreendendo o porquê de cada decisão.
+            </p>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step__num">Etapa 3</span>
+            <h3 class="method-step__title">Validação, Auditoria e Boas Práticas</h3>
+            <p class="method-step__desc">
+              Revisamos performance, legibilidade de código, prevenção de erros em planilhas e validação de alucinações em modelos de Inteligência Artificial.
+            </p>
+          </div>
+
+          <div class="method-step">
+            <span class="method-step__num">Etapa 4</span>
+            <h3 class="method-step__title">Publicação no Portfólio Técnico</h3>
+            <p class="method-step__desc">
+              Você organiza o projeto final com documentação executiva clara para apresentar em processos seletivos, reuniões de liderança ou projetos próprios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CRONOGRAMA DE TURMAS FICTÍCIAS E EDITÁVEIS -->
+    <section class="section section--alt" id="turmas" aria-labelledby="titulo-turmas">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Agenda de Próximas Turmas</span>
+            <h2 id="titulo-turmas" class="section__title">Cronograma de Turmas (Exemplo Demonstrativo)</h2>
+            <p class="section__desc">
+              Escolha a turma e o turno mais adequados à sua rotina. Ao clicar em <strong>Tenho interesse nesta turma</strong>, o curso e o código da turma serão preenchidos automaticamente no formulário de contato.
+            </p>
+          </div>
+          <div class="demo-inline-note">
+            Datas, horários e códigos de turma fictícios para demonstração — centralizados em <code>assets/js/config.js</code>.
+          </div>
+        </div>
+
+        <div class="cohorts-grid" id="lista-turmas">
+          <!-- Renderizado via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PROJETOS PRÁTICOS DEMONSTRATIVOS -->
+    <section class="section" id="projetos" aria-labelledby="titulo-projetos">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">O Que Você Vai Construir</span>
+            <h2 id="titulo-projetos" class="section__title">Projetos Práticos Demonstrativos</h2>
+            <p class="section__desc">
+              Conheça exemplos de soluções completas que os alunos desenvolvem passo a passo durante as formações da Nexo Academy.
+            </p>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="grade-projetos">
+          <!-- Renderizado via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INSTRUTORES FICTÍCIOS IDENTIFICADOS COMO EXEMPLO -->
+    <section class="section section--alt" id="instrutores" aria-labelledby="titulo-instrutores">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Corpo Docente (Exemplo)</span>
+            <h2 id="titulo-instrutores" class="section__title">Instrutores e Mentores Técnicos</h2>
+            <p class="section__desc">
+              Profissionais atuantes nas áreas de engenharia de dados, inteligência de negócios, finanças corporativas e inteligência artificial aplicada.
+            </p>
+          </div>
+          <div class="demo-inline-note">
+            <strong>Aviso transparente:</strong> Perfis e biografias abaixo são fictícios e servem exclusivamente como exemplo visual até personalização pelo cliente.
+          </div>
+        </div>
+
+        <div class="instructors-grid" id="grade-instrutores">
+          <!-- Renderizado via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. PERGUNTAS FREQUENTES (FAQ) -->
+    <section class="section" id="faq" aria-labelledby="titulo-faq">
+      <div class="container">
+        <div class="section__header">
+          <div>
+            <span class="section__tag">Tire Suas Dúvidas</span>
+            <h2 id="titulo-faq" class="section__title">Perguntas Frequentes</h2>
+            <p class="section__desc">
+              Informações diretas sobre pré-requisitos, formato das aulas, projetos práticos, certificados de cursos livres e processo de atendimento.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-list" id="lista-faq">
+          <!-- Renderizado via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. FORMULÁRIO DE INTERESSE (SEM BACKEND / WHATSAPP OU MAILTO) -->
+    <section class="section section--cta" id="inscricao" aria-labelledby="titulo-inscricao">
+      <div class="container">
+        <div class="enrollment-layout">
+          <div class="enrollment-info">
+            <span class="section__tag">Atendimento Consultivo &amp; Ementas</span>
+            <h2 id="titulo-inscricao" class="section__title">Manifeste interesse em um curso ou turma</h2>
+            <p class="section__desc">
+              Preencha seus dados e escolha se prefere iniciar a conversa pelo <strong>WhatsApp</strong> ou por <strong>E-mail</strong>. Sua seleção de curso ou turma preenche automaticamente a mensagem.
+            </p>
+
+            <div class="transparency-box" role="note" aria-label="Explicação sobre o funcionamento do formulário sem servidor">
+              <h3 class="transparency-box__title">Como este formulário funciona?</h3>
+              <ul class="transparency-box__list">
+                <li><strong>Sem cobrança ou checkout:</strong> Você não insere dados bancários nem assume compromisso financeiro nesta etapa.</li>
+                <li><strong>Privacidade total (100% local):</strong> Este site estático não armazena seus dados em bancos de dados ocultos. A mensagem é formatada no seu navegador e aberta diretamente no seu WhatsApp ou aplicativo de E-mail.</li>
+                <li><strong>Dados de contato demonstrativos:</strong> Configure o número oficial de WhatsApp e o e-mail da escola em <code>assets/js/config.js</code>.</li>
+              </ul>
+            </div>
+
+            <div class="contact-cards">
+              <div class="contact-mini-card">
+                <span class="contact-mini-card__label">WhatsApp de Atendimento (Demo)</span>
+                <strong id="contato-whats-display">+55 (11) 99999-0000 (Demo)</strong>
+              </div>
+              <div class="contact-mini-card">
+                <span class="contact-mini-card__label">E-mail Institucional (Demo)</span>
+                <strong id="contato-email-display">contato@nexoacademy.exemplo.com.br</strong>
+              </div>
+              <div class="contact-mini-card">
+                <span class="contact-mini-card__label">Horário e Localização (Demo)</span>
+                <strong id="contato-endereco-display">Av. Paulista, 1000 — Conj. 1204 (Endereço Demonstrativo), São Paulo/SP</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="enrollment-form-card">
+            <div id="banner-preenchimento" class="prefill-banner" role="status" aria-live="polite" hidden>
+              <span id="texto-preenchimento">Curso selecionado automaticamente.</span>
+            </div>
+
+            <form id="form-interesse" class="interest-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="campo-nome" class="form-label">Nome completo <span class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="campo-nome"
+                    name="nome"
+                    class="form-input"
+                    placeholder="Ex.: Ana Beatriz Martins"
+                    required
+                    aria-describedby="erro-nome"
+                  />
+                  <span id="erro-nome" class="field-error" role="alert" hidden></span>
+                </div>
+              </div>
+
+              <div class="form-row form-row--2col">
+                <div class="form-field">
+                  <label for="campo-email" class="form-label">Seu melhor e-mail <span class="required">*</span></label>
+                  <input
+                    type="email"
+                    id="campo-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="voce@exemplo.com.br"
+                    required
+                    aria-describedby="erro-email"
+                  />
+                  <span id="erro-email" class="field-error" role="alert" hidden></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="campo-telefone" class="form-label">WhatsApp / Telefone <span class="required">*</span></label>
+                  <input
+                    type="tel"
+                    id="campo-telefone"
+                    name="telefone"
+                    class="form-input"
+                    placeholder="(11) 98888-7777"
+                    required
+                    aria-describedby="erro-telefone"
+                  />
+                  <span id="erro-telefone" class="field-error" role="alert" hidden></span>
+                </div>
+              </div>
+
+              <div class="form-row form-row--2col">
+                <div class="form-field">
+                  <label for="campo-curso" class="form-label">Curso ou Trilha de interesse <span class="required">*</span></label>
+                  <select id="campo-curso" name="curso" class="form-select" required aria-describedby="erro-curso">
+                    <option value="">Selecione uma formação...</option>
+                    <!-- Opções populadas via main.js -->
+                  </select>
+                  <span id="erro-curso" class="field-error" role="alert" hidden></span>
+                </div>
+
+                <div class="form-field">
+                  <label for="campo-turma" class="form-label">Turma ou modalidade preferida</label>
+                  <select id="campo-turma" name="turma" class="form-select">
+                    <option value="Qualquer turma disponível / A definir">Qualquer turma disponível / A definir</option>
+                    <!-- Turmas populadas via main.js -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row form-row--2col">
+                <div class="form-field">
+                  <label for="campo-nivel" class="form-label">Seu momento atual no tema</label>
+                  <select id="campo-nivel" name="nivel" class="form-select">
+                    <option value="Iniciante (começando do zero)">Iniciante (começando do zero)</option>
+                    <option value="Básico (já uso no dia a dia com limitações)">Básico (já uso no dia a dia com limitações)</option>
+                    <option value="Intermediário (busco automação e projetos avançados)">Intermediário (busco automação e projetos avançados)</option>
+                    <option value="Gestor / Líder avaliando capacitação para equipe">Gestor / Líder avaliando capacitação para equipe</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label for="campo-objetivo" class="form-label">Objetivo principal</label>
+                  <select id="campo-objetivo" name="objetivo" class="form-select">
+                    <option value="Transição de carreira para Dados / Tecnologia">Transição de carreira para Dados / Tecnologia</option>
+                    <option value="Automatizar tarefas e ganhar produtividade no cargo atual">Automatizar tarefas e ganhar produtividade no cargo atual</option>
+                    <option value="Construir portfólio prático de projetos">Construir portfólio prático de projetos</option>
+                    <option value="Treinamento corporativo (In-Company)">Treinamento corporativo (In-Company)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="campo-mensagem" class="form-label">Dúvida específica ou contexto profissional (opcional)</label>
+                  <textarea
+                    id="campo-mensagem"
+                    name="mensagem"
+                    rows="3"
+                    class="form-textarea"
+                    placeholder="Conte brevemente quais ferramentas você já utiliza ou qual projeto gostaria de desenvolver..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label class="checkbox-label" for="campo-consentimento">
+                  <input type="checkbox" id="campo-consentimento" name="consentimento" required aria-describedby="erro-consentimento" />
+                  <span>
+                    Compreendo que este é um envio direto via WhatsApp ou E-mail (sem armazenamento em banco de dados neste site demonstrativo). <span class="required">*</span>
+                  </span>
+                </label>
+                <span id="erro-consentimento" class="field-error" role="alert" hidden></span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" data-canal="whatsapp" class="btn btn--whatsapp btn--lg" id="btn-enviar-whatsapp">
+                  Enviar interesse por WhatsApp
+                </button>
+                <button type="submit" data-canal="email" class="btn btn--outline btn--lg" id="btn-enviar-email">
+                  Enviar por E-mail (mailto:)
+                </button>
+              </div>
+
+              <div id="feedback-formulario" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 12. RODAPÉ COMPLETO -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="#topo" class="brand">
+            <img src="assets/img/favicon.svg" alt="" width="34" height="34" class="brand__logo" />
+            <div class="brand__text">
+              <span class="brand__name">Nexo Academy</span>
+              <span class="brand__tag">Cursos Livres de Tecnologia</span>
+            </div>
+          </a>
+          <p class="site-footer__desc">
+            Formação prática em Python, Excel Avançado, Power BI e Inteligência Artificial Aplicada, com foco em projetos reais e competências técnicas verificáveis.
+          </p>
+          <p class="site-footer__legal-badge" id="footer-legal-note">
+            Cursos livres de capacitação e atualização profissional (Lei nº 9.394/96). Não conferem grau acadêmico superior nem exigem reconhecimento pelo MEC.
+          </p>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Formações</h3>
+          <ul class="site-footer__links">
+            <li><a href="#cursos" data-footer-filter="Python">Python &amp; SQL Analítico</a></li>
+            <li><a href="#cursos" data-footer-filter="Excel">Excel Avançado &amp; Power Query</a></li>
+            <li><a href="#cursos" data-footer-filter="Power BI">Power BI &amp; Storytelling DAX</a></li>
+            <li><a href="#cursos" data-footer-filter="IA">IA Aplicada &amp; Prompt Engineering</a></li>
+            <li><a href="#comparador">Comparador de Cursos</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Navegação</h3>
+          <ul class="site-footer__links">
+            <li><a href="#beneficios">Diferenciais Pedagógicos</a></li>
+            <li><a href="#trilhas">Trilhas de Aprendizagem</a></li>
+            <li><a href="#metodologia">Metodologia de Projetos</a></li>
+            <li><a href="#turmas">Cronograma de Turmas</a></li>
+            <li><a href="#projetos">Projetos Demonstrativos</a></li>
+            <li><a href="#instrutores">Corpo Docente (Exemplo)</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Atendimento (Demo)</h3>
+          <ul class="site-footer__contact">
+            <li id="footer-whats">+55 (11) 99999-0000 (Demo)</li>
+            <li id="footer-email">contato@nexoacademy.exemplo.com.br</li>
+            <li id="footer-address">Av. Paulista, 1000 — Conj. 1204 (Endereço Demonstrativo), São Paulo/SP</li>
+            <li id="footer-hours">Seg. a Sex. 09h às 20h | Sáb. 09h às 13h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span id="ano-atual">2026</span> Nexo Academy (Projeto Demonstrativo Independente). Todos os assets gráficos em SVG são locais e autorais.</p>
+        <p class="site-footer__disclaimer">
+          Aviso de transparência: Esta landing page é um modelo estático demonstrativo. Preços, datas de turmas, contatos e instrutores são fictícios até personalização pelo contratante.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL ACESSÍVEL DE DETALHES DO CURSO -->
+  <div
+    class="modal-backdrop"
+    id="modal-curso"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-curso-titulo"
+    aria-describedby="modal-curso-resumo"
+    hidden
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge" id="modal-curso-categoria">Categoria</span>
+          <h2 class="modal-title" id="modal-curso-titulo">Título do Curso</h2>
+        </div>
+        <button
+          type="button"
+          class="modal-close"
+          id="btn-fechar-modal"
+          aria-label="Fechar detalhes do curso"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-summary" id="modal-curso-resumo"></p>
+
+        <div class="modal-meta-grid">
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Carga Horária</span>
+            <strong id="modal-curso-carga"></strong>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Nível</span>
+            <strong id="modal-curso-nivel"></strong>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Modalidade</span>
+            <strong id="modal-curso-modalidade"></strong>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Investimento (Exemplo Demo)</span>
+            <strong id="modal-curso-preco"></strong>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-section-title">Projeto Prático de Portfólio</h3>
+          <p class="modal-project-box" id="modal-curso-projeto"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-section-title">Pré-requisitos Recomendados</h3>
+          <p id="modal-curso-prereq"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-section-title">Ferramentas e Tecnologias Utilizadas</h3>
+          <div class="modal-tags" id="modal-curso-ferramentas"></div>
+        </div>
+
+        <div class="modal-section">
+          <h3 class="modal-section-title">Ementa Programática por Módulos</h3>
+          <div class="modal-syllabus" id="modal-curso-ementa"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn--ghost" id="btn-modal-comparar">
+          Adicionar ao comparador
+        </button>
+        <button type="button" class="btn btn--primary" id="btn-modal-interesse">
+          Selecionar este curso e solicitar contato
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts locais com defer (config.js antes de main.js) -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>PULSO FIT | Academia Boutique, Musculação Orientada e Aulas Coletivas</title>
+  <meta name="description" content="Academia boutique com Musculação Orientada, Treinamento Funcional, Bike Indoor e Mobilidade &amp; Core. Ambiente sem superlotação e acolhedor para adultos de todas as idades. Solicite sua aula experimental." />
+  <meta name="theme-color" content="#111315" />
+
+  <!-- Canonical & Open Graph (Configuráveis para o domínio final) -->
+  <link rel="canonical" href="https://usuario.github.io/academia/" id="canonical-link" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="PULSO FIT | Academia Boutique e Treinamento Orientado" />
+  <meta property="og:description" content="Treine com acompanhamento próximo e sem superlotação. Musculação Orientada, Funcional, Bike Indoor e Mobilidade para adultos iniciantes e intermediários." />
+  <meta property="og:url" content="https://usuario.github.io/academia/" />
+  <meta property="og:image" content="assets/img/og-pulso-fit.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PULSO FIT | Academia Boutique e Treinamento Orientado" />
+  <meta name="twitter:description" content="Ambiente acolhedor, turmas reduzidas e rotina consistente. Solicite sua aula experimental." />
+  <meta name="twitter:image" content="assets/img/og-pulso-fit.svg" />
+
+  <!-- Favicons locais -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- JSON-LD Estruturado (Explicitamente marcado como Demonstração Comercial) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "PULSO FIT | Academia e Treinamento (Demonstração Comercial)",
+    "description": "Página demonstrativa de academia boutique com foco em musculação orientada, funcional, bike indoor e mobilidade para adultos iniciantes e intermediários.",
+    "url": "https://usuario.github.io/academia/",
+    "image": "https://usuario.github.io/academia/assets/img/og-pulso-fit.svg",
+    "telephone": "+55-11-99999-0000",
+    "email": "contato.demo@pulsofit.exemplo.br",
+    "priceRange": "R$ 229 - R$ 499 (Valores Fictícios de Exemplo)",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Exemplo Paulista, 1450 (Endereço Fictício de Demonstração)",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01310-000",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip Link de Acessibilidade WCAG 2.2 AA -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- 1. Aviso de Demonstração Visível, mas Discreto -->
+  <aside class="demo-banner" aria-label="Aviso de ambiente de demonstração">
+    <div class="container demo-banner__inner" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="demo-badge">Demonstração de portfólio</span>
+        <p class="demo-banner__text" data-config="demo-warning" style="margin:0;font-size:0.82rem;">
+          <strong>Pulso Fit:</strong> Academia boutique com planos e grade interativa semanal.
+        </p>
+      </div>
+      <div class="demo-banner__actions" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <a href="../../portfolio/index.html" class="btn btn--secondary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">← Voltar ao Portfólio</a>
+        <a href="../../contato/index.html?projeto=academia" class="btn btn--primary btn--sm" style="padding:4px 10px;font-size:0.75rem;text-decoration:none;border-radius:6px;background:#C8FF00;color:#111;font-weight:700;">Solicitar Site Similar</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Cabeçalho e Navegação Responsiva -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a href="#topo" class="brand-logo" aria-label="PULSO FIT — Voltar ao início">
+        <span class="brand-logo__icon" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32">
+            <rect width="36" height="36" rx="8" fill="#1A1D21" stroke="#C8FF00" stroke-width="2" />
+            <path d="M5 19 H11 L14 10 L19 26 L23 14 L26 19 H31" fill="none" stroke="#C8FF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-logo__text">
+          <strong class="brand-logo__name" data-config="brand-name">PULSO FIT</strong>
+          <small class="brand-logo__tag">BOUTIQUE STUDIO</small>
+        </span>
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Abrir menu de navegação"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="nav-menu" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="#modalidades" class="site-nav__link">Modalidades</a></li>
+          <li><a href="#diferenciais" class="site-nav__link">Diferenciais</a></li>
+          <li><a href="#horarios" class="site-nav__link">Grade Semanal</a></li>
+          <li><a href="#planos" class="site-nav__link">Planos</a></li>
+          <li><a href="#equipe" class="site-nav__link">Equipe</a></li>
+          <li><a href="#instalacoes" class="site-nav__link">Instalações</a></li>
+          <li><a href="#faq" class="site-nav__link">FAQ</a></li>
+          <li><a href="#contato" class="site-nav__link">Contato</a></li>
+        </ul>
+        <a href="#aula-experimental" class="btn btn--primary btn--sm site-nav__cta">
+          Solicitar aula experimental
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- 3. Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="eyebrow-pill">
+            <span class="eyebrow-pill__dot" aria-hidden="true"></span>
+            <span>ACADEMIA BOUTIQUE • AMBIENTE SEM SUPERLOTAÇÃO</span>
+          </div>
+
+          <h1 id="hero-title" class="hero__title">
+            Encontre o seu <span class="text-lime">ritmo de treino</span> em um espaço acolhedor e orientado.
+          </h1>
+
+          <p class="hero__subtitle">
+            Projetada para adultos iniciantes, intermediários e público 50+ que buscam construir uma rotina consistente de <strong>Musculação Orientada</strong>, <strong>Funcional</strong>, <strong>Bike Indoor</strong> e <strong>Mobilidade</strong> — sem filas nos aparelhos e com atenção próxima da equipe.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#aula-experimental" class="btn btn--primary btn--lg">
+              Solicitar aula experimental
+            </a>
+            <a href="#horarios" class="btn btn--outline btn--lg">
+              Explorar grade de horários
+            </a>
+          </div>
+
+          <p class="hero__disclaimer">
+            <svg class="icon-inline" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+              <circle cx="10" cy="10" r="8" fill="none" stroke="#C8FF00" stroke-width="2" />
+              <path d="M10 6v5M10 14h.01" stroke="#C8FF00" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>A aula experimental é agendada mediante confirmação de disponibilidade de horário pela nossa recepção.</span>
+          </p>
+
+          <!-- Números institucionais claramente marcados como demonstrativos -->
+          <div class="hero__stats-wrapper" aria-label="Indicadores operacionais ilustrativos de demonstração">
+            <div class="section-demo-tag">INDICADORES DE FORMATO BOUTIQUE (EXEMPLO DEMONSTRATIVO)</div>
+            <dl class="hero__stats" id="hero-stats">
+              <div class="stat-card">
+                <dt class="stat-card__label">Alunos por horário nas turmas coletivas</dt>
+                <dd class="stat-card__value">Máx. 14</dd>
+                <span class="stat-card__note">Exemplo operacional demonstrativo</span>
+              </div>
+              <div class="stat-card">
+                <dt class="stat-card__label">Sessões objetivas planejadas para sua rotina</dt>
+                <dd class="stat-card__value">45 a 55 min</dd>
+                <span class="stat-card__note">Duração média de referência</span>
+              </div>
+              <div class="stat-card">
+                <dt class="stat-card__label">Diversidade etária em ambiente acolhedor</dt>
+                <dd class="stat-card__value">20 a 70+ anos</dd>
+                <span class="stat-card__note">Perfil ilustrativo de público</span>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__image-frame">
+            <img
+              src="assets/img/hero-treino-diversidade.svg"
+              alt="Ilustração do estúdio Pulso Fit com adultos de diferentes faixas etárias treinando acompanhados por instrutora"
+              width="900"
+              height="660"
+              class="hero__image"
+            />
+            <div class="hero__floating-card">
+              <span class="hero__floating-badge">Atenção Real</span>
+              <p class="hero__floating-text">
+                <strong>Zero clima intimidador:</strong> você sabe exatamente o que fazer do aquecimento ao alongamento final.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Modalidades -->
+    <section class="section" id="modalidades" aria-labelledby="modalidades-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">NOSSAS PRÁTICAS • CONTEÚDO DEMONSTRATIVO</span>
+          <h2 id="modalidades-title" class="section-title">
+            Quatro modalidades que se complementam na sua semana
+          </h2>
+          <p class="section-description">
+            Da construção de força à liberdade de movimento e condicionamento cardiovascular. Escolha uma prática principal ou combine todas em uma rotina equilibrada.
+          </p>
+        </div>
+
+        <div class="modalities-grid" id="modalities-grid">
+          <!-- Cards renderizados no HTML para SEO/acessibilidade imediata e enriquecidos via JS -->
+          <article class="modality-card" data-modality-card="musculacao">
+            <div class="modality-card__media">
+              <img
+                src="assets/img/modalidade-musculacao.svg"
+                alt="Ilustração de sala de musculação orientada com rack de agachamento, banco ajustável e halteres"
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+              <span class="modality-card__badge">Força &amp; Base</span>
+            </div>
+            <div class="modality-card__body">
+              <h3 class="modality-card__title">Musculação Orientada</h3>
+              <p class="modality-card__desc">
+                Treinamento de força em equipamentos ergonômicos e pesos livres com número controlado de alunos por faixa horária e ajuste técnico constante dos instrutores de sala.
+              </p>
+              <dl class="modality-card__meta">
+                <div>
+                  <dt>Intensidade:</dt>
+                  <dd>Adaptável (Leve a Intensa)</dd>
+                </div>
+                <div>
+                  <dt>Duração média:</dt>
+                  <dd>50 min</dd>
+                </div>
+                <div>
+                  <dt>Perfil indicado:</dt>
+                  <dd>Iniciantes, intermediários, adultos 50+ e retorno aos treinos</dd>
+                </div>
+              </dl>
+              <ul class="modality-card__list">
+                <li>Organização de rotina sem fila em aparelhos</li>
+                <li>Atenção à postura, cadência e execução segura</li>
+                <li>Progressão respeitando o histórico individual</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--secondary btn--full js-select-modality"
+                data-modality="musculacao"
+              >
+                Quero experimentar Musculação
+              </button>
+            </div>
+          </article>
+
+          <article class="modality-card" data-modality-card="funcional">
+            <div class="modality-card__media">
+              <img
+                src="assets/img/modalidade-funcional.svg"
+                alt="Ilustração de zona de treinamento funcional com pista sintética, kettlebells e corda naval"
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+              <span class="modality-card__badge">Dinâmico &amp; Coletivo</span>
+            </div>
+            <div class="modality-card__body">
+              <h3 class="modality-card__title">Treinamento Funcional</h3>
+              <p class="modality-card__desc">
+                Sessões dinâmicas em pista amortecida utilizando kettlebells, corda naval, caixas e peso corporal para desenvolver coordenação, estabilidade e fôlego para o dia a dia.
+              </p>
+              <dl class="modality-card__meta">
+                <div>
+                  <dt>Intensidade:</dt>
+                  <dd>Moderada a Alta (Escalável)</dd>
+                </div>
+                <div>
+                  <dt>Duração média:</dt>
+                  <dd>45 min</dd>
+                </div>
+                <div>
+                  <dt>Perfil indicado:</dt>
+                  <dd>Adultos que buscam dinamismo, agilidade e resistência geral</dd>
+                </div>
+              </dl>
+              <ul class="modality-card__list">
+                <li>Turmas reduzidas de até 12 participantes</li>
+                <li>Opções de adaptação de impacto em cada estação</li>
+                <li>Ambiente colaborativo sem clima de competição hostil</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--secondary btn--full js-select-modality"
+                data-modality="funcional"
+              >
+                Quero experimentar Funcional
+              </button>
+            </div>
+          </article>
+
+          <article class="modality-card" data-modality-card="bike">
+            <div class="modality-card__media">
+              <img
+                src="assets/img/modalidade-bike.svg"
+                alt="Ilustração de estúdio de bike indoor com bicicleta estacionária e indicador de cadência"
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+              <span class="modality-card__badge">Cardio &amp; Ritmo</span>
+            </div>
+            <div class="modality-card__body">
+              <h3 class="modality-card__title">Bike Indoor</h3>
+              <p class="modality-card__desc">
+                Pedal estacionário guiado por música e cadência em sala climatizada, onde cada aluno controla sua própria resistência mecânica de acordo com a disposição do dia.
+              </p>
+              <dl class="modality-card__meta">
+                <div>
+                  <dt>Intensidade:</dt>
+                  <dd>Moderada a Intensa (Carga individual)</dd>
+                </div>
+                <div>
+                  <dt>Duração média:</dt>
+                  <dd>45 min</dd>
+                </div>
+                <div>
+                  <dt>Perfil indicado:</dt>
+                  <dd>Todos os níveis; excelente opção cardiovascular de baixo impacto articular</dd>
+                </div>
+              </dl>
+              <ul class="modality-card__list">
+                <li>Regulagem prévia de selim e guidão com auxílio do instrutor</li>
+                <li>Trilha sonora energética e iluminação confortável</li>
+                <li>Controle individual de carga do início ao fim</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--secondary btn--full js-select-modality"
+                data-modality="bike"
+              >
+                Quero experimentar Bike Indoor
+              </button>
+            </div>
+          </article>
+
+          <article class="modality-card" data-modality-card="mobilidade">
+            <div class="modality-card__media">
+              <img
+                src="assets/img/modalidade-mobilidade.svg"
+                alt="Ilustração de aula de mobilidade e core com tatames, rolo de liberação e bola de estabilidade"
+                width="640"
+                height="420"
+                loading="lazy"
+              />
+              <span class="modality-card__badge">Postura &amp; Fluidez</span>
+            </div>
+            <div class="modality-card__body">
+              <h3 class="modality-card__title">Mobilidade &amp; Core</h3>
+              <p class="modality-card__desc">
+                Prática focada em liberdade articular (quadril, coluna torácica e ombros), fortalecimento profundo do centro do corpo (core) e consciência respiratória.
+              </p>
+              <dl class="modality-card__meta">
+                <div>
+                  <dt>Intensidade:</dt>
+                  <dd>Leve a Moderada</dd>
+                </div>
+                <div>
+                  <dt>Duração média:</dt>
+                  <dd>45 min</dd>
+                </div>
+                <div>
+                  <dt>Perfil indicado:</dt>
+                  <dd>Quem trabalha muitas horas sentado, iniciantes e complemento de força</dd>
+                </div>
+              </dl>
+              <ul class="modality-card__list">
+                <li>Ideal para reduzir rigidez de rotina de escritório</li>
+                <li>Excelente preparação ou recuperação entre treinos de força</li>
+                <li>Ritmo calmo, guiado passo a passo</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--secondary btn--full js-select-modality"
+                data-modality="mobilidade"
+              >
+                Quero experimentar Mobilidade
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Diferenciais da Academia Boutique -->
+    <section class="section section--alt" id="diferenciais" aria-labelledby="diferenciais-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">POR QUE UM ESTÚDIO BOUTIQUE? • PROPOSTA DE VALOR</span>
+          <h2 id="diferenciais-title" class="section-title">
+            Um ambiente pensado para você gostar de manter a constância
+          </h2>
+          <p class="section-description">
+            Sabemos que grandes academias convencionais podem parecer barulhentas, lotadas e impessoais. Na Pulso Fit, desenhamos cada detalhe para acolher sua rotina.
+          </p>
+        </div>
+
+        <div class="differentials-grid">
+          <article class="diff-card">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C8FF00" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="diff-card__title">Ambiente sem superlotação</h3>
+            <p class="diff-card__text">
+              Trabalhamos com limite de capacidade por faixa horária. Você realiza seu treino completo em 45 a 55 minutos sem precisar disputar aparelhos ou halteres.
+            </p>
+          </article>
+
+          <article class="diff-card">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C8FF00" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+            </div>
+            <h3 class="diff-card__title">Acompanhamento próximo de verdade</h3>
+            <p class="diff-card__text">
+              Nunca treinou ou está retomando após anos parado? Nossos instrutores estão presentes na sala para ajustar equipamentos, orientar postura e adaptar movimentos.
+            </p>
+          </article>
+
+          <article class="diff-card">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C8FF00" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <h3 class="diff-card__title">Diversidade etária e acolhimento</h3>
+            <p class="diff-card__text">
+              De jovens profissionais de 25 anos a adultos de 60 e 70+ anos: cultivamos uma comunidade respeitosa onde o foco é qualidade de vida e autonomia diária.
+            </p>
+          </article>
+
+          <article class="diff-card">
+            <div class="diff-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#C8FF00" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18M9 21V9" />
+              </svg>
+            </div>
+            <h3 class="diff-card__title">Vestiários completos para sua rotina</h3>
+            <p class="diff-card__text">
+              Duchas individuais aquecidas, armários seguros, bancadas iluminadas e café passado no lounge para você seguir direto para o trabalho com tranquilidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Grade Semanal de Aulas de Exemplo (Com Filtro Interativo por Modalidade e Dia) -->
+    <section class="section" id="horarios" aria-labelledby="horarios-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">GRADE SEMANAL INTERATIVA • HORÁRIOS DE EXEMPLO (DEMO)</span>
+          <h2 id="horarios-title" class="section-title">
+            Encontre o horário que encaixa na sua agenda
+          </h2>
+          <p class="section-description">
+            Filtre por modalidade e dia da semana para visualizar as turmas demonstrativas. Ao encontrar uma sessão ideal, clique em <strong>Solicitar este horário</strong> para pré-preencher seu pedido de aula experimental.
+          </p>
+        </div>
+
+        <div class="schedule-controls" role="region" aria-label="Filtros da grade de horários">
+          <!-- Filtro por Modalidade -->
+          <div class="filter-group">
+            <span class="filter-group__label" id="label-filtro-modalidade">1. Filtrar por Modalidade:</span>
+            <div class="filter-pills" role="group" aria-labelledby="label-filtro-modalidade" id="schedule-modality-filters">
+              <button type="button" class="filter-pill is-active" data-filter-modality="todas" aria-pressed="true">
+                Todas as Modalidades
+              </button>
+              <button type="button" class="filter-pill" data-filter-modality="musculacao" aria-pressed="false">
+                Musculação Orientada
+              </button>
+              <button type="button" class="filter-pill" data-filter-modality="funcional" aria-pressed="false">
+                Funcional
+              </button>
+              <button type="button" class="filter-pill" data-filter-modality="bike" aria-pressed="false">
+                Bike Indoor
+              </button>
+              <button type="button" class="filter-pill" data-filter-modality="mobilidade" aria-pressed="false">
+                Mobilidade &amp; Core
+              </button>
+            </div>
+          </div>
+
+          <!-- Filtro por Dia da Semana -->
+          <div class="filter-group">
+            <span class="filter-group__label" id="label-filtro-dia">2. Dia da Semana:</span>
+            <div class="filter-pills" role="group" aria-labelledby="label-filtro-dia" id="schedule-day-filters">
+              <button type="button" class="filter-pill is-active" data-filter-day="todos" aria-pressed="true">
+                Seg a Sáb (Todos)
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="segunda" aria-pressed="false">
+                Segunda
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="terca" aria-pressed="false">
+                Terça
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="quarta" aria-pressed="false">
+                Quarta
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="quinta" aria-pressed="false">
+                Quinta
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="sexta" aria-pressed="false">
+                Sexta
+              </button>
+              <button type="button" class="filter-pill" data-filter-day="sabado" aria-pressed="false">
+                Sábado
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-status-bar">
+          <p class="schedule-count" id="schedule-count" aria-live="polite">
+            Exibindo <strong>29</strong> turmas de exemplo na grade semanal.
+          </p>
+          <span class="schedule-demo-note">* Grade horária fictícia para demonstração de filtro e agendamento.</span>
+        </div>
+
+        <div class="schedule-grid" id="schedule-grid" aria-live="polite">
+          <!-- Renderizado dinamicamente via assets/js/main.js a partir de window.PULSO_CONFIG.schedule -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Planos (Mensal / Trimestral / Anual com Cálculo Transparente de Valores Fictícios) -->
+    <section class="section section--alt" id="planos" aria-labelledby="planos-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">VALORES FICTÍCIOS DE DEMONSTRAÇÃO • TRANSPARÊNCIA TOTAL</span>
+          <h2 id="planos-title" class="section-title">
+            Planos claros para diferentes frequências de rotina
+          </h2>
+          <p class="section-description">
+            Alterne entre os ciclos <strong>Mensal</strong>, <strong>Trimestral</strong> e <strong>Anual</strong> para comparar o valor mensal equivalente, o total do ciclo e a economia estimada. Todos os valores abaixo são exemplos ilustrativos.
+          </p>
+        </div>
+
+        <!-- Seletor de Periodicidade Acessível -->
+        <div class="billing-switcher-wrap">
+          <div class="billing-switcher" role="group" aria-label="Alternar periodicidade dos planos" id="billing-switcher">
+            <button
+              type="button"
+              class="billing-btn"
+              data-cycle="mensal"
+              aria-pressed="false"
+            >
+              <span class="billing-btn__title">Mensal</span>
+              <span class="billing-btn__sub">Sem fidelidade</span>
+            </button>
+            <button
+              type="button"
+              class="billing-btn"
+              data-cycle="trimestral"
+              aria-pressed="false"
+            >
+              <span class="billing-btn__title">Trimestral</span>
+              <span class="billing-btn__badge">~10% OFF</span>
+            </button>
+            <button
+              type="button"
+              class="billing-btn is-active"
+              data-cycle="anual"
+              aria-pressed="true"
+            >
+              <span class="billing-btn__title">Anual</span>
+              <span class="billing-btn__badge billing-btn__badge--highlight">~20% OFF</span>
+            </button>
+          </div>
+          <p class="billing-cycle-note" id="billing-cycle-note" aria-live="polite">
+            Ciclo selecionado: <strong>Anual (12 meses)</strong> — Melhor relação custo-benefício para quem prioriza consistência o ano inteiro (valores fictícios de exemplo).
+          </p>
+        </div>
+
+        <div class="plans-grid" id="plans-grid">
+          <!-- Renderizado dinamicamente e sincronizado via assets/js/main.js -->
+        </div>
+
+        <div class="plans-disclaimer">
+          <p>
+            <strong>Aviso importante de demonstração:</strong> Os preços exibidos nesta seção (R$ 229 a R$ 499/mês) são estritamente fictícios e servem para demonstrar a calculadora transparente de periodicidade. Nenhuma cobrança online é realizada neste site.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Equipe com Perfis Ilustrativos (Sem Credenciais ou CREF Inventados) -->
+    <section class="section" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">EQUIPE DEMONSTRATIVA • PERFIS ILUSTRATIVOS</span>
+          <h2 id="equipe-title" class="section-title">
+            Profissionais atentos ao seu movimento e ao seu momento
+          </h2>
+          <p class="section-description">
+            Conheça o perfil de atendimento da Pulso Fit. <em>Nota de transparência: os nomes e biografias abaixo são perfis fictícios ilustrativos, sem registros profissionais ou credenciais inventadas.</em>
+          </p>
+        </div>
+
+        <div class="team-grid" id="team-grid">
+          <article class="team-card">
+            <div class="team-card__avatar-wrap">
+              <img
+                src="assets/img/equipe-1.svg"
+                alt="Retrato ilustrativo de Marina Costa, perfil fictício de demonstração"
+                width="320"
+                height="320"
+                loading="lazy"
+                class="team-card__avatar"
+              />
+            </div>
+            <div class="team-card__body">
+              <span class="team-card__demo-badge">Perfil Ilustrativo de Demonstração</span>
+              <h3 class="team-card__name">Marina Costa</h3>
+              <p class="team-card__role">Coordenação de Sala &amp; Musculação Orientada</p>
+              <p class="team-card__bio">
+                Focada em acolher adultos iniciantes e organizar rotinas de força sustentáveis, priorizando execução limpa e conforto articular.
+              </p>
+              <ul class="team-card__tags" aria-label="Áreas de atuação ilustrativas">
+                <li>Musculação Orientada</li>
+                <li>Acolhimento de Iniciantes</li>
+                <li>Rotina Sustentável</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__avatar-wrap">
+              <img
+                src="assets/img/equipe-2.svg"
+                alt="Retrato ilustrativo de Roberto Vasconcelos, perfil fictício de demonstração"
+                width="320"
+                height="320"
+                loading="lazy"
+                class="team-card__avatar"
+              />
+            </div>
+            <div class="team-card__body">
+              <span class="team-card__demo-badge">Perfil Ilustrativo de Demonstração</span>
+              <h3 class="team-card__name">Roberto Vasconcelos</h3>
+              <p class="team-card__role">Mobilidade &amp; Longevidade Ativa</p>
+              <p class="team-card__bio">
+                Dedica-se à liberdade de movimento, estabilidade do core e adaptação de exercícios para adultos 50+, 60+ e profissionais que passam longas horas sentados.
+              </p>
+              <ul class="team-card__tags" aria-label="Áreas de atuação ilustrativas">
+                <li>Mobilidade &amp; Core</li>
+                <li>Público 50+ e 60+</li>
+                <li>Consciência Postural</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__avatar-wrap">
+              <img
+                src="assets/img/equipe-3.svg"
+                alt="Retrato ilustrativo de Lucas Kenji, perfil fictício de demonstração"
+                width="320"
+                height="320"
+                loading="lazy"
+                class="team-card__avatar"
+              />
+            </div>
+            <div class="team-card__body">
+              <span class="team-card__demo-badge">Perfil Ilustrativo de Demonstração</span>
+              <h3 class="team-card__name">Lucas Kenji</h3>
+              <p class="team-card__role">Instrutor de Funcional &amp; Bike Indoor</p>
+              <p class="team-card__bio">
+                Conduz aulas coletivas dinâmicas com energia positiva, oferecendo variações claras de ritmo e impacto para que cada aluno evolua no próprio tempo.
+              </p>
+              <ul class="team-card__tags" aria-label="Áreas de atuação ilustrativas">
+                <li>Bike Indoor</li>
+                <li>Treinamento Funcional</li>
+                <li>Ritmo Escalável</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Instalações do Estúdio -->
+    <section class="section section--alt" id="instalacoes" aria-labelledby="instalacoes-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ESTRUTURA PLANEJADA • AMBIENTES ILUSTRATIVOS</span>
+          <h2 id="instalacoes-title" class="section-title">
+            Conheça as áreas de treino e convivência da Pulso Fit
+          </h2>
+          <p class="section-description">
+            Quatro ambientes integrados com climatização eficiente, acústica tratada, iluminação confortável e equipamentos dispostos para facilitar sua circulação.
+          </p>
+        </div>
+
+        <div class="facilities-grid" id="facilities-grid">
+          <article class="facility-card">
+            <div class="facility-card__media">
+              <img
+                src="assets/img/instalacao-forca.svg"
+                alt="Ilustração da Sala de Força e Peso Livre da Pulso Fit"
+                width="640"
+                height="400"
+                loading="lazy"
+              />
+              <span class="facility-card__tag">Sem filas nos horários de pico</span>
+            </div>
+            <div class="facility-card__body">
+              <h3 class="facility-card__title">Sala de Força &amp; Peso Livre</h3>
+              <p class="facility-card__desc">
+                Equipamentos biomecânicos selecionados, racks de agachamento, bancos ajustáveis e pares completos de halteres com amplo espaço de circulação.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="facility-card__media">
+              <img
+                src="assets/img/instalacao-bike-studio.svg"
+                alt="Ilustração do Estúdio Climatizado de Bike Indoor"
+                width="640"
+                height="400"
+                loading="lazy"
+              />
+              <span class="facility-card__tag">Acústica planejada &amp; 14 bikes</span>
+            </div>
+            <div class="facility-card__body">
+              <h3 class="facility-card__title">Estúdio Climatizado de Bike Indoor</h3>
+              <p class="facility-card__desc">
+                Sala dedicada com renovação constante de ar, iluminação indireta que não cansa a vista e bicicletas com ajuste milimétrico de postura.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="facility-card__media">
+              <img
+                src="assets/img/instalacao-funcional.svg"
+                alt="Ilustração da Zona Funcional e Mobilidade"
+                width="640"
+                height="400"
+                loading="lazy"
+              />
+              <span class="facility-card__tag">Piso de absorção de impacto</span>
+            </div>
+            <div class="facility-card__body">
+              <h3 class="facility-card__title">Zona Funcional &amp; Mobilidade</h3>
+              <p class="facility-card__desc">
+                Pista sintética amortecida, tatames de alta densidade, kettlebells, fitas de suspensão e acessórios para trabalho de core e estabilidade.
+              </p>
+            </div>
+          </article>
+
+          <article class="facility-card">
+            <div class="facility-card__media">
+              <img
+                src="assets/img/instalacao-vestiarios.svg"
+                alt="Ilustração dos Vestiários Individuais e Lounge de Convivência"
+                width="640"
+                height="400"
+                loading="lazy"
+              />
+              <span class="facility-card__tag">Pronto para ir direto ao trabalho</span>
+            </div>
+            <div class="facility-card__body">
+              <h3 class="facility-card__title">Vestiários Individuais &amp; Lounge</h3>
+              <p class="facility-card__desc">
+                Cabines de banho privativas, bancadas iluminadas, secadores, armários seguros e lounge com café passado e água filtrada gelada.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Perguntas Frequentes (FAQ Acessível) -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <span class="section-tag">TIRE SUAS DÚVIDAS • TRANSPARÊNCIA</span>
+          <h2 id="faq-title" class="section-title">
+            Perguntas frequentes sobre rotina, aulas e funcionamento
+          </h2>
+          <p class="section-description">
+            Respostas diretas para quem está pensando em dar o primeiro passo ou retomar o hábito de treinar.
+          </p>
+        </div>
+
+        <div class="faq-list" id="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="true"
+                aria-controls="faq-panel-1"
+                id="faq-btn-1"
+              >
+                <span>Como funciona a solicitação de aula experimental?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div
+              id="faq-panel-1"
+              class="faq-panel"
+              role="region"
+              aria-labelledby="faq-btn-1"
+            >
+              <p>
+                Você preenche o formulário abaixo com sua modalidade e turno de preferência e envia o pedido via WhatsApp ou e-mail. Como trabalhamos com vagas limitadas por horário para evitar superlotação, <strong>a aula experimental não é confirmada automaticamente pelo site</strong>: nossa recepção verifica a disponibilidade da turma e responde confirmando o dia e horário combinados.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-btn-2"
+              >
+                <span>Estou sem treinar há muito tempo ou sou iniciante. Vou conseguir acompanhar?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div
+              id="faq-panel-2"
+              class="faq-panel"
+              role="region"
+              aria-labelledby="faq-btn-2"
+              hidden
+            >
+              <p>
+                Sim! Grande parte dos nossos alunos começa justamente após longos períodos sem atividade física. Na primeira visita, apresentamos o espaço com calma, ajustamos cargas leves e adaptamos o volume das sessões para que você ganhe confiança semana após semana, sem dores excessivas ou pressão.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-btn-3"
+              >
+                <span>A academia atende adultos 50+, 60+ e 70+ anos?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div
+              id="faq-panel-3"
+              class="faq-panel"
+              role="region"
+              aria-labelledby="faq-btn-3"
+              hidden
+            >
+              <p>
+                Com certeza. Valorizamos a diversidade etária e mantemos um ambiente tranquilo, música em volume agradável e pisos seguros. Tanto a Musculação Orientada quanto as aulas de Mobilidade &amp; Core são excelentes para preservação de força, equilíbrio e autonomia em todas as fases da vida adulta.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-btn-4"
+              >
+                <span>O site realiza avaliação física clínica ou prescrição médica de exercícios?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div
+              id="faq-panel-4"
+              class="faq-panel"
+              role="region"
+              aria-labelledby="faq-btn-4"
+              hidden
+            >
+              <p>
+                Não. Este canal digital serve exclusivamente para apresentação institucional e solicitação de visita ou aula experimental. Não realizamos diagnóstico clínico, avaliação médica nem prescrição individualizada de treinos pela internet. Caso você possua recomendações médicas ou fisioterapêuticas específicas, converse presencialmente com a equipe no estúdio.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+                id="faq-btn-5"
+              >
+                <span>O que devo levar no dia da minha aula experimental?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div
+              id="faq-panel-5"
+              class="faq-panel"
+              role="region"
+              aria-labelledby="faq-btn-5"
+              hidden
+            >
+              <p>
+                Basta vir com roupas leves e confortáveis de ginástica e tênis fechado. Disponibilizamos água filtrada gelada, toalha de rosto cortesia na primeira visita e armários com trava para você guardar seus pertences com segurança.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Formulário de Interesse em Aula Experimental e Planos -->
+    <section class="section section--highlight" id="aula-experimental" aria-labelledby="form-title">
+      <div class="container">
+        <div class="booking-layout">
+          <div class="booking-info">
+            <span class="section-tag">DÊ O PRIMEIRO PASSO • SEM COMPROMISSO</span>
+            <h2 id="form-title" class="section-title">
+              Solicite sua aula experimental ou tire dúvidas sobre planos
+            </h2>
+            <p class="booking-info__lead">
+              Preencha suas preferências de rotina ao lado. O formulário prepara uma mensagem organizada para envio imediato pelo seu <strong>WhatsApp</strong> ou aplicativo de <strong>E-mail (`mailto:`)</strong>.
+            </p>
+
+            <div class="booking-rules-card">
+              <h3 class="booking-rules-card__title">Como funciona na prática:</h3>
+              <ul class="booking-rules-card__list">
+                <li>
+                  <strong>1. Confirmação pela equipe:</strong> Toda aula experimental depende de confirmação prévia da nossa recepção para garantir que o horário escolhido tenha vaga disponível e instrutor dedicado.
+                </li>
+                <li>
+                  <strong>2. Sem avaliação clínica online:</strong> As perguntas sobre seu objetivo servem apenas para prepararmos sua recepção presencial, sem substituir orientação médica nem configurar prescrição de treino.
+                </li>
+                <li>
+                  <strong>3. Privacidade total:</strong> Como este é um site estático sem banco de dados oculto, seus dados não ficam salvos em servidores externos — você mesmo dispara a mensagem no canal de sua preferência.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="booking-form-card">
+            <form id="trial-form" class="trial-form" novalidate>
+              <div class="trial-form__header">
+                <h3 class="trial-form__title">Formulário de Interesse</h3>
+                <span class="trial-form__badge">Envio via WhatsApp ou E-mail</span>
+              </div>
+
+              <!-- Resumo dinâmico se veio de um botão da grade ou de planos -->
+              <div id="form-prefill-notice" class="form-prefill-notice" hidden aria-live="polite">
+                <span id="form-prefill-text">Preferência selecionada.</span>
+                <button type="button" id="clear-prefill-btn" class="form-prefill-clear">Limpar seleção</button>
+              </div>
+
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome completo <span class="required-star" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-control"
+                  placeholder="Ex.: Helena Martins"
+                  autocomplete="name"
+                  required
+                  aria-describedby="erro-nome"
+                />
+                <span class="form-error" id="erro-nome" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contato-usuario" class="form-label">Seu WhatsApp ou Telefone <span class="required-star" aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="contato-usuario"
+                    name="contatoUsuario"
+                    class="form-control"
+                    placeholder="Ex.: (11) 98888-7777"
+                    autocomplete="tel"
+                    required
+                    aria-describedby="erro-contato"
+                  />
+                  <span class="form-error" id="erro-contato" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email-usuario" class="form-label">Seu E-mail (opcional)</label>
+                  <input
+                    type="email"
+                    id="email-usuario"
+                    name="emailUsuario"
+                    class="form-control"
+                    placeholder="Ex.: helena@email.com"
+                    autocomplete="email"
+                    aria-describedby="erro-email"
+                  />
+                  <span class="form-error" id="erro-email" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="objetivo" class="form-label">O que você busca para sua rotina? <span class="required-star" aria-hidden="true">*</span></label>
+                  <select id="objetivo" name="objetivo" class="form-control" required aria-describedby="erro-objetivo">
+                    <option value="">Selecione um foco de rotina...</option>
+                    <option value="Sair do sedentarismo com acolhimento e segurança">Sair do sedentarismo com acolhimento e segurança</option>
+                    <option value="Construir consistência em treino de força e postura">Construir consistência em treino de força e postura</option>
+                    <option value="Melhorar disposição diária, mobilidade e fôlego">Melhorar disposição diária, mobilidade e fôlego</option>
+                    <option value="Longevidade ativa e autonomia (público 50+ / 60+)">Longevidade ativa e autonomia (público 50+ / 60+)</option>
+                    <option value="Conhecer a estrutura e comparar os planos">Conhecer a estrutura e comparar os planos</option>
+                  </select>
+                  <span class="form-error" id="erro-objetivo" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="modalidade" class="form-label">Modalidade de interesse <span class="required-star" aria-hidden="true">*</span></label>
+                  <select id="modalidade" name="modalidade" class="form-control" required aria-describedby="erro-modalidade">
+                    <option value="">Selecione a modalidade...</option>
+                    <option value="Musculação Orientada">Musculação Orientada</option>
+                    <option value="Treinamento Funcional">Treinamento Funcional</option>
+                    <option value="Bike Indoor">Bike Indoor</option>
+                    <option value="Mobilidade & Core">Mobilidade &amp; Core</option>
+                    <option value="Combinação (Musculação + Coletivas)">Combinação (Musculação + Coletivas)</option>
+                  </select>
+                  <span class="form-error" id="erro-modalidade" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="horario-preferido" class="form-label">Turno ou horário preferido <span class="required-star" aria-hidden="true">*</span></label>
+                  <select id="horario-preferido" name="horarioPreferido" class="form-control" required aria-describedby="erro-horario">
+                    <option value="">Selecione o período...</option>
+                    <option value="Manhã cedo (06h00 às 09h00)">Manhã cedo (06h00 às 09h00)</option>
+                    <option value="Meio da manhã (09h00 às 12h00)">Meio da manhã (09h00 às 12h00)</option>
+                    <option value="Horário de almoço (12h00 às 14h00)">Horário de almoço (12h00 às 14h00)</option>
+                    <option value="Tarde (14h00 às 18h00)">Tarde (14h00 às 18h00)</option>
+                    <option value="Noite (18h00 às 21h30)">Noite (18h00 às 21h30)</option>
+                    <option value="Sábado pela manhã (08h00 às 13h00)">Sábado pela manhã (08h00 às 13h00)</option>
+                  </select>
+                  <span class="form-error" id="erro-horario" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="plano-interesse" class="form-label">Plano de referência (opcional)</label>
+                  <select id="plano-interesse" name="planoInteresse" class="form-control">
+                    <option value="Quero decidir após a aula experimental">Quero decidir após a aula experimental</option>
+                    <option value="Plano Essencial (Mensal / Trimestral / Anual)">Plano Essencial</option>
+                    <option value="Plano Pulso Total (Mensal / Trimestral / Anual)">Plano Pulso Total</option>
+                    <option value="Plano Black Studio (Mensal / Trimestral / Anual)">Plano Black Studio</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="observacoes" class="form-label">Turma específica ou observação (opcional)</label>
+                <textarea
+                  id="observacoes"
+                  name="observacoes"
+                  rows="2"
+                  class="form-control"
+                  placeholder="Ex.: Gostaria de testar na Terça às 08:00 ou tenho preferência por horários mais tranquilos."
+                ></textarea>
+              </div>
+
+              <div class="form-group form-group--checkbox">
+                <label class="checkbox-label" for="aceite-confirmacao">
+                  <input
+                    type="checkbox"
+                    id="aceite-confirmacao"
+                    name="aceiteConfirmacao"
+                    required
+                    aria-describedby="erro-aceite"
+                  />
+                  <span>
+                    Compreendo que este site é um ambiente demonstrativo sem banco de dados e que a realização da aula experimental <strong>depende de confirmação de disponibilidade pela equipe</strong>.
+                  </span>
+                </label>
+                <span class="form-error" id="erro-aceite" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--lg btn--full" data-submit-channel="whatsapp">
+                  Enviar solicitação por WhatsApp
+                </button>
+                <button type="button" id="btn-submit-mailto" class="btn btn--outline btn--full">
+                  Prefiro enviar por E-mail (mailto:)
+                </button>
+              </div>
+
+              <div id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Contato e Localização -->
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CANAIS DE ATENDIMENTO • DADOS DE EXEMPLO (DEMO)</span>
+          <h2 id="contato-title" class="section-title">
+            Visite o estúdio ou fale com nossa recepção
+          </h2>
+          <p class="section-description">
+            Os dados de endereço, telefone e e-mail abaixo são configuráveis em <code>assets/js/config.js</code> e estão preenchidos com valores fictícios para demonstração.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 class="contact-card__title">Endereço Demonstrativo</h3>
+            <p class="contact-card__text" data-config="address-line1">
+              Av. Exemplo Paulista, 1450 — Conjunto Térreo (Endereço Fictício)
+            </p>
+            <p class="contact-card__text" data-config="address-line2">
+              Bela Vista, São Paulo — SP • CEP 01310-000
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+Paulista+Sao+Paulo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card__link"
+              data-config="maps-link"
+            >
+              Ver referência no Google Maps &rarr;
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3 class="contact-card__title">Atendimento &amp; Recepção</h3>
+            <p class="contact-card__text">
+              <strong>WhatsApp:</strong> <span data-config="whatsapp-display">(11) 99999-0000 (Demo)</span>
+            </p>
+            <p class="contact-card__text">
+              <strong>Telefone fixo:</strong> <span data-config="phone-display">(11) 3000-0000 (Demo)</span>
+            </p>
+            <p class="contact-card__text">
+              <strong>E-mail:</strong> <a href="mailto:contato.demo@pulsofit.exemplo.br" class="text-link" data-config="email-link">contato.demo@pulsofit.exemplo.br</a>
+            </p>
+            <a
+              href="https://wa.me/5511999990000?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20a%20Pulso%20Fit%20%28Demonstra%C3%A7%C3%A3o%29."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card__link"
+              id="contact-whatsapp-direct"
+            >
+              Iniciar conversa no WhatsApp &rarr;
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3 class="contact-card__title">Horários de Funcionamento (Demo)</h3>
+            <ul class="contact-hours-list" id="contact-hours-list">
+              <li>Segunda a Sexta: 06h00 às 22h00</li>
+              <li>Sábados: 08h00 às 14h00</li>
+              <li>Domingos e Feriados: 09h00 às 13h00 (Aulas Especiais)</li>
+            </ul>
+            <p class="contact-card__small">
+              Estacionamento conveniado no subsolo e bicicletário coberto na entrada térrea (ilustrativo).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé Institucional Completo -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <a href="#topo" class="brand-logo">
+          <span class="brand-logo__icon" aria-hidden="true">
+            <svg viewBox="0 0 36 36" width="28" height="28">
+              <rect width="36" height="36" rx="8" fill="#1A1D21" stroke="#C8FF00" stroke-width="2" />
+              <path d="M5 19 H11 L14 10 L19 26 L23 14 L26 19 H31" fill="none" stroke="#C8FF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="brand-logo__text">
+            <strong class="brand-logo__name" data-config="brand-name">PULSO FIT</strong>
+            <small class="brand-logo__tag">ACADEMIA &amp; TREINAMENTO</small>
+          </span>
+        </a>
+        <p class="site-footer__desc">
+          Treinamento orientado em formato boutique para adultos iniciantes e intermediários. Foco em ambiente acolhedor, constância e qualidade de movimento.
+        </p>
+      </div>
+
+      <div class="site-footer__nav">
+        <h3 class="site-footer__heading">Navegação Rápida</h3>
+        <ul class="site-footer__links">
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#horarios">Grade de Horários</a></li>
+          <li><a href="#planos">Planos Mensal / Trimestral / Anual</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#instalacoes">Instalações</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+          <li><a href="#aula-experimental">Solicitar Aula Experimental</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__legal">
+        <h3 class="site-footer__heading">Aviso de Demonstração &amp; Saúde</h3>
+        <p class="site-footer__legal-text">
+          <strong>Projeto Demonstrativo:</strong> Esta página é um modelo comercial estático. Marca (Pulso Fit), preços, grade horária, endereços, telefones e perfis de equipe são exemplos fictícios e devem ser substituídos pelo contratante antes do uso público.
+        </p>
+        <p class="site-footer__legal-text">
+          <strong>Responsabilidade Técnica:</strong> Este site não realiza avaliação física clínica, diagnóstico médico nem prescrição de exercícios, e não promete resultados estéticos ou de emagrecimento garantidos. A prática de atividades físicas deve respeitar a individualidade biológica e orientações médicas.
+        </p>
+      </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p>&copy; <span id="current-year">2026</span> PULSO FIT (Demonstração Comercial). Todos os direitos reservados.</p>
+      <a href="#topo" class="back-to-top">Voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Scripts (config.js carregado antes de main.js com defer) -->
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Pata &amp; Prosa - Pet Shop e Banho &amp; Tosa Acolhedor">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF6F0"/>
+      <stop offset="100%" stop-color="#F2ECE1"/>
+    </linearGradient>
+    <linearGradient id="sageCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A6B5D"/>
+      <stop offset="100%" stop-color="#375247"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <circle cx="1050" cy="110" r="210" fill="#E6EFEA"/>
+  <circle cx="140" cy="540" r="180" fill="#F7E4DF"/>
+  <rect x="70" y="65" width="1060" height="500" rx="36" fill="url(#sageCard)"/>
+  <circle cx="910" cy="315" r="165" fill="#FAF6F0" opacity="0.96"/>
+  <!-- Cute Dog & Cat Illustration inside circle -->
+  <g transform="translate(795, 195)">
+    <!-- Dog -->
+    <ellipse cx="82" cy="145" rx="46" ry="52" fill="#D99B66"/>
+    <circle cx="82" cy="88" r="42" fill="#E6AD7B"/>
+    <ellipse cx="44" cy="86" rx="14" ry="28" transform="rotate(14 44 86)" fill="#B57642"/>
+    <ellipse cx="120" cy="86" rx="14" ry="28" transform="rotate(-14 120 86)" fill="#B57642"/>
+    <circle cx="68" cy="82" r="5.5" fill="#2A2421"/>
+    <circle cx="96" cy="82" r="5.5" fill="#2A2421"/>
+    <ellipse cx="82" cy="96" rx="8" ry="6" fill="#2A2421"/>
+    <path d="M74 106 Q82 114 90 106" stroke="#2A2421" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- Coral bandana -->
+    <path d="M48 122 L116 122 L82 152 Z" fill="#E06D53"/>
+    <!-- Cat -->
+    <ellipse cx="164" cy="158" rx="36" ry="42" fill="#FAF6F0" stroke="#D8CFC2" stroke-width="2"/>
+    <path d="M136 95 L142 62 L162 82 Z" fill="#E8DFD1"/>
+    <path d="M192 95 L186 62 L166 82 Z" fill="#E8DFD1"/>
+    <circle cx="164" cy="108" r="32" fill="#FAF6F0" stroke="#D8CFC2" stroke-width="2"/>
+    <circle cx="152" cy="104" r="4.5" fill="#4A6B5D"/>
+    <circle cx="176" cy="104" r="4.5" fill="#4A6B5D"/>
+    <polygon points="164,112 159,118 169,118" fill="#E06D53"/>
+    <!-- Bubbles -->
+    <circle cx="125" cy="48" r="12" fill="#E6EFEA" stroke="#688B7B" stroke-width="2"/>
+    <circle cx="148" cy="34" r="8" fill="#E6EFEA" stroke="#688B7B" stroke-width="2"/>
+  </g>
+  <rect x="130" y="130" width="240" height="44" rx="22" fill="#E06D53"/>
+  <text x="250" y="159" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#FAF6F0">PET SHOP &amp; ESTÉTICA AFETIVA</text>
+  <text x="130" y="255" font-family="Georgia, serif" font-size="68" font-weight="700" fill="#FAF6F0">Pata &amp; Prosa</text>
+  <text x="130" y="325" font-family="sans-serif" font-size="30" font-weight="400" fill="#E6EFEA">Banho &amp; Tosa com hora marcada,</text>
+  <text x="130" y="368" font-family="sans-serif" font-size="30" font-weight="400" fill="#E6EFEA">baixo ruído e carinho de verdade.</text>
+  <text x="130" y="455" font-family="sans-serif" font-size="22" font-weight="600" fill="#F2ECE1">✓ Produtos Hipoalergênicos   ✓ Espaço Felino Exclusivo</text>
+  <text x="130" y="495" font-family="sans-serif" font-size="18" font-weight="400" fill="#C9DBD2">Projeto Demonstrativo Configurável • Agendamento via WhatsApp</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Pulso Fit - Academia Boutique e Treinamento Orientado">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111315" />
+      <stop offset="60%" stop-color="#1A1D21" />
+      <stop offset="100%" stop-color="#0D0F11" />
+    </linearGradient>
+    <linearGradient id="limeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C8FF00" />
+      <stop offset="100%" stop-color="#B4F000" />
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#262A30" stroke-width="1" opacity="0.45" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <circle cx="980" cy="290" r="240" fill="#C8FF00" opacity="0.08" />
+  <circle cx="980" cy="290" r="170" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.25" stroke-dasharray="10 8" />
+  <!-- Pulse graphic -->
+  <path d="M 680 330 H 780 L 825 190 L 885 450 L 940 250 L 985 330 H 1120" fill="none" stroke="url(#limeGlow)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Left content -->
+  <rect x="80" y="95" width="350" height="40" rx="20" fill="#1F242A" stroke="#C8FF00" stroke-width="1.5" />
+  <text x="105" y="121" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" letter-spacing="2">ESTÚDIO BOUTIQUE • DEMO COMERCIAL</text>
+  <text x="80" y="235" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="78" font-weight="900" letter-spacing="-1">PULSO FIT</text>
+  <text x="80" y="305" fill="#C8FF00" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700">Treino orientado no seu ritmo.</text>
+  <text x="80" y="370" fill="#CBD5E1" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400">Musculação Orientada • Funcional • Bike Indoor • Mobilidade</text>
+  <text x="80" y="415" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400">Ambiente sem superlotação para adultos de todas as idades.</text>
+  <rect x="80" y="470" width="380" height="64" rx="12" fill="#C8FF00" />
+  <text x="122" y="510" fill="#111315" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="800">SOLICITAR AULA EXPERIMENTAL</text>
+</svg>

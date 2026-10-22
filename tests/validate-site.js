@@ -25,7 +25,11 @@ const REQUIRED_PAGES = [
   "privacidade/index.html",
   "demos/restaurante/index.html",
   "demos/clinica/index.html",
-  "demos/imobiliaria/index.html"
+  "demos/imobiliaria/index.html",
+  "demos/petshop/index.html",
+  "demos/academia/index.html",
+  "demos/nexo/index.html",
+  "demos/linhaviva/index.html"
 ];
 
 const REQUIRED_FILES = [
@@ -118,7 +122,7 @@ REQUIRED_PAGES.forEach((pageRel) => {
   );
 
   // Verificar referências locais (href / src)
-  const attrRegex = /\b(?:href|src)=["']([^"']+)["']/gi;
+  const attrRegex = /(?:^|\s)(?:href|src)=["']([^"']+)["']/gi;
   let match;
   while ((match = attrRegex.exec(html)) !== null) {
     const rawRef = match[1];

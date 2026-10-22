@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Ilustração da Sala de Força e Peso Livre da Pulso Fit com equipamentos espaçados e iluminação indireta">
+  <rect width="640" height="400" rx="16" fill="#14171A" />
+  <line x1="40" y1="42" x2="600" y2="42" stroke="#C8FF00" stroke-width="3" opacity="0.8" />
+  <rect x="55" y="80" width="160" height="230" rx="6" fill="none" stroke="#363D47" stroke-width="6" />
+  <line x1="40" y1="150" x2="230" y2="150" stroke="#F8FAFC" stroke-width="5" />
+  <rect x="48" y="125" width="14" height="50" rx="3" fill="#C8FF00" />
+  <rect x="208" y="125" width="14" height="50" rx="3" fill="#C8FF00" />
+  <rect x="275" y="110" width="150" height="200" rx="8" fill="#1C2026" stroke="#2E343E" stroke-width="3" />
+  <line x1="305" y1="150" x2="395" y2="150" stroke="#C8FF00" stroke-width="4" />
+  <line x1="305" y1="190" x2="395" y2="190" stroke="#94A3B8" stroke-width="4" />
+  <line x1="305" y1="230" x2="395" y2="230" stroke="#94A3B8" stroke-width="4" />
+  <rect x="465" y="170" width="125" height="140" rx="8" fill="#1C2026" stroke="#38BDF8" stroke-width="2" />
+  <circle cx="500" cy="210" r="12" fill="#F8FAFC" />
+  <circle cx="550" cy="210" r="12" fill="#C8FF00" />
+  <circle cx="500" cy="260" r="15" fill="#C8FF00" />
+  <circle cx="550" cy="260" r="15" fill="#F8FAFC" />
+  <line x1="25" y1="312" x2="615" y2="312" stroke="#2D333B" stroke-width="4" />
+  <text x="45" y="360" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Sala de Força &amp; Peso Livre • Circulação Livre</text>
+</svg>
