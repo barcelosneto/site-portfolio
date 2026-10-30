@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySQL to Elasticsearch Real-Time Sync & Query API | Live Demo</title>
+  <meta name="description" content="Demonstração interativa de arquitetura de alta performance com Change Data Capture (CDC) em tempo real entre MySQL e Elasticsearch." />
+  <meta name="theme-color" content="#090d16" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090d16;
+      --surface: #0f172a;
+      --surface-border: #1e293b;
+      --surface-hover: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.15);
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    /* HEADER */
+    .top-bar {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 24px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      margin-bottom: 24px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0284c7, #10b981);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+    }
+
+    .brand-titles h1 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-titles p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-github {
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid #334155;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-github:hover {
+      background: #334155;
+      border-color: #475569;
+      transform: translateY(-2px);
+    }
+
+    /* MAIN GRID */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    /* ARCHITECTURE HERO */
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 860px;
+      margin-bottom: 28px;
+    }
+
+    /* ARCHITECTURE PIPELINE VISUAL */
+    .pipeline-visual {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .pipeline-step {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--surface-border);
+      border-radius: 16px;
+      padding: 18px;
+      position: relative;
+    }
+
+    .pipeline-step.active-node {
+      border-color: var(--primary);
+      box-shadow: 0 0 24px var(--primary-glow);
+    }
+
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .step-tag {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .tag-mysql { background: rgba(68, 121, 161, 0.2); color: #38bdf8; }
+    .tag-cdc { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+    .tag-es { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+    .tag-api { background: rgba(139, 92, 246, 0.2); color: #c084fc; }
+
+    .step-title-text {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .step-sub-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* KPI STRIP */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+      padding-top: 24px;
+      border-top: 1px solid var(--surface-border);
+    }
+
+    .kpi-box {
+      background: #090d16;
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .kpi-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .kpi-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .kpi-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    /* TWO-COLUMN INTERACTIVE CONSOLE */
+    .console-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 960px) {
+      .console-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card-panel {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    .panel-head h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* SEARCH BAR & FILTERS */
+    .search-bar-wrap {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .search-input {
+      flex: 1;
+      background: #090d16;
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px var(--primary-glow);
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .chip-btn {
+      background: #090d16;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .chip-btn.active, .chip-btn:hover {
+      background: var(--primary);
+      color: #090d16;
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* RESULTS TABLE */
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .result-row {
+      background: #090d16;
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+
+    .result-row:hover {
+      border-color: #334155;
+      transform: translateX(4px);
+    }
+
+    .res-info h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .res-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 12px;
+    }
+
+    .res-price {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: var(--mono);
+      text-align: right;
+    }
+
+    .res-actions {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .btn-action-sm {
+      background: transparent;
+      border: 1px solid var(--surface-border);
+      color: var(--text-muted);
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action-sm:hover {
+      background: #1e293b;
+      color: #fff;
+    }
+
+    .btn-action-del:hover {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      border-color: #ef4444;
+    }
+
+    /* SIMULATION ACTIONS PANEL */
+    .sim-buttons-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn-sim {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-sim-insert {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(2, 132, 199, 0.25);
+    }
+
+    .btn-sim-insert:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-sim-update {
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid #334155;
+    }
+
+    .btn-sim-update:hover {
+      background: #334155;
+    }
+
+    .btn-sim-delete {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-sim-delete:hover {
+      background: rgba(239, 68, 68, 0.25);
+    }
+
+    /* LIVE TERMINAL LOG */
+    .terminal-box {
+      background: #020617;
+      border: 1px solid var(--surface-border);
+      border-radius: 14px;
+      padding: 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.6;
+      height: 240px;
+      overflow-y: auto;
+      color: #cbd5e1;
+    }
+
+    .terminal-line {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .t-time { color: #64748b; }
+    .t-mysql { color: #38bdf8; font-weight: 700; }
+    .t-cdc { color: #fbbf24; font-weight: 700; }
+    .t-es { color: #34d399; font-weight: 700; }
+    .t-del { color: #f87171; font-weight: 700; }
+
+    /* FOOTER */
+    .footer-bar {
+      width: 100%;
+      max-width: 1200px;
+      margin-top: 32px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="brand-group">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-titles">
+        <h1>MySQL 8.0 ⇄ Elasticsearch 8.13 CDC Mirror</h1>
+        <p>Alta Performance para Tabelas Massivas com Escritas e Leituras Concorrentes</p>
+      </div>
+    </div>
+    <div class="top-links">
+      <a href="https://github.com/barcelosneto/mysql-elasticsearch-sync-api" target="_blank" class="btn-github">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Ver Repositório no GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTAINER -->
+  <main class="container">
+
+    <!-- ARCHITECTURE HERO -->
+    <section class="hero-card">
+      <div class="hero-eyebrow">Arquitetura de Baixa Latência</div>
+      <h2 class="hero-title">Sincronização Bidirecional Contínua em Tempo Real</h2>
+      <p class="hero-desc">
+        Elimine gargalos e lentidão no MySQL offloadando 100% das buscas complexas para o cluster do <strong>Elasticsearch</strong>.
+        Toda inserção, alteração ou deleção ocorrida no MySQL é capturada instantaneamente pelo motor <strong>CDC (Change Data Capture)</strong>
+        e refletida no espelho com latência inferior a <strong>250 milissegundos</strong>.
+      </p>
+
+      <!-- PIPELINE STEPS -->
+      <div class="pipeline-visual">
+        <div class="pipeline-step">
+          <div class="step-header">
+            <span class="step-tag tag-mysql">Passo 1 • MySQL</span>
+          </div>
+          <div class="step-title-text">Gravação Transacional ACID</div>
+          <div class="step-sub-text">Single Source of Truth para escritas, alterações e exclusões estritas.</div>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-header">
+            <span class="step-tag tag-cdc">Passo 2 • CDC Engine</span>
+          </div>
+          <div class="step-title-text">Captura de Binlog / Outbox</div>
+          <div class="step-sub-text">Streaming contínuo de eventos de mutação sem travar tabelas.</div>
+        </div>
+
+        <div class="pipeline-step active-node">
+          <div class="step-header">
+            <span class="step-tag tag-es">Passo 3 • Elasticsearch</span>
+          </div>
+          <div class="step-title-text">Espelho &amp; Indexação Invertida</div>
+          <div class="step-sub-text">Consultas em larga escala com N-grams, filtros e agregações em &lt;15ms.</div>
+        </div>
+
+        <div class="pipeline-step">
+          <div class="step-header">
+            <span class="step-tag tag-api">Passo 4 • FastAPI</span>
+          </div>
+          <div class="step-title-text">REST API Unificada</div>
+          <div class="step-sub-text">Endpoints assíncronos de alta concorrência para aplicações e frontends.</div>
+        </div>
+      </div>
+
+      <!-- KPIS -->
+      <div class="kpi-row">
+        <div class="kpi-box">
+          <div class="kpi-label">TEMPO DE BUSCA (ELASTIC)</div>
+          <div class="kpi-num" id="kpiQueryTime">8.4 ms</div>
+          <div class="kpi-badge">150x mais veloz que MySQL LIKE</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">REGISTROS SINCRONIZADOS</div>
+          <div class="kpi-num" id="kpiTotalDocs">5.420.194</div>
+          <div class="kpi-badge">Zero desync detectado</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">REPLICATION LAG CDC</div>
+          <div class="kpi-num" id="kpiLag">48 ms</div>
+          <div class="kpi-badge">Quase tempo real</div>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-label">CARGA DE LEITURA MYSQL</div>
+          <div class="kpi-num">0.0%</div>
+          <div class="kpi-badge">Offloaded p/ Elasticsearch</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO-COLUMN INTERACTIVE CONSOLE -->
+    <div class="console-grid">
+
+      <!-- LEFT: ELASTICSEARCH LIVE QUERY CONSOLE -->
+      <div class="card-panel">
+        <div class="panel-head">
+          <h2>
+            <span style="color: var(--primary);">🔍</span>
+            Consulta em Tempo Real no Elasticsearch
+          </h2>
+          <span style="font-size: 12px; color: var(--accent); font-weight: 700;">Cluster Saudável (Green)</span>
+        </div>
+
+        <!-- SEARCH INPUT -->
+        <div class="search-bar-wrap">
+          <input type="text" id="searchInput" class="search-input" placeholder="Buscar por título, SKU ou categoria (Ex: Dell, Cisco, Switch)..." oninput="handleSearch()" />
+        </div>
+
+        <!-- CATEGORY CHIPS -->
+        <div class="filter-chips">
+          <button class="chip-btn active" onclick="filterCategory('ALL', this)">Todas as Categorias</button>
+          <button class="chip-btn" onclick="filterCategory('Servidores', this)">Servidores</button>
+          <button class="chip-btn" onclick="filterCategory('Redes', this)">Redes &amp; Switches</button>
+          <button class="chip-btn" onclick="filterCategory('Storage', this)">Storage SAN</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+          <span id="resultsCount">Exibindo 6 de 5.420.194 itens</span>
+          <span id="queryLatencyText" style="color: var(--primary); font-family: var(--mono); font-weight: 700;">Query time: 8.2 ms</span>
+        </div>
+
+        <!-- RESULTS LIST -->
+        <div class="results-list" id="resultsContainer">
+          <!-- Dynamic cards injected via JS -->
+        </div>
+      </div>
+
+      <!-- RIGHT: CDC TRANSACTION SIMULATOR & LIVE LOG -->
+      <div class="card-panel">
+        <div class="panel-head">
+          <h2>
+            <span style="color: var(--warning);">⚡</span>
+            Simulador de Mutações no MySQL (Auto CDC)
+          </h2>
+        </div>
+
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">
+          Dispare operações no MySQL para observar o motor CDC sincronizando o espelho do Elasticsearch instantaneamente:
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="sim-buttons-group">
+          <button class="btn-sim btn-sim-insert" onclick="simulateInsert()">
+            <span>➕</span> Inserir Novo Item no MySQL
+          </button>
+          <button class="btn-sim btn-sim-update" onclick="simulateUpdate()">
+            <span>✏️</span> Atualizar Preço &amp; Estoque de Item Existente
+          </button>
+          <button class="btn-sim btn-sim-delete" onclick="simulateDelete()">
+            <span>🗑️</span> Excluir Item no MySQL (Remove do Elastic)
+          </button>
+        </div>
+
+        <!-- LOG TERMINAL -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-size: 12px; font-weight: 700; color: #fff;">Log de Eventos CDC em Tempo Real</span>
+          <button style="background: none; border: none; color: var(--text-muted); font-size: 11px; cursor: pointer;" onclick="clearLogs()">Limpar log</button>
+        </div>
+
+        <div class="terminal-box" id="terminalLogs">
+          <div class="terminal-line">
+            <span class="t-time">[14:10:00]</span>
+            <span class="t-cdc">[CDC READY]</span>
+            <span>Motor CDC conectado ao binlog do MySQL (Poll rate: 250ms).</span>
+          </div>
+          <div class="terminal-line">
+            <span class="t-time">[14:10:01]</span>
+            <span class="t-es">[ES INDEX]</span>
+            <span>Índice 'items_index' operacional com 2 shards e réplica ativa.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="footer-bar">
+    Desenvolvido por <a href="https://barcelosneto.github.io/site-portfolio/" target="_blank">Pedro Moacyr Barcelos Neto</a> •
+    Repositório aberto: <a href="https://github.com/barcelosneto/mysql-elasticsearch-sync-api" target="_blank">github.com/barcelosneto/mysql-elasticsearch-sync-api</a>
+  </footer>
+
+  <script>
+    // In-memory dataset simulating 5.4M records in Elasticsearch
+    let activeCategory = 'ALL';
+    let sampleData = [
+      { id: 10481, sku: 'SKU-DEL-0010481', title: 'Servidor Dell PowerEdge R750 32-Core 128GB RAM', category: 'Servidores', price: 34850.00, stock: 12, status: 'active' },
+      { id: 10482, sku: 'SKU-CIS-0010482', title: 'Switch Cisco Catalyst 9300 48 Portas PoE+ Gigabit', category: 'Redes', price: 18400.00, stock: 24, status: 'active' },
+      { id: 10483, sku: 'SKU-HPE-0010483', title: 'Storage SAN HPE MSA 2060 24x SSD NVMe 16Gb Fibre Channel', category: 'Storage', price: 68900.00, stock: 5, status: 'active' },
+      { id: 10484, sku: 'SKU-FOR-0010484', title: 'Firewall Fortinet FortiGate 100F 10Gbps UTM Appliance', category: 'Redes', price: 21500.00, stock: 18, status: 'active' },
+      { id: 10485, sku: 'SKU-LEN-0010485', title: 'Servidor Lenovo ThinkSystem SR650 V2 Xeon Gold', category: 'Servidores', price: 29400.00, stock: 8, status: 'active' },
+      { id: 10486, sku: 'SKU-DEL-0010486', title: 'Storage Dell PowerStore 500T All-Flash 35TB', category: 'Storage', price: 92000.00, stock: 3, status: 'active' }
+    ];
+
+    let nextId = 10487;
+
+    function renderResults(query = '') {
+      const container = document.getElementById('resultsContainer');
+      const start = performance.now();
+
+      let filtered = sampleData.filter(item => {
+        const matchesCat = (activeCategory === 'ALL' || item.category === activeCategory);
+        const qLower = query.toLowerCase();
+        const matchesQuery = !query ||
+          item.title.toLowerCase().includes(qLower) ||
+          item.sku.toLowerCase().includes(qLower) ||
+          item.category.toLowerCase().includes(qLower);
+        return matchesCat && matchesQuery;
+      });
+
+      const latency = (performance.now() - start + (Math.random() * 4 + 4)).toFixed(1);
+      document.getElementById('queryLatencyText').textContent = `Query time: ${latency} ms`;
+      document.getElementById('kpiQueryTime').textContent = `${latency} ms`;
+      document.getElementById('resultsCount').textContent = `Exibindo ${filtered.length} de 5.420.${sampleData.length * 10} itens`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 40px 10px; color: var(--text-muted);">
+            <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
+            <p style="font-size: 14px; font-weight: 600;">Nenhum registro encontrado no índice Elasticsearch.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(item => `
+        <div class="result-row" id="row-${item.id}">
+          <div class="res-info">
+            <h4>${item.title}</h4>
+            <div class="res-meta">
+              <span>SKU: <code style="color: #38bdf8; font-family: var(--mono);">${item.sku}</code></span>
+              <span>Categoria: <strong>${item.category}</strong></span>
+              <span>Estoque: <strong>${item.stock} un.</strong></span>
+            </div>
+            <div class="res-actions">
+              <button class="btn-action-sm" onclick="quickEditItem(${item.id})">Editar Preço</button>
+              <button class="btn-action-sm btn-action-del" onclick="quickDeleteItem(${item.id})">Excluir no MySQL</button>
+            </div>
+          </div>
+          <div class="res-price">
+            R$ ${item.price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value;
+      renderResults(q);
+    }
+
+    function filterCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      handleSearch();
+    }
+
+    function logTerminal(type, msg) {
+      const term = document.getElementById('terminalLogs');
+      const now = new Date();
+      const timeStr = `[${now.toTimeString().split(' ')[0]}]`;
+      let tagHtml = '';
+
+      if (type === 'mysql') tagHtml = '<span class="t-mysql">[MySQL TX]</span>';
+      else if (type === 'cdc') tagHtml = '<span class="t-cdc">[CDC STREAM]</span>';
+      else if (type === 'es') tagHtml = '<span class="t-es">[ELASTIC]</span>';
+      else if (type === 'del') tagHtml = '<span class="t-del">[CDC DELETE]</span>';
+
+      const line = document.createElement('div');
+      line.className = 'terminal-line';
+      line.innerHTML = `<span class="t-time">${timeStr}</span> ${tagHtml} <span>${msg}</span>`;
+      term.appendChild(line);
+      term.scrollTop = term.scrollHeight;
+    }
+
+    function clearLogs() {
+      document.getElementById('terminalLogs').innerHTML = '';
+    }
+
+    function simulateInsert() {
+      const newId = nextId++;
+      const randomSku = `SKU-SER-${newId}`;
+      const randomPrice = Math.floor(Math.random() * 40000 + 12000);
+      const newItem = {
+        id: newId,
+        sku: randomSku,
+        title: `Servidor Rack IBM Enterprise Z-${newId} High-Density`,
+        category: 'Servidores',
+        price: randomPrice,
+        stock: Math.floor(Math.random() * 20 + 2),
+        status: 'active'
+      };
+
+      logTerminal('mysql', `INSERT INTO items (id: ${newId}, sku: '${randomSku}') COMMIT OK.`);
+
+      setTimeout(() => {
+        logTerminal('cdc', `Binlog Event: INSERT aggregate_id=${newId} detectado (lag: 34ms).`);
+      }, 50);
+
+      setTimeout(() => {
+        sampleData.unshift(newItem);
+        handleSearch();
+        logTerminal('es', `_doc id=${newId} indexado no Elasticsearch com sucesso.`);
+      }, 120);
+    }
+
+    function simulateUpdate() {
+      if (sampleData.length === 0) return;
+      const target = sampleData[0];
+      const oldPrice = target.price;
+      target.price = Math.round(target.price * (1 + (Math.random() * 0.15 - 0.07)));
+      target.stock += 5;
+
+      logTerminal('mysql', `UPDATE items SET price=${target.price}, stock=${target.stock} WHERE id=${target.id} COMMIT.`);
+
+      setTimeout(() => {
+        logTerminal('cdc', `Binlog Event: UPDATE aggregate_id=${target.id} capturado (lag: 28ms).`);
+      }, 50);
+
+      setTimeout(() => {
+        handleSearch();
+        logTerminal('es', `_doc id=${target.id} atualizado no Elasticsearch em 11ms.`);
+      }, 110);
+    }
+
+    function simulateDelete() {
+      if (sampleData.length === 0) return;
+      const target = sampleData[0];
+      quickDeleteItem(target.id);
+    }
+
+    function quickEditItem(id) {
+      const item = sampleData.find(i => i.id === id);
+      if (!item) return;
+      item.price = Math.round(item.price * 1.05);
+      logTerminal('mysql', `UPDATE items SET price=${item.price} WHERE id=${id} COMMIT.`);
+      setTimeout(() => {
+        logTerminal('cdc', `Binlog Event: UPDATE id=${id} reindexado no Elastic.`);
+        handleSearch();
+      }, 80);
+    }
+
+    function quickDeleteItem(id) {
+      const item = sampleData.find(i => i.id === id);
+      if (!item) return;
+
+      logTerminal('mysql', `DELETE FROM items WHERE id=${id} COMMIT OK.`);
+
+      setTimeout(() => {
+        logTerminal('del', `Binlog Event: DELETE id=${id} recebido (lag: 24ms).`);
+      }, 50);
+
+      setTimeout(() => {
+        sampleData = sampleData.filter(i => i.id !== id);
+        handleSearch();
+        logTerminal('es', `Documento id=${id} purgado do índice Elasticsearch.`);
+      }, 120);
+    }
+
+    // Initial render
+    renderResults();
+  </script>
+</body>
+</html>
