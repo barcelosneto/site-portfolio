@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redesign de Landing Page: Da Estrutura de IA ao Design Premium de Alta Conversao</title>
-  <meta name="description" content="Demonstracao interativa de redesign de landing pages: transformacao de modelos genericos gerados por inteligencia artificial em interfaces refinadas, com identidade propria e foco em conversao." />
+  <title>Vanguard OS | Plataforma de Inteligencia Financeira e Crescimento Estrategico</title>
+  <meta name="description" content="Plataforma de alta precisao que combina analise preditiva, governanca automatizada e gestao de liquidez para operacoes que demandam excelencia." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-dark: #0A0D14;
-      --bg-card: rgba(18, 24, 38, 0.7);
-      --bg-card-hover: rgba(24, 32, 50, 0.85);
+      --bg: #07090E;
+      --bg-surface: #0E131F;
+      --bg-card: rgba(16, 22, 36, 0.65);
+      --bg-card-hover: rgba(22, 30, 48, 0.85);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-focus: rgba(99, 102, 241, 0.5);
+      --border-accent: rgba(99, 102, 241, 0.4);
       --primary: #4F46E5;
-      --primary-hover: #4338CA;
-      --accent: #06B6D4;
-      --text-main: #F3F4F6;
-      --text-muted: #9CA3AF;
-      --text-dim: #6B7280;
+      --primary-light: #6366F1;
+      --cyan: #06B6D4;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --container: 1200px;
       --radius-sm: 8px;
       --radius-md: 14px;
-      --radius-lg: 20px;
-      --container: 1180px;
-      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-display: 'Space Grotesk', sans-serif;
+      --radius-lg: 24px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-serif: 'Newsreader', Georgia, serif;
     }
 
     * {
@@ -36,25 +37,37 @@
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      font-family: var(--font-body);
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Ambient Lighting */
-    .glow-bg {
+    /* Ambient Glow Effects */
+    .ambient-glow-1 {
       position: absolute;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(6, 182, 212, 0.05) 45%, transparent 70%);
-      top: -150px;
+      top: -200px;
       left: 50%;
       transform: translateX(-50%);
-      filter: blur(80px);
+      width: 900px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, rgba(6, 182, 212, 0.06) 40%, transparent 70%);
+      filter: blur(100px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 1400px;
+      right: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, transparent 65%);
+      filter: blur(120px);
       z-index: -1;
       pointer-events: none;
     }
@@ -66,42 +79,79 @@
       padding: 0 24px;
     }
 
-    /* Navigation */
+    /* Header */
     header {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border-subtle);
       position: sticky;
       top: 0;
-      background: rgba(10, 13, 20, 0.85);
-      backdrop-filter: blur(16px);
       z-index: 100;
+      background: rgba(7, 9, 14, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.3s;
     }
 
     .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 76px;
     }
 
-    .logo {
-      font-family: var(--font-display);
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #4F46E5, #06B6D4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+    }
+
+    .brand-name {
       font-size: 1.25rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: #FFFFFF;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    .logo-badge {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 12px var(--accent);
+    .brand-suffix {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-left: 4px;
+      background: rgba(6, 182, 212, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
     }
 
     .nav-actions {
@@ -110,90 +160,90 @@
       gap: 16px;
     }
 
-    .nav-link {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover {
-      color: #FFFFFF;
-    }
-
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 24px;
+      gap: 8px;
+      padding: 11px 22px;
       border-radius: var(--radius-sm);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
-      border: none;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #3730A3 100%);
+      background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
       color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.15);
       box-shadow: 0 4px 20px rgba(79, 70, 229, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, var(--primary-hover) 0%, #312E81 100%);
+      background: linear-gradient(135deg, #6366F1 0%, #4338CA 100%);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.5);
+      box-shadow: 0 8px 30px rgba(79, 70, 229, 0.55);
     }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--border-subtle);
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border-color: var(--border-subtle);
     }
 
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.05);
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
       border-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      padding: 96px 0 64px;
+      padding: 88px 0 64px;
       text-align: center;
+      position: relative;
     }
 
-    .hero-tag {
+    .badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px 16px;
-      background: rgba(79, 70, 229, 0.12);
+      background: rgba(79, 70, 229, 0.1);
       border: 1px solid rgba(79, 70, 229, 0.3);
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: #818CF8;
+      color: #A5B4FC;
       margin-bottom: 24px;
       letter-spacing: 0.02em;
-      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #818CF8;
+      box-shadow: 0 0 8px #818CF8;
     }
 
     .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.03em;
+      font-size: clamp(2.5rem, 5.5vw, 4.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
       margin-bottom: 24px;
       color: #FFFFFF;
     }
 
-    .hero-title span {
-      background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+    .hero-title .serif-accent {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      background: linear-gradient(135deg, #A5B4FC 0%, #06B6D4 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -204,346 +254,701 @@
       max-width: 680px;
       margin: 0 auto 36px;
       font-weight: 400;
+      line-height: 1.7;
     }
 
-    .hero-cta-group {
+    .hero-cta {
       display: flex;
       justify-content: center;
       gap: 16px;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
     }
 
-    .stats-row {
+    .trust-metrics {
       display: flex;
       justify-content: center;
-      gap: 48px;
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 28px 0;
-      margin-top: 48px;
+      align-items: center;
+      gap: 32px;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      margin-bottom: 64px;
       flex-wrap: wrap;
     }
 
-    .stat-item {
-      text-align: center;
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
+    .check-icon {
+      color: #10B981;
       font-weight: 700;
+    }
+
+    /* Hero Dashboard Mockup Showcase */
+    .mockup-container {
+      position: relative;
+      max-width: 1040px;
+      margin: 0 auto;
+      perspective: 1200px;
+    }
+
+    .mockup-wrapper {
+      background: var(--bg-surface);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 80px rgba(79, 70, 229, 0.2);
+      overflow: hidden;
+      transform: rotateX(3deg);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mockup-wrapper:hover {
+      transform: rotateX(0deg);
+    }
+
+    .mockup-header {
+      background: #0B0E17;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mockup-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #27272A;
+    }
+
+    .dot.red { background: #EF4444; }
+    .dot.yellow { background: #F59E0B; }
+    .dot.green { background: #10B981; }
+
+    .mockup-title {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    .mockup-body {
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(14, 19, 31, 0.8) 0%, rgba(7, 9, 14, 0.95) 100%);
+    }
+
+    .dashboard-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .dash-stat-group {
+      text-align: left;
+    }
+
+    .dash-label {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .dash-val {
+      font-size: 1.8rem;
+      font-weight: 800;
       color: #FFFFFF;
       letter-spacing: -0.02em;
     }
 
-    .stat-label {
-      font-size: 0.88rem;
-      color: var(--text-dim);
-      font-weight: 500;
+    .dash-tag-positive {
+      font-size: 0.8rem;
+      color: #10B981;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-left: 8px;
     }
 
-    /* Interactive Comparison Switcher Section */
-    .comparison-section {
-      padding: 80px 0;
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .dash-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .chart-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .chart-legend {
+      display: flex;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-color-1 { width: 8px; height: 8px; border-radius: 2px; background: #6366F1; }
+    .legend-color-2 { width: 8px; height: 8px; border-radius: 2px; background: #06B6D4; }
+
+    /* SVG Chart Vector */
+    .chart-svg {
+      width: 100%;
+      height: 160px;
+    }
+
+    .stream-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .stream-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .stream-info {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .stream-sub {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .stream-value {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #10B981;
+    }
+
+    /* Floating Pill Badge */
+    .floating-card-1 {
+      position: absolute;
+      top: 40px;
+      left: -32px;
+      background: rgba(14, 19, 31, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+
+    .floating-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .floating-text-title {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .floating-text-val {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-12px); }
+    }
+
+    /* Social Proof Brands */
+    .partners-section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .partners-label {
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+    }
+
+    .partners-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      opacity: 0.6;
+    }
+
+    .partner-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-muted);
+      filter: grayscale(1);
+      transition: opacity 0.2s;
+    }
+
+    .partner-logo:hover {
+      opacity: 1;
+      color: #FFFFFF;
+    }
+
+    /* Core Features Grid */
+    .features-section {
+      padding: 100px 0;
     }
 
     .section-header {
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 48px;
+      max-width: 680px;
+      margin: 0 auto 56px;
     }
 
     .section-tag {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--cyan);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
       margin-bottom: 12px;
     }
 
     .section-title {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
       margin-bottom: 16px;
       color: #FFFFFF;
     }
 
     .section-desc {
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1.08rem;
     }
 
-    .toggle-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 36px;
-    }
-
-    .toggle-box {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      padding: 6px;
-      border-radius: var(--radius-sm);
-      display: inline-flex;
-      gap: 6px;
-    }
-
-    .toggle-btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .toggle-btn.active {
-      background: var(--primary);
-      color: #FFFFFF;
-      box-shadow: 0 2px 10px rgba(79, 70, 229, 0.4);
-    }
-
-    /* Comparison Card Box */
-    .comparison-display {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      backdrop-filter: blur(12px);
-      transition: all 0.3s;
-    }
-
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .comparison-col {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      padding: 32px;
-    }
-
-    .comparison-col.ai-version {
-      border-left: 3px solid #EF4444;
-    }
-
-    .comparison-col.human-version {
-      border-left: 3px solid #10B981;
-      background: rgba(16, 185, 129, 0.03);
-    }
-
-    .col-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #FFFFFF;
-    }
-
-    .col-desc {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-
-    .spec-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .spec-item {
-      font-size: 0.92rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .spec-marker {
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .marker-bad {
-      color: #EF4444;
-    }
-
-    .marker-good {
-      color: #10B981;
-    }
-
-    /* Pillars of Transformation */
-    .pillars-section {
-      padding: 80px 0;
-    }
-
-    .pillars-grid {
+    .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
 
-    .pillar-card {
+    .feature-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
-      padding: 32px;
-      transition: all 0.25s;
+      padding: 36px 30px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
     }
 
-    .pillar-card:hover {
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .feature-card:hover {
       background: var(--bg-card-hover);
       border-color: rgba(255, 255, 255, 0.16);
       transform: translateY(-4px);
     }
 
-    .pillar-number {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.15);
-      margin-bottom: 16px;
+    .feature-card:hover::before {
+      opacity: 1;
     }
 
-    .pillar-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 12px;
-    }
-
-    .pillar-desc {
-      font-size: 0.94rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* Process Flow */
-    .process-section {
-      padding: 80px 0;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .steps-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .step-card {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 24px;
-      padding: 28px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-md);
-      align-items: center;
-    }
-
-    .step-badge {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: rgba(79, 70, 229, 0.15);
-      border: 1px solid rgba(79, 70, 229, 0.35);
-      color: #818CF8;
+    .feature-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(79, 70, 229, 0.12);
+      border: 1px solid rgba(79, 70, 229, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.25rem;
+      margin-bottom: 24px;
     }
 
-    .step-content h4 {
-      font-size: 1.15rem;
+    .feature-icon-svg {
+      width: 22px;
+      height: 22px;
+      stroke: #818CF8;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .feature-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Interactive Showcase Section */
+    .interactive-section {
+      padding: 90px 0;
+      background: rgba(255, 255, 255, 0.015);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .tabs-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: rgba(79, 70, 229, 0.15);
+      border-color: var(--border-accent);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.25);
+    }
+
+    .tab-content-panel {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      backdrop-filter: blur(12px);
+    }
+
+    .tab-content-panel.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .tab-text h3 {
+      font-size: 1.8rem;
       font-weight: 700;
       color: #FFFFFF;
-      margin-bottom: 6px;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
     }
 
-    .step-content p {
-      font-size: 0.92rem;
+    .tab-text p {
+      font-size: 1rem;
       color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.7;
     }
 
-    /* Testimonials & Proof */
-    .proof-section {
-      padding: 80px 0;
+    .tab-checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+    .tab-check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--text);
     }
 
-    .testimonial-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
+    .tab-check-bullet {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10B981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .tab-graphic-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-md);
       padding: 32px;
     }
 
-    .testimonial-quote {
-      font-size: 1.05rem;
-      color: var(--text-main);
-      margin-bottom: 24px;
-      font-style: italic;
+    .mini-metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
     }
 
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .mini-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
     }
 
-    .author-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #334155;
+    .mini-card-title {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .mini-card-num {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 100px 0;
+    }
+
+    .pricing-toggle {
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-weight: 700;
-      color: #FFFFFF;
-      font-size: 0.9rem;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
     }
 
-    .author-name {
-      font-weight: 700;
-      color: #FFFFFF;
-      font-size: 0.95rem;
+    .toggle-label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
     }
 
-    .author-role {
-      font-size: 0.82rem;
+    .toggle-switch {
+      width: 52px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid var(--border-subtle);
+      transition: background 0.3s;
+    }
+
+    .toggle-switch.annual {
+      background: var(--primary);
+    }
+
+    .toggle-knob {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      transition: transform 0.25s;
+    }
+
+    .toggle-switch.annual .toggle-knob {
+      transform: translateX(24px);
+    }
+
+    .discount-badge {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #10B981;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      background: rgba(20, 27, 45, 0.9);
+      border-color: var(--primary-light);
+      box-shadow: 0 0 40px rgba(79, 70, 229, 0.25);
+      transform: scale(1.03);
+    }
+
+    .featured-ribbon {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 16px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .plan-desc {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+    }
+
+    .plan-price-box {
+      margin-bottom: 28px;
+    }
+
+    .plan-currency {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .plan-value {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+    }
+
+    .plan-period {
+      font-size: 0.88rem;
       color: var(--text-dim);
     }
 
-    /* FAQ Section */
+    .plan-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+      flex-grow: 1;
+    }
+
+    .plan-feat-item {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-feat-bullet {
+      color: #818CF8;
+      font-weight: 700;
+    }
+
+    /* FAQ */
     .faq-section {
-      padding: 80px 0;
+      padding: 90px 0;
       border-top: 1px solid var(--border-subtle);
     }
 
-    .faq-list {
-      max-width: 820px;
+    .faq-container {
+      max-width: 800px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -557,8 +962,8 @@
       overflow: hidden;
     }
 
-    .faq-question {
-      padding: 20px 24px;
+    .faq-q {
+      padding: 22px 28px;
       font-weight: 600;
       font-size: 1.05rem;
       color: #FFFFFF;
@@ -569,94 +974,149 @@
       user-select: none;
     }
 
-    .faq-icon {
+    .faq-arrow {
       font-size: 1.2rem;
       color: var(--text-dim);
-      transition: transform 0.2s;
+      transition: transform 0.25s;
     }
 
-    .faq-answer {
-      padding: 0 24px 20px;
+    .faq-a {
+      padding: 0 28px 24px;
       color: var(--text-muted);
       font-size: 0.95rem;
-      line-height: 1.6;
+      line-height: 1.7;
       display: none;
     }
 
-    .faq-item.open .faq-answer {
+    .faq-item.open .faq-a {
       display: block;
     }
 
-    .faq-item.open .faq-icon {
+    .faq-item.open .faq-arrow {
       transform: rotate(45deg);
     }
 
-    /* CTA Final Box */
-    .cta-box {
-      background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
-      border: 1px solid rgba(79, 70, 229, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 64px 32px;
-      text-align: center;
-      margin: 80px 0;
+    /* Final CTA */
+    .final-cta {
+      margin: 80px 0 100px;
     }
 
-    .cta-title {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 700;
+    .final-cta-card {
+      background: radial-gradient(circle at center, rgba(79, 70, 229, 0.2) 0%, rgba(14, 19, 31, 0.9) 70%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 72px 32px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
       color: #FFFFFF;
       margin-bottom: 16px;
     }
 
-    .cta-desc {
+    .cta-p {
       color: var(--text-muted);
-      max-width: 580px;
-      margin: 0 auto 32px;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 36px;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border-subtle);
-      padding: 40px 0;
-      text-align: center;
+      padding: 60px 0 30px;
+      background: #04060A;
+      font-size: 0.88rem;
       color: var(--text-dim);
-      font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .comparison-grid, .pillars-grid, .testimonials-grid {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col h5 {
+      color: #FFFFFF;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col a {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 24px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .dashboard-grid, .tab-content-panel.active, .pricing-grid, .features-grid {
         grid-template-columns: 1fr;
       }
-      .step-card {
-        grid-template-columns: 1fr;
-        text-align: left;
+      .pricing-card.featured {
+        transform: scale(1);
       }
-      .stats-row {
-        gap: 24px;
+      .floating-card-1 {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .nav-menu {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <div class="glow-bg"></div>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
 
   <!-- Header -->
   <header>
     <div class="container nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-badge"></span>
-        Redesign Studio
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <span class="brand-name">Vanguard</span>
+        <span class="brand-suffix">OS</span>
       </a>
+
+      <ul class="nav-menu">
+        <li><a href="#recursos" class="nav-link">Recursos</a></li>
+        <li><a href="#arquitetura" class="nav-link">Arquitetura</a></li>
+        <li><a href="#planos" class="nav-link">Planos</a></li>
+        <li><a href="#faq" class="nav-link">Duvidas</a></li>
+      </ul>
+
       <div class="nav-actions">
-        <a href="#comparativo" class="nav-link">Comparativo</a>
-        <a href="#pilares" class="nav-link">Pilares</a>
-        <a href="#faq" class="nav-link">Duvidas</a>
-        <a href="#contato" class="btn btn-primary">Iniciar Redesign</a>
+        <a href="#planos" class="btn btn-secondary">Acessar Conta</a>
+        <a href="#planos" class="btn btn-primary">Iniciar Teste Gratuito</a>
       </div>
     </div>
   </header>
@@ -665,210 +1125,129 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <div class="hero-tag">Design Humano &amp; Otimizacao de Conversao</div>
+        <div class="badge-pill">
+          <span class="badge-dot"></span>
+          <span>Nova Geracao de Inteligencia Financeira 2.0</span>
+        </div>
+
         <h1 class="hero-title">
-          Transforme o rascunho da sua IA em uma<br />
-          <span>landing page premium e autentica</span>
+          A precisao analitica que o seu capital<br />
+          sempre exigiu com a <span class="serif-accent">elegancia de um software moderno</span>
         </h1>
+
         <p class="hero-subtitle">
-          A Inteligencia Artificial gera esqueletos funcionais, mas falha na conexao humana, na autoridade visual e na arquitetura de conversao. Nos refinamos a sua estrutura com identidade visual exclusiva e foco total em conversao.
+          Unifique fluxos de liquidez, auditoria preditiva e projecao de receitas em uma interface de alta fidelidade desenhada para quem toma decisoes em tempo real.
         </p>
-        <div class="hero-cta-group">
-          <a href="#comparativo" class="btn btn-primary">Ver Comparativo Antes e Depois</a>
-          <a href="#pilares" class="btn btn-outline">Conhecer Metodologia</a>
+
+        <div class="hero-cta">
+          <a href="#planos" class="btn btn-primary">Comecar Agora sem Compromisso</a>
+          <a href="#arquitetura" class="btn btn-secondary">Ver Tour Interativo</a>
         </div>
 
-        <div class="stats-row">
-          <div class="stat-item">
-            <div class="stat-number">+142%</div>
-            <div class="stat-label">Taxa media de conversao pos-redesign</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">1.2s</div>
-            <div class="stat-label">Tempo medio de carregamento otimizado</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">Zero</div>
-            <div class="stat-label">Templates genericos ou copias batidas</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Comparison Section -->
-    <section class="comparison-section" id="comparativo">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Analise Critica</div>
-          <h2 class="section-title">O que separa uma pagina de IA de uma pagina de autoridade</h2>
-          <p class="section-desc">
-            A diferenca entre passar uma impressao amadora ou transmitir confianca imediata comeca no design e nos detalhes tecnicos.
-          </p>
+        <div class="trust-metrics">
+          <div class="trust-item"><span class="check-icon">[v]</span> Implantacao em 15 minutos</div>
+          <div class="trust-item"><span class="check-icon">[v]</span> Criptografia em nivel bancario</div>
+          <div class="trust-item"><span class="check-icon">[v]</span> Sem necessidade de cartao no teste</div>
         </div>
 
-        <div class="comparison-display">
-          <div class="comparison-grid">
-            <!-- Modelo Padrao de IA -->
-            <div class="comparison-col ai-version">
-              <div class="col-title">Estrutura Bruta Gerada por IA</div>
-              <div class="col-desc">Sintomas comuns de ferramentas automotivas sem direcao de arte.</div>
-              <ul class="spec-list">
-                <li class="spec-item">
-                  <span class="spec-marker marker-bad">[x]</span>
-                  <span><strong>Tipografia padrao:</strong> Fontes basicas do sistema sem contraste de pesos, gerando aspecto monótono.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-bad">[x]</span>
-                  <span><strong>Espacamento desarmonico:</strong> Sessoes coladas ou com margens exageradas sem ritmo de leitura.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-bad">[x]</span>
-                  <span><strong>Cores desconexas:</strong> Contrastes genericos ou gradientes fluorescentes que cansam a visao e nao guiam a acao.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-bad">[x]</span>
-                  <span><strong>Sem hierarquia de conversao:</strong> Botoes secundarios competindo em peso com a chamada principal.</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Modelo Humano Refatorado -->
-            <div class="comparison-col human-version">
-              <div class="col-title">Redesign Humano &amp; Otimizado para CRO</div>
-              <div class="col-desc">Direcao de arte autoral ajustada a psicologia do seu publico-alvo.</div>
-              <ul class="spec-list">
-                <li class="spec-item">
-                  <span class="spec-marker marker-good">[v]</span>
-                  <span><strong>Tipografia com autoridade:</strong> Escala modular com peso visual calibrado para conduzir o olho aos pontos de decisao.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-good">[v]</span>
-                  <span><strong>Ritmo e respiro visual:</strong> Grid equilibrado com espacamentos que transmitem elegancia e confianca.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-good">[v]</span>
-                  <span><strong>Paleta intencional:</strong> Cores funcionais com botoes de acao (CTA) projetados para alto contraste e clique.</span>
-                </li>
-                <li class="spec-item">
-                  <span class="spec-marker marker-good">[v]</span>
-                  <span><strong>Micro-interacoes fluidas:</strong> Efeitos e estados sutis que geram engajamento sem prejudicar a velocidade.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pillars of Redesign -->
-    <section class="pillars-section" id="pilares">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Metodologia</div>
-          <h2 class="section-title">Os 3 pilares da refatoracao de interface</h2>
-          <p class="section-desc">
-            Aproveitamos toda a sua estrutura e textos existentes para focar 100% no que realmente move o ponteiro da percepcao de valor.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-number">01</div>
-            <div class="pillar-title">Direcao de Arte e Identidade</div>
-            <div class="pillar-desc">
-              Adequacao completa de fontes, contraste, icones vetorizados modernos e paleta cromatica que tira o aspecto de template pronto e estabelece presenca de marca forte.
+        <!-- Dashboard Mockup -->
+        <div class="mockup-container">
+          <!-- Floating notification badge -->
+          <div class="floating-card-1">
+            <div class="floating-icon">+</div>
+            <div>
+              <div class="floating-text-title">Rendimento Preditivo</div>
+              <div class="floating-text-val">+34.8% a.a.</div>
             </div>
           </div>
 
-          <div class="pillar-card">
-            <div class="pillar-number">02</div>
-            <div class="pillar-title">Hierarquia e Psicologia de Conversao</div>
-            <div class="pillar-desc">
-              Reorganizacao do fluxo de leitura (F-pattern e Z-pattern), posicionamento estrategico de provas sociais e destaque absoluto para os caminhos de captura e contato.
-            </div>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-number">03</div>
-            <div class="pillar-title">Execucao Tecnica e Mobile First</div>
-            <div class="pillar-desc">
-              Mais de 75% dos acessos ocorrem em dispositivos moveis. Garantimos adaptabilidade cirurgica em smartphones, eliminando quebras de layout e garantindo velocidade maxima.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Fluxo de Trabalho</div>
-          <h2 class="section-title">Como funciona o processo de entrega</h2>
-          <p class="section-desc">
-            Transparencia total em cada etapa, sem surpresas e com revisoes orientadas a objetivos comerciais.
-          </p>
-        </div>
-
-        <div class="steps-container">
-          <div class="step-card">
-            <div class="step-badge">1</div>
-            <div class="step-content">
-              <h4>Auditoria e Diagnostico Critico</h4>
-              <p>Analisamos minuciosamente o modelo atual gerado pela IA, identificando pontos de atrito, quebras de proporcao e oportunidades de aumento de conversao.</p>
-            </div>
-          </div>
-
-          <div class="step-card">
-            <div class="step-badge">2</div>
-            <div class="step-content">
-              <h4>Proposta de Redesign Visual</h4>
-              <p>Apresentamos a nova direcao visual com tipografia ajustada, elementos graficos e organizacao espacial para sua aprovacao previa.</p>
-            </div>
-          </div>
-
-          <div class="step-card">
-            <div class="step-badge">3</div>
-            <div class="step-content">
-              <h4>Desenvolvimento e Entrega Pronta</h4>
-              <p>Construcao da pagina final na plataforma de sua escolha (WordPress + Elementor, HTML/CSS ou Webflow), totalmente funcional, responsiva e pronta para receber trafego.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proof / Testimonials -->
-    <section class="proof-section">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">Casos Reais</div>
-          <h2 class="section-title">O impacto de sair do modelo padrao</h2>
-        </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-quote">
-              "Minha pagina feita com IA parecia mais um trabalho escolar generico. Apos o redesign mantendo a mesma copy, a taxa de agendamento de reunioes quase dobrou no primeiro mes."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">MS</div>
-              <div>
-                <div class="author-name">Marcos Silveira</div>
-                <div class="author-role">Fundador, Apex Consultoria</div>
+          <div class="mockup-wrapper">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
               </div>
+              <div class="mockup-title">vanguard-platform.internal / live-dashboard</div>
+              <div style="width: 50px;"></div>
             </div>
-          </div>
 
-          <div class="testimonial-card">
-            <div class="testimonial-quote">
-              "O diferencial foi a visao critica de UX. Nao foi apenas trocar cores, foi reestruturar a hierarquia visual para que o visitante realmente entendesse a oferta em 5 segundos."
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">CL</div>
-              <div>
-                <div class="author-name">Carla Lourenco</div>
-                <div class="author-role">Head de Operacoes, Nexus Tech</div>
+            <div class="mockup-body">
+              <div class="dashboard-topbar">
+                <div class="dash-stat-group">
+                  <div class="dash-label">Liquidez Projetada em Carteira</div>
+                  <div class="dash-val">
+                    R$ 14.850.400,00
+                    <span class="dash-tag-positive">+12.4% este mes</span>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                  <span class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">Filtrar Periodo: 30D</span>
+                  <span class="btn btn-primary" style="padding: 6px 14px; font-size: 0.8rem;">Exportar Relatorio</span>
+                </div>
+              </div>
+
+              <div class="dashboard-grid">
+                <!-- Main Vector Chart -->
+                <div class="dash-card">
+                  <div class="chart-header">
+                    <span class="chart-title">Volume Transacionado vs Previsao Algoritmica</span>
+                    <div class="chart-legend">
+                      <div class="legend-item"><span class="legend-color-1"></span> Volume Real</div>
+                      <div class="legend-item"><span class="legend-color-2"></span> IA Preditiva</div>
+                    </div>
+                  </div>
+
+                  <svg class="chart-svg" viewBox="0 0 600 160" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chartGrad1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#6366F1" stop-opacity="0.35"/>
+                        <stop offset="100%" stop-color="#6366F1" stop-opacity="0.0"/>
+                      </linearGradient>
+                      <linearGradient id="chartGrad2" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+                        <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.0"/>
+                      </linearGradient>
+                    </defs>
+                    <!-- Area Fills -->
+                    <path d="M0,130 Q120,90 240,110 T480,40 T600,20 L600,160 L0,160 Z" fill="url(#chartGrad1)"/>
+                    <path d="M0,145 Q120,120 240,125 T480,70 T600,45 L600,160 L0,160 Z" fill="url(#chartGrad2)"/>
+                    <!-- Lines -->
+                    <path d="M0,130 Q120,90 240,110 T480,40 T600,20" fill="none" stroke="#6366F1" stroke-width="3"/>
+                    <path d="M0,145 Q120,120 240,125 T480,70 T600,45" fill="none" stroke="#06B6D4" stroke-width="2" stroke-dasharray="6,4"/>
+                  </svg>
+                </div>
+
+                <!-- Transaction Streams -->
+                <div class="dash-card">
+                  <div class="chart-header">
+                    <span class="chart-title">Atividades em Tempo Real</span>
+                  </div>
+                  <div class="stream-list">
+                    <div class="stream-item">
+                      <div>
+                        <div class="stream-info">Aporte de Tesouraria</div>
+                        <div class="stream-sub">Conta Escrow Santander</div>
+                      </div>
+                      <div class="stream-value">+ R$ 450.000</div>
+                    </div>
+                    <div class="stream-item">
+                      <div>
+                        <div class="stream-info">Rebalanceamento de Custo</div>
+                        <div class="stream-sub">Operacao de Hedge Cambial</div>
+                      </div>
+                      <div class="stream-value">+ R$ 180.250</div>
+                    </div>
+                    <div class="stream-item">
+                      <div>
+                        <div class="stream-info">Liquidacao de Dividendos</div>
+                        <div class="stream-sub">Custodia B3 Institucional</div>
+                      </div>
+                      <div class="stream-value">+ R$ 920.000</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -876,56 +1255,290 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Partners Logos -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-label">Empresas e family offices que confiam na tecnologia Vanguard</div>
+        <div class="partners-grid">
+          <span class="partner-logo">VERTEX CAPITAL</span>
+          <span class="partner-logo">MERIDIAN TECH</span>
+          <span class="partner-logo">NEXUS ASSET</span>
+          <span class="partner-logo">HORIZON EQUITY</span>
+          <span class="partner-logo">AEGIS GLOBAL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section class="features-section" id="recursos">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Capacidades Centrais</div>
+          <h2 class="section-title">Engenharia construida para escala e controle</h2>
+          <p class="section-desc">
+            Cada componente da arquitetura foi desenhado para eliminar latencia e entregar clareza absoluta sobre suas operacoes.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="feature-title">Analise Preditiva Dinamica</h3>
+            <p class="feature-desc">
+              Modelos neurais proprietarios identificam variacoes de liquidez com ate 90 dias de antecedencia, permitindo antecipacao tatica.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="feature-title">Auditoria em Tempo Real</h3>
+            <p class="feature-desc">
+              Rastreamento imutavel de transacoes e reconciliacao bancaria instantanea sem necessidade de planilhas manuais.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 class="feature-title">Integracoes por API Direta</h3>
+            <p class="feature-desc">
+              Conecte seus sistemas ERP, bancos e plataformas de cobranca em minutos por meio de webhooks assincronos e documentacao aberta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Architecture Tabs -->
+    <section class="interactive-section" id="arquitetura">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Experiencia de Gestao</div>
+          <h2 class="section-title">Controle cirurgico em cada nivel</h2>
+        </div>
+
+        <div class="tabs-nav">
+          <button class="tab-btn active" onclick="switchTab(0)">01. Visao Executiva</button>
+          <button class="tab-btn" onclick="switchTab(1)">02. Gestao de Risco</button>
+          <button class="tab-btn" onclick="switchTab(2)">03. Automação de Fluxo</button>
+        </div>
+
+        <div class="tab-content-panel active" id="tab-0">
+          <div class="tab-text">
+            <h3>Consolidacao Patrimonial Instantanea</h3>
+            <p>
+              Esqueca o fechamento mensal com atraso de duas semanas. Tenha visibilidade consolidada de todas as contas e subsidiarias em um painel unico e atualizado a cada bloco.
+            </p>
+            <ul class="tab-checklist">
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Conciliacao multipaises com correcao cambial automatica</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Relatorios padronizados para conselhos de administracao</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Integracao nativa com Open Finance</li>
+            </ul>
+          </div>
+          <div class="tab-graphic-box">
+            <div class="mini-metric-grid">
+              <div class="mini-card">
+                <div class="mini-card-title">Margem de Lucro Efetiva</div>
+                <div class="mini-card-num">41.8%</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card-title">Reducao de Despesas</div>
+                <div class="mini-card-num">-28.4%</div>
+              </div>
+            </div>
+            <div style="background: rgba(255,255,255,0.02); padding: 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+              <span style="font-size: 0.8rem; color: #10B981; font-weight: 600;">STATUS DO SISTEMA:</span>
+              <p style="font-size: 0.85rem; color: #E2E8F0; margin-top: 4px;">Sincronizacao global com 100% de disponibilidade nos ultimos 180 dias.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content-panel" id="tab-1">
+          <div class="tab-text">
+            <h3>Mitigacao Ativa de Riscos de Liquidez</h3>
+            <p>
+              Identificacao continua de descompassos de prazos entre recebiveis e pagaveis, acionando alertas preditivos antes que ocorram gargalos de caixa.
+            </p>
+            <ul class="tab-checklist">
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Testes de estresse de mercado em cenarios extremos</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Politicas de aprovacao de despesas multinivel com chaves FIDO2</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Bloqueio automatico de pagamentos com discrepancia cadastral</li>
+            </ul>
+          </div>
+          <div class="tab-graphic-box">
+            <div class="mini-metric-grid">
+              <div class="mini-card">
+                <div class="mini-card-title">Score de Risco da Operacao</div>
+                <div class="mini-card-num" style="color: #10B981;">A+ (99.2)</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card-title">Incidentes Evitados</div>
+                <div class="mini-card-num">142</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content-panel" id="tab-2">
+          <div class="tab-text">
+            <h3>Workflows de Liquidacao Automatica</h3>
+            <p>
+              Programe regras complexas de repasse financeiro, liquidacao de fornecedores e distribuicao de dividendos sem friccao operacional.
+            </p>
+            <ul class="tab-checklist">
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Disparos via API RESTful com baixa latencia</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Notificacoes criptografadas de ponta a ponta</li>
+              <li class="tab-check-item"><span class="tab-check-bullet">v</span> Trilha de auditoria com exportacao fiscal automatica</li>
+            </ul>
+          </div>
+          <div class="tab-graphic-box">
+            <div class="mini-metric-grid">
+              <div class="mini-card">
+                <div class="mini-card-title">Tempo Medio de Conciliacao</div>
+                <div class="mini-card-num">0.4 seg</div>
+              </div>
+              <div class="mini-card">
+                <div class="mini-card-title">Horas Economizadas/Mes</div>
+                <div class="mini-card-num">180h</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="planos">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Planos Transparentes</div>
+          <h2 class="section-title">O investimento proporcional a sua maturidade</h2>
+          <p class="section-desc">Sem taxas ocultas. Cancele ou altere seu plano quando desejar.</p>
+        </div>
+
+        <div class="pricing-toggle">
+          <span class="toggle-label">Faturamento Mensal</span>
+          <div class="toggle-switch" id="billing-switch" onclick="toggleBilling()">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="toggle-label">Anual</span>
+          <span class="discount-badge">20% OFF</span>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1 -->
+          <div class="pricing-card">
+            <div class="plan-name">Essencial</div>
+            <div class="plan-desc">Para empresas em fase de consolidacao e operacoes em crescimento.</div>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-value" id="price-essential">490</span>
+              <span class="plan-period">/mes</span>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Ate 3 contas bancarias integradas</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Previsoes de fluxo com horizonte de 30 dias</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Exportacao de relatorios semanais</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Suporte prioritario via chamado</li>
+            </ul>
+            <a href="#contato" class="btn btn-secondary">Assinar Essencial</a>
+          </div>
+
+          <!-- Card 2 (Featured) -->
+          <div class="pricing-card featured">
+            <div class="featured-ribbon">Mais Escolhido</div>
+            <div class="plan-name">Profissional</div>
+            <div class="plan-desc">Para corporacoes e gestoras que necessitam de analise preditiva avancada.</div>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-value" id="price-pro">1.190</span>
+              <span class="plan-period">/mes</span>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Contas bancarias e subsidiarias ilimitadas</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Modelos preditivos de horizonte de 180 dias</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Acesso completo a API e Webhooks</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Gestao de usuarios com permissoes RBAC</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Gerente de contas dedicado</li>
+            </ul>
+            <a href="#contato" class="btn btn-primary">Comecar Teste de 14 Dias</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="pricing-card">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-desc">Para grandes grupos economicos e requisitos estritos de conformidade.</div>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-value">Sob Consulta</span>
+            </div>
+            <ul class="plan-features">
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Servidores isolados on-premise ou cloud privada</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> SLA de resposta garantido de 15 minutos</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Customizacao de algoritmos proprietarios</li>
+              <li class="plan-feat-item"><span class="plan-feat-bullet">[v]</span> Auditoria de seguranca SOC2 Type II</li>
+            </ul>
+            <a href="#contato" class="btn btn-secondary">Falar com Especialistas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
     <section class="faq-section" id="faq">
       <div class="container">
         <div class="section-header">
           <div class="section-tag">Perguntas Frequentes</div>
-          <h2 class="section-title">Duvidas comuns sobre o redesign</h2>
+          <h2 class="section-title">Esclarecimentos operacionais</h2>
         </div>
 
-        <div class="faq-list">
+        <div class="faq-container">
           <div class="faq-item">
-            <div class="faq-question">
-              Preciso reescrever todo o conteudo ou textos da pagina?
-              <span class="faq-icon">+</span>
+            <div class="faq-q">
+              Qual e o tempo necessario para a integracao com meus bancos atuais?
+              <span class="faq-arrow">+</span>
             </div>
-            <div class="faq-answer">
-              Nao. Aproveitamos integralmente a sua estrutura de copywriting existente. Fazemos apenas ajustes de micro-copy ou distribuicao visual dos blocos para que o texto fique mais escaneavel e agradavel de ler.
+            <div class="faq-a">
+              A conexao ocorre via padrao Open Finance regulamentado pelo Banco Central e APIs diretas. Na maioria dos casos, a sincronizacao completa dos primeiros dados e concluida em menos de 15 minutos.
             </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question">
-              Voces entregam apenas o visual ou o site pronto e publicado?
-              <span class="faq-icon">+</span>
+            <div class="faq-q">
+              Como funciona a seguranca dos meus dados financeiros confidenciais?
+              <span class="faq-arrow">+</span>
             </div>
-            <div class="faq-answer">
-              Entregamos o site 100% desenvolvido e funcional na plataforma desejada (WordPress + Elementor, HTML/CSS ou Webflow), com testes completos de responsividade em celulares, tablets e computadores.
+            <div class="faq-a">
+              Todos os dados trafegam com criptografia TLS 1.3 e sao armazenados em repouso com algoritmo AES-256. Possuimos conformidade com os padroes LGPD e ISO 27001.
             </div>
           </div>
 
           <div class="faq-item">
-            <div class="faq-question">
-              Qual e o prazo tipico para um projeto de redesign como esse?
-              <span class="faq-icon">+</span>
+            <div class="faq-q">
+              Posso cancelar meu plano a qualquer momento sem multa rescisoria?
+              <span class="faq-arrow">+</span>
             </div>
-            <div class="faq-answer">
-              Como a estrutura inicial ja esta definida, o ciclo completo de redesign, refinamento visual e desenvolvimento funcional leva em media de 3 a 5 dias uteis.
+            <div class="faq-a">
+              Sim. Nao ha fidelidade forcada nos planos mensais. Voce pode exportar todos os seus dados e encerrar sua assinatura quando desejar diretamente pelo painel.
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final Call to Action Box -->
-    <div class="container" id="contato">
-      <div class="cta-box">
-        <h3 class="cta-title">Pronto para dar o toque humano a sua pagina?</h3>
-        <p class="cta-desc">
-          Envie o link ou print do modelo atual gerado pela IA para recebermos uma analise preliminar gratuita com os principais pontos de melhoria.
+    <!-- Final CTA -->
+    <div class="container final-cta" id="contato">
+      <div class="final-cta-card">
+        <h2 class="cta-h2">Experimente a precisao Vanguard por 14 dias</h2>
+        <p class="cta-p">
+          Junte-se a mais de 800 organizacoes que transformaram incertezas financeiras em crescimento seguro.
         </p>
-        <a href="mailto:pedrobarcelos1980@gmail.com" class="btn btn-primary">Solicitar Analise de Redesign</a>
+        <a href="#planos" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">Solicitar Acesso Antecipado</a>
       </div>
     </div>
   </main>
@@ -933,15 +1546,90 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>Desenvolvido por Pedro Moacyr Barcelos Neto — Especialista em Interfaces e Otimizacao de Conversao.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+            <div class="brand-icon" style="width: 26px; height: 26px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <span style="font-weight: 700; color: #FFFFFF; font-size: 1.1rem;">Vanguard OS</span>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.7; max-width: 320px;">
+            Plataforma corporativa de visibilidade financeira, previsibilidade analitica e governanca de liquidez.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Plataforma</h5>
+          <ul>
+            <li><a href="#recursos">Analise Preditiva</a></li>
+            <li><a href="#arquitetura">Workflows de Liquidacao</a></li>
+            <li><a href="#recursos">APIs e Integracoes</a></li>
+            <li><a href="#planos">Seguranca e SOC2</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#">Sobre a Vanguard</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Sala de Imprensa</a></li>
+            <li><a href="#">Contato Corporativo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Juridico</h5>
+          <ul>
+            <li><a href="#">Politica de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Seguranca de Dados</a></li>
+            <li><a href="#">Conformidade LGPD</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vanguard Technologies S.A. Todos os direitos reservados. Demonstração de interface desenvolvida por Pedro Moacyr Barcelos Neto.</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    // FAQ Accordion functionality
-    document.querySelectorAll('.faq-question').forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
+    // Tab Switcher
+    function switchTab(index) {
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === index);
+      });
+      document.querySelectorAll('.tab-content-panel').forEach((panel, idx) => {
+        panel.classList.toggle('active', idx === index);
+      });
+    }
+
+    // Billing Switcher (Monthly vs Annual)
+    let isAnnual = false;
+    function toggleBilling() {
+      isAnnual = !isAnnual;
+      const toggle = document.getElementById('billing-switch');
+      toggle.classList.toggle('annual', isAnnual);
+
+      const pEssential = document.getElementById('price-essential');
+      const pPro = document.getElementById('price-pro');
+
+      if (isAnnual) {
+        pEssential.textContent = '392';
+        pPro.textContent = '952';
+      } else {
+        pEssential.textContent = '490';
+        pPro.textContent = '1.190';
+      }
+    }
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
         item.classList.toggle('open');
       });
     });
