@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa Interativa de Alta Conversão | Demonstração Técnica</title>
+  <meta name="description" content="Questionário online interativo de alta taxa de resposta, responsivo, gamificado e com analytics em tempo real para campanhas de grande volume." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent: #10b981;
+      --accent-light: #d1fae5;
+      --dark: #0f172a;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-gradient: radial-gradient(circle at 50% 0%, #f1f5f9 0%, #e2e8f0 100%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+
+    /* TOP BAR & SWITCHER */
+    .top-header {
+      width: 100%;
+      max-width: 860px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .brand-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .brand-text h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .view-toggle {
+      display: flex;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 12px;
+      gap: 4px;
+    }
+
+    .view-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-btn.active {
+      background: #ffffff;
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* MAIN CONTAINER */
+    .app-container {
+      width: 100%;
+      max-width: 720px;
+      position: relative;
+    }
+
+    /* CARD WRAPPER */
+    .survey-card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 640px) {
+      .survey-card {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+    }
+
+    /* PROGRESS BAR */
+    .progress-wrapper {
+      margin-bottom: 24px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: #f1f5f9;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 25%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 999px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* LIVE RESPONSES PILL */
+    .live-pulse-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-light);
+      color: #065f46;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulseAnimation 1.6s infinite;
+    }
+
+    @keyframes pulseAnimation {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+
+    /* QUESTION STEPS */
+    .step-section {
+      display: none;
+      animation: fadeIn 0.35s ease;
+    }
+
+    .step-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-number {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .step-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .step-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    /* OPTIONS GRID */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .option-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      background: #ffffff;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+    }
+
+    .option-card:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+      transform: translateY(-2px);
+    }
+
+    .option-card.selected {
+      border-color: var(--primary);
+      background: #f0f9ff;
+      box-shadow: 0 4px 16px -2px rgba(2, 132, 199, 0.15);
+    }
+
+    .option-card .key-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .option-card.selected .key-badge {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .option-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      flex: 1;
+    }
+
+    .option-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* RATING SCALE */
+    .rating-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 28px;
+      justify-content: space-between;
+    }
+
+    .rating-btn {
+      flex: 1;
+      padding: 16px 8px;
+      text-align: center;
+      background: #ffffff;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .rating-btn:hover {
+      border-color: #94a3b8;
+      background: #f8fafc;
+    }
+
+    .rating-btn.selected {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(2, 132, 199, 0.25);
+    }
+
+    .rating-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-top: -18px;
+      margin-bottom: 24px;
+    }
+
+    /* TEXT INPUT / TEXTAREA */
+    .custom-input {
+      width: 100%;
+      padding: 16px;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s ease;
+      background: #fff;
+      color: var(--dark);
+      resize: vertical;
+      min-height: 100px;
+      margin-bottom: 24px;
+    }
+
+    .custom-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    /* ACTIONS / NAVIGATION */
+    .card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 18px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .btn-prev {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-prev:hover {
+      background: #f8fafc;
+      color: var(--dark);
+    }
+
+    .btn-next {
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      border: none;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px -3px rgba(2, 132, 199, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-next:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px -3px rgba(2, 132, 199, 0.45);
+    }
+
+    .btn-next:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* SUCCESS STEP */
+    .success-box {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-icon-wrap {
+      width: 72px;
+      height: 72px;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 36px;
+    }
+
+    .viral-share-box {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: left;
+    }
+
+    .viral-share-box h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .share-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .share-btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .share-whatsapp {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .share-whatsapp:hover {
+      background: #20ba5a;
+    }
+
+    .share-copy {
+      background: #ffffff;
+      color: var(--dark);
+      border: 1px solid var(--border);
+    }
+
+    .share-copy:hover {
+      background: #f1f5f9;
+    }
+
+    /* ANALYTICS VIEW (DASHBOARD) */
+    #analyticsView {
+      display: none;
+    }
+
+    .analytics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .metric-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .metric-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .metric-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--dark);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .chart-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .chart-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .channel-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .channel-name {
+      width: 130px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .channel-bar-bg {
+      flex: 1;
+      height: 12px;
+      background: #f1f5f9;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .channel-bar-fill {
+      height: 100%;
+      border-radius: 6px;
+    }
+
+    .channel-count {
+      width: 75px;
+      text-align: right;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .strategy-card {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .strategy-card h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #38bdf8;
+    }
+
+    .strategy-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .strategy-card li {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #cbd5e1;
+    }
+
+    .strategy-card li strong {
+      color: #ffffff;
+    }
+
+    /* FOOTER */
+    .app-footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .app-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="top-header">
+    <div class="brand-badge">
+      <div class="brand-icon">Q</div>
+      <div class="brand-text">
+        <h1>OmniPulse Survey System</h1>
+        <p>Alta Conversão &amp; Disparo em Massa</p>
+      </div>
+    </div>
+
+    <!-- MODO SWITCHER -->
+    <div class="view-toggle">
+      <button class="view-btn active" id="btnViewSurvey" onclick="switchView('survey')">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H6v-2h6v2zm4-4H6v-2h10v2zm0-4H6V7h10v2z"/></svg>
+        Questionário
+      </button>
+      <button class="view-btn" id="btnViewAnalytics" onclick="switchView('analytics')">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+        Painel de Métricas
+      </button>
+    </div>
+  </header>
+
+  <!-- APP CONTAINER -->
+  <main class="app-container">
+
+    <!-- VIEW 1: QUESTIONÁRIO INTERATIVO -->
+    <div id="surveyView" class="survey-card">
+
+      <!-- PROGRESS -->
+      <div class="progress-wrapper">
+        <div class="progress-meta">
+          <span id="stepCounterText">Pergunta 1 de 4</span>
+          <span id="progressPercentageText">25% concluído</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width: 25%;"></div>
+        </div>
+      </div>
+
+      <div class="live-pulse-badge">
+        <div class="pulse-dot"></div>
+        <span>+1.428 pessoas responderam nesta semana</span>
+      </div>
+
+      <!-- STEP 1: INTERESSE PRINCIPAL -->
+      <div class="step-section active" id="step1">
+        <div class="step-number">Etapa 01</div>
+        <h2 class="step-title">Qual é o seu principal objetivo ou desafio profissional atualmente?</h2>
+        <p class="step-desc">Selecione a opção que melhor reflete seu momento para direcionarmos o conteúdo.</p>
+
+        <div class="options-grid">
+          <div class="option-card" onclick="selectSingleOption(1, 'Aumentar faturamento com vendas e captação de clientes')">
+            <div class="key-badge">A</div>
+            <div class="option-label">
+              Aumentar faturamento &amp; Vendas
+              <span class="option-sub">Captação ativa de clientes e contratos de maior ticket</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(1, 'Automatizar processos operacionais e ganhar tempo')">
+            <div class="key-badge">B</div>
+            <div class="option-label">
+              Automação &amp; Produtividade
+              <span class="option-sub">Reduzir tarefas manuais e focar na estratégia do negócio</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(1, 'Transição de carreira ou novos projetos digitais')">
+            <div class="key-badge">C</div>
+            <div class="option-label">
+              Novos Projetos &amp; Inovação Digital
+              <span class="option-sub">Criação de novos produtos ou serviços online</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(1, 'Gestão de equipe e organização interna')">
+            <div class="key-badge">D</div>
+            <div class="option-label">
+              Organização &amp; Gestão
+              <span class="option-sub">Melhorar rotinas, metas e eficiência da equipe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: CANAL MAIS UTILIZADO -->
+      <div class="step-section" id="step2">
+        <div class="step-number">Etapa 02</div>
+        <h2 class="step-title">Por onde você prefere receber novidades, pesquisas e oportunidades?</h2>
+        <p class="step-desc">Indique o canal em que você mais consome informações e responde com agilidade.</p>
+
+        <div class="options-grid">
+          <div class="option-card" onclick="selectSingleOption(2, 'WhatsApp Direto ou Grupos Segmentados')">
+            <div class="key-badge">A</div>
+            <div class="option-label">
+              WhatsApp (Mensagem Direta ou Grupos)
+              <span class="option-sub">Comunicação instantânea e de fácil acesso</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(2, 'LinkedIn & Artigos Profissionais')">
+            <div class="key-badge">B</div>
+            <div class="option-label">
+              LinkedIn
+              <span class="option-sub">Feed profissional e mensagens de negócios</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(2, 'Instagram & Redes Sociais Visuais')">
+            <div class="key-badge">C</div>
+            <div class="option-label">
+              Instagram / Redes Sociais
+              <span class="option-sub">Stories, vídeos curtos e enquetes dinâmicas</span>
+            </div>
+          </div>
+          <div class="option-card" onclick="selectSingleOption(2, 'E-mail / Newsletters Especializadas')">
+            <div class="key-badge">D</div>
+            <div class="option-label">
+              E-mail Executivo
+              <span class="option-sub">Leitura com calma na caixa de entrada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: AVALIAÇÃO DE VELOCIDADE & PRATICIDADE -->
+      <div class="step-section" id="step3">
+        <div class="step-number">Etapa 03</div>
+        <h2 class="step-title">Como você avalia a facilidade e rapidez deste formato de questionário?</h2>
+        <p class="step-desc">Em uma escala de 1 (muito lento/cansativo) a 5 (extremamente ágil e intuitivo).</p>
+
+        <div class="rating-row">
+          <button type="button" class="rating-btn" onclick="selectRating(1)">1</button>
+          <button type="button" class="rating-btn" onclick="selectRating(2)">2</button>
+          <button type="button" class="rating-btn" onclick="selectRating(3)">3</button>
+          <button type="button" class="rating-btn" onclick="selectRating(4)">4</button>
+          <button type="button" class="rating-btn" onclick="selectRating(5)">5 ★</button>
+        </div>
+        <div class="rating-labels">
+          <span>1 - Complicado / Lento</span>
+          <span>5 - Rápido &amp; Excelente</span>
+        </div>
+      </div>
+
+      <!-- STEP 4: COMENTÁRIO & ENCERRAMENTO -->
+      <div class="step-section" id="step4">
+        <div class="step-number">Etapa 04</div>
+        <h2 class="step-title">Alguma sugestão ou ponto importante que gostaria de compartilhar? (Opcional)</h2>
+        <p class="step-desc">Deixe seu comentário livre ou clique direto em "Finalizar e Enviar Respostas".</p>
+
+        <textarea class="custom-input" id="feedbackInput" placeholder="Digite aqui sua opinião ou ideias para melhoria da pesquisa..."></textarea>
+      </div>
+
+      <!-- STEP 5: SUCESSO & COMPARTILHAMENTO VIRAL -->
+      <div class="step-section" id="step5">
+        <div class="success-box">
+          <div class="success-icon-wrap">✓</div>
+          <h2 class="step-title" style="margin-bottom: 8px;">Muito obrigado! Sua resposta foi gravada.</h2>
+          <p class="step-desc" style="margin-bottom: 16px;">
+            Sua participação ajuda a calibrar a tomada de decisão com dados reais e precisos.
+          </p>
+
+          <!-- VIRAL LOOP -->
+          <div class="viral-share-box">
+            <h4>Ajude a ampliar esta pesquisa compartilhando com 1 colega:</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">
+              Quanto mais respostas coletadas, maior a precisão dos relatórios de mercado.
+            </p>
+            <div class="share-buttons">
+              <a href="https://api.whatsapp.com/send?text=Participei%20de%20uma%20pesquisa%20r%C3%A1pida%20e%20muito%20interessante.%20D%C3%A1%20uma%20olhada%20e%20responda%20tamb%C3%A9m%3A%20https%3A%2F%2Fbarcelosneto.github.io%2Fsite-portfolio%2Fdemos%2Fpesquisa-online%2F" target="_blank" class="share-btn share-whatsapp">
+                Compartilhar no WhatsApp
+              </a>
+              <button type="button" class="share-btn share-copy" onclick="copyShareLink()">
+                Copiar Link da Pesquisa
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="btn-prev" onclick="restartSurvey()">
+            ↺ Preencher Novamente (Reset)
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD ACTIONS (FOOTER) -->
+      <div class="card-actions" id="cardActions">
+        <button type="button" class="btn-prev" id="btnPrev" onclick="navigateStep(-1)" style="visibility: hidden;">
+          ← Voltar
+        </button>
+        <button type="button" class="btn-next" id="btnNext" onclick="navigateStep(1)" disabled>
+          Avançar →
+        </button>
+      </div>
+
+    </div>
+
+    <!-- VIEW 2: PAINEL DE MÉTRICAS (ANALYTICS & ESTRATÉGIA DE DIVULGAÇÃO) -->
+    <div id="analyticsView">
+      <div class="survey-card">
+        <div style="margin-bottom: 20px;">
+          <h2 class="step-title" style="font-size: 22px;">Painel de Tração &amp; Métricas de Respostas</h2>
+          <p class="step-desc" style="margin-bottom: 0;">
+            Visão gerencial do pesquisador: monitoramento do funil de respostas, canais de aquisição e custo estimado por respondente.
+          </p>
+        </div>
+
+        <!-- 4 KPI CARDS -->
+        <div class="analytics-grid">
+          <div class="metric-card">
+            <div class="metric-title">TOTAL DE RESPOSTAS</div>
+            <div class="metric-value">1.428</div>
+            <div class="metric-sub">+342 nas últimas 24h</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">TAXA DE CONCLUSÃO</div>
+            <div class="metric-value">89,4%</div>
+            <div class="metric-sub">Google Forms média: ~42%</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">TEMPO MÉDIO GASTO</div>
+            <div class="metric-value">1m 32s</div>
+            <div class="metric-sub">Fluxo sem fricção mobile</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-title">CUSTO POR RESPOSTA</div>
+            <div class="metric-value">R$ 0,38</div>
+            <div class="metric-sub">Via campanhas segmentadas</div>
+          </div>
+        </div>
+
+        <!-- CANAIS DE DIVULGAÇÃO & RESPOSTAS -->
+        <div class="chart-box">
+          <div class="chart-title">
+            <span>Volume de Respostas por Canal de Divulgação (UTM Tracked)</span>
+            <span style="font-size: 13px; font-weight: 600; color: var(--accent);">Atualizado em Tempo Real</span>
+          </div>
+
+          <div class="channel-row">
+            <div class="channel-name">Grupos WhatsApp</div>
+            <div class="channel-bar-bg">
+              <div class="channel-bar-fill" style="width: 44%; background: #22c55e;"></div>
+            </div>
+            <div class="channel-count">628 (44%)</div>
+          </div>
+
+          <div class="channel-row">
+            <div class="channel-name">Meta Ads (Instagram)</div>
+            <div class="channel-bar-bg">
+              <div class="channel-bar-fill" style="width: 28%; background: #3b82f6;"></div>
+            </div>
+            <div class="channel-count">400 (28%)</div>
+          </div>
+
+          <div class="channel-row">
+            <div class="channel-name">LinkedIn Orgânico</div>
+            <div class="channel-bar-bg">
+              <div class="channel-bar-fill" style="width: 18%; background: #0ea5e9;"></div>
+            </div>
+            <div class="channel-count">257 (18%)</div>
+          </div>
+
+          <div class="channel-row">
+            <div class="channel-name">E-mail Marketing</div>
+            <div class="channel-bar-bg">
+              <div class="channel-bar-fill" style="width: 10%; background: #8b5cf6;"></div>
+            </div>
+            <div class="channel-count">143 (10%)</div>
+          </div>
+        </div>
+
+        <!-- ESTRATÉGIA PRÁTICA EXECUTIVA PARA O CLIENTE -->
+        <div class="strategy-card">
+          <h3>Estratégia Recomendada para Bater o Recorde de Respostas</h3>
+          <ul>
+            <li>
+              <strong>1. Formato Mobile-First Ultra-Ágil:</strong>
+              O questionário reduz o abandono eliminando campos desnecessários e rodando em menos de 2 minutos no celular.
+            </li>
+            <li>
+              <strong>2. Disparo Segmentado em Grupos de Comunidade:</strong>
+              Divulgação com copy de engajamento em grupos focados no nicho desejado (WhatsApp e Telegram), gerando os primeiros 300+ respondentes sem custo de mídia.
+            </li>
+            <li>
+              <strong>3. Campanhas de Micro-Tráfego Pago (Meta Ads / Instagram Stories):</strong>
+              Anúncios diretos no formato Story com botão "Arrastar/Responder Agora", garantindo volume escalável com custo médio inferior a R$ 0,50 por resposta válida.
+            </li>
+            <li>
+              <strong>4. Efeito de Rede &amp; Compartilhamento Viral:</strong>
+              Ao finalizar o questionário, o participante é convidado a enviar para um colega, gerando um loop orgânico de novas respostas gratuitas.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    Desenvolvido por <a href="https://barcelosneto.github.io/site-portfolio/" target="_blank">Barcelos Neto — Soluções Web &amp; Analytics</a>
+  </footer>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 4;
+    const surveyAnswers = {
+      step1: '',
+      step2: '',
+      step3: '',
+      step4: ''
+    };
+
+    function switchView(viewName) {
+      const surveyView = document.getElementById('surveyView');
+      const analyticsView = document.getElementById('analyticsView');
+      const btnSurvey = document.getElementById('btnViewSurvey');
+      const btnAnalytics = document.getElementById('btnViewAnalytics');
+
+      if (viewName === 'survey') {
+        surveyView.style.display = 'block';
+        analyticsView.style.display = 'none';
+        btnSurvey.classList.add('active');
+        btnAnalytics.classList.remove('active');
+      } else {
+        surveyView.style.display = 'none';
+        analyticsView.style.display = 'block';
+        btnSurvey.classList.remove('active');
+        btnAnalytics.classList.add('active');
+      }
+    }
+
+    function selectSingleOption(stepIndex, value) {
+      surveyAnswers['step' + stepIndex] = value;
+      const stepEl = document.getElementById('step' + stepIndex);
+      const cards = stepEl.querySelectorAll('.option-card');
+      cards.forEach(c => {
+        c.classList.remove('selected');
+        if (c.querySelector('.option-label').textContent.includes(value.split(' ')[0])) {
+          c.classList.add('selected');
+        }
+      });
+      document.getElementById('btnNext').disabled = false;
+      // Auto-advance after 300ms for fast experience
+      setTimeout(() => {
+        navigateStep(1);
+      }, 320);
+    }
+
+    function selectRating(val) {
+      surveyAnswers.step3 = val;
+      const btns = document.querySelectorAll('.rating-btn');
+      btns.forEach((b, i) => {
+        if (i + 1 === val) {
+          b.classList.add('selected');
+        } else {
+          b.classList.remove('selected');
+        }
+      });
+      document.getElementById('btnNext').disabled = false;
+      setTimeout(() => {
+        navigateStep(1);
+      }, 350);
+    }
+
+    function navigateStep(delta) {
+      const nextStep = currentStep + delta;
+
+      if (nextStep < 1) return;
+
+      if (nextStep > totalSteps) {
+        // Complete survey!
+        showSuccess();
+        return;
+      }
+
+      // Hide current step
+      document.getElementById('step' + currentStep).classList.remove('active');
+
+      currentStep = nextStep;
+      document.getElementById('step' + currentStep).classList.add('active');
+
+      updateProgressUI();
+    }
+
+    function updateProgressUI() {
+      const pct = Math.round((currentStep / totalSteps) * 100);
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('stepCounterText').textContent = `Pergunta ${currentStep} de ${totalSteps}`;
+      document.getElementById('progressPercentageText').textContent = `${pct}% concluído`;
+
+      const btnPrev = document.getElementById('btnPrev');
+      const btnNext = document.getElementById('btnNext');
+
+      btnPrev.style.visibility = (currentStep > 1) ? 'visible' : 'hidden';
+
+      if (currentStep === 4) {
+        btnNext.textContent = 'Finalizar & Enviar Respostas ✓';
+        btnNext.disabled = false;
+      } else {
+        btnNext.textContent = 'Avançar →';
+        // Check if current step has answer
+        btnNext.disabled = !surveyAnswers['step' + currentStep];
+      }
+    }
+
+    function showSuccess() {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      document.getElementById('step5').classList.add('active');
+      document.getElementById('cardActions').style.display = 'none';
+      document.getElementById('progressFill').style.width = '100%';
+      document.getElementById('progressPercentageText').textContent = '100% concluído';
+      document.getElementById('stepCounterText').textContent = 'Pesquisa Concluída';
+
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      }
+    }
+
+    function restartSurvey() {
+      currentStep = 1;
+      surveyAnswers.step1 = '';
+      surveyAnswers.step2 = '';
+      surveyAnswers.step3 = '';
+      surveyAnswers.step4 = '';
+
+      document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+      document.querySelectorAll('.rating-btn').forEach(b => b.classList.remove('selected'));
+      document.getElementById('feedbackInput').value = '';
+
+      document.getElementById('step5').classList.remove('active');
+      document.getElementById('step1').classList.add('active');
+      document.getElementById('cardActions').style.display = 'flex';
+
+      updateProgressUI();
+    }
+
+    function copyShareLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Link da pesquisa copiado para a área de transferência!');
+      }).catch(() => {
+        prompt('Copie o link abaixo:', url);
+      });
+    }
+  </script>
+</body>
+</html>
