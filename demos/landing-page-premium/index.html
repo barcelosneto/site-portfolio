@@ -9,6 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
+    /* Comparison Bar */
+    .switch-banner-premium {
+      background: linear-gradient(90deg, #0F172A 0%, #1E1B4B 100%);
+      color: #94A3B8;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 0.88rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 101;
+    }
+
+    .switch-banner-premium strong {
+      color: #10B981;
+    }
+
+    .switch-link-premium {
+      display: inline-block;
+      margin-left: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #F8FAFC;
+      padding: 4px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.2s;
+    }
+
+    .switch-link-premium:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+    }
+
     :root {
       --bg: #07090E;
       --bg-surface: #0E131F;
@@ -1103,6 +1139,12 @@
   </style>
 </head>
 <body>
+  <!-- Comparison Notification Bar -->
+  <aside class="switch-banner-premium">
+    <span>Visualização: <strong>Versão Premium Refatorada</strong> (Direção de arte autoral, tipografia editorial e interatividade).</span>
+    <a href="../landing-page-padrao/index.html" class="switch-link-premium">Comparar com a Versão Padrão de IA &rarr;</a>
+  </aside>
+
   <div class="ambient-glow-1"></div>
   <div class="ambient-glow-2"></div>
 
