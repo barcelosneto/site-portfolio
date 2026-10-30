@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redesign de Landing Page: Da Estrutura de IA ao Design Premium de Alta Conversao</title>
+  <meta name="description" content="Demonstracao interativa de redesign de landing pages: transformacao de modelos genericos gerados por inteligencia artificial em interfaces refinadas, com identidade propria e foco em conversao." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #0A0D14;
+      --bg-card: rgba(18, 24, 38, 0.7);
+      --bg-card-hover: rgba(24, 32, 50, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(99, 102, 241, 0.5);
+      --primary: #4F46E5;
+      --primary-hover: #4338CA;
+      --accent: #06B6D4;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --text-dim: #6B7280;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --container: 1180px;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Lighting */
+    .glow-bg {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(6, 182, 212, 0.05) 45%, transparent 70%);
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #FFFFFF;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, #3730A3 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--primary-hover) 0%, #312E81 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 96px 0 64px;
+      text-align: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(79, 70, 229, 0.12);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #818CF8;
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: #FFFFFF;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 28px 0;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+
+    /* Interactive Comparison Switcher Section */
+    .comparison-section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .toggle-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+
+    .toggle-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      padding: 6px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      gap: 6px;
+    }
+
+    .toggle-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .toggle-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 10px rgba(79, 70, 229, 0.4);
+    }
+
+    /* Comparison Card Box */
+    .comparison-display {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      backdrop-filter: blur(12px);
+      transition: all 0.3s;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .comparison-col {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px;
+    }
+
+    .comparison-col.ai-version {
+      border-left: 3px solid #EF4444;
+    }
+
+    .comparison-col.human-version {
+      border-left: 3px solid #10B981;
+      background: rgba(16, 185, 129, 0.03);
+    }
+
+    .col-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .col-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .spec-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .spec-item {
+      font-size: 0.92rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .spec-marker {
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .marker-bad {
+      color: #EF4444;
+    }
+
+    .marker-good {
+      color: #10B981;
+    }
+
+    /* Pillars of Transformation */
+    .pillars-section {
+      padding: 80px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      transition: all 0.25s;
+    }
+
+    .pillar-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(255, 255, 255, 0.16);
+      transform: translateY(-4px);
+    }
+
+    .pillar-number {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.15);
+      margin-bottom: 16px;
+    }
+
+    .pillar-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .pillar-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Process Flow */
+    .process-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .step-card {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      align-items: center;
+    }
+
+    .step-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(79, 70, 229, 0.15);
+      border: 1px solid rgba(79, 70, 229, 0.35);
+      color: #818CF8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+
+    .step-content h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Testimonials & Proof */
+    .proof-section {
+      padding: 80px 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 32px;
+    }
+
+    .testimonial-quote {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+
+    .author-name {
+      font-weight: 700;
+      color: #FFFFFF;
+      font-size: 0.95rem;
+    }
+
+    .author-role {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      transition: transform 0.2s;
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* CTA Final Box */
+    .cta-box {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%);
+      border: 1px solid rgba(79, 70, 229, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 64px 32px;
+      text-align: center;
+      margin: 80px 0;
+    }
+
+    .cta-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .cta-desc {
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 32px;
+      font-size: 1.05rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .comparison-grid, .pillars-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .step-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .stats-row {
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-badge"></span>
+        Redesign Studio
+      </a>
+      <div class="nav-actions">
+        <a href="#comparativo" class="nav-link">Comparativo</a>
+        <a href="#pilares" class="nav-link">Pilares</a>
+        <a href="#faq" class="nav-link">Duvidas</a>
+        <a href="#contato" class="btn btn-primary">Iniciar Redesign</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-tag">Design Humano &amp; Otimizacao de Conversao</div>
+        <h1 class="hero-title">
+          Transforme o rascunho da sua IA em uma<br />
+          <span>landing page premium e autentica</span>
+        </h1>
+        <p class="hero-subtitle">
+          A Inteligencia Artificial gera esqueletos funcionais, mas falha na conexao humana, na autoridade visual e na arquitetura de conversao. Nos refinamos a sua estrutura com identidade visual exclusiva e foco total em conversao.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#comparativo" class="btn btn-primary">Ver Comparativo Antes e Depois</a>
+          <a href="#pilares" class="btn btn-outline">Conhecer Metodologia</a>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number">+142%</div>
+            <div class="stat-label">Taxa media de conversao pos-redesign</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1.2s</div>
+            <div class="stat-label">Tempo medio de carregamento otimizado</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Zero</div>
+            <div class="stat-label">Templates genericos ou copias batidas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Comparison Section -->
+    <section class="comparison-section" id="comparativo">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Analise Critica</div>
+          <h2 class="section-title">O que separa uma pagina de IA de uma pagina de autoridade</h2>
+          <p class="section-desc">
+            A diferenca entre passar uma impressao amadora ou transmitir confianca imediata comeca no design e nos detalhes tecnicos.
+          </p>
+        </div>
+
+        <div class="comparison-display">
+          <div class="comparison-grid">
+            <!-- Modelo Padrao de IA -->
+            <div class="comparison-col ai-version">
+              <div class="col-title">Estrutura Bruta Gerada por IA</div>
+              <div class="col-desc">Sintomas comuns de ferramentas automotivas sem direcao de arte.</div>
+              <ul class="spec-list">
+                <li class="spec-item">
+                  <span class="spec-marker marker-bad">[x]</span>
+                  <span><strong>Tipografia padrao:</strong> Fontes basicas do sistema sem contraste de pesos, gerando aspecto monótono.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-bad">[x]</span>
+                  <span><strong>Espacamento desarmonico:</strong> Sessoes coladas ou com margens exageradas sem ritmo de leitura.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-bad">[x]</span>
+                  <span><strong>Cores desconexas:</strong> Contrastes genericos ou gradientes fluorescentes que cansam a visao e nao guiam a acao.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-bad">[x]</span>
+                  <span><strong>Sem hierarquia de conversao:</strong> Botoes secundarios competindo em peso com a chamada principal.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Modelo Humano Refatorado -->
+            <div class="comparison-col human-version">
+              <div class="col-title">Redesign Humano &amp; Otimizado para CRO</div>
+              <div class="col-desc">Direcao de arte autoral ajustada a psicologia do seu publico-alvo.</div>
+              <ul class="spec-list">
+                <li class="spec-item">
+                  <span class="spec-marker marker-good">[v]</span>
+                  <span><strong>Tipografia com autoridade:</strong> Escala modular com peso visual calibrado para conduzir o olho aos pontos de decisao.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-good">[v]</span>
+                  <span><strong>Ritmo e respiro visual:</strong> Grid equilibrado com espacamentos que transmitem elegancia e confianca.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-good">[v]</span>
+                  <span><strong>Paleta intencional:</strong> Cores funcionais com botoes de acao (CTA) projetados para alto contraste e clique.</span>
+                </li>
+                <li class="spec-item">
+                  <span class="spec-marker marker-good">[v]</span>
+                  <span><strong>Micro-interacoes fluidas:</strong> Efeitos e estados sutis que geram engajamento sem prejudicar a velocidade.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars of Redesign -->
+    <section class="pillars-section" id="pilares">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Metodologia</div>
+          <h2 class="section-title">Os 3 pilares da refatoracao de interface</h2>
+          <p class="section-desc">
+            Aproveitamos toda a sua estrutura e textos existentes para focar 100% no que realmente move o ponteiro da percepcao de valor.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-number">01</div>
+            <div class="pillar-title">Direcao de Arte e Identidade</div>
+            <div class="pillar-desc">
+              Adequacao completa de fontes, contraste, icones vetorizados modernos e paleta cromatica que tira o aspecto de template pronto e estabelece presenca de marca forte.
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">02</div>
+            <div class="pillar-title">Hierarquia e Psicologia de Conversao</div>
+            <div class="pillar-desc">
+              Reorganizacao do fluxo de leitura (F-pattern e Z-pattern), posicionamento estrategico de provas sociais e destaque absoluto para os caminhos de captura e contato.
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-number">03</div>
+            <div class="pillar-title">Execucao Tecnica e Mobile First</div>
+            <div class="pillar-desc">
+              Mais de 75% dos acessos ocorrem em dispositivos moveis. Garantimos adaptabilidade cirurgica em smartphones, eliminando quebras de layout e garantindo velocidade maxima.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Fluxo de Trabalho</div>
+          <h2 class="section-title">Como funciona o processo de entrega</h2>
+          <p class="section-desc">
+            Transparencia total em cada etapa, sem surpresas e com revisoes orientadas a objetivos comerciais.
+          </p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step-card">
+            <div class="step-badge">1</div>
+            <div class="step-content">
+              <h4>Auditoria e Diagnostico Critico</h4>
+              <p>Analisamos minuciosamente o modelo atual gerado pela IA, identificando pontos de atrito, quebras de proporcao e oportunidades de aumento de conversao.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">2</div>
+            <div class="step-content">
+              <h4>Proposta de Redesign Visual</h4>
+              <p>Apresentamos a nova direcao visual com tipografia ajustada, elementos graficos e organizacao espacial para sua aprovacao previa.</p>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-badge">3</div>
+            <div class="step-content">
+              <h4>Desenvolvimento e Entrega Pronta</h4>
+              <p>Construcao da pagina final na plataforma de sua escolha (WordPress + Elementor, HTML/CSS ou Webflow), totalmente funcional, responsiva e pronta para receber trafego.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof / Testimonials -->
+    <section class="proof-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Casos Reais</div>
+          <h2 class="section-title">O impacto de sair do modelo padrao</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              "Minha pagina feita com IA parecia mais um trabalho escolar generico. Apos o redesign mantendo a mesma copy, a taxa de agendamento de reunioes quase dobrou no primeiro mes."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MS</div>
+              <div>
+                <div class="author-name">Marcos Silveira</div>
+                <div class="author-role">Fundador, Apex Consultoria</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">
+              "O diferencial foi a visao critica de UX. Nao foi apenas trocar cores, foi reestruturar a hierarquia visual para que o visitante realmente entendesse a oferta em 5 segundos."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">CL</div>
+              <div>
+                <div class="author-name">Carla Lourenco</div>
+                <div class="author-role">Head de Operacoes, Nexus Tech</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Perguntas Frequentes</div>
+          <h2 class="section-title">Duvidas comuns sobre o redesign</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              Preciso reescrever todo o conteudo ou textos da pagina?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Nao. Aproveitamos integralmente a sua estrutura de copywriting existente. Fazemos apenas ajustes de micro-copy ou distribuicao visual dos blocos para que o texto fique mais escaneavel e agradavel de ler.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Voces entregam apenas o visual ou o site pronto e publicado?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Entregamos o site 100% desenvolvido e funcional na plataforma desejada (WordPress + Elementor, HTML/CSS ou Webflow), com testes completos de responsividade em celulares, tablets e computadores.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Qual e o prazo tipico para um projeto de redesign como esse?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Como a estrutura inicial ja esta definida, o ciclo completo de redesign, refinamento visual e desenvolvimento funcional leva em media de 3 a 5 dias uteis.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action Box -->
+    <div class="container" id="contato">
+      <div class="cta-box">
+        <h3 class="cta-title">Pronto para dar o toque humano a sua pagina?</h3>
+        <p class="cta-desc">
+          Envie o link ou print do modelo atual gerado pela IA para recebermos uma analise preliminar gratuita com os principais pontos de melhoria.
+        </p>
+        <a href="mailto:pedrobarcelos1980@gmail.com" class="btn btn-primary">Solicitar Analise de Redesign</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Desenvolvido por Pedro Moacyr Barcelos Neto — Especialista em Interfaces e Otimizacao de Conversao.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
